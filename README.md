@@ -152,6 +152,10 @@ In the first milestone my main goal was to get the project's framework set up an
 ## Media
 - [A reading girl mural by Jef Aerosol](https://toppng.com/show_download/451527/graffiti-child-reading-book-street-art/xlarge)
 - I used [AI Image Sharpener](https://vanceai.com/sharpen-ai/) to make the hero image sharper.
+- [Overlay over the Hero image](https://stackoverflow.com/questions/28121731/use-pseudo-element-to-create-background-overlay)
+- [Sticky Footer](https://mdbootstrap.com/docs/standard/navigation/footer/)
+
+
 [Back to top](#contents)
 ## Acknowledgements
 - Extra help and guidance was received from my mentor Precious Ijege, from my husband Sam and fellow colleagues from the Code Institute.
