@@ -154,6 +154,7 @@ In the first milestone my main goal was to get the project's framework set up an
 - I used [AI Image Sharpener](https://vanceai.com/sharpen-ai/) to make the hero image sharper.
 - [Overlay over the Hero image](https://stackoverflow.com/questions/28121731/use-pseudo-element-to-create-background-overlay)
 - [Sticky Footer](https://mdbootstrap.com/docs/standard/navigation/footer/)
+- [Favicon]ttps://cz.pinterest.com/pin/462181980485395733/
 
 
 [Back to top](#contents)

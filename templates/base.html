@@ -8,6 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="Bookworm kid is a webstore that sells books for young children taking not only their age but also their reading skills into account. Come and find the best book for your child.">
+    <meta name="keywords"
+        content="books by-age, books by-reading skills, reluctant reader, keen reader, struggling reader, avid reader, age appropriate books">
     {% endblock %}
 
     {% block extra_meta %}
@@ -43,6 +47,11 @@
     {% endblock %}
 
     <title>Bookworm Kid {% block extra_title %}{% endblock %}</title>
+
+    <!-- Add favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <title>Bookworm Kid {% block title %}{% endblock %}</title>
+
 </head>
 
 <body>
