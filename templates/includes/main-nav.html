@@ -1,5 +1,5 @@
 <div class="collapse navbar-collapse bg-navy" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto">
+    <ul class="navbar-nav w-auto mx-auto p-2">
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="all-productS-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -9,7 +9,7 @@
                 <a href="" class="dropdown-item ">By Age</a>
                 <a href="" class="dropdown-item ">By Skill Level</a>
                 <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">All Books</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Books</a>
             </div>
         </li>
 

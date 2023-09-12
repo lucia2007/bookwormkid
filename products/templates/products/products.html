@@ -21,16 +21,17 @@
     <div class="row">
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2"></div>
-            <div class="row">
+            <div class="row mb-5">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0">
                         {% if product.image %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.title }}">
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid card-image" src="{{ product.image.url }}"
+                                alt="{{ product.title }}">
                         </a>
                         {% else %}
-                        <a href="">
+                        <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
                                 alt="{{ product.title }}">
                         </a>
@@ -41,8 +42,9 @@
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                                    <p class="text-muted">{{ product.category.friendly_name }}</p>
+                                    <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                                    <p class="text-muted"><i class="fa-solid fa-book"></i>
+                                        {{ product.category.friendly_name }}</p>
                                     {% if product.rating %}
                                     <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
                                         5</small>
