@@ -60,7 +60,8 @@ body {
 .shop-now-button {
     background: #3A3042;
     color: white;
-    min-width: 200px;
+    min-width: 100px;
+    max-width: 150px;
 }
 
 .btn-navy {
@@ -152,11 +153,11 @@ a.text-reset {
         }
 
         .header-container {
-            padding-top: 164px;
+            padding-top: 146px;
         }
 
         .action-call {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
         }
 
     }
@@ -165,6 +166,10 @@ a.text-reset {
     @media (min-width: 1200px) {
         .container {
             max-width: 80%;
+        }
+
+        .action-call {
+            font-size: 2rem;
         }
 
     }
