@@ -16,7 +16,7 @@ def all_products(request):
                 return redirect(reverse('products'))
 
             # Checks if the search term is either in the title or the descrip.
-            queries = Q(title__icontains=query) | Q(description__icontains=query)
+            queries = Q(title__icontains=query) | Q(description__icontains=query) | Q(by_age__icontains=query) | Q(author__icontains=query)
             products = products.filter(queries)
 
     context = {
