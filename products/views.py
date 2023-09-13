@@ -66,3 +66,25 @@ def featured_books(request):
     }
 
     return render(request, 'products/featured_books.html', context)
+
+
+def on_sale(request):
+    on_sale_books = Product.objects.filter(is_sale=True)
+
+    context = {
+        "on_sale_books": on_sale_books
+    }
+
+    return render(request, 'products/on_sale.html', context)
+
+
+def all_specials(request):
+    criteria = Q(new_arrival=True) | Q(feature_product=True) | Q(is_sale=True)
+
+    all_specials_books = Product.objects.filter(criteria)
+
+    context = {
+        "all_specials_books": all_specials_books
+    }
+
+    return render(request, 'products/all_specials.html', context)
