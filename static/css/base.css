@@ -108,6 +108,17 @@ body {
 
 /* Footer  */
 /* https://www.youtube.com/watch?v=E9eWdZTpiGA - so the footer stays at the bottom*/
+/* Product Card */
+.card-image {
+    object-fit: contain;
+    height: 350px;
+    width: 100%;
+    padding: 1rem 1rem 0;
+ }
+
+/* Footer  */
+/* https://www.youtube.com/watch?v=E9eWdZTpiGA - so the footer stays at the bottom*/
+
 footer {
     flex-shrink: 0;
     background-color: #3A3042;
@@ -139,7 +150,7 @@ a.text-reset {
     display: none;
 }
 
-/* -------------------------------- Media Queries */
+/* Media Queries */
 
 /* Mobile screens */
 
@@ -154,6 +165,7 @@ a.text-reset {
         display: block;
     }
 
+}
 
 
     /* fixed top navbar only on medium and up */
@@ -174,6 +186,9 @@ a.text-reset {
             font-size: 1.5rem;
         }
 
+    .card-image {
+        padding-top: 2rem;
+    }
     }
 
     /* Slightly larger container on xl screens */
