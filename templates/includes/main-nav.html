@@ -1,15 +1,26 @@
 <div class="collapse navbar-collapse bg-navy" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto p-2">
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="all-productS-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Books
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}"
+                id="all-productS-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Books
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="" class="dropdown-item ">By Age</a>
-                <a href="" class="dropdown-item ">By Skill Level</a>
                 <a href="" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Books</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="all-productS-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Skill Level
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="{% url 'products' %}?category=reluctant" class="dropdown-item ">Reluctant Reader</a>
+                <a href="{% url 'products' %}?category=keen" class="dropdown-item">Keen Reader</a>
+                <a href="{% url 'products' %}?category=avid" class="dropdown-item">Avid Reader</a>
             </div>
         </li>
 
@@ -37,6 +48,12 @@
             <a class="logo-font font-weight-bold nav-link text-white" href="#" id="contact-link" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Contact Us
+            </a>
+        </li>
+        <li class="nav-item dropdown d-sm-block d-md-none">
+            <a class="logo-font font-weight-bold nav-link text-white" href="#" id="contact-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                HELP
             </a>
         </li>
     </ul>
