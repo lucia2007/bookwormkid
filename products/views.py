@@ -46,3 +46,14 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def new_arrivals(request):
+    new_arrivals_books = Product.objects.filter(new_arrival=True)
+
+    context = {
+        "new_arrivals_books": new_arrivals_books
+    }
+
+    return render(request, 'products/new_arrivals.html', context)
+
