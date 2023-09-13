@@ -57,3 +57,12 @@ def new_arrivals(request):
 
     return render(request, 'products/new_arrivals.html', context)
 
+
+def featured_books(request):
+    special_feature_books = Product.objects.filter(feature_product=True)
+
+    context = {
+        "special_feature_books": special_feature_books
+    }
+
+    return render(request, 'products/featured_books.html', context)
