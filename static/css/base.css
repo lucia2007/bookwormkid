@@ -5,7 +5,7 @@ html {
 body {
     background: url('/media/graffiti_child_reading.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh-116px);
+    height: calc(100vh - 200px);
     color: #555;
     font-family: 'Raleway', sans-serif;
     /* position: relative; */
@@ -115,6 +115,11 @@ body {
     width: 100%;
     padding: 1rem 1rem 0;
  }
+
+.category-icon-image {
+    width: 20px;
+}
+
 
 /* Footer  */
 /* https://www.youtube.com/watch?v=E9eWdZTpiGA - so the footer stays at the bottom*/
