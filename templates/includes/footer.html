@@ -62,13 +62,15 @@
                           Navigation
                       </h6>
                       <p>
-                          <a href="/" class="text-reset" aria-label="Takes user back to home page">Home</a>
+                          <a href="/" class="text-reset" aria-label="Takes user back to home page">HOME</a>
                       </p>
                       <p>
-                          <a href="" class="text-reset" aria-label="Takes user to all products page.">PRODUCTS</a>
+                          <a href="{% url 'products' %}" class="text-reset"
+                              aria-label="Takes user to all products page.">PRODUCTS</a>
                       </p>
                       <p>
-                          <a href="" class="text-reset" aria-label="Takes user to special offers">SPECIAL OFFERS</a>
+                          <a href="{% url 'all_specials' %}" class="text-reset"
+                              aria-label="Takes user to special offers">SPECIAL OFFERS</a>
                       </p>
                       <p>
                           <a href="" class="text-reset" aria-label="Takes user to blog entries">BLOG</a>
