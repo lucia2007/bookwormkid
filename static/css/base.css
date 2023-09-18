@@ -74,6 +74,20 @@ body {
     padding: 0;
 }
 
+
+.btn-outline-navy {
+    background: #3A3042;
+    color: white !important;
+    border: 1px solid #3A3042;
+}
+
+.btn-outline-navy:hover,
+.btn-outline-navy:active,
+.btn-outline-navy:focus {
+    background: #EDFFD9;
+    color: #3A3042 !important;
+}
+
 .overlay {
     height: 100%;
     width: 100%;
@@ -97,7 +111,9 @@ a.category-badge>span.badge:hover {
     right: 10px;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
@@ -108,7 +124,7 @@ a.category-badge>span.badge:hover {
 .btn-navy:hover,
 .btn-navy:active,
 .btn-navy:focus {
-    background: #222;
+    background: #3A3042;
     color: white;
 }
 
@@ -224,5 +240,5 @@ a.text-reset {
             font-size: 2rem;
         }
 
-    }
+
     }
