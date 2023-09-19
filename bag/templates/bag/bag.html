@@ -48,7 +48,7 @@
                             <p class="my-0">${{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25">
-                            <form action="" class="form update-form" method="POST">
+                            <form action="{% url 'adjust_bag' item.item_id %}" class="form update-form" method="POST">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <div class="input-group">
@@ -79,7 +79,7 @@
                                 id="remove_{{ item.item_id }}"><small>Remove</small></a>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.product.price }}</p>
+                            <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
                     {% endfor %}
@@ -90,7 +90,7 @@
                             <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                             {% if free_delivery_delta > 0 %}
                             <p class="mb-1 text-danger">
-                                You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong>
+                                Get free delivery by spending just <strong>${{ free_delivery_delta }}</strong>
                                 more!
                             </p>
                             {% endif %}
@@ -116,7 +116,7 @@
                 </table>
             </div>
             {% else %}
-            <p class="lead mb-5">Your bag is empty.</p>
+            <p class="text-muted mb-5">Your bag is empty.</p>
             <a href="{% url 'products' %}" class="btn btn-outline-navy rounded-0 btn-lg">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
