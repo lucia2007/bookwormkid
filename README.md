@@ -146,7 +146,7 @@ In the first milestone my main goal was to get the project's framework set up an
 # Credits
 
 ## Content
-- 
+- [Triangle snippets from CSS-tricks.com](https://css-tricks.com/snippets/css/css-triangle/)
 
 [Back to top](#contents)
 ## Media
