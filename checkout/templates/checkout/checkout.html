@@ -74,7 +74,7 @@
             <p class="text-muted">Please fill out the form below to complete your order</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
-                <fieldset class="rounded px-3 mb-5">
+                <fieldset class="rounded mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
                     <div class="row">
                         <div class="col-12">
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                 </fieldset>
-                <fieldset class="rounded px-3 mb-5">
+                <fieldset class="rounded mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
                     <div class="row">
                         <div class="col-12">
@@ -118,7 +118,7 @@
                             <p class="mt-0 small mb-0">County: </p>
                             {{ order_form.county | as_crispy_field }}
                         </div>
-                        <div class="form-check form-check-inline float-right mr-0">
+                        <div class="form-check form-check-inline float-right mr-0 px-3">
                             {% if user.is_authenticated %}
                             <label class="form-check-label" for="id-save-info">Save this delivery information to my
                                 profile</label>
@@ -133,7 +133,7 @@
                         </div>
                     </div>
                 </fieldset>
-                <fieldset class="px-3">
+                <fieldset>
                     <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
                     <!-- A Stripe card element will go here -->
                     <div class="mb-3" id="card-element"></div>
@@ -165,6 +165,13 @@
             </form>
         </div>
     </div>
+</div>
+<div id="loading-overlay">
+    <h1 class="text-light logo-font loading-spinner">
+        <span class="icon">
+            <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+        </span>
+    </h1>
 </div>
 {% endblock %}
 
