@@ -198,13 +198,24 @@
     </div>
     <div class="row">
         <div class="col-12 text-center">
-            <a href="{% url 'all_specials' %}" class="btn btn-black rounded-0 my-2">
+            {% if from_profile %}
+            <a href="{% url 'profile' %}" aria-label="Returns the user to their profile page."
+                class="btn btn-outline-navy rounded-0 my-2">
+                <span class="icon mr-2">
+                    <i class="fas fa-angle-left"></i>
+                </span>
+                <span class="text-uppercase">Back to Profile Page</span>
+            </a>
+            {% else %}
+            <a href="{% url 'all_specials' %}" class="btn btn-outline-navy rounded-0 my-2">
                 <span class="text-uppercase">Now check out our special offers!</span>
                 <span class="icon mr-2">
                     <i class="fa-solid fa-gift"></i>
                 </span>
             </a>
+            {% endif %}
         </div>
+
     </div>
 </div>
 {% endblock %}
