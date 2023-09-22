@@ -1,6 +1,7 @@
 asgiref==3.7.2
 Django==3.2.21
 django-allauth==0.41.0
+django-countries==7.2.1
 django-crispy-forms==1.14.0
 django-stubs==4.2.4
 django-stubs-ext==4.2.2
@@ -12,3 +13,4 @@ sqlparse==0.4.4
 stripe==6.5.0
 types-pytz==2023.3.0.1
 types-PyYAML==6.0.12.11
+types-stripe==3.5.2.14

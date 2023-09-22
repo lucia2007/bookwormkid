@@ -95,18 +95,6 @@
                             {{ order_form.phone_number | as_crispy_field }}
                         </div>
                         <div class="col-12">
-                            <p class="mt-0 small mb-0">Country: </p>
-                            {{ order_form.country | as_crispy_field }}
-                        </div>
-                        <div class="col-12">
-                            <p class="mt-0 small mb-0">Postcode: </p>
-                            {{ order_form.postcode | as_crispy_field }}
-                        </div>
-                        <div class="col-12">
-                            <p class="mt-0 small mb-0">Town or City: </p>
-                            {{ order_form.town_or_city | as_crispy_field }}
-                        </div>
-                        <div class="col-12">
                             <p class="mt-0 small mb-0">Street Address 1: </p>
                             {{ order_form.street_address1 | as_crispy_field }}
                         </div>
@@ -115,8 +103,20 @@
                             {{ order_form.street_address2 | as_crispy_field }}
                         </div>
                         <div class="col-12">
+                            <p class="mt-0 small mb-0">Town or City: </p>
+                            {{ order_form.town_or_city | as_crispy_field }}
+                        </div>
+                        <div class="col-12">
                             <p class="mt-0 small mb-0">County: </p>
                             {{ order_form.county | as_crispy_field }}
+                        </div>
+                        <div class="col-12">
+                            <p class="mt-0 small mb-0">Postcode: </p>
+                            {{ order_form.postcode | as_crispy_field }}
+                        </div>
+                        <div class="col-12">
+                            <p class="mt-0 small mb-0">Country: </p>
+                            {{ order_form.country | as_crispy_field }}
                         </div>
                         <div class="form-check form-check-inline float-right mr-0 px-3">
                             {% if user.is_authenticated %}
