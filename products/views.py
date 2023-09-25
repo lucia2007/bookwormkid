@@ -4,6 +4,8 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
 
+from .forms import ProductForm
+
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
@@ -75,6 +77,7 @@ def product_detail(request, product_id):
 
 
 def new_arrivals(request):
+    """ Display all new arrivals """
     new_arrivals_books = Product.objects.filter(new_arrival=True)
 
     context = {
@@ -85,6 +88,7 @@ def new_arrivals(request):
 
 
 def featured_books(request):
+    """ Display special feature books """
     special_feature_books = Product.objects.filter(feature_product=True)
 
     context = {
@@ -95,6 +99,7 @@ def featured_books(request):
 
 
 def on_sale(request):
+    """ Display books which are on sale """
     on_sale_books = Product.objects.filter(is_sale=True)
 
     context = {
@@ -105,6 +110,7 @@ def on_sale(request):
 
 
 def all_specials(request):
+    """ Display all specials (new arrivals, featured, sale) """
     criteria = Q(new_arrival=True) | Q(feature_product=True) | Q(is_sale=True)
 
     all_specials_books = Product.objects.filter(criteria)
@@ -114,3 +120,24 @@ def all_specials(request):
     }
 
     return render(request, 'products/all_specials.html', context)
+
+
+def add_product(request):
+    """ Add a product to the store """
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Product was added successfully.")
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Product was not added. Correct the form inputs.')
+    else:
+        form = ProductForm()
+
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
