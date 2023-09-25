@@ -125,12 +125,14 @@
             </div>
             {% else %}
             <p class="text-muted mb-5 text-center">Your bag is empty.</p>
-            <a href="{% url 'products' %}" class="btn btn-outline-navy rounded-0 btn-lg">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">Keep Shopping</span>
-            </a>
+            <p class="text-center">
+                <a href="{% url 'products' %}" class="btn btn-outline-navy rounded-0 btn-lg">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
+            </p>
             {% endif %}
         </div>
     </div>
