@@ -109,6 +109,14 @@
                                     {% else %}
                                     <small class="text-muted">No Rating</small>
                                     {% endif %}
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_product' product.id %}"
+                                            aria-label="Takes the user to edit_product page">Edit</a> |
+                                        <a href="{% url 'delete_product' product.id %}" class="text-danger"
+                                            aria-label="Takes the user to delete_product page">Delete</a>
+                                    </small>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>

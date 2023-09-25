@@ -59,7 +59,7 @@
 <body>
     {% include 'includes/header.html' %}
     {% if messages %}
-    <div class="message-container border-black">
+    <div class="message-container">
         {% for message in messages %}
         {% with message.level as level %}
         {% if level == 40 %}
