@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bookwormkid.herokuapp.com', 'localhost', '8000-lucia2007-bookwormkid-kzzr8bsd1y0.ws-eu104.gitpod.io']
+ALLOWED_HOSTS = ['bookwormkid-c20568b2004e.herokuapp.com', 'localhost', '8000-lucia2007-bookwormkid-kzzr8bsd1y0.ws-eu104.gitpod.io']
 
 
 # Application definition
