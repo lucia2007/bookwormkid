@@ -1,0 +1,1 @@
+web: gunicorn bookwormkid.wsgi:application
