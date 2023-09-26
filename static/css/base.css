@@ -231,7 +231,6 @@ input[name='q']::placeholder {
     background: #FFE19C;
 }
 
-
 /* Admin Product Form */
 .btn-file {
     position: relative;
@@ -258,41 +257,6 @@ input[name='q']::placeholder {
     border-color: #dc3545;
     border-radius: 0;
 }
-
-
-/* Footer  */
-/* https://www.youtube.com/watch?v=E9eWdZTpiGA - so the footer stays at the bottom*/
-/* Footer */
-.navigation,
-.help,
-.contact {
-    display: none;
-}
-
-footer {
-    flex-shrink: 0;
-    background-color: #3A3042;
-    font-size: 0.8em;
-}
-
-.social-icon {
-    height: 2rem;
-}
-
-/* Social icons > a */
-a.me-4.link-secondary {
-    text-decoration: none;
-}
-
-/* Navigation links in Footer */
-a.text-reset {
-    text-decoration: none;
-}
-
-.copyright {
-    background-color: #3A3042;
-}
-
 
 /* Allauth form formatting */
 
@@ -351,22 +315,40 @@ a.text-reset {
     /* text-info */
 }
 
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
+/* Footer */
+.navigation,
+.help,
+.contact {
+    display: none;
+}
 
-    .header-container {
-        padding-top: 164px;
+footer {
+    flex-shrink: 0;
+    background-color: #3A3042;
+    font-size: 0.8em;
+}
+
+.social-icon {
+    height: 2rem;
+}
+
+/* Social icons > a */
+a.me-4.link-secondary {
+    text-decoration: none;
+}
+
+/* Navigation links in Footer */
+a.text-reset {
+    text-decoration: none;
+}
+
+.copyright {
+    background-color: #3A3042;
+}
+
 
 /* Media Queries */
-/* Mobile screens */
-/* @media only screen and (min-width: 576px) {} */
+/* Small screen devices (min-width: 576px) {} */
 @media only screen and (min-width: 576px) {
     .bag-container {
         padding-left: 5px;
@@ -392,39 +374,38 @@ a.text-reset {
 
 }
 
+/* Large screen devices (992px and above) */
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
 
-    /* fixed top navbar only on medium and up */
-    @media (min-width: 992px) {
-        .fixed-top-desktop-only {
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
-            z-index: 1030;
-        }
+    .header-container {
+        padding-top: 164px;
+    }
 
-        .header-container {
-            padding-top: 146px;
-        }
-
-        .action-call {
-            font-size: 1.5rem;
-        }
+    .action-call {
+        font-size: 1.5rem;
+    }
 
     .card-image {
         padding-top: 2rem;
     }
+}
+
+/* Extra large screen devices (1200px and above) */
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
     }
 
-    /* Slightly larger container on xl screens */
-    @media (min-width: 1200px) {
-        .container {
-            max-width: 80%;
-        }
-
-        .action-call {
-            font-size: 2rem;
-        }
-
-
+    .action-call {
+        font-size: 2rem;
     }
+}
