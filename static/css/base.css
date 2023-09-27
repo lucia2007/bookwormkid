@@ -10,6 +10,8 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+main {
+    margin-bottom: 50px;
 }
 
 .header-container {
@@ -436,5 +438,12 @@ a.text-reset {
 
     .action-call {
         font-size: 2rem;
+    }
+}
+
+@media (min-width: 1675px) {
+    main {
+        max-width: 1400px;
+        margin: 0 auto;
     }
 }
