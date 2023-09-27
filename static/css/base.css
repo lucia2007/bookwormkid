@@ -5,10 +5,10 @@ html {
 body {
     background: url('/media/graffiti_child_reading.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 200px);
+    height: 100vh;
     color: #555;
     font-family: 'Raleway', sans-serif;
-    /* position: relative; */
+    position: relative;
 }
 
 .header-container {
@@ -26,6 +26,11 @@ body {
     height: calc(100% + 164px);
     background-color: rgba(0, 0, 0, 0.1);
 } */
+
+
+.display-4.logo-font.text-black {
+    font-size: 1.5rem;
+}
 
 .navbar-light .navbar-toggler {
     color: rgba(0, 0, 0, .5);
@@ -231,6 +236,11 @@ input[name='q']::placeholder {
     background: #FFE19C;
 }
 
+.table-head {
+    font-size: 0.7rem;
+    text-align: center;
+}
+
 /* Admin Product Form */
 .btn-file {
     position: relative;
@@ -326,6 +336,9 @@ footer {
     flex-shrink: 0;
     background-color: #3A3042;
     font-size: 0.8em;
+    position: absolute;
+    right: 0;
+    width: 100vw;
 }
 
 .social-icon {
@@ -355,6 +368,11 @@ a.text-reset {
         padding-right: 5px;
     }
 
+    .table-head {
+        font-size: 1rem;
+        text-align: left;
+    }
+
     .btn-shop {
         padding: 0.5rem 1rem;
         font-size: 1.25rem;
@@ -370,6 +388,10 @@ a.text-reset {
     .help,
     .contact {
         display: block;
+    }
+
+    .grand-total {
+        font-size: 2rem;
     }
 
 }
