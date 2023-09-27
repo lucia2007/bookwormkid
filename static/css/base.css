@@ -5,7 +5,7 @@ html {
 body {
     background: url('/media/graffiti_child_reading.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     color: #555;
     font-family: 'Raleway', sans-serif;
 }
@@ -17,6 +17,11 @@ main {
 .header-container {
     padding-top: 100px;
 }
+
+.dropdown-menu {
+    left: -110px;
+}
+
 .girl-reading {
     height: 100vh;
 }
