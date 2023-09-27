@@ -8,11 +8,15 @@ body {
     height: 100vh;
     color: #555;
     font-family: 'Raleway', sans-serif;
-    position: relative;
+}
+
 }
 
 .header-container {
     padding-top: 100px;
+}
+.girl-reading {
+    height: 100vh;
 }
 
 /* Create an overlay pseudo-element */
@@ -336,8 +340,6 @@ footer {
     flex-shrink: 0;
     background-color: #3A3042;
     font-size: 0.8em;
-    position: absolute;
-    right: 0;
     width: 100vw;
 }
 
