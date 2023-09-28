@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
-from .views import handler404
+from .views import handler404, error_view
 from django.conf.urls.static import static
 
 urlpatterns = [
@@ -29,4 +29,6 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'boutique_ado.views.handler404'
+handler404 = 'bookwormkid.views.handler404'
+# https://github.com/davidcalikes/sensical.ie/blob/main/sensical/urls.py
+handler500 = "bookwormkid.views.error_view"
