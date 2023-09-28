@@ -39,7 +39,8 @@
             {% for item in bag_items %}
             <div class="row">
                 <div class="col-2 mb-1">
-                    <a href="{% url 'product_detail' item.product.id %}">
+                    <a href="{% url 'product_detail' item.product.id %}"
+                        aria-label="Takes the user to the product detail page of the chosen book.">
                         {% if item.product.image %}
                         <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                         {% else %}
@@ -126,8 +127,10 @@
                                 checked>
                             {% else %}
                             <label class="form-check-label" for="id-save-info">
-                                <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
-                                <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                <a class="text-info" href="{% url 'account_signup' %}"
+                                    aria-label="Takes the user to the account registration">Create an account</a> or
+                                <a class="text-info" href="{% url 'account_login' %}"
+                                    aria-label="Takes the user to the login">login</a> to save this information
                             </label>
                             {% endif %}
                         </div>
@@ -144,7 +147,8 @@
                 </fieldset>
 
                 <div class="submit-button text-right mt-5 mb-2">
-                    <a href="{% url 'view_bag' %}" class="btn btn-outline-navy rounded-0">
+                    <a href="{% url 'view_bag' %}" class="btn btn-outline-navy rounded-0"
+                        aria-label="Takes the user to view the shopping bag.">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
@@ -168,11 +172,11 @@
     </div>
 </div>
 <div id="loading-overlay">
-    <h1 class="text-light logo-font loading-spinner">
+    <span class="text-light logo-font loading-spinner">
         <span class="icon">
             <i class="fas fa-3x fa-sync-alt fa-spin"></i>
         </span>
-    </h1>
+    </span>
 </div>
 {% endblock %}
 

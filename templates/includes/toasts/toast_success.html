@@ -46,7 +46,8 @@
                     Spend <strong>${{ free_delivery_delta }}</strong> more to get free next day delivery!
                 </p>
                 {% endif %}
-                <a href="{% url 'view_bag' %}" class="btn btn-navy btn-block rounded-0">
+                <a href="{% url 'view_bag' %}" aria-label="Takes the user to view the shopping bag."
+                    class="btn btn-navy btn-block rounded-0">
                     <span class="text-uppercase">Go To Your Bag</span>
                     <span class="icon">
                         <i class="fas fa-lock"></i>

@@ -25,11 +25,12 @@
     <strong>Menu:</strong>
     <ul>
       {% if user.is_authenticated %}
-      <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-      <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
+      <li><a href="{% url 'account_email' %}" aria-label="Takes the user to the email set up page.">Change E-mail</a>
+      </li>
+      <li><a href="{% url 'account_logout' %}" aria-label="Takes the user to the logout page.">Sign Out</a></li>
       {% else %}
-      <li><a href="{% url 'account_login' %}">Sign In</a></li>
-      <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+      <li><a href="{% url 'account_login' %}" aria-label="Takes the user to the login page.">Sign In</a></li>
+      <li><a href="{% url 'account_signup' %}" aria-label="Takes the user to the registration page.">Sign Up</a></li>
       {% endif %}
     </ul>
   </div>

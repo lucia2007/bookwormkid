@@ -14,8 +14,10 @@
             </h3>
             <div class="my-5">
                 <div class="d-flex error-page-buttons">
-                    <a class="btn btn-outline-navy rounded-0" href="{% url 'home' %}">Home</a>
-                    <a href="{% url 'products' %}" class="btn btn-outline-navy rounded-0">
+                    <a class="btn btn-outline-navy rounded-0" href="{% url 'home' %}"
+                        aria-label="Takes the user to the home page">Home</a>
+                    <a href="{% url 'products' %}" aria-label="Takes the user to view all the products."
+                        class="btn btn-outline-navy rounded-0">
                         Back to store
                     </a>
                 </div>

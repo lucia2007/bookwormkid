@@ -52,8 +52,6 @@
 
     <!-- Add favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
-    <title>Bookworm Kid {% block title %}{% endblock %}</title>
-
 </head>
 
 <body>
@@ -85,7 +83,7 @@
     </main>
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
     {% endblock %}

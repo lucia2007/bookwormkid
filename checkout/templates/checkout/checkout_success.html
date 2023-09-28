@@ -207,8 +207,9 @@
                 <span class="text-uppercase">Back to Profile Page</span>
             </a>
             {% else %}
-            <a href="{% url 'all_specials' %}" class="btn btn-outline-navy rounded-0 my-2">
-                <span class="text-uppercase">Now check out our special offers!</span>
+            <a href="{% url 'all_specials' %}" class="btn btn-outline-navy rounded-0 my-2"
+                aria-label="Takes the user to all special offers.">
+                <span class=" text-uppercase">Now check out our special offers!</span>
                 <span class="icon mr-2">
                     <i class="fa-solid fa-gift"></i>
                 </span>

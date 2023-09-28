@@ -8,7 +8,7 @@
     </div>
     <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto d-flex py-1 py-lg-0 text-center text-lg-left">
-            <a href="{% url 'home' %}" class="nav-link main-logo-link">
+            <a href="{% url 'home' %}" class="nav-link main-logo-link" aria-label="Takes the user to the home page.">
                 <h2 class="logo-font logo-name text-black my-0"><strong>Bookworm</strong> Kid</h2>
             </a>
         </div>
@@ -30,8 +30,9 @@
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
             <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                 <li class="list-inline-item dropdown">
-                    <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <a class="text-black nav-link" href="#"
+                        aria-label="Takes the user to the dropdown menu under the user profile icon." id="user-options"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="text-center">
                             <div><i class="fas fa-user fa-lg"></i></div>
                         </div>
@@ -39,20 +40,26 @@
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
-                        <a href="{% url 'add_product' %}" class="dropdown-item">Bookstore Management</a>
+                        <a href="{% url 'add_product' %}" aria-label="Takes the admin to the add product page."
+                            class="dropdown-item">Bookstore Management</a>
                         {% endif %}
-                        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                        <a href="{% url 'profile' %}" aria-label="Takes the user to the user profile page."
+                            class="dropdown-item">My Profile</a>
                         <a href="" class="dropdown-item">My Wishlist</a>
-                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                        <a href="{% url 'account_logout' %}" aria-label="Takes the user to the logout page."
+                            class="dropdown-item">Logout</a>
                         {% else %}
-                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                        <a href="{% url 'account_signup' %}" aria-label="Takes the user to the registration page."
+                            class="dropdown-item">Register</a>
+                        <a href="{% url 'account_login' %}" aria-label="Takes the user to the login page"
+                            class="dropdown-item">Login</a>
                         {% endif %}
                     </div>
                 </li>
                 <li class="list-inline-item">
                     <a class="{% if grand_total %}text-warning font-weight-bold{% else %}text-black{% endif %} nav-link"
-                        href="{% url 'view_bag' %}">
+                        href="{% url 'view_bag' %}"
+                        aria-label="Takes the user to view the contents of the shopping bag.">
                         <div class="text-center">
                             <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                         </div>

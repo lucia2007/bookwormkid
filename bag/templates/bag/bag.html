@@ -106,7 +106,8 @@
             {% else %}
             <p class="text-muted mb-5 text-center">Your bag is empty.</p>
             <p class="text-center">
-                <a href="{% url 'products' %}" class="btn btn-outline-navy rounded-0 btn-lg">
+                <a href="{% url 'products' %}" class="btn btn-outline-navy rounded-0 btn-lg"
+                    aria-label="Takes the user to all products page.">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
@@ -118,7 +119,7 @@
     </div>
 </div>
 <div class="btt-button shadow-sm bg-navy rounded-circle border border-white">
-    <a href="" class="btt-link d-flex h-100">
+    <a href="" class="btt-link d-flex h-100" aria-label="scroll to top button">
         <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
     </a>
 </div>

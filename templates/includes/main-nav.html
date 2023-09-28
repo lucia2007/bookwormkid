@@ -7,59 +7,79 @@
         </li>
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}"
-                id="all-productS-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Books
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Books</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc"
+                    aria-label="Takes the user to the products sorted by price in ascending order."
+                    class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc"
+                    aria-label="Takes the user to the products sorted by rating in descending order."
+                    class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc"
+                    aria-label="Takes the user to the products sorted by category in ascending order."
+                    class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}" aria-label="Takes the user to all the products."
+                    class="dropdown-item">All Books</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="all-skill-level-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5"
+                aria-label="Takes the user to the dropdown for the reading skill levels" href="#"
+                id="all-skill-level-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Skill Level
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?category=Reluctant" class="dropdown-item ">Reluctant Reader</a>
-                <a href="{% url 'products' %}?category=Keen" class="dropdown-item">Keen Reader</a>
-                <a href="{% url 'products' %}?category=Avid" class="dropdown-item">Avid Reader</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Books</a>
+                <a href="{% url 'products' %}?category=Reluctant"
+                    aria-label="Takes the user to books for reluctant readers." class="dropdown-item ">Reluctant
+                    Reader</a>
+                <a href="{% url 'products' %}?category=Keen" aria-label="Takes the user to books for keen readers."
+                    class="dropdown-item">Keen Reader</a>
+                <a href="{% url 'products' %}?category=Avid" aria-label="Takes the user to books for avid readers."
+                    class="dropdown-item">Avid Reader</a>
+                <a href="{% url 'products' %}" aria-label="Takes the user to view all books." class="dropdown-item">All
+                    Books</a>
             </div>
         </li>
 
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="special-offers-link"
+            <a class="logo-font font-weight-bold nav-link text-white mr-5"
+                aria-label="Takes the user to dropdown for special offers." href="#" id="special-offers-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="special-offers-link">
-                <a href="{% url 'new_arrivals' %}" class="dropdown-item">New Arrivals</a>
-                <a href="{% url 'featured_books' %}" class="dropdown-item">Featured Books</a>
-                <a href="{% url 'on_sale' %}" class="dropdown-item">Sale</a>
-                <a href="{% url 'all_specials' %}" class="dropdown-item">All Specials</a>
+                <a href="{% url 'new_arrivals' %}" aria-label="Takes the user new arrivals." class="dropdown-item">New
+                    Arrivals</a>
+                <a href="{% url 'featured_books' %}" aria-label="Takes the user to featured books."
+                    class="dropdown-item">Featured Books</a>
+                <a href="{% url 'on_sale' %}" aria-label="Takes the user to books on sale."
+                    class="dropdown-item">Sale</a>
+                <a href="{% url 'all_specials' %}" aria-label="Takes the user all special offers."
+                    class="dropdown-item">All Specials</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="blog-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5"
+                aria-label="Takes the user to the blog entries." href="#" id="blog-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Blog
             </a>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white" href="#" id="contact-link" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white" aria-label="Takes the user to the contact page."
+                href="#" id="contact-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Contact Us
             </a>
         </li>
         <li class="nav-item dropdown d-sm-block d-md-none">
-            <a class="logo-font font-weight-bold nav-link text-white" href="#" id="help" data-toggle="dropdown"
+            <a class="logo-font font-weight-bold nav-link text-white"
+                aria-label="Takes the user to the links hidden under HELP." href="#" id="help" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 HELP
             </a>
