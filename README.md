@@ -3,7 +3,7 @@
 
 Bookwormkid is an application which can be used in real life by anyone who is interested in supporting their child's, grandchild's or pupil's reading journey and help them fall in love with reading. I am sure there is no need to explain why reading skills are important for the development of the child, but detailed information can be found [here](https://www.highspeedtraining.co.uk/hub/why-is-reading-important-for-children/) if interested.
 
-The app's main purpose is to provide age appropriate literature for all kinds of readers which would take their reading levels into account, so no reader is dissuaded or discouraged by too difficult a text, but also suggesting interesting and enticing literature for avid and passionate readers whose reading skills are above average for their age group. 
+The app's main purpose is to provide age appropriate literature for all kinds of readers which would take their reading levels into account, so no reader is dissuaded or discouraged by too difficult a text, but also suggesting interesting and enticing literature for avid and passionate readers whose reading skills are above average for their age group.
 
 Reading doesn't come easily to everyone and while some child might be able to read his way through Harry Potter or even The Lord of the Rings at the age of 7, other children might find it difficult to read through much simpler stories at a much higher age.
 
@@ -102,7 +102,7 @@ When I started creating the web application, I had a very clear idea of what I w
 [Back to top](#contents)
 ## Design Prototype (Wireframes)
 
-I started by creating wireframes which is always a great process because it helps me think in much more detail about what I want to accomplish. As you will see from my wireframes I tried to work on my design including the hero picture and color scheme from the very beginning. I came across the wonderful picture of the girl happily reading a book when travelling in France and later I was able to find it on the internet. The author of this amazing mural is Jef Aerosol. 
+I started by creating wireframes which is always a great process because it helps me think in much more detail about what I want to accomplish. As you will see from my wireframes I tried to work on my design including the hero picture and color scheme from the very beginning. I came across the wonderful picture of the girl happily reading a book when travelling in France and later I was able to find it on the internet. The author of this amazing mural is Jef Aerosol.
 
 The wireframes include a view for desktop, tablet and mobile to take responsives into accout. Many of the simple pages look the same on all devices (sign in, sign up, logout, forms,...). For those whose layout is different on smaller devices, I created a sample wireframe. The main difference in smaller screen is a collapsed NavBar accessible at the hamburger icon and the footer where the items stack up. The number of displayed books and other relevant features also responds to the size of the screen.
 
@@ -147,6 +147,7 @@ In the first milestone my main goal was to get the project's framework set up an
 
 ## Content
 - [Triangle snippets from CSS-tricks.com](https://css-tricks.com/snippets/css/css-triangle/)
+- [Scott's commit for avoiding decrement disable bug](https://github.com/Code-Institute-Solutions/boutique_ado_v1/commit/de7ad2067ac1b5de37a4cd8b9f4ddf572a4bf6c7)
 
 [Back to top](#contents)
 ## Media
@@ -154,7 +155,9 @@ In the first milestone my main goal was to get the project's framework set up an
 - I used [AI Image Sharpener](https://vanceai.com/sharpen-ai/) to make the hero image sharper.
 - [Overlay over the Hero image](https://stackoverflow.com/questions/28121731/use-pseudo-element-to-create-background-overlay)
 - [Sticky Footer](https://mdbootstrap.com/docs/standard/navigation/footer/)
-- [Favicon]ttps://cz.pinterest.com/pin/462181980485395733/
+- [Favicon](https://cz.pinterest.com/pin/462181980485395733/)
+- [Little House](https://www.google.cz/books/edition/Little_House_on_the_Prairie/m06dCwAAQBAJ?hl=en&gbpv=1)
+- [Dr. Seuss](https://www.amazon.com/Seusss-Beginner-Collection-Green-Socks/dp/0375851569)
 
 
 [Back to top](#contents)

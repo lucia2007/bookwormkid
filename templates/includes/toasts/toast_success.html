@@ -27,7 +27,7 @@
                     {% endif %}
                 </div>
                 <div class="col-9">
-                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                    <p class="my-0"><strong>{{ item.product.title }}</strong></p>
                     <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                 </p>
                 {% endif %}
                 <a href="{% url 'view_bag' %}" class="btn btn-navy btn-block rounded-0">
-                    <span class="text-uppercase">Go To Secure Checkout</span>
+                    <span class="text-uppercase">Go To Your Bag</span>
                     <span class="icon">
                         <i class="fas fa-lock"></i>
                     </span>
