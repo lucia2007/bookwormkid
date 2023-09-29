@@ -387,6 +387,30 @@ a.text-reset {
     background-color: #3A3042;
 }
 
+/* Newsletter container */
+
+.newsletter-container {
+    margin-top: 100px;
+}
+
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 100%;
+}
+
+#mc-embedded-subscribe {
+    clear: both;
+    width: auto;
+    display: block;
+    margin: 1em 5% 1em 5%;
+}
+
+#mc_embed_signup div#mce-responses {
+    padding: 0 !important;
+    margin: 0 !important;
+}
 
 /* Media Queries */
 /* Small screen devices (min-width: 576px) {} */
@@ -415,6 +439,14 @@ a.text-reset {
     .btn-group-sm>.btn,
     .btn-sm {
         font-size: 1rem !important;
+    }
+
+    /* Newsletter form */
+    #mc_embed_signup {
+        background: #fff;
+        clear: left;
+        font: 14px Helvetica, Arial, sans-serif;
+        width: 100%;
     }
 
 }
