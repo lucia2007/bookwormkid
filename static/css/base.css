@@ -52,6 +52,24 @@ main {
     padding: 8px 0 0 0;
 }
 
+/* Specials Icons */
+.specials-icons {
+    width: 25px;
+    height: 25px;
+}
+
+.specials-icons-sale {
+    width: 40px;
+    height: 40px;
+}
+
+.specials-header {
+    justify-content: center;
+    align-items: baseline;
+    gap: 5px;
+    justify-content: center;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
