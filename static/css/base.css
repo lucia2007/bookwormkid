@@ -100,11 +100,25 @@ main {
     border: 1px solid #3A3042;
 }
 
+.btn-outline-navy-reverse {
+    background: white !important;
+    color: #3A3042;
+    border: 1px solid #3A3042;
+    font-size: 0.8rem;
+}
+
 .btn-outline-navy:hover,
 .btn-outline-navy:active,
 .btn-outline-navy:focus {
     background: #EDFFD9;
     color: #3A3042 !important;
+}
+
+.btn-outline-navy-reverse:hover,
+.btn-outline-navy-reverse:active,
+.btn-outline-navy-reverse:focus {
+    background: #3A3042 !important;
+    color: #fff;
 }
 
 .overlay {
