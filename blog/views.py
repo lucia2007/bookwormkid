@@ -2,6 +2,6 @@ from django.shortcuts import render
 
 
 def blog(request):
-    """ A view to return the index page """
+    """ A view to go to the blog entries """
 
     return render(request, 'blog/blog.html')
