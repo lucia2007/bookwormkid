@@ -29,6 +29,8 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('newsletter/', include('newsletter.urls')),
     path('blog/', include('blog.urls')),
+    path('djrichtextfield/', include('djrichtextfield.urls')),
+    path('summernote/', include('django_summernote.urls')),
     path('contact/', include('contact.urls')),
     path('wishlist/', include('wishlist.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
