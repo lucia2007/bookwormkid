@@ -19,7 +19,7 @@ class Article(models.Model):
     content = RichTextField(max_length=5000)
     excerpt = models.TextField(max_length=254, blank=True)
     likes = models.ManyToManyField(
-        User, related_name='blog_likes', blank=True
+        User, related_name='article_likes', blank=True
         )
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
@@ -35,4 +35,3 @@ class Article(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
-

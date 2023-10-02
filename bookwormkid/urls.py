@@ -28,7 +28,7 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('newsletter/', include('newsletter.urls')),
-    path('blog/', include('blog.urls')),
+    path('article/', include('article.urls')),
     path('djrichtextfield/', include('djrichtextfield.urls')),
     path('summernote/', include('django_summernote.urls')),
     path('contact/', include('contact.urls')),
