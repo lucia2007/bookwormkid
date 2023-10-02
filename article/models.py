@@ -9,14 +9,16 @@ STATUS = ((0, "Draft"), (1, "Published"))
 class Article(models.Model):
     """ Model for creating/managing articles """
     title = models.CharField(max_length=254, unique=True)
-    author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='article_posts'
+    entered_by = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='article_posts',
+        default=1
         )
+    author = models.CharField(max_length=200)
     image = models.ImageField(null=True, blank=True, default='placeholder')
     image_description = models.CharField(
         max_length=100, default="no description provided"
         )
-    content = RichTextField(max_length=10000)
+    content = RichTextField(max_length=20000)
     excerpt = models.TextField(max_length=254, blank=True)
     likes = models.ManyToManyField(
         User, related_name='article_likes', blank=True
