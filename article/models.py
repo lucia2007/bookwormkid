@@ -16,7 +16,7 @@ class Article(models.Model):
     image_description = models.CharField(
         max_length=100, default="no description provided"
         )
-    content = RichTextField(max_length=5000)
+    content = RichTextField(max_length=10000)
     excerpt = models.TextField(max_length=254, blank=True)
     likes = models.ManyToManyField(
         User, related_name='article_likes', blank=True
