@@ -20,3 +20,15 @@ def all_articles(request):
     }
 
     return render(request, 'article/articles.html', context)
+
+
+def article_detail(request, article_id):
+    """ A view to show article details. """
+
+    article = get_object_or_404(article, pk=article_id)
+
+    context = {
+        'article': article,
+    }
+
+    return render(request, 'articles/article_detail.html', context)

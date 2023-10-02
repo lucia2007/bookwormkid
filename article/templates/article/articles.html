@@ -1,1 +1,64 @@
-<h1>Working on content...</h1>
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3 pt-3">
+            <h2 class="logo-font">All Articles</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for article in articles %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                {% if "placeholder" in article.featured_image.url %}
+                                <img src="{% static 'media/noimage.png' }" alt="No image provided" class="card-img-top">
+                                {% else %}
+                                <img src=" {{ article.image.url }}" alt=" {{artice.image_description }}"
+                                    class=" card-img-top">
+                                {% endif %}
+                                <div class="image-flash">
+                                    <p class="author">Author: {{ article.author }}</p>
+                                </div>
+                            </div>
+                            <a href="" class="article-link">
+                                <h2 class="card-title">{{ article.title }}</h2>
+                                <p class="card-text">{{ article.excerpt }}</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor%}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="btt-button shadow-sm bg-navy rounded-circle border border-white">
+    <a href="" class="btt-link d-flex h-100" aria-label="The arrow takes the user to the very top of the page.">
+        <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
+    </a>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    $('.btn-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
+{% endblock %}
