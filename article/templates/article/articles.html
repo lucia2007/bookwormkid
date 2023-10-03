@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'article/css/article.css' %}">
+{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -17,12 +21,14 @@
             <h2 class="logo-font">All Articles</h2>
         </div>
     </div>
+    <hr>
     <div class="row">
-        <div class="col-12 mt-3 left">
+        <!-- <div class="col-12 mt-3 left"> -->
+        <div class="col-10 offset-1">
             <div class="row">
                 {% for article in articles %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card mb-4 h-100">
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in article.featured_image.url %}
@@ -32,16 +38,39 @@
                                     class=" card-img-top">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ article.author }}</p>
+                                    <p class=" fs-sm">Author: {{ article.author }}</p>
                                 </div>
                             </div>
-                            <a href="" class="article-link">
+                            <a href="{% url 'article_detail' article.slug %}" class="article-link">
                                 <h2 class="card-title">{{ article.title }}</h2>
                                 <p class="card-text">{{ article.excerpt }}</p>
                             </a>
+                            <hr>
+                            <p class="card-text text-muted h6">{{ article.created_on }} </p>
+                            <p><i class="far fa-heart"></i> {{ article.number_of_likes}}</p>
                         </div>
                     </div>
                 </div>
+                {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-sm-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:4 %}
+                <div class="col-12 d-none d-xl-block mb-5">
+                    <hr>
+                </div>
+                {% endif %}
                 {% endfor%}
             </div>
         </div>

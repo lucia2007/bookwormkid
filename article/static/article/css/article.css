@@ -1,0 +1,25 @@
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #EDFFD9;
+    z-index: -1;
+}
+
+.author {
+    margin: 4px;
+    text-transform: uppercase;
+}
+
+.article-link {
+    text-decoration: none;
+    color: black;
+}
+
+.article-link:hover,
+.page-link {
+    color: #3A3042;
+}
+

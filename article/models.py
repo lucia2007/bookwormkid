@@ -27,6 +27,7 @@ class Article(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     slug = models.SlugField(max_length=254, unique=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    source = models.CharField(max_length=500)
 
     class Meta:
         """ Order articles from newest to oldest """
