@@ -389,8 +389,7 @@ input[name='q']::placeholder {
 
 /* Footer */
 .navigation,
-.help,
-.contact {
+.help {
     display: none;
 }
 

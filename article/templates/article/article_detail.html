@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="image-container my-5">
+                {% if article.image %}
+                <a href="{% url 'article_detail' article.slug %}"
+                    aria-label="Takes the user to the detail page of the chosen book. A picture of the book is displayed.">
+                    <img class="card-img-top img-fluid card-image" src="{{ article.image.url }}"
+                        alt="{{ article.title }}">
+                </a>
+                {% else %}
+                <a href="{% url 'article_detail' atricle.slug %}"
+                    aria-label="Takes the user to the detail page of the chosen book. Noimage substitute picture is displayed.">
+                    <img class="card-img-top img-fluid card-image" src="{{ MEDIA_URL }}noimage.png"
+                        alt="{{ article.title }}">
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-md-6 mx-auto">
+            <div class="article-details-container mb-5 mt-md-5">
+                <h1 class="mb-0">
+                    {{ article.title }}</h1>
+                <p class="mb-0"><i class="fa-solid fa-at"></i> {{ article.author }}</p>
+                <!-- The safe filter indicates that the value is known to be safe and therefore does not need to be escaped. -->
+                <!-- https://www.djangotemplatetagsandfilters.com/filters/safe/ -->
+                <p class="mt-3">{{ article.content|safe }}</p>
+                <p class="mt-3" id="full-description" style="display: none;">
+                    {{ article.content }}
+                </p>
+                <a href="{{ article.source }}" class="mt-3" id="article-source">
+                    Source
+                </a>
+                <div class="col-12">
+                    <a href="{% url 'articles' %}" target="_blank" class="btn btn-outline-navy rounded-0 mt-5">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Back To Articles</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% endblock %}
