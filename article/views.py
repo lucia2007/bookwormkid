@@ -53,3 +53,19 @@ def edit_article(request, slug):
     }
 
     return render(request, 'article/edit_article.html', context)
+
+
+@login_required
+def delete_article(request, slug):
+    """ Delete an article """
+    article = get_object_or_404(Article, slug=slug)
+    if request.user != article.entered_by:
+        messages.error(
+            request,
+            'Sorry, only the owner of the article can delete their articles.')
+        return redirect(reverse('articles'))
+
+    article.delete()
+    messages.success(request,
+                     f'Article - { article.title } was deleted successfully.')
+    return redirect(reverse('articles'))
