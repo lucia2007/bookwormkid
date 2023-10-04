@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'article/css/article.css' %}">
+{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -54,7 +58,32 @@
                 <a href="{{ article.source }}" class="mt-3" id="article-source">
                     Source
                 </a>
-                <div class="col-12">
+                <div>
+                    {% if user.is_authenticated %}
+                    <form action="{% url 'like_article' article.slug %}" method="POST" class="d-inline">
+                        {% csrf_token %}
+                        {% if liked %}
+                        <button class="btn-like" type="submit" name="article_id" value="{{ article.slug }}"><i
+                                class="fas fa-heart"></i></button>
+                        {% else %}
+                        <button class="btn-like" type="submit" name="article_id" value="{{ article.slug }}"><i
+                                class="far fa-heart"></i></button>
+                        {% endif %}
+                    </form>
+                    {% else %}
+                    <span class="card-text text-muted h6"><i class="far fa-heart"></i></span>
+                    {% endif %}
+                    <span class="text-secondary">{{ article.number_of_likes}}</span>
+                </div>
+                {% if request.user.is_superuser %}
+                <small>
+                    <a href="{% url 'edit_article' article.slug %}"
+                        aria-label="Takes the user to edit the article">Edit</a> |
+                    <a href="{% url 'delete_article' article.slug %}" class="text-danger"
+                        aria-label="Lets the user delete article">Delete</a>
+                </small>
+                {% endif %}
+                <div class="col-12 pl-0">
                     <a href="{% url 'articles' %}" target="_blank" class="btn btn-outline-navy rounded-0 mt-5">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
@@ -66,8 +95,18 @@
         </div>
     </div>
 </div>
+<div class="btt-button shadow-sm bg-navy rounded-circle border border-white">
+    <a href="" class="btt-link d-flex h-100" aria-label="The arrow takes the user to the very top of the page.">
+        <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
+    </a>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
+<script>
+    $('.btn-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
 {% endblock %}

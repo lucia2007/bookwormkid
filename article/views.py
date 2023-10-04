@@ -19,13 +19,19 @@ def all_articles(request):
     return render(request, 'article/articles.html', context)
 
 
-def article_detail(request, slug):
+def article_detail(request, slug, *args, **kwargs):
     """ A view to show article details. """
+    queryset = Article.objects.filter(status=1)
+    article = get_object_or_404(queryset, slug=slug)
 
-    article = get_object_or_404(Article, slug=slug)
+    liked = False
+
+    if article.likes.filter(id=request.user.id).exists():
+        liked = True
 
     context = {
         'article': article,
+        'liked': liked,
     }
 
     return render(request, 'article/article_detail.html', context)
@@ -69,3 +75,15 @@ def delete_article(request, slug):
     messages.success(request,
                      f'Article - { article.title } was deleted successfully.')
     return redirect(reverse('articles'))
+
+
+@login_required
+def like_article(request, slug):
+    article = get_object_or_404(Article, slug=slug)
+
+    if article.likes.filter(id=request.user.id).exists():
+        article.likes.remove(request.user)
+    else:
+        article.likes.add(request.user)
+
+    return HttpResponseRedirect(reverse('article_detail', args=[slug]))

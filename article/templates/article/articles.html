@@ -27,7 +27,6 @@
         <div class="col-10 offset-1">
             <div class="row">
                 {% for article in articles %}
-                {% if article.status %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card mb-4 h-100">
                         <div class="card-body">
@@ -48,9 +47,10 @@
                             </a>
                             <hr>
                             <p class="card-text text-muted h6">{{ article.created_on }} </p>
-                            <p><i class="far fa-heart"></i> {{ article.number_of_likes}}</p>
+                            <p class="card-text text-muted h6"><i class="far fa-heart"></i>
+                                {{ article.number_of_likes }}</p>
                             {% if request.user.is_superuser %}
-                            <small class="ml-3">
+                            <small>
                                 <a href="{% url 'edit_article' article.slug %}"
                                     aria-label="Takes the user to edit the article">Edit</a> |
                                 <a href="{% url 'delete_article' article.slug %}" class="text-danger"
@@ -79,7 +79,6 @@
                 <div class="col-12 d-none d-xl-block mb-5">
                     <hr>
                 </div>
-                {% endif %}
                 {% endif %}
                 {% endfor%}
             </div>

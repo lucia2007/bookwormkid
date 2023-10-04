@@ -8,11 +8,6 @@
     z-index: -1;
 }
 
-.author {
-    margin: 4px;
-    text-transform: uppercase;
-}
-
 .article-link {
     text-decoration: none;
     color: black;
@@ -22,4 +17,9 @@
 .page-link {
     color: #3A3042;
     text-decoration: none;
+}
+
+.btn-like {
+    border: none;
+    background: transparent;
 }
