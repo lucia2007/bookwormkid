@@ -510,6 +510,10 @@ a.text-reset {
         font-size: 2rem;
     }
 
+    .wishlist-text {
+        align-items: flex-start !important;
+    }
+
 }
 
 /* Large screen devices (992px and above) */
