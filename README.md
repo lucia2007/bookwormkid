@@ -150,6 +150,7 @@ In the first milestone my main goal was to get the project's framework set up an
 - [Scott's commit for avoiding decrement disable bug](https://github.com/Code-Institute-Solutions/boutique_ado_v1/commit/de7ad2067ac1b5de37a4cd8b9f4ddf572a4bf6c7)
 - [500.html error view](https://github.com/davidcalikes/sensical.ie/blob/main/sensical/urls.py)
 - [RichTextField settings - Daisy's Recipe Tutorial](https://www.youtube.com/watch?v=_GNvmwvvS70)
+- [Contact Form](https://ordinarycoders.com/blog/article/build-a-django-contact-form-with-email-backend)
 
 [Back to top](#contents)
 ## Media
