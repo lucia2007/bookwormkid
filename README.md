@@ -150,6 +150,8 @@ In the first milestone my main goal was to get the project's framework set up an
 - [Scott's commit for avoiding decrement disable bug](https://github.com/Code-Institute-Solutions/boutique_ado_v1/commit/de7ad2067ac1b5de37a4cd8b9f4ddf572a4bf6c7)
 - [500.html error view](https://github.com/davidcalikes/sensical.ie/blob/main/sensical/urls.py)
 - [RichTextField settings - Daisy's Recipe Tutorial](https://www.youtube.com/watch?v=_GNvmwvvS70)
+- [Boutique Ado]
+- [I Think, Therefor I Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/dabfed30d1fc4d078b6de270117dbe50/?child=first)
 - [Contact Form](https://ordinarycoders.com/blog/article/build-a-django-contact-form-with-email-backend)
 
 [Back to top](#contents)
@@ -161,6 +163,11 @@ In the first milestone my main goal was to get the project's framework set up an
 - [Favicon](https://cz.pinterest.com/pin/462181980485395733/)
 - [Little House](https://www.google.cz/books/edition/Little_House_on_the_Prairie/m06dCwAAQBAJ?hl=en&gbpv=1)
 - [Dr. Seuss](https://www.amazon.com/Seusss-Beginner-Collection-Green-Socks/dp/0375851569)
+- [Unsplash](unsplash.com)
+- [Top tips for engaging reluctant readers](https://www.explorelearning.co.uk/free-resources/tips-engaging-reluctant-readers/)
+- [7 effective ways to increase your child's reading skills](https://www.petitjourney.com.au/7-effective-ways-to-increase-your-childs-reading-skills/)
+- [Why Reading is Important](https://www.worksheetcloud.com/blog/why-is-reading-important/)
+- [safe filter](https://www.djangotemplatetagsandfilters.com/filters/safe/)
 
 
 [Back to top](#contents)
