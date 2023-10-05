@@ -59,8 +59,17 @@ main {
 }
 
 .specials-icons-sale {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
+}
+
+.specials-icons-card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: yellow;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .specials-header {
@@ -272,6 +281,12 @@ input[name='q']::placeholder {
 .category-icon-image {
     width: 20px;
 }
+
+.a-product-image {
+    position: relative;
+}
+
+
 
 /* Shopping Bag */
 .bag-container {

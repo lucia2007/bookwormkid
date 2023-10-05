@@ -18,6 +18,8 @@
                 <img src="{% static 'images/featured_icon.svg' %}" class="specials-icons"
                     alt="An image of a star to notify of featured books">
                 <h2 class="logo-font text-uppercase">Featured Books</h2>
+                <img src="{% static 'images/featured_icon.svg' %}" class="specials-icons"
+                    alt="An image of a star to notify of featured books">
             </div>
             <hr class="w-50 mb-1">
         </div>
@@ -34,6 +36,24 @@
                             aria-label="Takes the user to the detail page of the chosen book. A picture of the book is displayed.">
                             <img class="card-img-top img-fluid card-image" src="{{ product.image.url }}"
                                 alt="{{ product.title }}">
+                            {% if product.new_arrival or product.feature_product or product.is_sale %}
+                            <div class="specials-icons-card">
+                                {% if product.new_arrival %}
+                                <img src="{% static 'images/new_arrivals_icon.svg' %}" class="specials-icons"
+                                    alt="An image of a ringing bell to notify of new arrivals">
+                                {% endif %}
+                                {% if product.feature_product %}
+                                <img src="{% static 'images/featured_icon.svg' %}" class="specials-icons"
+                                    alt="An image of a star to notify of featured books">
+                                {% endif %}
+                                {% if product.is_sale %}
+                                <img src="{% static 'images/sale_icon.svg' %}" class="specials-icons-sale"
+                                    alt="An image of a start to notify of items on sale">
+                                {% endif %}
+                            </div>
+                            {% else %}
+                            <div class="specials-icons-card d-none"></div>
+                            {% endif %}
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' product.id %}"
