@@ -38,7 +38,7 @@
                 {% endif %}
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-center flex-column">
+        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-center flex-column wishlist-text">
             <div class="product-details-container mb-5 mt-5">
                 <p class="mb-0"><i class="fa-solid fa-book"></i>
                     {{ wishlist_item.product.title }}</p>
@@ -60,20 +60,36 @@
             </div>
         </div>
         {% endfor %}
+        {% else %}
+        <div class="col-12">
+            <p class="text-muted mb-5 text-center">Your Wishlist is empty.</p>
+        </div>
+        <div class="col-12">
+            <p class="text-center">
+                <a href="{% url 'products' %}" class="btn btn-outline-navy rounded-0 btn-lg"
+                    aria-label="Takes the user to all products page.">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
+            </p>
+        </div>
         {% endif %}
     </div>
-    <div class="btt-button shadow-sm bg-navy rounded-circle border border-white">
-        <a href="" class="btt-link d-flex h-100" aria-label="scroll to top button">
-            <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
-        </a>
-    </div>
-    {% endblock %}
+</div>
+<div class="btt-button shadow-sm bg-navy rounded-circle border border-white">
+    <a href="" class="btt-link d-flex h-100" aria-label="scroll to top button">
+        <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
+    </a>
+</div>
+{% endblock %}
 
-    {% block postloadjs %}
-    {{ block.super }}
-    <script>
-        $('.btn-link').click(function (e) {
-            window.scrollTo(0, 0)
-        })
-    </script>
-    {% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    $('.btn-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
+{% endblock %}
