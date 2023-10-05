@@ -37,6 +37,7 @@ def add_to_wishlist(request, product_id):
         messages.warning(
                          request,
                          f'You already have { product.title } in your wishlist.')
+        return redirect(reverse('products'))
     else:
         wishlist_item = Wishlist.objects.create(
                                                 user_profile=user_profile,
@@ -46,7 +47,7 @@ def add_to_wishlist(request, product_id):
                          request,
                          f'You have successfully added { wishlist_item.product.title } to your wishlist.'
                          )
-    return redirect(reverse('wishlist'))
+        return redirect(reverse('wishlist'))
 
 
 @login_required
