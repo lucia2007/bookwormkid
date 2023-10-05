@@ -531,11 +531,21 @@ a.text-reset {
     .action-call {
         font-size: 2rem;
     }
+
 }
 
 @media (min-width: 1675px) {
     main {
         max-width: 1400px;
         margin: 0 auto;
+    }
+
+    .action-call-container {
+        margin-top: 450px;
+    }
+
+    footer {
+        flex-shrink: 0;
+        font-size: 0.6em;
     }
 }
