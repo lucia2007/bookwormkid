@@ -125,6 +125,15 @@
                                 </div>
                             </div>
                         </div>
+                        <small class="text-center my-3">
+                            <a href="" class="btn btn-outline-navy mb-2"
+                                aria-label="Adds the chosen book to the shopping bag"><i class="fas fa-shopping-bag">
+                                </i> Add To Bag
+                            </a>
+                            <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Adds a product to wishlist"
+                                class="btn btn-outline-navy-reverse"><i class="fas fa-heart"> </i> Add To Wishlist
+                            </a>
+                        </small>
                     </div>
                 </div>
                 {% if forloop.counter|divisibleby:1 %}
