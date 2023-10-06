@@ -16,12 +16,14 @@
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
                 {% if product.image %}
-                <a href="{% url 'product_detail' product.id %}"
-                    aria-label="Takes the user to the detail page of the chosen book. A picture of the book is displayed.">
-                    <img class="card-img-top img-fluid card-image" src="{{ product.image.url }}"
-                        alt="{{ product.title }}">
-                    {% if product.new_arrival or product.feature_product or product.is_sale %}
-                    <div class="specials-icons-card">
+                <div class="image-card-detail d-flex flex-column  align-items-center">
+                    <a href="{% url 'product_detail' product.id %}"
+                        aria-label="Takes the user to the detail page of the chosen book. A picture of the book is displayed.">
+                        <img class="card-img-top img-fluid card-image" src="{{ product.image.url }}"
+                            alt="{{ product.title }}">
+                        {% if product.new_arrival or product.feature_product or product.is_sale %}
+                    </a>
+                    <div class="specials-icons-card-detail">
                         {% if product.new_arrival %}
                         <img src="{% static 'images/new_arrivals_icon.svg' %}" class="specials-icons"
                             alt="An image of a ringing bell to notify of new arrivals">
@@ -38,7 +40,7 @@
                     {% else %}
                     <div class="specials-icons-card d-none"></div>
                     {% endif %}
-                </a>
+                </div>
                 {% else %}
                 <a href="{% url 'product_detail' product.id %}"
                     aria-label="Takes the user to the detail page of the chosen book. Noimage substitute picture is displayed.">
@@ -82,7 +84,8 @@
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
                     <a href="{% url 'edit_product' product.id %}"
-                        aria-label="Takes the user to edit_product page">Edit</a> |
+                        aria-label="Takes the user to edit_product page">Edit</a>
+                    |
                     <a href="{% url 'delete_product' product.id %}" class="text-danger"
                         aria-label="Takes the user to delete_product page">Delete</a>
                 </small>

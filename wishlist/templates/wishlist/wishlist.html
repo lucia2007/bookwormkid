@@ -24,18 +24,14 @@
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container">
                 {% if wishlist_item.product.image %}
-                <a href="{% url 'product_detail' wishlist_item.product.id %}"
-                    aria-label="Takes the user to the wishlist. A picture of the book is displayed.">
-                    <img class="card-img-top img-fluid card-image" src="{{ wishlist_item.product.image.url }}"
-                        alt="{{ wishlist_item.product.title }}">
-                </a>
-                {% else %}
-                <a href="{% url 'product_detail' wishlist_item.product.id %}"
-                    aria-label="Takes the user to the wishlist. Noimage substitute picture is displayed.">
-                    <img class="card-img-top img-fluid card-image" src="{{ MEDIA_URL }}noimage.png"
-                        alt="{{ wishlist_item.product.title }}">
-                </a>
-                {% endif %}
+                <div class="image-card-detail d-flex flex-column  align-items-center">
+                    <a href="{% url 'product_detail' wishlist_item.product.id %}"
+                        aria-label="Takes the user to the wishlist. A picture of the book is displayed.">
+                        <img class="card-img-top img-fluid card-image" src="{{ wishlist_item.product.image.url }}"
+                            alt="{{ wishlist_item.product.title }}">
+                        {% if wishlist_item.product.new_arrival or wishlist_item.product.feature_product or wishlist_item.product.is_sale %}
+                    </a>
+                </div>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4 d-flex align-items-center flex-column wishlist-text">
@@ -45,6 +41,30 @@
                 <p class="mb-0"><i class="fa-solid fa-at"></i> {{ wishlist_item.product.author }}</p>
                 <p class="mb-0"><i class="fa-solid fa-child"></i> {{ wishlist_item.product.by_age }}</p>
                 <p class="lead mb-0 text-left font-weight-bold">€{{ wishlist_item.product.price }}</p>
+                <div class="specials-icons-card-detail">
+                    {% if wishlist_item.product.new_arrival %}
+                    <img src="{% static 'images/new_arrivals_icon.svg' %}" class="specials-icons"
+                        alt="An image of a ringing bell to notify of new arrivals">
+                    {% endif %}
+                    {% if wishlist_item.product.feature_product %}
+                    <img src="{% static 'images/featured_icon.svg' %}" class="specials-icons"
+                        alt="An image of a star to notify of featured books">
+                    {% endif %}
+                    {% if wishlist_item.product.is_sale %}
+                    <img src="{% static 'images/sale_icon.svg' %}" class="specials-icons-sale"
+                        alt="An image of a start to notify of items on sale">
+                    {% endif %}
+                </div>
+                {% else %}
+                <div class="specials-icons-card d-none"></div>
+                {% endif %}
+                {% else %}
+                <a href="{% url 'product_detail' wishlist_item.product.id %}"
+                    aria-label="Takes the user to the wishlist. Noimage substitute picture is displayed.">
+                    <img class="card-img-top img-fluid card-image" src="{{ MEDIA_URL }}noimage.png"
+                        alt="{{ wishlist_item.product.title }}">
+                </a>
+                {% endif %}
             </div>
             <div class="text-center my-3">
                 <div class="col-12">
@@ -53,7 +73,8 @@
                             class="fas fa-heart"> </i> Remove From Wishlist
                     </a>
                     <a href="" class="btn btn-outline-navy mb-2"
-                        aria-label="Adds the chosen book to the shopping bag"><i class="fas fa-shopping-bag"> </i> Add
+                        aria-label="Adds the chosen book to the shopping bag"><i class="fas fa-shopping-bag"> </i>
+                        Add
                         To Bag
                     </a>
                 </div>

@@ -72,6 +72,16 @@ main {
     border-radius: 5px;
 }
 
+.specials-icons-card-detail {
+    /* position: absolute;
+    top: 70px;
+    right: 60px; */
+    background: yellow;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .specials-header {
     justify-content: center;
     align-items: baseline;
@@ -464,6 +474,10 @@ a.text-reset {
     .display-4.logo-font.text-black {
         font-size: 2rem;
         padding: 0.5rem;
+    }
+
+    .dropdown-menu {
+        left: 5px;
     }
 
     .bag-container {
