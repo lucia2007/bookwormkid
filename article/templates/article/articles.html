@@ -32,9 +32,9 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in article.featured_image.url %}
-                                <img src="{% static 'media/noimage.png' }" alt="No image provided" class="card-img-top">
+                                <img src="{{ MEDIA_URL }}noimage.png" alt="No image provided" class="card-img-top">
                                 {% else %}
-                                <img src=" {{ article.image.url }}" alt=" {{artice.image_description }}"
+                                <img src=" {{ article.image.url }}" alt=" {{article.image_description }}"
                                     class=" card-img-top">
                                 {% endif %}
                                 <div class="image-flash">
