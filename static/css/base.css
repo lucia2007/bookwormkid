@@ -73,10 +73,6 @@ main {
 }
 
 .specials-icons-card-detail {
-    /* position: absolute;
-    top: 70px;
-    right: 60px; */
-    background: yellow;
     display: inline-block;
     padding: 10px;
     border-radius: 5px;
@@ -295,8 +291,6 @@ input[name='q']::placeholder {
 .a-product-image {
     position: relative;
 }
-
-
 
 /* Shopping Bag */
 .bag-container {
