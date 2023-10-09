@@ -1,12 +1,17 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 
 
-def handler404(request, exception):
-    """ Error Handler 404 - Page Not Found """
-    return render(request, "errors/404.html", status=404)
+# def handler404(request, exception):
+#     """ Error Handler 404 - Page Not Found """
+#     return render(request, "errors/404.html", status=404)
 
 
-#  https://github.com/davidcalikes/sensical.ie/blob/main/sensical/urls.py
-def error_view(request):
-    """ 500 Internal Server Error """
-    return render(request, "500.html")
+# #  https://github.com/davidcalikes/sensical.ie/blob/main/sensical/urls.py
+# def error_view(request):
+#     """ 500 Internal Server Error """
+#     return render(request, "errors/500.html", status=500)
+
+
+# def error_view_403(request, exception):
+#     """ 403 Unauthorized Action """
+#     return render(request, "errors/403_csrf.html", status=403)
