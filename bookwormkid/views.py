@@ -14,4 +14,4 @@ def error_view(request):
 
 def error_view_403(request, exception):
     """ 403 Unauthorized Action """
-    return render(request, "403_csrf.html", status=403)
+    return render(request, "403.html", status=403)
