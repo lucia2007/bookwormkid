@@ -21,8 +21,8 @@
                         aria-label="Takes the user to the detail page of the chosen book. A picture of the book is displayed.">
                         <img class="card-img-top img-fluid card-image" src="{{ product.image.url }}"
                             alt="{{ product.title }}">
-                        {% if product.new_arrival or product.feature_product or product.is_sale %}
                     </a>
+                    {% if product.new_arrival or product.feature_product or product.is_sale %}
                     <div class="specials-icons-card-detail">
                         {% if product.new_arrival %}
                         <img src="{% static 'images/new_arrivals_icon.svg' %}" class="specials-icons"
@@ -48,6 +48,11 @@
                         alt="{{ product.title }}">
                 </a>
                 {% endif %}
+                <div class="text-center my-3">
+                    <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Adds a product to wishlist"
+                        class="btn btn-outline-navy-reverse"><i class="fas fa-heart"> </i> Add To Wishlist
+                    </a>
+                </div>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
