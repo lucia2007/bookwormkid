@@ -1,28 +1,31 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="container header-container">
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container mb-2">
     <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
-<div class="container h-100 error-page-container">
-    <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
-            <h3 class="display-4 logo-font action-call text-black p-2">
-                We apologize, there is an internal error.
-            </h3>
-            <div class="my-5">
-                <div class="d-flex error-page-buttons">
-                    <a class="btn btn-outline-navy rounded-0" href="{% url 'home' %}"
-                        aria-label="Takes the user to the home page.">Home</a>
-                    <a href="{% url 'products' %}" aria-label="Takes the user to view all the products."
-                        class="btn btn-outline-navy rounded-0">
-                        Back to store
-                    </a>
-                </div>
-            </div>
+        <div class="col">
+            <h2 class="logo-font mb-4 text-center mt-5">Error Page - 500</h2>
+            <hr>
         </div>
     </div>
 </div>
+<div class="col-12">
+    <p class="text-muted mb-5 text-center">Sorry, there is an internal error.</p>
+</div>
+<div class="my-5">
+    <div class="d-flex error-page-buttons justify-content-center">
+        <a class="btn btn-outline-navy rounded-0" href="{% url 'home' %}"
+            aria-label="Takes the user to the home page">Home</a>
+        <a href="{% url 'products' %}" aria-label="Takes the user to view all the products."
+            class="btn btn-outline-navy rounded-0">
+            Back to store
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
 {% endblock %}
