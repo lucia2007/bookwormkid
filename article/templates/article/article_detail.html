@@ -75,14 +75,6 @@
                     {% endif %}
                     <span class="text-secondary">{{ article.number_of_likes}}</span>
                 </div>
-                {% if request.user.is_superuser %}
-                <small>
-                    <a href="{% url 'edit_article' article.slug %}"
-                        aria-label="Takes the user to edit the article">Edit</a> |
-                    <a href="{% url 'delete_article' article.slug %}" class="text-danger"
-                        aria-label="Lets the user delete article">Delete</a>
-                </small>
-                {% endif %}
                 <div class="col-12 pl-0">
                     <a href="{% url 'articles' %}" target="_blank" class="btn btn-outline-navy rounded-0 mt-5">
                         <span class="icon">
