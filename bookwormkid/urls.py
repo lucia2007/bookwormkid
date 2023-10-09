@@ -35,6 +35,8 @@ urlpatterns = [
     path('wishlist/', include('wishlist.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+
+handler403 = 'bookwormkid.views.error_view_403'
 handler404 = 'bookwormkid.views.handler404'
 # https://github.com/davidcalikes/sensical.ie/blob/main/sensical/urls.py
-handler500 = "bookwormkid.views.error_view"
+handler500 = 'bookwormkid.views.error_view'
