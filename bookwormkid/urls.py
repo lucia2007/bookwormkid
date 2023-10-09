@@ -16,7 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
-from .views import handler404, error_view
+from .views import handler404, error_view, error_view_403
+# from django.conf.urls import handler500, handler403
 from django.conf.urls.static import static
 
 urlpatterns = [
@@ -36,7 +37,7 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
-# handler403 = 'bookwormkid.views.error_view_403'
-# handler404 = 'bookwormkid.views.handler404'
-# # https://github.com/davidcalikes/sensical.ie/blob/main/sensical/urls.py
-# handler500 = 'bookwormkid.views.error_view'
+handler403 = 'bookwormkid.views.error_view_403'
+handler404 = 'bookwormkid.views.handler404'
+# https://github.com/davidcalikes/sensical.ie/blob/main/sensical/urls.py
+handler500 = 'bookwormkid.views.error_view'
