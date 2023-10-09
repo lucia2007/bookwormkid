@@ -6,12 +6,10 @@ def handler404(request, exception):
     return render(request, "404.html", status=404)
 
 
-#  https://github.com/davidcalikes/sensical.ie/blob/main/sensical/urls.py
-def error_view(request):
-    """ 500 Internal Server Error """
-    return render(request, "500.html", status=500)
-
-
-def error_view_403(request, exception):
-    """ 403 Unauthorized Action """
-    return render(request, "403.html", status=403)
+def handler403(request, exception):
+    """ Rendering 403 and 500 error pages """
+    if isinstance(exception, PermissionDenied):
+        return render(request, '403.html', status=403)
+    else:
+        # Handle unexpected erros with a generic 500 error page
+        return render(request, '500.html', status=500)
