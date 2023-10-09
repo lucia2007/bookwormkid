@@ -37,7 +37,7 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
-handler403 = 'bookwormkid.views.handler403'
-handler404 = 'bookwormkid.views.handler404'
+# handler403 = 'bookwormkid.views.handler403'
+# handler404 = 'bookwormkid.views.handler404'
 # https://github.com/davidcalikes/sensical.ie/blob/main/sensical/urls.py
 # handler500 = 'bookwormkid.views.error_view'
