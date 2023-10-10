@@ -3,6 +3,7 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
+from django.utils import timezone
 
 from django_countries.fields import CountryField
 
@@ -41,6 +42,7 @@ class Order(models.Model):
     stripe_pid = models.CharField(
         max_length=254, null=False, blank=False, default=''
         )
+    created_on = models.DateTimeField(default=timezone.now)
 
     def _generate_order_number(self):
         """
@@ -69,6 +71,10 @@ class Order(models.Model):
         if not self.order_number:
             self.order_number = self._generate_order_number()
         super().save(*args, **kwargs)
+
+    class Meta:
+        """ Order orders from newest to oldest """
+        ordering = ['-created_on']
 
     def __str__(self):
         return self.order_number
