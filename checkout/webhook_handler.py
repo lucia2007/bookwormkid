@@ -9,8 +9,9 @@ from profiles.models import UserProfile
 
 import json
 import time
-
+import logging
 import stripe
+
 
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
@@ -28,12 +29,16 @@ class StripeWH_Handler:
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
 
-        send_mail(
-            subject,
-            body,
-            settings.DEFAULT_FROM_EMAIL,
-            [cust_email]
-        )
+        try:
+            send_mail(
+                subject,
+                body,
+                settings.DEFAULT_FROM_EMAIL,
+                [cust_email]
+            )   
+        except Exception as e:
+            print(e)
+            logging.error(e)
 
     def handle_event(self, event):
         """
@@ -150,7 +155,7 @@ class StripeWH_Handler:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
-        self._send_confirmation_email(order)    
+        self._send_confirmation_email(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
