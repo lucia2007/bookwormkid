@@ -22,6 +22,10 @@ main {
     left: -110px;
 }
 
+.dropdown-menu-search {
+    left: 0px;
+}
+
 .girl-reading {
     height: 100vh;
 }
