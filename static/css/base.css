@@ -401,11 +401,6 @@ input[name='q']::placeholder {
 }
 
 /* Error pages */
-.error-page-container {
-    margin-top: 150px;
-    margin-left: 10px;
-}
-
 .error-page-buttons {
     gap: 3px;
 }
@@ -472,10 +467,6 @@ a.text-reset {
     .display-4.logo-font.text-black {
         font-size: 2rem;
         padding: 0.5rem;
-    }
-
-    .dropdown-menu {
-        left: 5px;
     }
 
     .bag-container {
