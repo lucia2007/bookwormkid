@@ -103,7 +103,7 @@ main {
 }
 
 .action-call-container {
-    margin-top: 650px;
+    margin-top: 350px;
 }
 
 .action-call {
@@ -554,6 +554,9 @@ a.text-reset {
         font-size: 2rem;
     }
 
+    .action-call-container {
+        margin-top: 250px;
+    }
 }
 
 @media (min-width: 1675px) {
@@ -563,7 +566,7 @@ a.text-reset {
     }
 
     .action-call-container {
-        margin-top: 450px;
+        margin-top: 400px;
     }
 
     footer {
