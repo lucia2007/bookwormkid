@@ -53,8 +53,12 @@
                             <small>
                                 <a href="{% url 'edit_article' article.slug %}"
                                     aria-label="Takes the user to edit the article">Edit</a> |
-                                <a href="{% url 'delete_article' article.slug %}" class="text-danger"
-                                    aria-label="Lets the user delete article">Delete</a>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="text-danger border-0 bg-white" data-toggle="modal"
+                                    data-target="#articleModal_{{ article.slug }}">
+                                    Delete
+                                </button>
+                                {% include 'article/includes/article_deletion.html' %}
                             </small>
                             {% endif %}
                         </div>
