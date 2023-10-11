@@ -24,16 +24,19 @@
             <hr class="w-50 mb-1">
         </div>
     </div>
-    <div class="row text-center">
+    <div class="row text-center mt-2">
         <div class="col-12">
-            <a href="{% url 'six_to_eight' %}" aria-label="Adds a product to wishlist"
+            <a href="{% url 'six_to_eight' %}" aria-label="Filters books for kids 6-8"
                 class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 6-8
             </a>
-            <a href="{% url 'nine_to_ten' %}" aria-label="Adds a product to wishlist"
+            <a href="{% url 'nine_to_ten' %}" aria-label="Filters books for kids 9-10"
                 class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 9-10
             </a>
-            <a href="{% url 'eleven_to_twelve' %}" aria-label="Adds a product to wishlist"
+            <a href="{% url 'eleven_to_twelve' %}" aria-label="Filters books for kids 11-12"
                 class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 11-12
+            </a>
+            <a href="{% url 'products' %}" aria-label="Show all products" class="btn btn-outline-navy-reverse"><i
+                    class="fa-solid fa-child"> </i> All
             </a>
         </div>
     </div>
