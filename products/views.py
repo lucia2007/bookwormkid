@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import PermissionDenied
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
@@ -75,6 +76,60 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def six_to_eight(request):
+    """ A view to return the 6-8 page """
+    six_to_eight = Product.objects.filter(by_age='6-8')
+    categories = None
+
+    if 'category' in request.GET:
+        categories = request.GET['category'].split(',')
+        products = products.filter(category__name__in=categories)
+        categories = Category.objects.filter(name__in=categories)
+
+    context = {
+        'six_to_eight': six_to_eight,
+        'current_categories': categories,
+    }
+
+    return render(request, 'products/six_to_eight.html', context)
+
+
+def nine_to_ten(request):
+    """ A view to return the 6-8 page """
+    nine_to_ten = Product.objects.filter(by_age='9-10')
+    categories = None
+
+    if 'category' in request.GET:
+        categories = request.GET['category'].split(',')
+        products = products.filter(category__name__in=categories)
+        categories = Category.objects.filter(name__in=categories)
+
+    context = {
+        'nine_to_ten': nine_to_ten,
+        'current_categories': categories,
+    }
+
+    return render(request, 'products/nine_to_ten.html', context)
+
+
+def eleven_to_twelve(request):
+    """ A view to return the 6-8 page """
+    eleven_to_twelve = Product.objects.filter(by_age='11-12')
+    categories = None
+
+    if 'category' in request.GET:
+        categories = request.GET['category'].split(',')
+        products = products.filter(category__name__in=categories)
+        categories = Category.objects.filter(name__in=categories)
+
+    context = {
+        'eleven_to_twelve': eleven_to_twelve,
+        'current_categories': categories,
+    }
+
+    return render(request, 'products/eleven_to_twelve.html', context)
 
 
 def new_arrivals(request):
@@ -166,9 +221,10 @@ def edit_product(request, product_id):
             messages.success(request, 'Product successfully updated!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request,
-                            'Failed to update product. Please check the form inputs.'
-                            )
+            messages.error(
+                request,
+                'Failed to update product. Please check the form inputs.'
+                          )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.title}')
