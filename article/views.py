@@ -56,6 +56,7 @@ def edit_article(request, slug):
     context = {
         'form': form,
         'article': article,
+        'on_page': True,
     }
 
     return render(request, 'article/edit_article.html', context)
@@ -74,7 +75,12 @@ def delete_article(request, slug):
     article.delete()
     messages.success(request,
                      f'Article - { article.title } was deleted successfully.')
-    return redirect(reverse('articles'))
+
+    context = {
+        'on_page': True,
+    }
+
+    return redirect(reverse('articles'), context)
 
 
 @login_required

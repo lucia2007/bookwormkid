@@ -201,6 +201,7 @@ def add_product(request):
     template = 'products/add_product.html'
     context = {
         'form': form,
+        'on_page': True,
     }
 
     return render(request, template, context)
@@ -233,6 +234,7 @@ def edit_product(request, product_id):
     context = {
         'form': form,
         'product': product,
+        'on_page': True,
     }
 
     return render(request, template, context)
@@ -248,4 +250,9 @@ def delete_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product was deleted.')
-    return redirect(reverse('products'))
+
+    context = {
+        'on_page': True,
+    }
+
+    return redirect(reverse('products'), context)

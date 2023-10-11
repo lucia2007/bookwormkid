@@ -37,7 +37,11 @@ def add_to_wishlist(request, product_id):
         messages.warning(
                          request,
                          f'You already have { product.title } in your wishlist.')
-        return redirect(reverse('products'))
+        context = {
+            'on_page': True,
+        }
+
+        return redirect(reverse('products'), context)
     else:
         wishlist_item = Wishlist.objects.create(
                                                 user_profile=user_profile,
@@ -47,7 +51,11 @@ def add_to_wishlist(request, product_id):
                          request,
                          f'You have successfully added { wishlist_item.product.title } to your wishlist.'
                          )
-        return redirect(reverse('wishlist'))
+        context = {
+            'on_page': True,
+        }
+
+        return redirect(reverse('wishlist'), context)
 
 
 @login_required
@@ -60,9 +68,14 @@ def remove_from_wishlist(request, product_id):
                                          user_profile=user_profile,
                                          product=product
                                          )
+
     wishlist_item.delete()
     messages.success(
-                        request,
-                        f'{product.title} was successfully removed from your wishlist.'
-                        )
-    return redirect(reverse('wishlist'))
+                     request,
+                     f'{product.title} was successfully removed from your wishlist.'
+                     )
+    context = {
+        'on_page': True,
+    }
+
+    return redirect(reverse('wishlist'), context)
