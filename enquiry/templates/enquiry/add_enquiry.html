@@ -24,11 +24,13 @@
             <form method="POST" action="{% url 'add_enquiry' %}" class="form mb-5" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <div class="text-right">
-                    <a class="btn btn-outline-navy rounded-0" href="{% url 'enquiries' %}"
-                        aria-label="Takes the user to all the books.">Cancel</a>
-                    <button class="btn btn-outline-navy rounded-0" type="submit">Add Enquiry</button>
-                </div>
+                <small>
+                    <div class="text-right">
+                        <a class="btn btn-outline-navy rounded-0" href="{% url 'enquiries' %}"
+                            aria-label="Takes the user to all the books.">Cancel</a>
+                        <button class="btn btn-outline-navy rounded-0" type="submit">Add Enquiry</button>
+                    </div>
+                </small>
             </form>
         </div>
     </div>
