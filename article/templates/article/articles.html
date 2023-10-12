@@ -31,11 +31,11 @@
                     <div class="card mb-4 h-100">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in article.featured_image.url %}
-                                <img src="{{ MEDIA_URL }}noimage.png" alt="No image provided" class="card-img-top">
-                                {% else %}
+                                {% if article.image %}
                                 <img src=" {{ article.image.url }}" alt=" {{article.image_description }}"
                                     class=" card-img-top">
+                                {% else %}
+                                <img src="{{ MEDIA_URL }}noimage.png" alt="No image provided" class="card-img-top">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class=" fs-sm">Author: {{ article.author }}</p>
