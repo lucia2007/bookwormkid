@@ -316,6 +316,14 @@ input[name='q']::placeholder {
     font-size: 0.8rem !important;
 }
 
+/* Article */
+.delete_article,
+.delete-product {
+    background: #EDFFD9;
+}
+
+
+
 /* Admin Product Form */
 .btn-file {
     position: relative;
@@ -397,7 +405,6 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content a {
     color: #17a2b8;
-    /* text-info */
 }
 
 /* Error pages */

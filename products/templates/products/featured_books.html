@@ -100,8 +100,12 @@
                                     <small class="ml-3">
                                         <a href="{% url 'edit_product' product.id %}"
                                             aria-label="Takes the user to edit_product page">Edit</a> |
-                                        <a href="{% url 'delete_product' product.id %}" class="text-danger"
-                                            aria-label="Takes the user to delete_product page">Delete</a>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="text-danger border-0 bg-white" data-toggle="modal"
+                                            data-target="#bookModal_{{ product.id }}">
+                                            Delete
+                                        </button>
+                                        {% include 'products/includes/product_deletion.html' %}
                                     </small>
                                     {% endif %}
                                 </div>
