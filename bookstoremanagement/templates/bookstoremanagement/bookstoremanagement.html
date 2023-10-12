@@ -56,5 +56,24 @@
             </div>
         </div>
     </div>
+    <div class="col text-center mt-3 pt-3">
+        <h4 class="logo-font">FAQ Management</h4>
+        <hr class="w-50 mb-1">
+        <div class="row text-center mt-2">
+            <div class="col-12">
+                <a href="{% url 'add_enquiry' %}" aria-label="Filters books for kids 6-8"
+                    class="btn btn-outline-navy-reverse"><i class="fa-solid fa-plus"> </i> Add an Enquiry
+                </a>
+                <a href="{% url 'articles' %}"
+                    aria-label="Takes the admin to all articles where they can choose which article to edit"
+                    class="btn btn-outline-navy-reverse"><i class="fa-solid fa-pen-to-square"> </i> Edit an Enquiry
+                </a>
+                <a href="{% url 'articles' %}"
+                    aria-label="Takes the admin to all articles where they can choose which article to delete"
+                    class="btn btn-outline-navy-reverse"><i class="fa-solid fa-trash"> </i> Delete an Enquiry
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

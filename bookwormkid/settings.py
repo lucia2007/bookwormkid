@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'contact',
     'wishlist',
     'bookstoremanagement',
+    'enquiry',
 
     # Other
     'crispy_forms',
