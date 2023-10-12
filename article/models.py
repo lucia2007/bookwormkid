@@ -14,7 +14,7 @@ class Article(models.Model):
         default=1
         )
     author = models.CharField(max_length=200)
-    image = models.ImageField(null=True, blank=True, default='placeholder')
+    image = models.ImageField(null=True, blank=True)
     image_description = models.CharField(
         max_length=100, default="no description provided"
         )
