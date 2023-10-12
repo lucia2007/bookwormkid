@@ -23,13 +23,13 @@
             <div class="image-container my-5">
                 {% if article.image %}
                 <a href="{% url 'article_detail' article.slug %}"
-                    aria-label="Takes the user to the detail page of the chosen book. A picture of the book is displayed.">
+                    aria-label="Takes the user to the detail page of the chosen article. A picture of the article is displayed.">
                     <img class="card-img-top img-fluid card-image" src="{{ article.image.url }}"
                         alt="{{ article.title }}">
                 </a>
                 {% else %}
                 <a href="{% url 'article_detail' atricle.slug %}"
-                    aria-label="Takes the user to the detail page of the chosen book. Noimage substitute picture is displayed.">
+                    aria-label="Takes the user to the detail page of the chosen article. Noimage substitute picture is displayed.">
                     <img class="card-img-top img-fluid card-image" src="{{ MEDIA_URL }}noimage.png"
                         alt="{{ article.title }}">
                 </a>
@@ -46,7 +46,7 @@
                     <a href="{% url 'edit_article' article.slug %}"
                         aria-label="Takes the user to edit the article">Edit</a> |
                     <!-- Button trigger modal -->
-                    <button type="button" class="text-danger border-0 bg-white" data-toggle="modal"
+                    <button type="button" class="text-danger border-0 delete_article" data-toggle="modal"
                         data-target="#articleModal_{{ article.slug }}">
                         Delete
                     </button>
