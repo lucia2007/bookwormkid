@@ -34,7 +34,7 @@
         <div class="dropdown-menu border-0" aria-labelledby="user-options">
             {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-            <a href="{% url 'add_product' %}" aria-label="Takes the admin to bookstore management page."
+            <a href="{% url 'bookstoremanagement' %}" aria-label="Takes the admin to bookstore management page."
                 class="dropdown-item">Bookstore Management</a>
             {% endif %}
             <a href="{% url 'profile' %}" aria-label="Takes the user to their profile." class="dropdown-item">My

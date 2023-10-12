@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3 pt-3">
+            <h2 class="logo-font">Bookstore Management</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="col text-center mt-3 pt-3">
+        <h4 class="logo-font">Product Management</h4>
+        <hr class="w-50 mb-1">
+        <div class="row text-center mt-2">
+            <div class="col-12">
+                <a href="{% url 'add_product' %}" aria-label="Filters books for kids 6-8"
+                    class="btn btn-outline-navy-reverse"><i class="fa-solid fa-plus"> </i> Add Product
+                </a>
+                <a href="{% url 'products' %}"
+                    aria-label="Takes the admin to all articles where they can choose which product to edit"
+                    class="btn btn-outline-navy-reverse"><i class="fa-solid fa-pen-to-square"> </i> Edit Product
+                </a>
+                <a href="{% url 'products' %}"
+                    aria-label="Takes the admin to all articles where they can choose which product to delete"
+                    class="btn btn-outline-navy-reverse"><i class="fa-solid fa-trash"> </i> Delete Product
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col text-center mt-3 pt-3">
+        <h4 class="logo-font">Article Management</h4>
+        <hr class="w-50 mb-1">
+        <div class="row text-center mt-2">
+            <div class="col-12">
+                <a href="{% url 'add_article' %}" aria-label="Filters books for kids 6-8"
+                    class="btn btn-outline-navy-reverse"><i class="fa-solid fa-plus"> </i> Add Article
+                </a>
+                <a href="{% url 'articles' %}"
+                    aria-label="Takes the admin to all articles where they can choose which article to edit"
+                    class="btn btn-outline-navy-reverse"><i class="fa-solid fa-pen-to-square"> </i> Edit Article
+                </a>
+                <a href="{% url 'articles' %}"
+                    aria-label="Takes the admin to all articles where they can choose which article to delete"
+                    class="btn btn-outline-navy-reverse"><i class="fa-solid fa-trash"> </i> Delete Article
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
