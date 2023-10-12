@@ -1,4 +1,9 @@
-from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.shortcuts import (
+                              render,
+                              get_object_or_404,
+                              reverse,
+                              redirect)
+from django.urls import reverse_lazy
 from .models import Article
 from django.http import HttpResponseRedirect
 from django.core.exceptions import PermissionDenied
@@ -36,6 +41,34 @@ def article_detail(request, slug, *args, **kwargs):
 
     return render(request, 'article/article_detail.html', context)
 
+
+@login_required
+def add_article(request):
+    """ Add a new article """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owner can add new articles.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ArticleForm(request.POST, request.FILES)
+        if form.is_valid():
+            article = form.save()
+            messages.success(request, "Article was added successfully.")
+            return redirect(reverse_lazy('article_detail', args=[article.slug]))
+        else:
+            messages.error(request,
+                           'Article was not added. Correct the form inputs.'
+                           )
+    else:
+        form = ArticleForm()
+
+    template = 'article/add_article.html'
+    context = {
+        'form': form,
+        'on_page': True
+    }
+
+    return render(request, template, context)
 
 @login_required
 def edit_article(request, slug):
