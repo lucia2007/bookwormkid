@@ -15,7 +15,7 @@ from .forms import ArticleForm
 
 def all_articles(request):
     """ A view to return all articles """
-    articles = Article.objects.all()
+    articles = Article.objects.all().filter(status=1)
 
     context = {
         'articles': articles,
