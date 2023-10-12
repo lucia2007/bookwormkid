@@ -42,4 +42,9 @@ def contact(request):
                 )
     else:
         form = ContactForm()
-    return render(request, "contact/contact.html", {'form': form})
+
+    context = {
+        'form': form,
+        'on_page': True,
+    }
+    return render(request, "contact/contact.html", context)

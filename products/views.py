@@ -193,8 +193,8 @@ def add_product(request):
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request,
-                            'Product was not added. Correct the form inputs.'
-                            )
+                           'Product was not added. Correct the form inputs.'
+                           )
     else:
         form = ProductForm()
 
