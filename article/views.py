@@ -83,7 +83,7 @@ def edit_article(request, slug):
             form.save()
             messages.success(request,
                              f"Article {article.title} has been updated.")
-            return redirect('article_detail', slug=slug)
+            return redirect('articles')
     else:
         form = ArticleForm(instance=article)
     context = {
