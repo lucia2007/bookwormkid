@@ -16,7 +16,10 @@ from .forms import EnquiryForm
 
 def all_enquiries(request):
     """ A view to return all enquiries """
-    enquiries = Enquiry.objects.all().filter(status=1)
+    if request.user.is_superuser:
+        enquiries = Enquiry.objects.all().filter
+    else:
+        enquiries = Enquiry.objects.all().filter(status=1)
 
     context = {
         'enquiries': enquiries,
