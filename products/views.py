@@ -47,9 +47,18 @@ def all_products(request):
             new = request.GET['new']
             products = products.filter(new_arrival=True)
 
-        if 'new' in request.GET:
-            new = request.GET['new']
-            products = products.filter(new_arrival=True)
+        if 'sale' in request.GET:
+            sale = request.GET['sale']
+            products = Product.objects.filter(is_sale=True)
+
+        if 'featured' in request.GET:
+            featured = request.GET['featured']
+            products = Product.objects.filter(feature_product=True)
+
+        if 'specials' in request.GET:
+            criteria = Q(new_arrival=True) | Q(feature_product=True) | Q(is_sale=True)
+            specials = request.GET['specials']
+            products = Product.objects.filter(criteria)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -88,41 +97,6 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
-
-
-def featured_books(request):
-    """ Display special feature books """
-    special_feature_books = Product.objects.filter(feature_product=True)
-
-    context = {
-        "special_feature_books": special_feature_books
-    }
-
-    return render(request, 'products/featured_books.html', context)
-
-
-def on_sale(request):
-    """ Display books which are on sale """
-    on_sale_books = Product.objects.filter(is_sale=True)
-
-    context = {
-        "on_sale_books": on_sale_books
-    }
-
-    return render(request, 'products/on_sale.html', context)
-
-
-def all_specials(request):
-    """ Display all specials (new arrivals, featured, sale) """
-    criteria = Q(new_arrival=True) | Q(feature_product=True) | Q(is_sale=True)
-
-    all_specials_books = Product.objects.filter(criteria)
-
-    context = {
-        "all_specials_books": all_specials_books
-    }
-
-    return render(request, 'products/all_specials.html', context)
 
 
 @login_required
