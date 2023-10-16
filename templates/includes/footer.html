@@ -70,7 +70,7 @@
                               aria-label="Takes user to all products page.">PRODUCTS</a>
                       </p>
                       <p>
-                          <a href="{% url 'all_specials' %}" class="text-reset"
+                          <a href="{% url 'products' %}?specials" class="text-reset"
                               aria-label="Takes user to special offers">SPECIAL OFFERS</a>
                       </p>
                       <p>
@@ -109,6 +109,37 @@
                       <p><i class="fas fa-phone me-3 text-white"></i> + 420 775 371 859</p>
                   </div>
                   <!-- Grid column -->
+                  <p>
+                      <a class="btn btn-outline-navy" data-toggle="collapse" href="#collapseExample" role="button"
+                          aria-expanded="false" aria-controls="collapseExample">
+                          Help
+                      </a>
+                      <!-- <button class="btn btn-primary" type="button" data-toggle="collapse"
+                          data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                          Button with data-target
+                      </button> -->
+                  </p>
+                  <div class="collapse" id="collapseExample">
+                      <div class="card card-body">
+                          <p>
+                              <a href="{% url 'enquiries' %}" class="text-black"
+                                  aria-label="Takes user back to frequently asked questions">FAQ</a>
+                          </p>
+                          <p>
+                              <a href="" class="text-reset" aria-label="Takes user to the privacy policy.">PRIVACY
+                                  POLICY</a>
+                          </p>
+                          <p>
+                              <a href="" class="text-reset" aria-label="Takes user to the terms of use.">TERMS OF
+                                  USE</a>
+                          </p>
+                          <p>
+                              <a href="{% url 'enquiries' %}#faq" class="text-reset"
+                                  aria-label="Takes user to shipping information.">SHIPPING
+                                  INFO</a>
+                          </p>
+                      </div>
+                  </div>
               </div>
               <!-- Grid row -->
           </div>
