@@ -39,6 +39,10 @@ def all_products(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
+        if 'age' in request.GET:
+            age = request.GET['age']
+            products = products.filter(by_age=age)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -76,24 +80,6 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
-
-
-def six_to_eight(request):
-    """ A view to return the 6-8 page """
-    six_to_eight = Product.objects.filter(by_age='6-8')
-    categories = None
-
-    if 'category' in request.GET:
-        categories = request.GET['category'].split(',')
-        products = products.filter(category__name__in=categories)
-        categories = Category.objects.filter(name__in=categories)
-
-    context = {
-        'six_to_eight': six_to_eight,
-        'current_categories': categories,
-    }
-
-    return render(request, 'products/six_to_eight.html', context)
 
 
 def nine_to_ten(request):
