@@ -82,42 +82,6 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
-def nine_to_ten(request):
-    """ A view to return the 6-8 page """
-    nine_to_ten = Product.objects.filter(by_age='9-10')
-    categories = None
-
-    if 'category' in request.GET:
-        categories = request.GET['category'].split(',')
-        products = products.filter(category__name__in=categories)
-        categories = Category.objects.filter(name__in=categories)
-
-    context = {
-        'nine_to_ten': nine_to_ten,
-        'current_categories': categories,
-    }
-
-    return render(request, 'products/nine_to_ten.html', context)
-
-
-def eleven_to_twelve(request):
-    """ A view to return the 6-8 page """
-    eleven_to_twelve = Product.objects.filter(by_age='11-12')
-    categories = None
-
-    if 'category' in request.GET:
-        categories = request.GET['category'].split(',')
-        products = products.filter(category__name__in=categories)
-        categories = Category.objects.filter(name__in=categories)
-
-    context = {
-        'eleven_to_twelve': eleven_to_twelve,
-        'current_categories': categories,
-    }
-
-    return render(request, 'products/eleven_to_twelve.html', context)
-
-
 def new_arrivals(request):
     """ Display all new arrivals """
     new_arrivals_books = Product.objects.filter(new_arrival=True)
