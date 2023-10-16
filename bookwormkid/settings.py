@@ -27,8 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = True
 
 ALLOWED_HOSTS = ['bookwormkid-c20568b2004e.herokuapp.com', 'localhost', '8000-lucia2007-bookwormkid-kzzr8bsd1y0.ws-eu105.gitpod.io']
 
@@ -150,7 +150,7 @@ WSGI_APPLICATION = 'bookwormkid.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL', ''))
     }
 else:
     DATABASES = {
