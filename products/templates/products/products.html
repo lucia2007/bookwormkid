@@ -37,18 +37,19 @@
     <div class="row text-center mt-2">
         <div class="col-12">
             <a href="{% url 'products' %}?category={{ c }}&age=6-8"
-                aria-label="Filters books for kids 6-8 & current category" class="btn btn-outline-navy-reverse"><i
+                aria-label="Filters books for kids 6-8 & {{ c }} skill level" class="btn btn-outline-navy-reverse"><i
                     class="fa-solid fa-child"> </i> 6-8
             </a>
             <a href="{% url 'products' %}?category={{ c }}&age=9-10"
-                aria-label="Filters books for kids 9-10 & current category" class="btn btn-outline-navy-reverse"><i
+                aria-label="Filters books for kids 9-10 & {{ c }} skill level" class="btn btn-outline-navy-reverse"><i
                     class="fa-solid fa-child"> </i> 9-10
             </a>
             <a href="{% url 'products' %}?category={{ c }}&age=11-12"
-                aria-label="Filters books for kids 11-12 & current category" class="btn btn-outline-navy-reverse"><i
+                aria-label="Filters books for kids 11-12 & {{ c }} skill level" class="btn btn-outline-navy-reverse"><i
                     class="fa-solid fa-child"> </i> 11-12
             </a>
-            <a href="{% url 'products' %}?category={{ c }}" aria-label="Show all products from the current category"
+            <a href="{% url 'products' %}?category={{ c }}"
+                aria-label="Show all products from the current category skill level"
                 class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> All {{ c }}
             </a>
         </div>
@@ -228,13 +229,13 @@
                                         {% if product.category.name == "Reluctant" %}
                                         <img class="mt-1 mb-1 category-icon-image"
                                             src="{% static 'images/reluctant.svg' %}"
-                                            alt="An icon of basic skill level">
+                                            alt="An icon of basic skill level - Reluctant reader">
                                         {% elif product.category.name == "Keen" %}
                                         <img class="mt-1 mb-1 category-icon-image" src="{% static 'images/keen.svg' %}"
-                                            alt="An icon of an intermediate skill level">
+                                            alt="An icon of an intermediate skill level - Keen reader">
                                         {% elif product.category.name == "Avid" %}
                                         <img class="mt-1 mb-1 category-icon-image" src="{% static 'images/avid.svg' %}"
-                                            alt="An icon of an advanced skill level">
+                                            alt="An icon of an advanced skill level - Avid reader">
                                         {% endif %}
                                         <span class="text-black mt-1 pl-1">
                                             <a class="text-black text-decoration-none"
@@ -254,7 +255,8 @@
                                     {% if request.user.is_superuser %}
                                     <small class="ml-3">
                                         <a href="{% url 'edit_product' product.id %}"
-                                            aria-label="Takes the user to edit_product page">Edit</a> |
+                                            aria-label="Takes the user to edit_product page"
+                                            class="edit-button">Edit</a> |
                                         <!-- Button trigger modal -->
                                         <button type="button" class="text-danger border-0 bg-white" data-toggle="modal"
                                             data-target="#bookModal_{{ product.id }}">
@@ -277,7 +279,8 @@
                                 <input type="hidden" name="quantity" value="1" data-item_id="{{ product.id }}">
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </form>
-                            <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Adds a product to wishlist"
+                            <a href="{% url 'add_to_wishlist' product.id %}"
+                                aria-label="Adds a product to wishlist - Add to wishlist"
                                 class="btn btn-outline-navy-reverse"><i class="fas fa-heart"> </i> Add To Wishlist
                             </a>
                         </div>

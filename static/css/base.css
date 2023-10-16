@@ -296,6 +296,10 @@ input[name='q']::placeholder {
     position: relative;
 }
 
+.edit-button {
+    color: navy;
+}
+
 /* Shopping Bag */
 .bag-container {
     padding-left: 5px;
@@ -605,6 +609,6 @@ a.text-reset {
 
     footer {
         flex-shrink: 0;
-        font-size: 0.6em;
+        font-size: 0.7em;
     }
 }
