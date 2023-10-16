@@ -49,16 +49,21 @@ def all_products(request):
 
         if 'sale' in request.GET:
             sale = request.GET['sale']
-            products = Product.objects.filter(is_sale=True)
+            products = products.filter(is_sale=True)
+            products_on_sale = products
+
+            context = {
+                'products_on_sale': products_on_sale
+            }
 
         if 'featured' in request.GET:
             featured = request.GET['featured']
-            products = Product.objects.filter(feature_product=True)
+            products = products.filter(feature_product=True)
 
         if 'specials' in request.GET:
             criteria = Q(new_arrival=True) | Q(feature_product=True) | Q(is_sale=True)
             specials = request.GET['specials']
-            products = Product.objects.filter(criteria)
+            products = products.filter(criteria)
 
         if 'q' in request.GET:
             query = request.GET['q']

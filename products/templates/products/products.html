@@ -20,6 +20,8 @@
             <h2 class="logo-font">Featured Products</h2>
             {% elif request.GET.sale %}
             <h2 class="logo-font">On Sale</h2>
+            {% elif request.GET.specials %}
+            <h2 class="logo-font">All Specials</h2>
             {% elif request.resolver_match.url_name and not request.GET.category %}
             <h2 class="logo-font">All Books</h2>
             {% else %}
@@ -34,17 +36,20 @@
     {% for c in current_categories %}
     <div class="row text-center mt-2">
         <div class="col-12">
-            <a href="{% url 'products' %}?category={{ c }}&age=6-8" aria-label="Filters books for kids 6-8"
-                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 6-8
+            <a href="{% url 'products' %}?category={{ c }}&age=6-8"
+                aria-label="Filters books for kids 6-8 & current category" class="btn btn-outline-navy-reverse"><i
+                    class="fa-solid fa-child"> </i> 6-8
             </a>
-            <a href="{% url 'products' %}?category={{ c }}&age=9-10" aria-label="Filters books for kids 9-10"
-                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 9-10
+            <a href="{% url 'products' %}?category={{ c }}&age=9-10"
+                aria-label="Filters books for kids 9-10 & current category" class="btn btn-outline-navy-reverse"><i
+                    class="fa-solid fa-child"> </i> 9-10
             </a>
-            <a href="{% url 'products' %}?category={{ c }}&age=11-12" aria-label="Filters books for kids 11-12"
-                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 11-12
+            <a href="{% url 'products' %}?category={{ c }}&age=11-12"
+                aria-label="Filters books for kids 11-12 & current category" class="btn btn-outline-navy-reverse"><i
+                    class="fa-solid fa-child"> </i> 11-12
             </a>
-            <a href="{% url 'products' %}" aria-label="Show all products" class="btn btn-outline-navy-reverse"><i
-                    class="fa-solid fa-child"> </i> All
+            <a href="{% url 'products' %}?category={{ c }}" aria-label="Show all products from the current category"
+                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> All {{ c }}
             </a>
         </div>
     </div>
@@ -52,17 +57,70 @@
     {% elif request.GET.new %}
     <div class="row text-center mt-2">
         <div class="col-12">
-            <a href="{% url 'products' %}?new=True&age=6-8" aria-label="Filters books for kids 6-8"
+            <a href="{% url 'products' %}?new=True&age=6-8" aria-label="Filters books for kids 6-8 & new arrivals"
                 class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 6-8
             </a>
-            <a href="{% url 'products' %}?new=True&age=9-10" aria-label="Filters books for kids 9-10"
+            <a href="{% url 'products' %}?new=True&age=9-10" aria-label="Filters books for kids 9-10 & new arrivals"
                 class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 9-10
             </a>
-            <a href="{% url 'products' %}?new=True&age=11-12" aria-label="Filters books for kids 11-12"
+            <a href="{% url 'products' %}?new=True&age=11-12" aria-label="Filters books for kids 11-12 & new arrivals"
                 class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 11-12
             </a>
-            <a href="{% url 'products' %}" aria-label="Show all products" class="btn btn-outline-navy-reverse"><i
-                    class="fa-solid fa-child"> </i> All
+            <a href="{% url 'products' %}?new=True" aria-label="Show all new products"
+                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> All New
+            </a>
+        </div>
+    </div>
+    {% elif request.GET.featured %}
+    <div class="row text-center mt-2">
+        <div class="col-12">
+            <a href="{% url 'products' %}?featured=True&age=6-8" aria-label="Filters books for kids 6-8 & featured"
+                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 6-8
+            </a>
+            <a href="{% url 'products' %}?featured=True&age=9-10" aria-label="Filters books for kids 9-10 & featured"
+                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 9-10
+            </a>
+            <a href="{% url 'products' %}?featured=True&age=11-12" aria-label="Filters books for kids 11-12 & featured"
+                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 11-12
+            </a>
+            <a href="{% url 'products' %}?featured=True" aria-label="Show all featured products"
+                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> All Featured
+            </a>
+        </div>
+    </div>
+    {% elif request.GET.sale %}
+    <div class="row text-center mt-2">
+        <div class="col-12">
+            <a href="{% url 'products' %}?sale=True&age=6-8" aria-label="Filters books for kids 6-8 & sale"
+                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 6-8
+            </a>
+            <a href="{% url 'products' %}?sale=True&age=9-10" aria-label="Filters books for kids 9-10 & sale"
+                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 9-10
+            </a>
+            <a href="{% url 'products' %}?sale=True&age=11-12" aria-label="Filters books for kids 11-12 & sale"
+                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 11-12
+            </a>
+            <a href="{% url 'products' %}?sale=True" aria-label="Show all products on sale"
+                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> All On Sale
+            </a>
+        </div>
+    </div>
+    {% elif request.GET.specials %}
+    <div class="row text-center mt-2">
+        <div class="col-12">
+            <a href="{% url 'products' %}?specials=True&age=6-8" aria-label="Filters books for kids 6-8 & some special"
+                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 6-8
+            </a>
+            <a href="{% url 'products' %}?specials=True&age=9-10"
+                aria-label="Filters books for kids 9-10 & some special" class="btn btn-outline-navy-reverse"><i
+                    class="fa-solid fa-child"> </i> 9-10
+            </a>
+            <a href="{% url 'products' %}?specials=True&age=11-12"
+                aria-label="Filters books for kids 11-12 & some special" class="btn btn-outline-navy-reverse"><i
+                    class="fa-solid fa-child"> </i> 11-12
+            </a>
+            <a href="{% url 'products' %}?specials=True" aria-label="Show all products in specials"
+                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> All Specials
             </a>
         </div>
     </div>
@@ -246,6 +304,7 @@
                 </div>
                 {% endif %}
                 {% endfor %}
+                <!-- <p class="text-center">No books with specified criteria found.</p> -->
             </div>
         </div>
     </div>
