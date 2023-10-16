@@ -43,6 +43,14 @@ def all_products(request):
             age = request.GET['age']
             products = products.filter(by_age=age)
 
+        if 'new' in request.GET:
+            new = request.GET['new']
+            products = products.filter(new_arrival=True)
+
+        if 'new' in request.GET:
+            new = request.GET['new']
+            products = products.filter(new_arrival=True)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -80,17 +88,6 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
-
-
-def new_arrivals(request):
-    """ Display all new arrivals """
-    new_arrivals_books = Product.objects.filter(new_arrival=True)
-
-    context = {
-        "new_arrivals_books": new_arrivals_books
-    }
-
-    return render(request, 'products/new_arrivals.html', context)
 
 
 def featured_books(request):

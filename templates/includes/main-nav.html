@@ -51,7 +51,8 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="special-offers-link">
-                <a href="{% url 'new_arrivals' %}" aria-label="Takes the user new arrivals." class="dropdown-item">New
+                <a href="{% url 'products' %}?new=True" aria-label="Takes the user new arrivals."
+                    class="dropdown-item">New
                     Arrivals</a>
                 <a href="{% url 'featured_books' %}" aria-label="Takes the user to featured books."
                     class="dropdown-item">Featured Books</a>
