@@ -223,7 +223,22 @@
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold text-black">€{{ product.price }}</p>
+                                    {% if product.is_sale %}
+                                    <div class="d-flex justify-content-between">
+                                        <del>
+                                            <p class="lead mb-0 text-left font-weight-bold text-black">
+                                                €{{ product.price }}
+                                            </p>
+                                        </del>
+                                        <p class="lead mb-0 text-right font-weight-bold text-danger">
+                                            €{{ product.sale_price }}
+                                        </p>
+                                    </div>
+                                    {% else %}
+                                    <p class="lead mb-0 text-left font-weight-bold text-black">
+                                        €{{ product.final_price }}
+                                    </p>
+                                    {% endif %}
                                     {% if product.category %}
                                     <div class="category-icon d-flex align-items-end text-black">
                                         {% if product.category.name == "Reluctant" %}

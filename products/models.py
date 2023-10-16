@@ -57,5 +57,20 @@ class Product(models.Model):
     by_age= models.CharField(max_length=6, choices=[
         ("6-8", "6-8"), ("9-10", "9-10"), ("11-12", "11-12")])
 
+    # https://www.andreadiotallevi.com/blog/how-to-use-the-property-decorator-in-python-and-django
+    # Inspiration for final_price functionality https://github.com/Iris-Smok/JoyfulBookstore-PP5/blob/main/books/views.py
+    # To be able to user final_price as model attribute without having to add a new model field
+    @property
+    def final_price(self):
+        products = Product.objects.all()
+        for product in products:
+            try:
+                if self.is_sale and self.sale_price < self.price:
+                    return self.sale_price
+                else:
+                    return self.price
+            except (TypeError, ValueError):
+                return None
+
     def __str__(self):
         return self.title

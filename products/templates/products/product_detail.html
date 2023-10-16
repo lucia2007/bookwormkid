@@ -80,7 +80,22 @@
                 </div>
                 {% endif %}
                 <p class="mb-0"><i class="fa-solid fa-child"></i> {{ product.by_age }}</p>
-                <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                {% if product.is_sale %}
+                <div class="d-flex justify-content-between">
+                    <del>
+                        <p class="lead mb-0 text-left font-weight-bold text-black">
+                            €{{ product.price }}
+                        </p>
+                    </del>
+                    <p class="lead mb-0 text-right font-weight-bold text-danger">
+                        €{{ product.sale_price }}
+                    </p>
+                </div>
+                {% else %}
+                <p class="lead mb-0 text-left font-weight-bold text-black">
+                    €{{ product.final_price }}
+                </p>
+                {% endif %}
                 {% if product.rating %}
                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                 {% else %}

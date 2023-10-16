@@ -46,7 +46,22 @@
                     {{ wishlist_item.product.title }}</p>
                 <p class="mb-0"><i class="fa-solid fa-at"></i> {{ wishlist_item.product.author }}</p>
                 <p class="mb-0"><i class="fa-solid fa-child"></i> {{ wishlist_item.product.by_age }}</p>
-                <p class="lead mb-0 text-left font-weight-bold">€{{ wishlist_item.product.price }}</p>
+                {% if wishlist_item.product.is_sale %}
+                <div class="d-flex justify-content-between">
+                    <del>
+                        <p class="lead mb-0 text-left font-weight-bold text-black">
+                            €{{ wishlist_item.product.price }}
+                        </p>
+                    </del>
+                    <p class="lead mb-0 text-right font-weight-bold text-danger">
+                        €{{ wishlist_item.product.sale_price }}
+                    </p>
+                </div>
+                {% else %}
+                <p class="lead mb-0 text-left font-weight-bold text-black">
+                    €{{ wishlist_item.product.final_price }}
+                </p>
+                {% endif %}
                 {% if wishlist_item.product.new_arrival or wishlist_item.product.feature_product or wishlist_item.product.is_sale %}
                 <div class="specials-icons-card-detail">
                     {% if wishlist_item.product.new_arrival %}
