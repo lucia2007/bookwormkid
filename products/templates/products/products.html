@@ -24,16 +24,17 @@
             <hr class="w-50 mb-1">
         </div>
     </div>
-    {% if request.resolver_match.url_name and not request.GET.category %}
+    {% if request.GET.category %}
+    {% for c in current_categories %}
     <div class="row text-center mt-2">
         <div class="col-12">
-            <a href="{% url 'products' %}?age=6-8" aria-label="Filters books for kids 6-8"
+            <a href="{% url 'products' %}?category={{ c }}&age=6-8" aria-label="Filters books for kids 6-8"
                 class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 6-8
             </a>
-            <a href="{% url 'products' %}?age=9-10" aria-label="Filters books for kids 9-10"
+            <a href="{% url 'products' %}?category={{ c }}&age=9-10" aria-label="Filters books for kids 9-10"
                 class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 9-10
             </a>
-            <a href="{% url 'products' %}?age=11-12" aria-label="Filters books for kids 11-12"
+            <a href="{% url 'products' %}?category={{ c }}&age=11-12" aria-label="Filters books for kids 11-12"
                 class="btn btn-outline-navy-reverse"><i class="fa-solid fa-child"> </i> 11-12
             </a>
             <a href="{% url 'products' %}" aria-label="Show all products" class="btn btn-outline-navy-reverse"><i
@@ -41,6 +42,7 @@
             </a>
         </div>
     </div>
+    {% endfor %}
     {% endif %}
     <div class="row">
         <div class="product-container col-10 offset-1">
