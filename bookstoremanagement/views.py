@@ -4,10 +4,6 @@ from django.shortcuts import render
 def bookstoremanagement(request):
     """ A view to return the bookstoremanagement page """
 
-    context = {
-        'on_page': True,
-    }
-
     return render(
                   request,
                   'bookstoremanagement/bookstoremanagement.html',
