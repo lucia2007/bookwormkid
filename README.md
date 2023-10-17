@@ -156,6 +156,8 @@ In the first milestone my main goal was to get the project's framework set up an
 - [I Think, Therefor I Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/dabfed30d1fc4d078b6de270117dbe50/?child=first)
 - [Contact Form](https://ordinarycoders.com/blog/article/build-a-django-contact-form-with-email-backend)
 - [Read more/Read less buttons](https://codepen.io/joserick/pen/ooVPwR)
+- [Inspiration for final_price functionality](https://github.com/Iris-Smok/JoyfulBookstore-PP5/blob/main/books/views.py)
+- [Privacy Policy and Terms of Use by Termly](https://termly.io/products/terms-and-conditions-generator/)
 
 [Back to top](#contents)
 ## Media
