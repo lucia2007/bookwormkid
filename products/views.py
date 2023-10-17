@@ -87,6 +87,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'on_page': True,
     }
 
     return render(request, 'products/products.html', context)
@@ -99,6 +100,7 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
+        'on_page': True,
     }
 
     return render(request, 'products/product_detail.html', context)

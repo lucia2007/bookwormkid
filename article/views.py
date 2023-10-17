@@ -19,6 +19,7 @@ def all_articles(request):
 
     context = {
         'articles': articles,
+        'on_page': True,
     }
 
     return render(request, 'article/articles.html', context)
@@ -37,6 +38,7 @@ def article_detail(request, slug, *args, **kwargs):
     context = {
         'article': article,
         'liked': liked,
+        'on_page': True,
     }
 
     return render(request, 'article/article_detail.html', context)

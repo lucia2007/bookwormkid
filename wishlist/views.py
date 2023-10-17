@@ -18,7 +18,8 @@ def wishlist(request):
     customer_wishlist = Wishlist.objects.filter(user_profile=user_profile)
 
     context = {
-        'customer_wishlist': customer_wishlist
+        'customer_wishlist': customer_wishlist,
+        'on_page': True,
     }
 
     return render(request, 'wishlist/wishlist.html', context)
