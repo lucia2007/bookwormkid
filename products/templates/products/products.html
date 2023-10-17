@@ -59,16 +59,20 @@
     <div class="row text-center mt-2">
         <div class="col-12">
             <a href="{% url 'products' %}?new=True&age=6-8" aria-label="Filters books for kids 6-8 & new arrivals"
-                class="btn btn-outline-navy-reverse mt-2"><i class="fa-solid fa-child"> </i> 6-8
+                class="{% if request.get_full_path == '/products/?new=True&age=6-8' %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2 {% endif %}">
+                <i class="fa-solid fa-child"> </i> 6-8
             </a>
             <a href="{% url 'products' %}?new=True&age=9-10" aria-label="Filters books for kids 9-10 & new arrivals"
-                class="btn btn-outline-navy-reverse mt-2"><i class="fa-solid fa-child"> </i> 9-10
+                class="{% if request.get_full_path == '/products/?new=True&age=9-10' %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2 {% endif %}"><i
+                    class="fa-solid fa-child"> </i> 9-10
             </a>
             <a href="{% url 'products' %}?new=True&age=11-12" aria-label="Filters books for kids 11-12 & new arrivals"
-                class="btn btn-outline-navy-reverse mt-2"><i class="fa-solid fa-child"> </i> 11-12
+                class="{% if request.get_full_path == '/products/?new=True&age=11-12' %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2 {% endif %}"><i
+                    class="fa-solid fa-child"> </i> 11-12
             </a>
             <a href="{% url 'products' %}?new=True" aria-label="Show all new products"
-                class="btn btn-outline-navy-reverse mt-2"><i class="fa-solid fa-child"> </i> All New
+                class="{% if request.get_full_path == '/products/?new=True' %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2 {% endif %}"><i
+                    class="fa-solid fa-child"> </i> All New
             </a>
         </div>
     </div>
@@ -76,16 +80,20 @@
     <div class="row text-center mt-2">
         <div class="col-12">
             <a href="{% url 'products' %}?featured=True&age=6-8" aria-label="Filters books for kids 6-8 & featured"
-                class="btn btn-outline-navy-reverse mt-2"><i class="fa-solid fa-child"> </i> 6-8
+                class="{% if request.get_full_path == '/products/?featured=True&age=6-8' %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2{% endif %}">
+                <i class="fa-solid fa-child"></i> 6-8
             </a>
             <a href="{% url 'products' %}?featured=True&age=9-10" aria-label="Filters books for kids 9-10 & featured"
-                class="btn btn-outline-navy-reverse mt-2"><i class="fa-solid fa-child"> </i> 9-10
+                class="{% if request.get_full_path == '/products/?featured=True&age=9-10' %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2{% endif %}"><i
+                    class="fa-solid fa-child"> </i> 9-10
             </a>
             <a href="{% url 'products' %}?featured=True&age=11-12" aria-label="Filters books for kids 11-12 & featured"
-                class="btn btn-outline-navy-reverse mt-2"><i class="fa-solid fa-child"> </i> 11-12
+                class="{% if request.get_full_path == '/products/?featured=True&age=11-12' %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2{% endif %}"><i
+                    class="fa-solid fa-child"> </i> 11-12
             </a>
             <a href="{% url 'products' %}?featured=True" aria-label="Show all featured products"
-                class="btn btn-outline-navy-reverse mt-2"><i class="fa-solid fa-child"> </i> All Featured
+                class="{% if request.get_full_path == '/products/?featured=True' %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2{% endif %}"><i
+                    class="fa-solid fa-child"> </i> All Featured
             </a>
         </div>
     </div>
