@@ -38,22 +38,25 @@
         <div class="col-12">
             <a href="{% url 'products' %}?category={{ c }}&age=6-8"
                 aria-label="Filters books for kids 6-8 & {{ c }} skill level"
-                class="{% if '/products/?category='|add:c|add:'&age=6-8' in request.get_full_path %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2 {% endif %}">
+                {% if '/products/?category='|add:c|add:'&age=6-8' in request.get_full_path %}
+                class="btn btn-outline-navy mt-2" {% else %} class=" btn btn-outline-navy-reverse mt-2" {% endif %}>
                 <i class="fa-solid fa-child"> </i> 6-8
             </a>
             <a href="{% url 'products' %}?category={{ c }}&age=9-10"
                 aria-label="Filters books for kids 9-10 & {{ c }} skill level"
-                class="{% if '/products/?category='|add:c|add:'&age=9-10' in request.get_full_path %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2 {% endif %}"><i
-                    class="fa-solid fa-child"> </i> 9-10
+                {% if '/products/?category='|add:c|add:'&age=9-10' in request.get_full_path %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2" {% endif %}><i class="fa-solid fa-child"> </i> 9-10
             </a>
             <a href="{% url 'products' %}?category={{ c }}&age=11-12"
                 aria-label="Filters books for kids 11-12 & {{ c }} skill level"
-                class="{% if '/products/?category='|add:c|add:'&age=11-12' in request.get_full_path %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2 {% endif %}"><i
-                    class="fa-solid fa-child"> </i> 11-12
+                {% if '/products/?category='|add:c|add:'&age=11-12' in request.get_full_path %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2" {% endif %}><i class="fa-solid fa-child"> </i>
+                11-12
             </a>
             <a href="{% url 'products' %}?category={{ c }}"
                 aria-label="Show all products from the current category skill level"
-                class="{% if 'category' in request.get_full_path and not 'age' in request.get_full_path %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2 {% endif %}">
+                {% if 'category' in request.get_full_path and not 'age' in request.get_full_path %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2" {% endif %}>
                 <i class="fa-solid fa-child"></i> All {{ c }}
             </a>
         </div>
@@ -63,20 +66,24 @@
     <div class="row text-center mt-2">
         <div class="col-12">
             <a href="{% url 'products' %}?new=True&age=6-8" aria-label="Filters books for kids 6-8 & new arrivals"
-                class="{% if request.get_full_path == '/products/?new=True&age=6-8' %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2 {% endif %}">
+                {% if request.get_full_path == '/products/?new=True&age=6-8' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}>
                 <i class="fa-solid fa-child"> </i> 6-8
             </a>
             <a href="{% url 'products' %}?new=True&age=9-10" aria-label="Filters books for kids 9-10 & new arrivals"
-                class="{% if request.get_full_path == '/products/?new=True&age=9-10' %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2 {% endif %}"><i
-                    class="fa-solid fa-child"> </i> 9-10
+                {% if request.get_full_path == '/products/?new=True&age=9-10' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-child"> </i>
+                9-10
             </a>
             <a href="{% url 'products' %}?new=True&age=11-12" aria-label="Filters books for kids 11-12 & new arrivals"
-                class="{% if request.get_full_path == '/products/?new=True&age=11-12' %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2 {% endif %}"><i
-                    class="fa-solid fa-child"> </i> 11-12
+                {% if request.get_full_path == '/products/?new=True&age=11-12' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-child"> </i>
+                11-12
             </a>
             <a href="{% url 'products' %}?new=True" aria-label="Show all new products"
-                class="{% if request.get_full_path == '/products/?new=True' %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2 {% endif %}"><i
-                    class="fa-solid fa-child"> </i> All New
+                {% if request.get_full_path == '/products/?new=True' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-child"> </i> All
+                New
             </a>
         </div>
     </div>
@@ -84,20 +91,24 @@
     <div class="row text-center mt-2">
         <div class="col-12">
             <a href="{% url 'products' %}?featured=True&age=6-8" aria-label="Filters books for kids 6-8 & featured"
-                class="{% if request.get_full_path == '/products/?featured=True&age=6-8' %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2 {% endif %}">
+                {% if request.get_full_path == '/products/?featured=True&age=6-8' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}>
                 <i class="fa-solid fa-child"></i> 6-8
             </a>
             <a href="{% url 'products' %}?featured=True&age=9-10" aria-label="Filters books for kids 9-10 & featured"
-                class="{% if request.get_full_path == '/products/?featured=True&age=9-10' %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2 {% endif %}"><i
-                    class="fa-solid fa-child"> </i> 9-10
+                {% if request.get_full_path == '/products/?featured=True&age=9-10' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-child"> </i>
+                9-10
             </a>
             <a href="{% url 'products' %}?featured=True&age=11-12" aria-label="Filters books for kids 11-12 & featured"
-                class="{% if request.get_full_path == '/products/?featured=True&age=11-12' %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2 {% endif %}"><i
-                    class="fa-solid fa-child"> </i> 11-12
+                {% if request.get_full_path == '/products/?featured=True&age=11-12' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-child"> </i>
+                11-12
             </a>
             <a href="{% url 'products' %}?featured=True" aria-label="Show all featured products"
-                class="{% if request.get_full_path == '/products/?featured=True' %}btn btn-outline-navy mt-2{% else %} btn btn-outline-navy-reverse mt-2 {% endif %}"><i
-                    class="fa-solid fa-child"> </i> All Featured
+                {% if request.get_full_path == '/products/?featured=True' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-child"> </i> All
+                Featured
             </a>
         </div>
     </div>
