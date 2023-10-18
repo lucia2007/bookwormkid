@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
-from django.db.models import Q
+from django.db.models import Case, DecimalField, F, Q, Value, When
 from django.db.models.functions import Lower
 from .models import Product, Category
 
@@ -27,12 +27,15 @@ def all_products(request):
                 products = products.annotate(lower_name=Lower('title'))
             if sortkey == "category":
                 sortkey = 'category__name'
+            # https://docs.djangoproject.com/en/1.8/ref/models/conditional-expressions/#conditional-aggregation
+            # my husbang helped me with the sorting price functionality
             if sortkey == "price":
-                for product in products:
-                    if product.is_sale:
-                        sortkey = 'sale_price'
-                    else:
-                        sortkey = "price"
+                sortkey = 'sort_price'
+                products = products.annotate(sort_price=Case(
+                    When(Q(is_sale=True) & Q(sale_price__isnull=False),
+                         then='sale_price'),
+                    default='price',
+                    output_field=DecimalField()))
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -67,7 +70,8 @@ def all_products(request):
             products = products.filter(feature_product=True)
 
         if 'specials' in request.GET:
-            criteria = Q(new_arrival=True) | Q(feature_product=True) | Q(is_sale=True)
+            criteria = Q(new_arrival=True) | Q(feature_product=True) | Q(
+                is_sale=True)
             specials = request.GET['specials']
             products = products.filter(criteria)
 
