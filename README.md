@@ -156,6 +156,7 @@ In the first milestone my main goal was to get the project's framework set up an
 - [I Think, Therefor I Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/dabfed30d1fc4d078b6de270117dbe50/?child=first)
 - [Contact Form](https://ordinarycoders.com/blog/article/build-a-django-contact-form-with-email-backend)
 - [Read more/Read less buttons](https://codepen.io/joserick/pen/ooVPwR)
+- [Property decorator Django - final_price functionality ](https://www.andreadiotallevi.com/blog/how-to-use-the-property-decorator-in-python-and-django)
 - [Inspiration for final_price functionality](https://github.com/Iris-Smok/JoyfulBookstore-PP5/blob/main/books/views.py)
 - [Privacy Policy and Terms of Use by Termly](https://termly.io/products/terms-and-conditions-generator/)
 
@@ -168,12 +169,13 @@ In the first milestone my main goal was to get the project's framework set up an
 - [Favicon](https://cz.pinterest.com/pin/462181980485395733/)
 - [Little House](https://www.google.cz/books/edition/Little_House_on_the_Prairie/m06dCwAAQBAJ?hl=en&gbpv=1)
 - [Dr. Seuss](https://www.amazon.com/Seusss-Beginner-Collection-Green-Socks/dp/0375851569)
-- [Unsplash](unsplash.com)
+- Images were taken from [Unsplash](unsplash.com), [Amazon](amazon.co.uk) and [Megaknihy](megaknihy.cz)
 - [Top tips for engaging reluctant readers](https://www.explorelearning.co.uk/free-resources/tips-engaging-reluctant-readers/)
 - [7 effective ways to increase your child's reading skills](https://www.petitjourney.com.au/7-effective-ways-to-increase-your-childs-reading-skills/)
 - [Why Reading is Important](https://www.worksheetcloud.com/blog/why-is-reading-important/)
 - [safe filter](https://www.djangotemplatetagsandfilters.com/filters/safe/)
-
+- [Resize images](https://www.iloveimg.com/resize-image)
+- [Convert images jpg to webp](https://convertio.co/jpg-webp/)
 
 [Back to top](#contents)
 ## Acknowledgements
