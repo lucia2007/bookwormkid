@@ -2,8 +2,8 @@ from django.shortcuts import (
 
                               render,
                               get_object_or_404,
-                              reverse,
                               redirect)
+from django.urls import reverse
 from django.urls import reverse_lazy
 from .models import Enquiry
 from django.http import HttpResponseRedirect
@@ -33,7 +33,10 @@ def all_enquiries(request):
 def add_enquiry(request):
     """ Add a new enquiry """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owner can add new enquiries.')
+        messages.error(
+                       request,
+                       'Sorry, only store owner can add new enquiries.'
+                       )
         return redirect(reverse('home'))
 
     enquiries = Enquiry.objects.all()

@@ -1,8 +1,8 @@
 from django.shortcuts import (render,
                               redirect,
-                              reverse,
-                              HttpResponse,
                               get_object_or_404)
+from django.http import HttpResponse
+from django.urls import reverse
 from django.contrib import messages
 from profiles.models import UserProfile
 from products.models import Product
@@ -37,7 +37,8 @@ def add_to_wishlist(request, product_id):
                                product=product).exists():
         messages.warning(
                          request,
-                         f'You already have { product.title } in your wishlist.')
+                         f'You already have { product.title } in '
+                         ' your wishlist.')
         context = {
             'on_page': True,
         }
@@ -50,7 +51,9 @@ def add_to_wishlist(request, product_id):
                                                 )
         messages.success(
                          request,
-                         f'You have successfully added { wishlist_item.product.title } to your wishlist.'
+                         'You have successfully '
+                         f'added { wishlist_item.product.title } to '
+                         'your wishlist.'
                          )
         context = {
             'on_page': True,
@@ -73,7 +76,8 @@ def remove_from_wishlist(request, product_id):
     wishlist_item.delete()
     messages.success(
                      request,
-                     f'{product.title} was successfully removed from your wishlist.'
+                     f'{product.title} was successfully removed from '
+                     ' your wishlist.'
                      )
     context = {
         'on_page': True,

@@ -1,9 +1,8 @@
 from django.shortcuts import (
                               render,
                               get_object_or_404,
-                              reverse,
                               redirect)
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from .models import Article
 from django.http import HttpResponseRedirect
 from django.core.exceptions import PermissionDenied
@@ -64,7 +63,9 @@ def add_article(request):
                 article = form.save()
                 messages.success(request, "Article was added successfully.")
                 return redirect(
-                                reverse_lazy('article_detail', args=[article.slug])
+                                reverse_lazy(
+                                    'article_detail',
+                                    args=[article.slug])
                                 )
             else:
                 article = form.save()
