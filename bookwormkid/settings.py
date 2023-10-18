@@ -30,7 +30,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = 'DEVELOPMENT' in os.environ
 # DEBUG = True
 
-ALLOWED_HOSTS = ['bookwormkid-c20568b2004e.herokuapp.com', 'localhost', '8000-lucia2007-bookwormkid-kzzr8bsd1y0.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['bookwormkid-c20568b2004e.herokuapp.com',
+                 'localhost',
+                 '8000-lucia2007-bookwormkid-kzzr8bsd1y0.ws-eu105.gitpod.io']
 
 
 # Application definition
@@ -165,7 +167,7 @@ else:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # noqa
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
