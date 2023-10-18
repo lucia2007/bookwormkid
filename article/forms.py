@@ -2,6 +2,7 @@ from .models import Article
 from slugify import slugify  # type:ignore
 from django import forms
 from djrichtextfield.widgets import RichTextWidget
+from .widgets import CustomClearableFileInput
 
 STATUS = ((0, 'Draft'), (1, 'Published'))
 
@@ -36,6 +37,10 @@ class ArticleForm(forms.ModelForm):
             'status': 'Status',
             'source': 'Source'
         }
+
+    image = forms.ImageField(
+        label='Image', required=False, widget=CustomClearableFileInput
+        )
 
     def save(self, commit=True):
         instance = super().save(commit=False)
