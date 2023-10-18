@@ -560,6 +560,11 @@ a.text-reset {
 /* Large screen devices (992px and above) */
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
+    main {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -584,6 +589,11 @@ a.text-reset {
 /* Extra large screen devices (1200px and above) */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
+    main {
+        max-width: 950px;
+        margin: 0 auto;
+    }
+
     .container {
         max-width: 80%;
     }
