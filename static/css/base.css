@@ -560,7 +560,7 @@ a.text-reset {
 /* Large screen devices (992px and above) */
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
-    main {
+    .shopping-bag-container {
         max-width: 850px;
         margin: 0 auto;
     }
@@ -589,7 +589,7 @@ a.text-reset {
 /* Extra large screen devices (1200px and above) */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-    main {
+    .shopping-bag-container {
         max-width: 950px;
         margin: 0 auto;
     }
