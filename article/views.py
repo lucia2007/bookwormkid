@@ -48,7 +48,9 @@ def article_detail(request, slug, *args, **kwargs):
 def add_article(request):
     """ Add a new article """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owner can add new articles.')
+        messages.error(
+                       request,
+                       'Sorry, only store owner can add new articles.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -56,7 +58,9 @@ def add_article(request):
         if form.is_valid():
             article = form.save()
             messages.success(request, "Article was added successfully.")
-            return redirect(reverse_lazy('article_detail', args=[article.slug]))
+            return redirect(
+                            reverse_lazy('article_detail', args=[article.slug])
+                            )
         else:
             messages.error(request,
                            'Article was not added. Correct the form inputs.'
@@ -71,6 +75,7 @@ def add_article(request):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_article(request, slug):

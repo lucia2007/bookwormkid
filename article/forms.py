@@ -1,12 +1,12 @@
 from .models import Article
-from slugify import slugify
+from slugify import slugify  # type:ignore
 from django import forms
 from djrichtextfield.widgets import RichTextWidget
 
 STATUS = ((0, 'Draft'), (1, 'Published'))
 
 
-class ArticleForm(forms.ModelForm): 
+class ArticleForm(forms.ModelForm):
     """ Form to create/edit an article """
     title = forms.CharField(max_length=200)
     excerpt = forms.CharField(widget=forms.Textarea(attrs={"rows": 5}))

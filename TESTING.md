@@ -6,6 +6,7 @@
     - [JavaScript Testing](#javascript-testing)
     - [CSS Testing](#css-testing)
   - [Browser Compatibility](#browser-compatibility)
+  - [Browser Compatibility](#browser-compatibility-1)
   - [Responsiveness Test](#responsiveness-test)
   - [Fixed Bugs](#fixed-bugs)
   - [Unfixed Bugs](#unfixed-bugs)

@@ -54,12 +54,14 @@ class Product(models.Model):
         max_digits=6, decimal_places=2, null=True, blank=True
         )
     ISBN = models.CharField(max_length=13, unique=True)
-    by_age= models.CharField(max_length=6, choices=[
+    by_age = models.CharField(max_length=6, choices=[
         ("6-8", "6-8"), ("9-10", "9-10"), ("11-12", "11-12")])
 
     # https://www.andreadiotallevi.com/blog/how-to-use-the-property-decorator-in-python-and-django
-    # Inspiration for final_price functionality https://github.com/Iris-Smok/JoyfulBookstore-PP5/blob/main/books/views.py
-    # To be able to user final_price as model attribute without having to add a new model field
+    # Inspiration for final_price functionality:
+    # https://github.com/Iris-Smok/JoyfulBookstore-PP5/blob/main/books/views.py
+    # To be able to user final_price as model attribute
+    # without having to add a new model field
     @property
     def final_price(self):
         products = Product.objects.all()

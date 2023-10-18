@@ -7,7 +7,7 @@ def bookstoremanagement(request):
     return render(
                   request,
                   'bookstoremanagement/bookstoremanagement.html',
-                  context)
+                  )
 
 
 def privacy_policy(request):
