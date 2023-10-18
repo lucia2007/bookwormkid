@@ -15,8 +15,11 @@ from .forms import ArticleForm
 
 def all_articles(request):
     """ A view to return all articles """
-    articles = Article.objects.all().filter(status=1)
 
+    if request.user.is_superuser:
+        articles = Article.objects.all()
+    else:
+        articles = Article.objects.all().filter(status=1)
     context = {
         'articles': articles,
         'on_page': True,
@@ -27,7 +30,7 @@ def all_articles(request):
 
 def article_detail(request, slug, *args, **kwargs):
     """ A view to show article details. """
-    queryset = Article.objects.filter(status=1)
+    queryset = Article.objects.all()
     article = get_object_or_404(queryset, slug=slug)
 
     liked = False
@@ -56,11 +59,17 @@ def add_article(request):
     if request.method == 'POST':
         form = ArticleForm(request.POST, request.FILES)
         if form.is_valid():
-            article = form.save()
-            messages.success(request, "Article was added successfully.")
-            return redirect(
-                            reverse_lazy('article_detail', args=[article.slug])
-                            )
+            article = form.save(commit=False)
+            if article.status == 1:
+                article = form.save()
+                messages.success(request, "Article was added successfully.")
+                return redirect(
+                                reverse_lazy('article_detail', args=[article.slug])
+                                )
+            else:
+                article = form.save()
+                messages.success(request, 'Article saved as draft.')
+                return redirect(reverse('articles'))
         else:
             messages.error(request,
                            'Article was not added. Correct the form inputs.'
