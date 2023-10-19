@@ -17,7 +17,7 @@
             <div class="image-container my-5">
                 {% if product.image %}
                 <div class="image-card-detail d-flex flex-column  align-items-center">
-                    <a href="{% url 'product_detail' product.id %}"
+                    <a href="{{ product.image.url }}" target="_blank"
                         aria-label="Takes the user to the detail page of the chosen book. A picture of the book is displayed.">
                         <img class="card-img-top img-fluid card-image" src="{{ product.image.url }}"
                             alt="{{ product.title }}">
@@ -42,7 +42,7 @@
                     {% endif %}
                 </div>
                 {% else %}
-                <a href="{% url 'product_detail' product.id %}"
+                <a href="{{ MEDIA_URL }}noimage.png" target="_blank"
                     aria-label="Takes the user to the detail page of the chosen book. Noimage substitute picture is displayed.">
                     <img class="card-img-top img-fluid card-image" src="{{ MEDIA_URL }}noimage.png"
                         alt="{{ product.title }}">
