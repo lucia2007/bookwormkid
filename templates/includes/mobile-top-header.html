@@ -52,7 +52,7 @@
     <li class="list-inline-item dropdown">
         {% if request.user.is_authenticated %}
         <a class="{% if customer_wishlist %}text-warning{% else %}text-black{% endif %} nav-link"
-            href="{% url 'wishlist' %}" id="wishlist-link" aria-label="Takes the user to their wishlist.">
+            href="{% url 'wishlist' %}" id="wishlist-link-mobile" aria-label="Takes the user to their wishlist.">
             <div class="text-center">
                 <div><i class="fa-solid fa-heart fa-lg"></i></div>
             </div>
