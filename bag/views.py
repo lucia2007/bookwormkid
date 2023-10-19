@@ -44,25 +44,32 @@ def adjust_bag(request, item_id):
     """ Adjust the amnount of the chosen product in the shopping bag """
 
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    quantity = request.POST.get('quantity')  # string
     bag = request.session.get('bag', {})
-    original_quantity = bag.get(item_id, 0)
 
-    if quantity > 0:
-        bag[item_id] = quantity
-        if quantity != original_quantity:
+    try:
+        quantity = int(quantity)
+        if quantity > 0:
+            original_quantity = bag.get(item_id, 0)
+            bag[item_id] = quantity
+            if quantity != original_quantity:
+                messages.success(
+                    request,
+                    f'You have updated {product.title} quantity to'
+                    f' {bag[item_id]}')
+            else:
+                messages.warning(
+                    request, 'You have not changed the product quantity.'
+                )
+        else:
+            bag.pop(item_id)
             messages.success(
                 request,
-                f'You have updated {product.title} quantity to {bag[item_id]}')
-        else:
-            messages.warning(
-                request, 'You have not changed the product quantity.'
-            )
-    else:
-        bag.pop(item_id)
-        messages.success(
-            request,
-            f'{product.title} was removed from your shopping bag.')
+                f'{product.title} was removed from your shopping bag.')
+    except ValueError:
+        messages.warning(
+            request, "You must enter a whole number."
+        )
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
