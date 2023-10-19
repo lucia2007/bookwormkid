@@ -25,43 +25,39 @@
             {% elif request.resolver_match.url_name and not request.GET.category %}
             <h2 class="logo-font">All Books</h2>
             {% else %}
-            {% for c in current_categories %}
-            <h2 class="logo-font">{{ c.friendly_name }}</h2>
-            {% endfor %}
+            <h2 class="logo-font">{{ current_category.friendly_name }}</h2>
             {% endif %}
             <hr class="w-50 mb-1">
         </div>
     </div>
     {% if request.GET.category %}
-    {% for c in current_categories %}
     <div class="row text-center mt-2">
         <div class="col-12">
-            <a href="{% url 'products' %}?category={{ c }}&age=6-8"
-                aria-label="Filters books for kids 6-8 & {{ c }} skill level"
-                {% if '/products/?category='|add:c|add:'&age=6-8' in request.get_full_path %}
+            <a href="{% url 'products' %}?category={{ current_category }}&age=6-8"
+                aria-label="Filters books for kids 6-8 & {{ current_category }} skill level"
+                {% if '/products/?category='|add:current_category|add:'&age=6-8' in request.get_full_path %}
                 class="btn btn-outline-navy mt-2" {% else %} class=" btn btn-outline-navy-reverse mt-2" {% endif %}>
                 <i class="fa-solid fa-child"> </i> 6-8
             </a>
-            <a href="{% url 'products' %}?category={{ c }}&age=9-10"
-                aria-label="Filters books for kids 9-10 & {{ c }} skill level"
-                {% if '/products/?category='|add:c|add:'&age=9-10' in request.get_full_path %}class="btn btn-outline-navy mt-2"
+            <a href="{% url 'products' %}?category={{ current_category }}&age=9-10"
+                aria-label="Filters books for kids 9-10 & {{ current_category }} skill level"
+                {% if '/products/?category='|add:current_category|add:'&age=9-10' in request.get_full_path %}class="btn btn-outline-navy mt-2"
                 {% else %}class=" btn btn-outline-navy-reverse mt-2" {% endif %}><i class="fa-solid fa-child"> </i> 9-10
             </a>
-            <a href="{% url 'products' %}?category={{ c }}&age=11-12"
-                aria-label="Filters books for kids 11-12 & {{ c }} skill level"
-                {% if '/products/?category='|add:c|add:'&age=11-12' in request.get_full_path %}class="btn btn-outline-navy mt-2"
+            <a href="{% url 'products' %}?category={{ current_category }}&age=11-12"
+                aria-label="Filters books for kids 11-12 & {{ current_category }} skill level"
+                {% if '/products/?category='|add:current_category|add:'&age=11-12' in request.get_full_path %}class="btn btn-outline-navy mt-2"
                 {% else %}class=" btn btn-outline-navy-reverse mt-2" {% endif %}><i class="fa-solid fa-child"> </i>
                 11-12
             </a>
-            <a href="{% url 'products' %}?category={{ c }}"
+            <a href="{% url 'products' %}?category={{ current_category }}"
                 aria-label="Show all products from the current category skill level"
                 {% if 'category' in request.get_full_path and not 'age' in request.get_full_path %}class="btn btn-outline-navy mt-2"
                 {% else %}class=" btn btn-outline-navy-reverse mt-2" {% endif %}>
-                <i class="fa-solid fa-child"></i> All {{ c }}
+                <i class="fa-solid fa-child"></i> All {{ current_category }}
             </a>
         </div>
     </div>
-    {% endfor %}
     {% elif request.GET.new %}
     <div class="row text-center mt-2">
         <div class="col-12">
@@ -218,7 +214,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="mt-3 text-center text-md-left">
-                        {% if search_term or current_categories or current_sorting != 'None_None' %}
+                        {% if search_term or current_category or current_sorting != 'None_None' %}
                         <span class="small"><a href="{% url 'products' %}"
                                 aria-label="Takes the user to view all the products.">Home</a> | </span>
                         {% endif %}
