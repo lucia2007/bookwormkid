@@ -51,7 +51,7 @@
                             </p>
                         </div>
                         <div class="col-12 col-sm-6 mb-2">
-                            {% include 'bag/quantity-form.html' %}
+                            {% include 'bag/quantity-form-mobile.html' %}
                         </div>
                     </div>
                     <div class="row">
@@ -147,6 +147,27 @@
     $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}/`;
+        var data = {
+            'csrfmiddlewaretoken': csrfToken,
+        };
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    })
+</script>
+
+<script>
+    // Update quantity on click
+    $('.update-link').click(function (e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+    // Remove item and reload on click on mobile
+    $('.remove-item').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_mobile_')[1];
         var url = `/bag/remove/${itemId}/`;
         var data = {
             'csrfmiddlewaretoken': csrfToken,
