@@ -46,12 +46,18 @@ def adjust_bag(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
+    original_quantity = bag.get(item_id, 0)
 
     if quantity > 0:
         bag[item_id] = quantity
-        messages.success(
-            request,
-            f'You have updated {product.title} quantity to {bag[item_id]}')
+        if quantity != original_quantity:
+            messages.success(
+                request,
+                f'You have updated {product.title} quantity to {bag[item_id]}')
+        else:
+            messages.warning(
+                request, 'You have not changed the product quantity.'
+            )
     else:
         bag.pop(item_id)
         messages.success(
