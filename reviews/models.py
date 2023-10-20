@@ -4,8 +4,8 @@ from products.models import Product
 
 
 class Review(models.Model):
-    review = models.ForeignKey(Product, on_delete=models.CASCADE,
-                               related_name="reviews")
+    product = models.ForeignKey(Product, on_delete=models.CASCADE,
+                                related_name="reviews")
     reviewer = models.ForeignKey(
                                  User,
                                  on_delete=models.CASCADE,

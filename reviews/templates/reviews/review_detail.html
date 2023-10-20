@@ -1,0 +1,29 @@
+        <div class="col-md-8 card mb-4 mt-3">
+            <div class="col-1">
+                <!-- Number of reviews of the book -->
+                {% with reviews.count as total_reviews %}
+                <div class="text-secondary d-flex align-items-center">
+                    <p><i class="fa-regular fa-comment"></i></p>
+                    <p>{{ total_reviews }}</p>
+                </div>
+                {% endwith %}
+            </div>
+            <p>Reviews:</p>
+            <div class="card-body">
+                {% for review in reviews %}
+                <div class="comments" style="padding: 10px;">
+                    <p class="font-weight-bold">
+                        {{ review.name }}
+                        <span class=" text-muted font-weight-normal">
+                            {{ review.created_on }}
+                        </span> says:
+                    </p>
+                    {{ review.body | linebreaks }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% if reviewed %}
+        <div class="alert alert-success" role="alert">
+            Your review is waiting for approval.
+        </div>
