@@ -9,7 +9,7 @@ class Review(models.Model):
     reviewer = models.ForeignKey(
                                  User,
                                  on_delete=models.CASCADE,
-                                 related_name="reviewers"
+                                 related_name="reviews"
                                  )
     name = models.CharField(max_length=80)
     email = models.EmailField()

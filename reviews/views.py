@@ -22,8 +22,6 @@ def review_detail(request, review_id):
     context = {
         'review': review,
         'review_form': ReviewForm(),
-        'commented': False
     }
 
     return render(request, 'review/review_detail.html', context)
-

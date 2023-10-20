@@ -1,31 +1,46 @@
-        <div class="col-md-8 card mb-4 mt-3 p-2">
-            <div class="d-flex">
-                <div class="pl-2">Reviews:</div>
-                <div class="col-1">
-                    <!-- Number of reviews of the book -->
-                    {% with reviews.count as total_reviews %}
-                    <div class="text-secondary d-flex align-items-center">
-                        <p><i class="fa-regular fa-comment"></i> </p>
-                        <p>{{ total_reviews }}</p>
-                    </div>
-                    {% endwith %}
-                </div>
+<div class="col-md-8 card mb-4 mt-3 p-2">
+    <div class="d-flex">
+        <div class="pl-2">Reviews:</div>
+        <div class="col-1">
+            <!-- Number of reviews of the book -->
+            {% with reviews.count as total_reviews %}
+            <div class="text-secondary d-flex align-items-center">
+                <p><i class="fa-regular fa-comment"></i> </p>
+                <p>{{ total_reviews }}</p>
             </div>
-            <div class="card-body p-0">
-                {% for review in reviews %}
-                <div class="reviews" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        {{ review.name }} says:
-                    </p>
-                    <span class="text-muted font-weight-normal">
-                        {{ review.created_on }}
-                    </span>
-                    {{ review.body | linebreaks }}
-                </div>
-                {% endfor %}
-            </div>
+            {% endwith %}
         </div>
-        {% if reviewed %}
-        <div class="alert alert-success" role="alert">
-            Your review is waiting for approval.
+    </div>
+    <div class="card-body p-0">
+        {% for review in reviews %}
+        <div class="reviews" style="padding: 10px;">
+            <p class="font-weight-bold">
+                {{ review.name }} says:
+            </p>
+            <span class="text-muted font-weight-normal">
+                {{ review.created_on }}
+            </span>
+            {{ review.body | linebreaks }}
         </div>
+        {% endfor %}
+    </div>
+</div>
+{% if reviewed %}
+<div class="alert alert-success" role="alert">
+    Your review is waiting for approval.
+</div>
+{% else %}
+{% if user.is_authenticated %}
+<div class="col-md-8 card mb-4 mt-3 p-2">
+    <div class="card-body">
+        <p>Leave a review:</p>
+        <p>Review by: {{ user.username }}</p>
+        <form method="post" action="{% url 'add_review' product.id %}" style=" margin-top: 1.3ren;">
+            {{ review_form | crispy }}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-outline-navy">Submit</button>
+        </form>
+    </div>
+</div>
+{% endif %}
+{% endif %}

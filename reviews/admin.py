@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 class ReviewAdmin(admin.ModelAdmin):
     """ Review model display """
     list_display = (
-        'name', 'body', 'product', 'created_on', 'approved',
+        'name', 'body', 'product', 'created_on', 'approved', 'reviewer'
     )
     list_filter = ('approved', 'created_on')
     search_fields = ('name', 'body')

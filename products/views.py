@@ -113,10 +113,46 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
-        'reviews': reviews
+        'reviews': reviews,
+        'reviewed': False,
+        'review_form': ReviewForm()
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+@login_required
+def add_review(request, product_id):
+    """ Add a new review """
+    product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.filter(approved=True).order_by('-created_on')
+
+    if request.method == 'POST':
+        review_form = ReviewForm(request.POST)
+
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review_form.instance.email = request.user.email
+            review_form.instance.name = request.user.username
+            review.reviewer = request.user
+            review.product = product
+            review.save()
+            messages.success(request, "Your review is waiting for approval.")
+            return redirect(reverse('product_detail', args=[product_id]))
+        else:
+            messages.error(request,
+                           'Review was not added. Correct the form inputs.'
+                           )
+    else:
+        review_form = ReviewForm()
+
+    template = 'product/product_detail.html'
+    context = {
+        'form': review_form,
+        'reviews': reviews,
+        'on_page': True,
+        'reviewed': True
+    }
 
 
 @login_required
