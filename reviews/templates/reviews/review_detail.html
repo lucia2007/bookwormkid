@@ -1,23 +1,25 @@
         <div class="col-md-8 card mb-4 mt-3 p-2">
-            <div class="col-1">
-                <!-- Number of reviews of the book -->
-                {% with reviews.count as total_reviews %}
-                <div class="text-secondary d-flex align-items-center">
-                    <p><i class="fa-regular fa-comment"></i></p>
-                    <p>{{ total_reviews }}</p>
+            <div class="d-flex">
+                <div class="pl-2">Reviews:</div>
+                <div class="col-1">
+                    <!-- Number of reviews of the book -->
+                    {% with reviews.count as total_reviews %}
+                    <div class="text-secondary d-flex align-items-center">
+                        <p><i class="fa-regular fa-comment"></i> </p>
+                        <p>{{ total_reviews }}</p>
+                    </div>
+                    {% endwith %}
                 </div>
-                {% endwith %}
             </div>
-            <div class="pl-2">Reviews:</div>
             <div class="card-body p-0">
                 {% for review in reviews %}
-                <div class="comments" style="padding: 10px;">
+                <div class="reviews" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        {{ review.name }}
-                        <span class=" text-muted font-weight-normal">
-                            {{ review.created_on }}
-                        </span> says:
+                        {{ review.name }} says:
                     </p>
+                    <span class="text-muted font-weight-normal">
+                        {{ review.created_on }}
+                    </span>
                     {{ review.body | linebreaks }}
                 </div>
                 {% endfor %}

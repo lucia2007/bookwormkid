@@ -109,9 +109,11 @@ def product_detail(request, product_id):
     """ A view to show product details. """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.filter(approved=True).order_by('created_on')
 
     context = {
         'product': product,
+        'reviews': reviews
     }
 
     return render(request, 'products/product_detail.html', context)
