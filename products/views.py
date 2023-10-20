@@ -6,8 +6,9 @@ from django.core.exceptions import PermissionDenied
 from django.db.models import Case, DecimalField, F, Q, Value, When
 from django.db.models.functions import Lower
 from .models import Product, Category
-
 from .forms import ProductForm
+from reviews.models import Review
+from reviews.forms import ReviewForm
 
 
 def all_products(request):
