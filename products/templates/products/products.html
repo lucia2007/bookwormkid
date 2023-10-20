@@ -57,24 +57,24 @@
     {% if request.GET.category %}
     <div class="row text-center mt-2">
         <div class="col-12">
-            <a href="{% url 'products' %}?category={{ current_category }}&age=6-8"
-                aria-label="Filters books for kids 6-8 & {{ current_category }} skill level"
+            <a href="{% url 'products' %}?category={{ current_category.name }}&age=6-8"
+                aria-label="Filters books for kids 6-8 & {{ current_category.name }} skill level"
                 {% if request.GET.age == '6-8' %} class="btn btn-outline-navy mt-2" {% else %}
                 class=" btn btn-outline-navy-reverse mt-2" {% endif %}>
                 <i class="fa-solid fa-child"> </i> 6-8
             </a>
-            <a href="{% url 'products' %}?category={{ current_category }}&age=9-10"
-                aria-label="Filters books for kids 9-10 & {{ current_category }} skill level"
+            <a href="{% url 'products' %}?category={{ current_category.name }}&age=9-10"
+                aria-label="Filters books for kids 9-10 & {{ current_category.name }} skill level"
                 {% if request.GET.age == '9-10' %}class="btn btn-outline-navy mt-2"
                 {% else %}class=" btn btn-outline-navy-reverse mt-2" {% endif %}><i class="fa-solid fa-child"> </i> 9-10
             </a>
-            <a href="{% url 'products' %}?category={{ current_category }}&age=11-12"
-                aria-label="Filters books for kids 11-12 & {{ current_category }} skill level"
+            <a href="{% url 'products' %}?category={{ current_category.name }}&age=11-12"
+                aria-label="Filters books for kids 11-12 & {{ current_category.name }} skill level"
                 {% if request.GET.age == '11-12' %}class="btn btn-outline-navy mt-2"
                 {% else %}class=" btn btn-outline-navy-reverse mt-2" {% endif %}><i class="fa-solid fa-child"> </i>
                 11-12
             </a>
-            <a href="{% url 'products' %}?category={{ current_category }}"
+            <a href="{% url 'products' %}?category={{ current_category.name }}"
                 aria-label="Show all products from the current category skill level"
                 {% if not 'age' in request.GET %}class="btn btn-outline-navy mt-2"
                 {% else %}class=" btn btn-outline-navy-reverse mt-2" {% endif %}>

@@ -18,6 +18,7 @@ def all_products(request):
     category = None
     sort = None
     direction = None
+    current_category = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -46,6 +47,7 @@ def all_products(request):
 
         if 'category' in request.GET:
             category = request.GET['category']
+            current_category = Category.objects.get(name=category)
             products = products.filter(category__name=category)
 
         if 'age' in request.GET:
@@ -95,7 +97,7 @@ def all_products(request):
     context = {
         'products': products,
         'search_term': query,
-        'current_category': category,
+        'current_category': current_category,
         'current_sorting': current_sorting,
     }
 
