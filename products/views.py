@@ -9,6 +9,8 @@ from .models import Product, Category
 from .forms import ProductForm
 from reviews.models import Review
 from reviews.forms import ReviewForm
+from checkout.models import Order, OrderLineItem
+from profiles.models import UserProfile
 
 
 def all_products(request):
@@ -169,9 +171,11 @@ def add_review(request, product_id):
         'form': review_form,
         'reviews': reviews,
         'on_page': True,
-        'reviewed': True
+        'reviewed': True,
+        'product_bought': product_bought
     }
 
+    return render(request, template, context)
 
 @login_required
 def add_product(request):
