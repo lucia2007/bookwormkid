@@ -127,6 +127,24 @@ def add_review(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews = product.reviews.filter(approved=True).order_by('-created_on')
 
+    # Get the user's profile instance
+    user_profile = get_object_or_404(UserProfile, user=request.user)
+
+    # Check if the product is in any of the user's orders
+    # Get user's orders
+    user_orders = Order.objects.filter(user_profile=user_profile)
+    # Check if the product is in any of the orders
+    # https://docs.djangoproject.com/en/4.2/ref/models/querysets/#field-lookups
+    product_bought = user_orders.filter(lineitems__product=product).exists()
+
+    if not product_bought:
+        # If the user bought the product in the past, show an error message
+        messages.error(
+                       request,
+                       'You can only leave a review for products'
+                       'you bought previously.')
+        return redirect(reverse('product_detail', args=[product_id]))
+
     if request.method == 'POST':
         review_form = ReviewForm(request.POST)
 
