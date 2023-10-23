@@ -11,7 +11,7 @@
     <meta name="description"
         content="Bookworm kid is a webstore that sells books for young children taking not only their age but also their reading skills into account. Come and find the best book for your child.">
     <meta name="keywords"
-        content="books by-age, books by-reading skills, reluctant reader, keen reader, struggling reader, avid reader, age appropriate books">
+        content="books by-age, books by-reading skills, reluctant reader, keen reader, struggling reader, avid reader, age appropriate books, slow reader, happy reader, fast reader, exciting books for kids">
     {% endblock %}
 
     {% block extra_meta %}
@@ -56,6 +56,7 @@
 
 <body>
     {% include 'includes/header.html' %}
+    <!-- Display messages -->
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
@@ -73,15 +74,21 @@
         {% endfor %}
     </div>
     {% endif %}
+    <!-- End of messages -->
 
+    <!-- Page header -->
     {% block page_header %}
     {% endblock %}
+    <!-- End of Page header -->
 
+    <!-- Main -->
     <main>
         {% block content %}
         {% endblock %}
     </main>
+    <!-- End of main -->
 
+    <!-- JS Block -->
     {% block postloadjs %}
     <script>
         $('.toast').toast('show');
@@ -89,7 +96,8 @@
     {% endblock %}
 
     {% include 'includes/footer.html' %}
-
+    <!-- End of JS block -->
 </body>
+<!-- End of body -->
 
 </html>

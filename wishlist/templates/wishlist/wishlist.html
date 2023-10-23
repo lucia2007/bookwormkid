@@ -9,6 +9,7 @@
 </div>
 {% endblock %}
 
+<!-- Wishlist -->
 {% block content %}
 <div class="overlay"></div>
 <div class="container mb-2">
@@ -19,6 +20,7 @@
         </div>
     </div>
     <div class="row">
+        <!-- Display items in wishlist and their details -->
         {% if customer_wishlist %}
         {% for wishlist_item in customer_wishlist %}
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
@@ -102,6 +104,7 @@
             </div>
         </div>
         {% endfor %}
+        <!-- End of wishlist items -->
         {% else %}
         <div class="col-12">
             <p class="text-muted mb-5 text-center">Your Wishlist is empty.</p>
@@ -120,13 +123,16 @@
         {% endif %}
     </div>
 </div>
+<!-- Back to top button -->
 <div class="btt-button shadow-sm bg-navy rounded-circle border border-white">
     <a href="" class="btt-link d-flex h-100" aria-label="scroll to top button">
         <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
     </a>
 </div>
+<!-- End of back to top button -->
 {% endblock %}
 
+<!-- JS Block -->
 {% block postloadjs %}
 {{ block.super }}
 <script>
@@ -135,3 +141,4 @@
     })
 </script>
 {% endblock %}
+<!-- End of JS block -->

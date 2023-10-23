@@ -20,9 +20,9 @@
             <hr>
         </div>
     </div>
-
     <div class="row">
         <div class="col-12 col-md-6 mx-auto">
+            <!-- Form to add a new article -->
             <form method="POST" action="{% url 'add_article' %}" class="form mb-5" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% for field in form %}
@@ -38,11 +38,14 @@
                     <button class="btn btn-outline-navy rounded-0" type="submit">Add Article</button>
                 </div>
             </form>
+            <!-- End of form -->
         </div>
     </div>
 </div>
 {% endblock %}
 
+<!-- JS block -->
 {% block postloadjs %}
 {{ block.super }}
 {% endblock %}
+<!-- End of JS block -->

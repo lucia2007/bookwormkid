@@ -20,6 +20,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
+            <!-- Display article picture, author, content and so on -->
             <div class="image-container my-5">
                 {% if article.image %}
                 <a href="{% url 'article_detail' article.slug %}"
@@ -50,6 +51,7 @@
                         data-target="#articleModal_{{ article.slug }}">
                         Delete
                     </button>
+                    <!-- End of trigger modal button -->
                     {% include 'article/includes/article_deletion.html' %}
                 </small>
                 {% endif %}
@@ -62,16 +64,20 @@
                 </a>
                 <div>
                     {% if user.is_authenticated %}
+                    <!-- Form to like an article -->
                     <form action="{% url 'like_article' article.slug %}" method="POST" class="d-inline">
                         {% csrf_token %}
                         {% if liked %}
-                        <button class="btn-like" type="submit" name="article_id" value="{{ article.slug }}"><i
+                        <button class="btn-like" type="submit" name="article_id" value="{{ article.slug }}"
+                            aria-label="solid heart icon if liked by the current user"><i
                                 class="fas fa-heart"></i></button>
                         {% else %}
                         <button class="btn-like" type="submit" name="article_id" value="{{ article.slug }}"><i
-                                class="far fa-heart"></i></button>
+                                class="far fa-heart"
+                                arial-label="empty heart if not liked by the current user"></i></button>
                         {% endif %}
                     </form>
+                    <!-- End of form -->
                     {% else %}
                     <span class="card-text text-muted h6"><i class="far fa-heart"></i></span>
                     {% endif %}
@@ -90,13 +96,16 @@
         </div>
     </div>
 </div>
+<!-- Back to top button -->
 <div class="btt-button shadow-sm bg-navy rounded-circle border border-white">
     <a href="" class="btt-link d-flex h-100" aria-label="The arrow takes the user to the very top of the page.">
         <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
     </a>
 </div>
+<!-- End of back to top button -->
 {% endblock %}
 
+<!-- Javascript -->
 {% block postloadjs %}
 {{ block.super }}
 <script>
@@ -105,3 +114,4 @@
     })
 </script>
 {% endblock %}
+<!-- End of JavaScript -->

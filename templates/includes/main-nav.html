@@ -1,3 +1,4 @@
+<!-- Main navigation - product filtering, products by category, articles, ... -->
 <div class="collapse navbar-collapse bg-navy" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto p-2">
         <li class="nav-item dropdown">
@@ -5,6 +6,7 @@
                 HOME
             </a>
         </li>
+        <!-- Sorting by price, rating and category -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}"
                 id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -24,7 +26,7 @@
                     class="dropdown-item">All Books</a>
             </div>
         </li>
-
+        <!-- Sorting by Skill level -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5"
                 aria-label="Takes the user to the dropdown for the reading skill levels" href="#"
@@ -43,7 +45,7 @@
                     Books</a>
             </div>
         </li>
-
+        <!-- Sorting by special offers -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5"
                 aria-label="Takes the user to dropdown for special offers." href="#" id="special-offers-link"
@@ -64,14 +66,14 @@
                     Specials</a>
             </div>
         </li>
-
+        <!-- Articles -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'articles' %}"
                 id="article-link">
                 ARTICLES
             </a>
         </li>
-
+        <!-- Contact Us -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'contact' %}" id="contact-link">
                 Contact Us

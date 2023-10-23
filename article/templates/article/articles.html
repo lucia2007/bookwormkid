@@ -23,9 +23,9 @@
     </div>
     <hr>
     <div class="row">
-        <!-- <div class="col-12 mt-3 left"> -->
         <div class="col-10 offset-1">
             <div class="row">
+                <!-- Display all articles with all their details -->
                 {% for article in articles %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card mb-4 h-100">
@@ -59,6 +59,7 @@
                                     data-target="#articleModal_{{ article.slug }}">
                                     Delete
                                 </button>
+                                <!-- End of button trigger modal -->
                                 {% include 'article/includes/article_deletion.html' %}
                             </small>
                             {% endif %}
@@ -90,13 +91,16 @@
         </div>
     </div>
 </div>
+<!-- Back to top button -->
 <div class="btt-button shadow-sm bg-navy rounded-circle border border-white">
     <a href="" class="btt-link d-flex h-100" aria-label="The arrow takes the user to the very top of the page.">
         <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
     </a>
 </div>
+<!--  End of back to top button -->
 {% endblock %}
 
+<!-- JS block -->
 {% block postloadjs %}
 {{ block.super }}
 <script>
@@ -105,3 +109,4 @@
     })
 </script>
 {% endblock %}
+<!-- End of JS block -->

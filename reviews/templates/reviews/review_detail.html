@@ -1,9 +1,11 @@
+<!-- If there are reviews, display collapsible button with the number of reviews -->
 {% if reviews %}
 <div class="col-md-8 card mb-4 mt-3 p-2">
     <div class="accordion" id="review-{{review.id}}">
         <div class="card">
             <div class="card-header p-0" id="headingOne-{{review.id}}">
                 <h2 class="mb-0">
+                    <!-- Button with number of reviews on it -->
                     <button class="btn btn-block text-center p-0" type="button" data-toggle="collapse"
                         data-target="#collapseOne-{{review.id}}" aria-expanded="false"
                         aria-controls="collapseOne-{{review.id}}"
@@ -13,8 +15,10 @@
                         {{ total_reviews }}
                         {% endwith %}
                     </button>
+                    <!-- End of button -->
                 </h2>
             </div>
+            <!-- Review details -->
             <div id="collapseOne-{{review.id}}" class="collapse" aria-labelledby="headingOne-{{review.id}}"
                 data-parent="#review-{{review.id}}">
                 <div class="card-body">
@@ -33,29 +37,36 @@
                     </div>
                 </div>
             </div>
+            <!-- End of review details -->
         </div>
     </div>
 </div>
 {% endif %}
+<!-- Waiting for approvval toast -->
 {% if reviewed %}
 <div class="alert alert-success" role="alert">
     Your review is waiting for approval.
 </div>
+<!-- End of toast -->
 {% else %}
+<!-- If user signed in, they can see the review form and leave a review if they had bought this particular item in the past -->
 {% if user.is_authenticated %}
 {% if product_bought %}
 <div class="col-md-8 card mb-4 mt-3 p-2">
     <div class="card-body">
         <p>Leave a review:</p>
         <p>Review by: {{ user.username }}</p>
+        <!-- Review form -->
         <form method="post" action="{% url 'add_review' product.id %}" style=" margin-top: 1.3ren;">
             {{ review_form | crispy }}
             {% csrf_token %}
             <button type="submit" class="btn btn-outline-navy"
                 aria-label="Lets the user signed in user who bought this particular product, add a review which will be approved by the admin.">Submit</button>
         </form>
+        <!-- End of form -->
     </div>
 </div>
 {% endif %}
 {% endif %}
 {% endif %}
+<!-- End of reviews -->
