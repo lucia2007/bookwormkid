@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %} | Articles {% endblock %}
+
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'article/css/article.css' %}">
 {% endblock %}
@@ -58,8 +60,8 @@
                 <!-- The safe filter indicates that the value is known to be safe and therefore does not need to be escaped. -->
                 <!-- https://www.djangotemplatetagsandfilters.com/filters/safe/ -->
                 <p class="mt-3">{{ article.content|safe }}</p>
-                <a href="{{ article.source }}" aria-label="The source link takes the user to the original articale."
-                    class="mt-3" id="article-source" target="_blank">
+                <a href="{{ article.source }}" aria-label="The source link takes the user to the original article."
+                    class="mt-3" id="article-source" target="_blank" rel="nofollow">
                     Source
                 </a>
                 <div>
