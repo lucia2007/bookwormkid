@@ -293,11 +293,65 @@ I used [Figma](https://www.figma.com) which is an excellent tool for making wire
 
 <details><summary><b>Blog Detail</b></summary>
 
-![Blog Detail](/readme-images/blog_detail.png)
+![Blog Detail](/readme-images/blog_detail_desktop.png)
 </details><br>
 
 ### Tablet Wireframes
 
+<details><summary><b>Home Page</b></summary>
+
+![Home Page](/readme-images/homepage_tablet.png)
+</details><br>
+
+<details><summary><b>All Products Page</b></summary>
+
+![All Products Page](/readme-images/all_products_page_tablet.png)
+</details><br>
+
+<details><summary><b>Product Detail Page</b></summary>
+
+![Product Detail Page](/readme-images/product_detail_tablet.png)
+</details><br>
+
+<details><summary><b>Products by Age/Skill Level</b></summary>
+
+![Products by Age/Skill Level](/readme-images/products_by_age_tablet.png)
+</details><br>
+
+<details><summary><b>Shopping Bag</b></summary>
+
+![Shopping Bag](/readme-images/shopping_bag_tablet.png)
+</details><br>
+
+<details><summary><b>Checkout</b></summary>
+
+![Checkout](/readme-images/checkout_tablet.png)
+</details><br>
+
+<details><summary><b>Admin Dasboard</b></summary>
+
+![Admin Dasboard](/readme-images/admin_tablet.png)
+</details><br>
+
+<details><summary><b>My Profile</b></summary>
+
+![My Profile](/readme-images/profile_desktop.png)
+</details><br>
+
+<details><summary><b>Blog</b></summary>
+
+![Blog](/readme-images/blog_tablet.png)
+</details><br>
+
+<details><summary><b>Blog Detail</b></summary>
+
+![Blog Detail](/readme-images/blog_detail_tablet.png)
+</details><br>
+
+<details><summary><b>Login</b></summary>
+
+![Login](/readme-images/login_tablet.png)
+</details><br>
 ### Mobile Wireframes
 
 
