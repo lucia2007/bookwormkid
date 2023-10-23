@@ -84,7 +84,7 @@
             <div class="text-center my-3">
                 <div class="col-12">
                     <a href="{% url 'remove_from_wishlist' wishlist_item.product.id %}"
-                        aria-label="Adds a product to wishlist" class="btn btn-outline-navy-reverse mb-2"><i
+                        aria-label="Removes a product to wishlist" class="btn btn-outline-navy-reverse mb-2"><i
                             class="fas fa-heart"> </i> Remove From Wishlist
                     </a>
                     <form class="form" action="{% url 'add_to_bag' wishlist_item.product.id %}" method="POST">

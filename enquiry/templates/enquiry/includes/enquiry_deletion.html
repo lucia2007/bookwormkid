@@ -17,7 +17,9 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a href="{% url 'delete_enquiry' enquiry.id %}" class="btn btn-danger">Confirm Deletion</a>
+                <a href="{% url 'delete_enquiry' enquiry.id %}"
+                    aria-label="Let the admin confirm deleteion of the chosen enquiry." class="btn btn-danger">Confirm
+                    Deletion</a>
             </div>
         </div>
     </div>

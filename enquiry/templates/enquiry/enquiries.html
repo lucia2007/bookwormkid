@@ -41,7 +41,8 @@
                         {% if request.user.is_superuser %}
                         <small class="text-uppercase ml-3">
                             <a href="{% url 'edit_enquiry' enquiry.id%}"
-                                class="text-success text-decoration-none p-1 border-0">Edit</a>
+                                class="text-success text-decoration-none p-1 border-0"
+                                aria-label="Lets the user edit the chosen enquiry.">Edit</a>
                             <button type="button" class="text-danger text-uppercase p-1 border-0" data-toggle="modal"
                                 data-target="#enquiryModal_{{ enquiry.id }}">
                                 Delete

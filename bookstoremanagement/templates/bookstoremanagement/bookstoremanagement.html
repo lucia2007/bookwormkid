@@ -23,15 +23,16 @@
         <hr class="w-50 mb-1">
         <div class="row text-center mt-2">
             <div class="col-12 d-flex flex-column align-items-center bookstore-management">
-                <a href="{% url 'add_product' %}" aria-label="Filters books for kids 6-8"
+                <a href="{% url 'add_product' %}"
+                    aria-label="Takes the admin to a page where they can add a new book to the store."
                     class="btn btn-outline-navy-reverse mt-2 w-50"><i class="fa-solid fa-plus"> </i> Add Book
                 </a>
                 <a href="{% url 'products' %}"
-                    aria-label="Takes the admin to all articles where they can choose which product to edit"
+                    aria-label="Takes the admin to all books where they can choose which book to edit"
                     class="btn btn-outline-navy-reverse mt-2 w-50"><i class="fa-solid fa-pen-to-square"> </i> Edit Book
                 </a>
                 <a href="{% url 'products' %}"
-                    aria-label="Takes the admin to all articles where they can choose which product to delete"
+                    aria-label="Takes the admin to all books where they can choose which book to delete."
                     class="btn btn-outline-navy-reverse mt-2 w-50"><i class="fa-solid fa-trash"> </i> Delete Book
                 </a>
             </div>
@@ -42,7 +43,7 @@
         <hr class="w-50 mb-1">
         <div class="row text-center mt-2">
             <div class="col-12  d-flex flex-column align-items-center bookstore-management">
-                <a href="{% url 'add_article' %}" aria-label="Filters books for kids 6-8"
+                <a href="{% url 'add_article' %}" aria-label="Lets the admin add a new article."
                     class="btn btn-outline-navy-reverse mt-2 w-50"><i class="fa-solid fa-plus"> </i> Add Article
                 </a>
                 <a href="{% url 'articles' %}"
@@ -62,16 +63,16 @@
         <hr class="w-50 mb-1">
         <div class="row text-center mt-2">
             <div class="col-12 d-flex flex-column align-items-center bookstore-management">
-                <a href="{% url 'add_enquiry' %}" aria-label="Filters books for kids 6-8"
+                <a href="{% url 'add_enquiry' %}" aria-label="Lets the admin add a new enquiry."
                     class="btn btn-outline-navy-reverse mt-2 w-50"><i class="fa-solid fa-plus"> </i> Add Enquiry
                 </a>
                 <a href="{% url 'enquiries' %}"
-                    aria-label="Takes the admin to all articles where they can choose which article to edit"
+                    aria-label="Takes the admin to all enquiries where they can choose which enquiry to edit"
                     class="btn btn-outline-navy-reverse mt-2 w-50"><i class="fa-solid fa-pen-to-square"> </i> Edit
                     Enquiry
                 </a>
                 <a href="{% url 'enquiries' %}"
-                    aria-label="Takes the admin to all articles where they can choose which article to delete"
+                    aria-label="Takes the admin to all enquirues where they can choose which enquiry to delete"
                     class="btn btn-outline-navy-reverse mt-2 w-50"><i class="fa-solid fa-trash"> </i> Delete Enquiry
                 </a>
             </div>
