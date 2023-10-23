@@ -5,7 +5,7 @@ from django_summernote.admin import SummernoteModelAdmin  # type:ignore
 
 @admin.register(Article)
 class ArticleAdmin(SummernoteModelAdmin):
-
+    """ Admin Article Class """
     prepopulated_fields = {'slug': ('title',)}
     list_filter = ('status', 'created_on')
     summernote_fields = ('content')

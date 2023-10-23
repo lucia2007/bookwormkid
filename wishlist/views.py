@@ -12,7 +12,7 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def wishlist(request):
-    """ A view to go to their wishlist entries """
+    """ A view to go to user's wishlist entries """
 
     user_profile = UserProfile.objects.get(user=request.user)
     customer_wishlist = Wishlist.objects.filter(user_profile=user_profile)

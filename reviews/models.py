@@ -4,6 +4,7 @@ from products.models import Product
 
 
 class Review(models.Model):
+    """ Class for creating/managing Reviews """
     product = models.ForeignKey(Product, on_delete=models.CASCADE,
                                 related_name="reviews")
     reviewer = models.ForeignKey(

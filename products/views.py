@@ -23,6 +23,7 @@ def all_products(request):
     direction = None
     current_category = None
 
+    # Product sorting by category, rating and sales price
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -32,8 +33,8 @@ def all_products(request):
                 products = products.annotate(lower_name=Lower('title'))
             if sortkey == "category":
                 sortkey = 'category__name'
-            # https://docs.djangoproject.com/en/1.8/ref/models/conditional-expressions/#conditional-aggregation
             # my husbang helped me with the sorting price functionality
+            # https://docs.djangoproject.com/en/1.8/ref/models/conditional-expressions/#conditional-aggregation
             if sortkey == "price":
                 sortkey = 'sort_price'
                 products = products.annotate(sort_price=Case(
@@ -109,6 +110,7 @@ def all_products(request):
 
 @login_required
 def product_bought_by_request_user(request, product_id):
+    """ Checks if the user bought the book in the past, returns T/F """
     # Get the product instance
     product = get_object_or_404(Product, pk=product_id)
 
@@ -145,7 +147,8 @@ def product_detail(request, product_id):
 
 @login_required
 def add_review(request, product_id):
-    """ Add a new review """
+    """ Add a new product review """
+    """ Only a signed in user can review a product """
     product = get_object_or_404(Product, pk=product_id)
     reviews = product.reviews.filter(approved=True).order_by('-created_on')
 
@@ -154,7 +157,7 @@ def add_review(request, product_id):
         #  show an error message
         messages.error(
                        request,
-                       'You can only leave a review for products '
+                       'You can only leave a review for book '
                        'you bought previously.'
                        )
         return redirect(reverse('product_detail', args=[product_id]))
@@ -194,20 +197,20 @@ def add_review(request, product_id):
 
 @login_required
 def add_product(request):
-    """ Add a product to the store """
+    """ Add a book to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owner can add products.')
+        messages.error(request, 'Sorry, only store owner can add book.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            messages.success(request, "Product was added successfully.")
+            messages.success(request, "Book was added successfully.")
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request,
-                           'Product was not added. Correct the form inputs.'
+                           'Book was not added. Correct the form inputs.'
                            )
     else:
         form = ProductForm()
@@ -223,9 +226,10 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a product in the bookstore offer """
+    """ Edit a book in the bookstore offer """
+
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owner can edit products.')
+        messages.error(request, 'Sorry, only store owner can edit books.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -233,12 +237,12 @@ def edit_product(request, product_id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Product successfully updated!')
+            messages.success(request, 'Book successfully updated!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(
                 request,
-                'Failed to update product. Please check the form inputs.'
+                'Failed to update book. Please check the form inputs.'
                           )
     else:
         form = ProductForm(instance=product)
@@ -256,14 +260,15 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the store offer """
+    """ Delete a book from the store offer """
+
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owner can delete products.')
+        messages.error(request, 'Sorry, only store owner can delete books.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
-    messages.success(request, 'Product was deleted.')
+    messages.success(request, 'Book was deleted.')
 
     context = {
         'on_page': True,

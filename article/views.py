@@ -135,6 +135,7 @@ def delete_article(request, slug):
 
 @login_required
 def like_article(request, slug):
+    """ Add or remove Like an article """
     article = get_object_or_404(Article, slug=slug)
 
     if article.likes.filter(id=request.user.id).exists():

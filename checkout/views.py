@@ -18,6 +18,7 @@ import json
 
 @require_POST
 def cache_checkout_data(request):
+    """ Process payment """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -85,7 +86,6 @@ def checkout(request):
         else:
             messages.error(request, 'There was an error with your form. \
                 Please check your information again.')
-            # print(order_form.errors.as_data())
     else:
         bag = request.session.get('bag', {})
         if not bag:

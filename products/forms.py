@@ -4,7 +4,7 @@ from .models import Product, Category
 
 
 class ProductForm(forms.ModelForm):
-
+    """ Product form for managing books """
     class Meta:
         model = Product
         fields = '__all__'
