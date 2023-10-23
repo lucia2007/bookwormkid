@@ -33,7 +33,7 @@
                         <h2 class="mb-0">
                             <button class="btn btn-block text-left p-3" type="button" data-toggle="collapse"
                                 data-target="#collapseOne-{{enquiry.id}}" aria-expanded="false"
-                                aria-controls="collapseOne-{{enquiry.id}}">
+                                aria-controls="collapseOne-{{enquiry.id}}" aria-label="Displays the enquiry text.">
                                 {{enquiry.enquiry}}
 
                             </button>
@@ -44,7 +44,8 @@
                                 class="text-success text-decoration-none p-1 border-0"
                                 aria-label="Lets the user edit the chosen enquiry.">Edit</a>
                             <button type="button" class="text-danger text-uppercase p-1 border-0" data-toggle="modal"
-                                data-target="#enquiryModal_{{ enquiry.id }}">
+                                data-target="#enquiryModal_{{ enquiry.id }}"
+                                aria-label="Show a confirm deletion modal.">
                                 Delete
                             </button>
                             <!-- Modal -->

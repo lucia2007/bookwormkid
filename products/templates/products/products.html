@@ -339,7 +339,8 @@
                                             class="edit-button">Edit</a> |
                                         <!-- Button trigger modal -->
                                         <button type="button" class="text-danger border-0 bg-white" data-toggle="modal"
-                                            data-target="#bookModal_{{ product.id }}">
+                                            data-target="#bookModal_{{ product.id }}"
+                                            aria-label="Triggers the confirm deletion modal.">
                                             Delete
                                         </button>
                                         {% include 'products/includes/product_deletion.html' %}
@@ -353,7 +354,9 @@
                                 {% csrf_token %}
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-outline-navy mb-2">
-                                        <i class="fas fa-shopping-bag"></i> Add to Bag
+                                        <i class="fas fa-shopping-bag"
+                                            aria-label="Adds one piece of the chosen product into the shopping bag."></i>
+                                        Add to Bag
                                     </button>
                                 </div>
                                 <input type="hidden" name="quantity" value="1" data-item_id="{{ product.id }}">

@@ -108,7 +108,7 @@
                         class="edit-button">Edit</a> |
                     <!-- Button trigger modal -->
                     <button type="button" class="text-danger border-0 delete-product" data-toggle="modal"
-                        data-target="#bookModal_{{ product.id }}">
+                        data-target="#bookModal_{{ product.id }}" aria-label="Opens a confirm deletion modal.">
                         Delete
                     </button>
                     {% include 'products/includes/product_deletion.html' %}
@@ -131,7 +131,8 @@
                                     <div class="input-group-prepend">
                                         <button type="submit"
                                             class="decrement-qty btn btn-navy rounded-0 decrement-qty_{{ product.id }}"
-                                            data-item_id="{{ product.id }}">
+                                            data-item_id="{{ product.id }}"
+                                            aria-label="Decrement button which decreases product quantity.">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
                                             </span>
@@ -142,6 +143,7 @@
                                     <div class="input-group-append">
                                         <button type="submit"
                                             class="increment-qty btn btn-navy rounded-0 increment-qty_{{ product.id }}"
+                                            aria-label="Increment button increases product quantity."
                                             data-item_id="{{ product.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-plus"></i>

@@ -8,7 +8,8 @@
                     Delete
                     enquiry
                 </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close button to close confirm deletion modal.">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -16,9 +17,10 @@
                 Are you sure you want to delete {{ enquiry.enquiry }}?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                    aria-label="Lets the user close the confirm deletion modal.">Close</button>
                 <a href="{% url 'delete_enquiry' enquiry.id %}"
-                    aria-label="Let the admin confirm deleteion of the chosen enquiry." class="btn btn-danger">Confirm
+                    aria-label="Let the admin confirm deletion of the chosen enquiry." class="btn btn-danger">Confirm
                     Deletion</a>
             </div>
         </div>

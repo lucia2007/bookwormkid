@@ -6,7 +6,8 @@
                 <h2 class="mb-0">
                     <button class="btn btn-block text-center p-0" type="button" data-toggle="collapse"
                         data-target="#collapseOne-{{review.id}}" aria-expanded="false"
-                        aria-controls="collapseOne-{{review.id}}">
+                        aria-controls="collapseOne-{{review.id}}"
+                        aria-label="The button displays the number of reviews. When clicked, it opens up all the reviews.">
                         {% with reviews.count as total_reviews %}
                         <i class="fa-regular fa-comment"></i>
                         {{ total_reviews }}
@@ -50,7 +51,8 @@
         <form method="post" action="{% url 'add_review' product.id %}" style=" margin-top: 1.3ren;">
             {{ review_form | crispy }}
             {% csrf_token %}
-            <button type="submit" class="btn btn-outline-navy">Submit</button>
+            <button type="submit" class="btn btn-outline-navy"
+                aria-label="Lets the user signed in user who bought this particular product, add a review which will be approved by the admin.">Submit</button>
         </form>
     </div>
 </div>
