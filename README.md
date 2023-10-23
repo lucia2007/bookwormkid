@@ -352,8 +352,13 @@ I used [Figma](https://www.figma.com) which is an excellent tool for making wire
 
 ![Login](/readme-images/login_tablet.png)
 </details><br>
+
 ### Mobile Wireframes
 
+<details><summary><b>Mobile Wireframes</b></summary>
+
+![Mobile Wireframes](/readme-images/mobile_wireframes.png)
+</details><br>
 
 [Back to top](#contents)
 ## Project Management
