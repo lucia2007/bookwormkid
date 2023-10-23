@@ -1,17 +1,17 @@
 # Bookworm Kid
 ![Bookwormkid](/readme-images/amiresponsive.png)
 
-Bookwormkid is an application which can be used in real life by anyone who is interested in supporting their child's, grandchild's or pupil's reading journey and help them fall in love with reading. I am sure there is no need to explain why reading skills are important for the development of the child, but detailed information can be found [here](https://www.highspeedtraining.co.uk/hub/why-is-reading-important-for-children/) if interested.
+Bookwormkid is an application which can be used in real life by anyone who is interested in supporting their child's, grandchild's or pupil's reading journey and help them fall in love with reading. I am sure there is no need to explain why reading skills are important for the development of the child, but detailed information can be found [here](https://www.highspeedtraining.co.uk/hub/why-is-reading-important-for-children/), if interested.
 
-The app's main purpose is to provide age appropriate literature for all kinds of readers which would take their reading levels into account, so no reader is dissuaded or discouraged by too difficult a text, but also suggesting interesting and enticing literature for avid and passionate readers whose reading skills are above average for their age group.
+The app's main purpose is to provide age appropriate literature for all kinds of readers which would take their reading levels into account, so no reader is dissuaded or discouraged by too difficult a text, but also recommending interesting and enticing literature for avid and passionate readers whose reading skills are above average for their age group.
 
 Reading doesn't come easily to everyone and while some child might be able to read his way through Harry Potter or even The Lord of the Rings at the age of 7, other children might find it difficult to read through much simpler stories at a much higher age.
 
 Having observed many children in their early reading journey, I can tell each road to proficient reading is different and just as a reluctant reader can be put off by too difficult a text or a "baby" story, so can a prolific reader be dissuaded by a story which isn't age appropriate or interesting enough.
 
-As a mother of four young children I have always strived for them to acquire and improve their reading skills from early on. I provided lots of Montessori materials for them and other aids to help them on the journey to becoming proficient readers. However, when I was looking for books that would be appropriate for their age and reading level, I often couldn't find books which would correspond to their current needs and skills. This was especially true about their native languages which are Czech and Slovak. The books which are available for early readers in these languages are often way too difficult, too long, unintestring or plain and definitely couldn't serve as a source of joy to the early avid or struggling readers.
+As a mother of four young children I have always strived for them to acquire and improve their reading skills from early on. I provided lots of Montessori materials for them and other aids to help them on the journey to becoming proficient readers. However, when I was looking for books that would be appropriate for their age and reading level, I often couldn't find books which would correspond to their current needs and skills and maturity level. This was especially true about their native languages which are Czech and Slovak. The books which are available for early readers in these languages are often way too difficult, too long, unintestring or plain and definitely couldn't serve as a source of joy to the early avid or struggling readers.
 
-In the English speaking countries, the reading system is much better developped, throught-through and adjusted to different ages and reading skills/levels. Children can pick a book which is the right level for them and take it from there.
+In the English speaking countries, the reading system is much better developped, well throught-through and adjusted to different ages and reading skills/levels. Children can pick a book which is the right level for them and take it from there.
 
 However, even in the English speaking environment, it is not easy to find books which would not be only age or skill appropriate, but both at the same time. Even a great [online resource](oxfordowl.com) which provides great age segmentation for young readers, doesn't provide interesting content for struggling readers of a higher age or profilic young readers. (I'm sure no struggling 8 year old would want to read "A very hungry caterpillar" or "Biff, Chip and Kipper" series which might correspond to their reading level if they are reluctant readers, but wouldn't correspond to their age or maturity level.)
 
@@ -19,16 +19,12 @@ I have heard of software available to schools which can diagnose a child's readi
 
 Most of the major bookstores which I have browsed through do provide segmentation taking age into account, but often it is too broad: early readers, first-grade readers, young adults, and none of these have subsegments for struggling, average or avid readers.
 
-Thus I would like to fill this market niche with this online bookstore which would cater for a specific age segment (5-12), early/young readers, but would take the children's reading skills and maturity into account.
-
-<!-- 
-Future feature
-Another major feature of this bookstore would be a possibility to return books for a credit which can subsequently be used when buying a new book. This was suggested by my friend Amy and also encouraged by real life application in one of my favorite bookstores. This would make our shopping behaviour more responsible and contribute to sustainability while at the same time allowing children at any age to be supplied with mind-blowing stories which they can't put away. -->
+Thus I would like to fill this market niche with this online bookstore which would cater for a specific age segment (6-12), early/young readers, but would take the children's reading skills and maturity into account.
 
 At this stage the bookstore is focused on English literature only, but it is my deepest wish for children all over the world to have access to literature which will transport them into a different world and make their lives richer in their own langauges whatever their reading skills are.
 
 You can access the Bookwormkid app here:
-<!-- [Bookworm Kid](https://tennis-buddies.herokuapp.com/) -->
+[Bookworm Kid](https://bookwormkid-c20568b2004e.herokuapp.com/)
 
 [Back to top](#contents)
 
