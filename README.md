@@ -50,6 +50,14 @@ You can access the Bookwormkid app here:
     - [Mobile Wireframes](#mobile-wireframes)
   - [Project Management](#project-management)
     - [Sprint #1 - 04/09 - 08/09](#sprint-1---0409---0809)
+    - [Sprint #2 - 11/09-15/09](#sprint-2---1109-1509)
+    - [Sprint #3 - 18/09-22/09](#sprint-3---1809-2209)
+    - [Sprint #4 - 25/09-29/09](#sprint-4---2509-2909)
+    - [Sprint #5 - 02/10 - 06/10](#sprint-5---0210---0610)
+    - [Sprint #6 - 09/10 - 13/10](#sprint-6---0910---1310)
+    - [Sprint #7 - 16/10 - 20/10](#sprint-7---1610---2010)
+    - [Sprint #8 + #9 - 23/10 - 03/11](#sprint-8--9---2310---0311)
+    - [Sprint #10 - 06/11 - 07/11](#sprint-10---0611---0711)
 - [Credits](#credits)
   - [Content](#content)
   - [Media](#media)
@@ -367,7 +375,7 @@ I have been using GitHub projects for organizing my project, tracking user stori
 
 At the beginning of the project, I spent a fair amount of time on project planning, on thinking it through. I created wireframes and a sketch of my models first. Having the wireframes and the ERD model to refer to when working on the project was both essential and very helpful. Any time I was getting lost or confused, I could consult them and figure out how to proceed.
 
-<!-- Reflecting back on my experience with PP4, I feel more confident about planning of the sprints and I planned them right at the beginning. -->
+Reflecting back on my experience with PP4, I felt more confident about planning of the sprints and I planned them right at the beginning. I did make minor changes to the content of each milestone, but in general my sprints followed this logic: focus on essential features first (mvp), add additional features if there is enough time.
 
 [Back to top](#contents)
 
@@ -375,15 +383,110 @@ My sprints were planned out as follows:
 
 ### Sprint #1 - 04/09 - 08/09
 
-In the first milestone my main goal was to get the project's framework set up and running.  I also added Login/Registration functionality using django-allauth. Most of this sprint was about setting up the backend and the tasks were labeled as Dev Task (DT). The following tasks where a part of this sprint:
+Project planning, project set up, Django Allauth
 
-<!-- Early deployment? -->
+In the first sprint I focused on project planning: I created wireframes, ERD schema, wrote down user stories, planned sprints and set up the project including the Django allauth. Most of this sprint was about setting up the backend and the tasks were labeled as Dev Task (DT). The following tasks where a part of this sprint:
 
-- DT Install of Django Environment
-- DT Create Django Project
-- DT Set Up Django allauth
-- DT Create an admin panel
-- DT Create Database models from ERD
+- DT - Preparation for Project Planning
+- DT - Set Up Development Environment
+- US - User Registration
+- US - User Login/Logout Functionality
+
+### Sprint #2 - 11/09-15/09
+
+Product Model set up/Page skeleton/Database set up
+
+In this sprint, I focused on creating the backend functionality for displaying products on offer, enable filtering and sorting and search functionality.
+
+- US - Home Page
+- US - Navigation
+- US - Footer
+- US - View All Products
+- US - Product Detail View
+- US - Product Sorting Functionality
+- US - Search Functionality
+- US - Filtering according to Skill Level, Special Offers, Featured
+- US - Product Category/Specials Filter
+- DT - Add Products to the database
+
+### Sprint #3 - 18/09-22/09
+
+Shopping Bag/Checkout page/User Profile/STRIPE
+
+I created shopping bag and checkout page functionality, customized user registration/login functionality, started working on implementation of Stripe payment system.
+
+- US - Shopping Bag
+- US - CHeckout
+- US - User Notifications (Toasts)
+- US - Add Products to Bag
+- DT - Add customized 403, 404 and 500 Error Pages
+- Several bug-fixes (details in testing.md)
+
+### Sprint #4 - 25/09-29/09
+
+Deploy/Newsletter sign up/CSS style improvements/Basic Admin Dashboard
+
+In this sprint I focused on early deploymentmadding newletter sign up functionality, improving app styling and added basic admin dashboard for adding products.
+
+- US - Newsletter
+- US - Visual Confirmation for shopping bag/wishlist items
+- Several bug fixes (details in testing.md)
+
+### Sprint #5 - 02/10 - 06/10
+
+Blog/Contact Form/Wishlist
+
+In this sprint I added Blog, contact form and wishlist and made small improvements to admin dashboard.
+
+- US - Admin Dashboard
+- US - Wishlist Icon Changes Colour when there is an Item in the Wishlist
+- US - Add Articles to the App (add, edit, delete functionality)
+- US - View All Articles
+- US - View Likes/Like/Unlike articles
+- US - Wishlist
+- US - Contact
+- US - Shopping Bag icon/functionality availabla from all books view
+
+### Sprint #6 - 09/10 - 13/10
+
+Age segmentation/Add more products to the shop/Bookstore management/Bug fixes/Confirm deletion
+
+In this sprint I managed to basic filtering by age, I added more products to the shop, significantly improved Bookstore Management, fixed bugs and added confirm deletion messages to relevant places.
+
+- US - Order Sorting
+- US - Confirm Deletion
+- US - Toasts without Shopping Bag
+- US - Add Age segmentation Filtering
+- US - Add Read more/read less Functionality
+- US - FAQs
+- US - Bookstore Management
+
+### Sprint #7 - 16/10 - 20/10
+
+Facebook mockup/Marketing (keywords)/Finish Age segmentation/Code refactoring/HTML Error Fixes/Finish up Footer/Navbar content
+
+In this milestone I focused on finishing the last features, I started refactoring the code and fixing HTML errors (duplicate ID's). I also finished up the Footer and Navbar Content. At my mentor's suggestion, I added a product review functionality.
+
+- US - Add Age Segmentation for all Product Views and Filters
+- US - Add Terms and Conditions
+- US _ Sales Price Functionality
+- US - Optimize Footer for Small Devices
+- US - Create Facebook Page
+- US - Sorting according to Sales Price
+- US - Add Dobule Filtering for Products according to Different Segments & Age
+- US - Make the Chosen Age Parameter Visually Clear
+- US - Product Review
+
+### Sprint #8 + #9 - 23/10 - 03/11
+
+Testing/Readme
+
+The main focus of these sprints was to update the readme file and do through testing of the whole app, including python, javascript, html validation, user story testing, lighthouse testing. Towards the end of the two weeks, I will add the robots.txt, sitemap.xml, and focus on improving of the SEO score.
+
+### Sprint #10 - 06/11 - 07/11
+
+Project Submission
+
 
 [Back to top](#contents)
 
