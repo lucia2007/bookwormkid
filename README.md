@@ -246,6 +246,56 @@ I used [Figma](https://www.figma.com) which is an excellent tool for making wire
 [Back to top](#contents)
 ### Desktop Wireframes
 
+<details><summary><b>Home Page</b></summary>
+
+![Home Page](/readme-images/homepage_desktop.png)
+</details><br>
+
+<details><summary><b>All Products Page</b></summary>
+
+![All Products Page](/readme-images/all_products_page_desktop.png)
+</details><br>
+
+<details><summary><b>Product Detail Page</b></summary>
+
+![Product Detail Page](/readme-images/product_detail_desktop.png)
+</details><br>
+
+<details><summary><b>Products by Skill Level</b></summary>
+
+![Products by Skill Level](/readme-images/products_by_skill_desktop.png)
+</details><br>
+
+<details><summary><b>Shopping Bag</b></summary>
+
+![Shopping Bag](/readme-images/shopping_bag_desktop.png)
+</details><br>
+
+<details><summary><b>Checkout</b></summary>
+
+![Checkout](/readme-images/checkout_desktop.png)
+</details><br>
+
+<details><summary><b>Admin Dasboard</b></summary>
+
+![Admin Dasboard](/readme-images/admin_dashboard_desktop.png)
+</details><br>
+
+<details><summary><b>My Profile</b></summary>
+
+![My Profile](/readme-images/profile_desktop.png)
+</details><br>
+
+<details><summary><b>Blog</b></summary>
+
+![Blog](/readme-images/blog_desktop.png)
+</details><br>
+
+<details><summary><b>Blog Detail</b></summary>
+
+![Blog Detail](/readme-images/blog_detail.png)
+</details><br>
+
 ### Tablet Wireframes
 
 ### Mobile Wireframes
