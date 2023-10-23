@@ -42,8 +42,8 @@
     Your review is waiting for approval.
 </div>
 {% else %}
-{% if product_bought %}
 {% if user.is_authenticated %}
+{% if product_bought %}
 <div class="col-md-8 card mb-4 mt-3 p-2">
     <div class="card-body">
         <p>Leave a review:</p>
