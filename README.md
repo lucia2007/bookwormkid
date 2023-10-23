@@ -526,7 +526,7 @@ Project Submission
 
 [Back to top](#contents)
 ## Acknowledgements
-- Extra help and guidance was received from my mentor Precious Ijege, from my husband Sam and fellow colleagues from the Code Institute.
+- Extra help and guidance was received from my mentor Precious Ijege, from my husband Sam and fellow colleagues and tutors from the Code Institute. Thank you Amy and Iris for sticking with me till the end. Thank you, Precious and Sam, for knowing exactly when to push me harder to add another cool feature or tackle another obstacle.
 
 Thank you all for your support and encouragement. I couldn't have done it without you.
 
