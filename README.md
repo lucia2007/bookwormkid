@@ -65,12 +65,22 @@ You can access the Bookwormkid app here:
 
 ## Objective
 
+I have always had a passion for reading and had a desire for others to enjoy this activity and benefit from it. Many adults who are not great readers today most likely lost their interest in reading when they were young and perhaps were struggling with reading fluently or with finding interesting books they would enjoy. Often it takes one great book for a child to become interested and they make a leap into the world of books from there. But for others, the road is not so easy and they need more support, help and guidance.
+
+It is my desire that every child falls is love with reading.
+
+I realize that if the book offer on this app was comprehnsive and complete, it could easily be used by teachers or librarians to easily find books for their young readers.
+
+From the technical perspective, when developing this project, my goal was to put my knowledge of HTML, CSS, JavaScript, Python, Bootstrap and Django Framework to use. Attaching Stripe functionality simulates the possibility to pay for the products which is a necessary feature of any eshop.
+
 ## Site User's Goal
 
-The main goal of the site user is to interesting age and reading skill appropriate books for their chidren, grandchildren or pupils.
+The main goal of the site user is to find interesting age and reading level appropriate books for their chidren, grandchildren or pupils.
 ## Site Owner's Goal
 
-As the site owner I want to provide a range of books for all young readers notwithstanding what their reading skill is so, so they can discover the world of books and fall in love with reading.
+As the site owner I want to provide a range of books for all young readers no matter what their reading skill is, so they can discover the world of books and fall in love with reading.
+
+Once the book offer has been amplified with consulation from experts on childrens' literature, this app could also be used as a search tool for finding the best books by librarians, teachers or other bookstores.
 
 # User Experience (UX)
 
@@ -84,12 +94,52 @@ As a visitor I want to find a fun and enticing book for my child/grandchild/pupi
 
 ### First Time Visitor
 
-### Returning Visitor
+  - A user sees the main features of the app on the welcome page: find a book by different search criteria, read an article or contact us.
+  - A user can register, log in and logout.
+  - An anonymous user can:
+    -  browse the page
+    -  search for books in the search window
+    -  sort books by category, rating and price (sales price is taken into account)
+    -  filter the books by skill level or/and age
+    -  identify products in specials
+    -  read articles and view number of likes
+    -  read book reviews if present
+    -  contact the store by filling in a form
+    -  read FAQs
+    -  subscribe for a newsletter
+    -  can see the contact information including the address, phone number and email
+    -  can visit the store's Facebook page
+    -  can follow the store through Twitter, Pinterest and Instagram (no real account)
+    -  can read Terms and Conditions
+    -  can read the store's Privacy Policy
+    -  see information about their user actions
+    -  see an updated shopping cart
+    -  can confirm deletion
+    -  can add/view/delete/update number of books in their shopping cart
+    -  can add a book to their shopping bag directly form the all products view
+    -  make a purchase
+    -  receive an email with order confirmation
+  - On top of that, a logged in user can:
+    -  leave a review for books they had previously bought
+    -  like/unlike articles
+    -  create a wishlist
+    -  save their information in the Profile section under the profile icon and update it
+    -  view their past orders
+    -  save their contact details for the future
+  - An admin user can:
+    - manage books, articles, enquiries in the bookstore management section (full CRUD functionality)
+    - confirm deletion of products/articles or enquiries
+    - can approve a review
+    - admin user can see unpublished articles and save them as drafts
 
+### Returning Visitor
+  - A user can easily sign in and access majority of the features of the website (like articles, leave a review, create a wishlist)
+  - A user with filled in profile details can make a fast purchase.
+  - A user can easily find books on sale/new arrivals or featured products
 
 ### Frequent Visitor
 
-  - A user can easily find a suitable book and make a quick purchase thanks to the saved personal and billing information.
+  - A user can easily find a suitable book and make a quick purchase thanks to the saved personal and billing information and make use of any user features.
 
 [Back to top](#contents)
 ## User Stories
