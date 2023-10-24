@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/bag/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?category=Reluctant</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?category=Keen</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?category=Avid</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?new=True</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?featured=True</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?sale=True</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?specials=True</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/article/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/contact/contact</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/enquiry/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/bookstoremanagement/privacy_policy/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/bookstoremanagement/terms_and_conditions/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/newsletter/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?age=6-8</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?age=9-10</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?age=11-12</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/31/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/2/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/6/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/5/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/13/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/14/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/16/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/15/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/18/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/26/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/25/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/19/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/21/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/23/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/20/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/22/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/24/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/29/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/27/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/28/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/30/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/17/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/12/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=/wishlist/add/4/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?category=Reluctant&amp;age=6-8</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?category=Reluctant&amp;age=9-10</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?category=Reluctant&amp;age=11-12</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?category=Keen&amp;age=6-8</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?category=Keen&amp;age=9-10</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?category=Keen&amp;age=11-12</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?category=Avid&amp;age=6-8</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?category=Avid&amp;age=9-10</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?category=Avid&amp;age=11-12</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?new=True&amp;age=6-8</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?new=True&amp;age=9-10</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?new=True&amp;age=11-12</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?featured=True&amp;age=6-8</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?featured=True&amp;age=9-10</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?featured=True&amp;age=11-12</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?sale=True&amp;age=6-8</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?sale=True&amp;age=9-10</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?sale=True&amp;age=11-12</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?specials=True&amp;age=6-8</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?specials=True&amp;age=9-10</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/products/?specials=True&amp;age=11-12</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/article/article/10-benefits-of-reading-why-you-should-read-every-day/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/article/article/top-tips-for-engaging-reluctant-readers/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/article/article/7-effective-ways-to-increase-your-childs-reading-skills/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/article/article/why-is-reading-important/</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F31%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F2%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F6%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F5%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F13%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F14%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F16%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F15%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F18%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F26%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F25%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F19%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F21%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F23%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F20%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F22%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F24%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F29%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F27%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F28%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F30%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F17%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F12%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F4%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F31%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F2%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F6%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F5%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F13%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F14%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F16%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F15%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F18%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F26%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F25%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F19%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F21%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F23%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F20%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F22%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F24%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F29%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F27%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F28%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F30%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F17%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F12%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bookwormkid-c20568b2004e.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F4%2F</loc>
+  <lastmod>2023-10-24T14:23:57+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>

@@ -52,6 +52,12 @@ For access to Admin Dashboard frontend view with relevant sign-in credentials: [
   - [Objective](#objective)
   - [Cutomer Goals](#cutomer-goals)
   - [Business Goal](#business-goal)
+- [Business Model](#business-model)
+  - [Marketing Techniques](#marketing-techniques)
+    - [Facebook Page](#facebook-page)
+    - [Content marketing](#content-marketing)
+    - [E-mail Marketing](#e-mail-marketing)
+    - [Search Engine Optimization (SEO)](#search-engine-optimization-seo)
 - [User Experience (UX/UI)](#user-experience-uxui)
   - [Primary Goal](#primary-goal)
   - [Visitor Goals](#visitor-goals)
@@ -115,6 +121,40 @@ Bookworm Kid strives to create a community of parents, teacher, librarians who c
 Once the book offer has been amplified with consulation from experts on childrens' literature, this app could also be used as a search tool for finding the best books by teachers, librarians and others.
 
 Bookworm Kid provides a very user friendly interface for bookstore admin where they can add/edit/delete books from the store, manage articles and enquiries. The admin can access all order details in the django admin panel and also can approve customer reviews.
+
+# Business Model
+Bookworm Kid was designed as a B2C - Business to Customer model - where the customer buys directly from the business. There are no intermediaries. This model enables direct communication with the customer and provides space for flexibility and quick reactions and adaptability to the customer's needs.
+
+## Marketing Techniques
+It is absolutely necessary to have online presence and recognition to be able to attract new customers and build a strong customer base. One of the ways to achieve this is through social platforms, e.g. the Facebook platform. Social media can be a great tool for attracting new customers and communicating with the current ones, if done correctly.
+
+### Facebook Page
+ A commercial Facebook page was created to make the potential customers aware of the business, its goals and to create a community around book lovers. We hope that through regular engagement with potential customers through posts, and other activities, we will be able to attract new customers. Facebook page will help us keep in touch with the current customers and provide a way for communication with new ones. We will be announcing new arrivals, featured products or special sales on this platform. Also when a new article is released/published, the users will be informed. When a new live reading session for children (which are very popular and will contribute to the organic growth of the store) takes place, the users will be informed about this upcoming event on our Facebook page. In the future we are considering using targeted ads, once our platform is robust enough.
+
+<details><summary><b>Facebook Page</b></summary>
+
+![Facebook Page](/readme-images/facebook_page.png)
+
+</details><br>
+
+### Content marketing
+
+There are several articles present on the Bookworm Kid website with the purpose of attracting potential customers to read up on the topic of the importance of reading and ways to improve children's reading skills. At the moment, all of the articles are guest articles, but in the future we plan to add our own content and engage more deeply with the users.
+
+### E-mail Marketing
+Another form of online marketing is through email. Bookworm Kid users can opt to subscribe to the company's newsletter. The content of the newsletter is kept short and fresh with the purpose to attract the customers to the store. New arrivals, featured products, sales will be announced through this platform. Also if there is a new interesting article or a new reading session, we will be letting the customers know. Lastly, the users will receive discount codes for their next purchase (future feature). [Mailchimp](https://mailchimp.com/) was used to set up the newsletter subscription functionality.
+
+### Search Engine Optimization (SEO)
+If a website does not come up in the google search on one of the top positions, it is very unlikely the users will ever visit is. Having sufficient traffic is a prerequite for customer conversion. One of the ways how to come up higher in searches is through Search Engine Optimization. If the ranking is good/high, there is a higher return on investment.
+
+Therefore it is Bookworm Kid's goal to include content which is reliable, profesional and relevant. Descriptive Meta Tags have been implemented on the site in hope of increasing the SEO. Most of them are a result of several brainstorming sessions, but I also used [Wordtracker](https://www.wordtracker.com/) to add more content specific keywords. I made sure to use not only short, but also long-tail words. The Meta Tags used:
+
+    * Meta Description - "Bookworm kid is a webstore that sells books for young children taking not only their age but also their reading skills into account. Encourage your young reader. Come and find the best book for your child."
+
+    * Meta Keywords - books by-age, books by-reading skills, reluctant reader, keen reader, struggling reader, avid reader, age appropriate books, slow reader, happy reader, fast reader, exciting books for kids, children's bookstore online, online children's bookstore, encourage children to read, child hates reading
+
+The site also includes a sitemap.xml and robots.txt to make sure that the search engines can find and crawl the pages on the site.
+
 # User Experience (UX/UI)
 
 ## Primary Goal

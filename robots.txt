@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://bookwormkid-c20568b2004e.herokuapp.com/sitemap.xml
