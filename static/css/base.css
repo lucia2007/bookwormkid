@@ -2,6 +2,7 @@ html {
     height: 100%;
 }
 
+/* Body */
 body {
     background: url('/media/graffiti_child_reading.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -10,10 +11,12 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+/* Main */
 main {
     min-height: 70vh;
 }
 
+/* Header Container */
 .header-container {
     padding-top: 100px;
 }
@@ -26,26 +29,6 @@ main {
     left: 0px;
 }
 
-.girl-reading {
-    height: 100vh;
-}
-
-/* Create an overlay pseudo-element */
-/* https://stackoverflow.com/questions/28121731/use-pseudo-element-to-create-background-overlay */
-/* body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100% + 164px);
-    background-color: rgba(0, 0, 0, 0.1);
-} */
-
-
-.display-4.logo-font.text-black {
-    font-size: 1.5rem;
-}
 
 .navbar-light .navbar-toggler {
     color: rgba(0, 0, 0, .5);
@@ -54,6 +37,38 @@ main {
 
 .main-navbar {
     padding: 8px 0 0 0;
+}
+
+/* Home Page */
+.girl-reading {
+    height: 100vh;
+}
+
+.display-4.logo-font.text-black {
+    font-size: 1.5rem;
+}
+
+.action-call-container {
+    margin-top: 350px;
+}
+
+.action-call {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    background-color: #FFE19C;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Overlay */
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #EDFFD9;
+    z-index: -1;
 }
 
 /* Specials Icons */
@@ -102,22 +117,11 @@ main {
     text-transform: uppercase;
 }
 
-.action-call-container {
-    margin-top: 350px;
-}
-
-.action-call {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    background-color: #FFE19C;
-    font-weight: 500;
-    text-align: center;
-}
-
 .main-logo-link {
     width: fit-content;
 }
 
+/* Buttons */
 .shop-now-button {
     background: #3A3042;
     color: white;
@@ -158,16 +162,6 @@ main {
     color: #fff;
 }
 
-.overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: #EDFFD9;
-    z-index: -1;
-}
-
 a.category-badge>span.badge:hover {
     background-color: #3A3042 !important;
     color: #fff !important;
@@ -185,6 +179,16 @@ a.category-badge>span.badge:hover {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-navy:hover,
+.btn-navy:active,
+.btn-navy:focus {
+    background: #3A3042;
+    color: white;
 }
 
 /* Toasts  */
@@ -256,16 +260,6 @@ input[name='q']::placeholder {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-navy:hover,
-.btn-navy:active,
-.btn-navy:focus {
-    background: #3A3042;
-    color: white;
 }
 
 .text-black {
@@ -353,8 +347,6 @@ input[name='q']::placeholder {
     background: #EDFFD9;
 }
 
-
-
 /* Admin Product Form */
 .btn-file {
     position: relative;
@@ -383,12 +375,9 @@ input[name='q']::placeholder {
 }
 
 /* Allauth form formatting */
-
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
-    /* mt-4 */
     color: #6c757d;
-    /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -443,6 +432,31 @@ input[name='q']::placeholder {
     gap: 3px;
 }
 
+/* Newsletter container */
+
+.newsletter-container {
+    margin-top: 100px;
+}
+
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 100%;
+}
+
+#mc-embedded-subscribe {
+    clear: both;
+    width: auto;
+    display: block;
+    margin: 1em 5% 1em 5%;
+}
+
+#mc_embed_signup div#mce-responses {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 /* Footer */
 .navigation,
 .help {
@@ -472,31 +486,6 @@ a.text-reset {
 
 .copyright {
     background-color: #3A3042;
-}
-
-/* Newsletter container */
-
-.newsletter-container {
-    margin-top: 100px;
-}
-
-#mc_embed_signup {
-    background: #fff;
-    clear: left;
-    font: 14px Helvetica, Arial, sans-serif;
-    width: 100%;
-}
-
-#mc-embedded-subscribe {
-    clear: both;
-    width: auto;
-    display: block;
-    margin: 1em 5% 1em 5%;
-}
-
-#mc_embed_signup div#mce-responses {
-    padding: 0 !important;
-    margin: 0 !important;
 }
 
 /* Media Queries */
@@ -607,6 +596,7 @@ a.text-reset {
     }
 }
 
+/* Extra large screen devices (1675px and above) */
 @media (min-width: 1675px) {
     main {
         max-width: 1400px;
