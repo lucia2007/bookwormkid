@@ -52,7 +52,8 @@
                 </a>
                 {% endif %}
                 <div class="text-center my-3">
-                    <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Adds a product to wishlist"
+                    <a href="{% url 'add_to_wishlist' product.id %}"
+                        aria-label="Adds a product to wishlist. Add to Wishlist."
                         class="btn btn-outline-navy-reverse"><i class="fas fa-heart"> </i> Add To Wishlist
                     </a>
                 </div>
@@ -67,13 +68,13 @@
                 <div class="category-icon d-flex align-items-end">
                     {% if product.category.name == "Reluctant" %}
                     <img class="mt-1 mb-1 category-icon-image" src="{% static 'images/reluctant.svg' %}"
-                        alt="An icon of basic skill level">
+                        alt="{{ product.category.friendly_name }}">
                     {% elif product.category.name == "Keen" %}
                     <img class="mt-1 mb-1 category-icon-image" src="{% static 'images/keen.svg' %}"
-                        alt="An icon of an intermediate skill level">
+                        alt="{{ product.category.friendly_name }}">
                     {% elif product.category.name == "Avid" %}
                     <img class="mt-1 mb-1 category-icon-image" src="{% static 'images/avid.svg' %}"
-                        alt="An icon of an advanced skill level">
+                        alt="{{ product.category.friendly_name }}">
                     {% endif %}
                     <span class="text-black mt-1 pl-1">
                         <a class="text-black text-decoration-none"
@@ -99,22 +100,25 @@
                     €{{ product.final_price }}
                 </p>
                 {% endif %}
-                {% if product.rating %}
-                <small class="text-black"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                {% else %}
-                <small class="text-black">No Rating</small>
-                {% endif %}
-                {% if request.user.is_superuser %}
-                <small class="ml-3">
-                    <a href="{% url 'edit_product' product.id %}" aria-label="Takes the user to edit_product page."
-                        class="edit-button">Edit</a> |
-                    <!-- Button trigger modal -->
-                    <button type="button" class="text-danger border-0 delete-product" data-toggle="modal"
-                        data-target="#bookModal_{{ product.id }}" aria-label="Opens a confirm deletion modal.">
-                        Delete
-                    </button>
-                    {% include 'products/includes/product_deletion.html' %}
-                </small>
+                <div class="d-flex align-items-center">
+                    {% if product.rating %}
+                    <small class="text-black"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                    {% else %}
+                    <small class="text-black">No Rating</small>
+                    {% endif %}
+                    {% if request.user.is_superuser %}
+                    <div class="ml-3">
+                        <a href="{% url 'edit_product' product.id %}" aria-label="Takes the user to edit_product page."
+                            class="edit-button small-buttons">Edit</a> |
+                        <!-- Button trigger modal -->
+                        <button type="button" class="text-danger border-0 delete-product small-buttons"
+                            data-toggle="modal" data-target="#bookModal_{{ product.id }}"
+                            aria-label="Opens a confirm deletion modal. Delete.">
+                            Delete
+                        </button>
+                        {% include 'products/includes/product_deletion.html' %}
+                    </div>
+                </div>
                 {% endif %}
                 <!-- Readm more/read less: https://codepen.io/joserick/pen/ooVPwR -->
                 <div id="summary">
@@ -156,7 +160,8 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <a href="{% url 'products' %}" aria-label="Takes the use to view all products."
+                            <a href="{% url 'products' %}"
+                                aria-label="Takes the use to view all products. Keep Shopping."
                                 class="btn btn-outline-navy rounded-0 mt-5">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>

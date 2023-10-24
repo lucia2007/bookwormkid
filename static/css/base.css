@@ -191,6 +191,10 @@ a.category-badge>span.badge:hover {
     color: white;
 }
 
+.small-buttons {
+    font-size: small;
+}
+
 /* Toasts  */
 .message-container {
     position: fixed;
