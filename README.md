@@ -153,7 +153,7 @@ Therefore it is Bookworm Kid's goal to include content which is reliable, profes
 
     * Meta Keywords - books by-age, books by-reading skills, reluctant reader, keen reader, struggling reader, avid reader, age appropriate books, slow reader, happy reader, fast reader, exciting books for kids, children's bookstore online, online children's bookstore, encourage children to read, child hates reading
 
-The site also includes a sitemap.xml and robots.txt to make sure that the search engines can find and crawl the pages on the site.
+The site also includes a sitemap.xml and robots.txt to make sure that the search engines can find and crawl the pages on the site. These files are essential for SEO optimization. The sitemap.xml was generated using [XML Sitemap Generator](https://www.xml-sitemaps.com/) and included in the root folder of the project. A robots.txt file was created in the root folder to instruct search engine crawlers on how to access and crawl the site's pages.
 
 # User Experience (UX/UI)
 
