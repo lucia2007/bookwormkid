@@ -28,15 +28,31 @@ You can access the Bookwormkid app here:
 
 [Back to top](#contents)
 
+If you wish to make a test purchase, you can use the following [Stripe Dummy Card](https://stripe.com/docs/testing) details:
+
+- Success Card Number: 4242424242424242
+- 3D Secure Auth Number: 4000 0027 6000 3184
+- Exp Date: Any date in the future using the format MM/YY
+- CVN: any 3 digit number
+- Postcode: any 5 numerals
+
+Any payments made using a valid debit/credit card will not be processed and the card will not be charged. No orders made will be fulfilled.
+
+For full Admin access to Django Admin panel with relevant sign-in credentials: [BookWorm Kid Admin](https://bookwormkid-c20568b2004e.herokuapp.com/admin/)
+
+For access to Admin Dashboard frontend view with relevant sign-in credentials: [BookWorm Kid Admin Dashboard](https://bookwormkid-c20568b2004e.herokuapp.com/bookstoremanagement/bookstoremanagement)
+
+[Back to top](#contents)
+
 # Contents
 
 - [Bookworm Kid](#bookworm-kid)
 - [Contents](#contents)
 - [Project](#project)
   - [Objective](#objective)
-  - [Site User's Goal](#site-users-goal)
-  - [Site Owner's Goal](#site-owners-goal)
-- [User Experience (UX)](#user-experience-ux)
+  - [Cutomer Goals](#cutomer-goals)
+  - [Business Goal](#business-goal)
+- [User Experience (UX/UI)](#user-experience-uxui)
   - [Primary Goal](#primary-goal)
   - [Visitor Goals](#visitor-goals)
     - [First Time Visitor](#first-time-visitor)
@@ -60,6 +76,7 @@ You can access the Bookwormkid app here:
     - [Sprint #10 - 06/11 - 07/11](#sprint-10---0611---0711)
 - [Credits](#credits)
   - [Content](#content)
+  - [Tools](#tools)
   - [Media](#media)
   - [Acknowledgements](#acknowledgements)
 
@@ -77,16 +94,19 @@ I realize that if the book offer on this app was comprehnsive and complete, it c
 
 From the technical perspective, when developing this project, my goal was to put my knowledge of HTML, CSS, JavaScript, Python, Bootstrap and Django Framework to use. Attaching Stripe functionality simulates the possibility to pay for the products which is a necessary feature of any eshop.
 
-## Site User's Goal
+## Cutomer Goals
 
-The main goal of the site user is to find interesting age and reading level appropriate books for their chidren, grandchildren or pupils.
-## Site Owner's Goal
+The main goal of the customer is to find interesting age and reading level appropriate books for their chidren, grandchildren or pupils. The customers are provided with a search field to quickly find books they are looking for and with highly customized filters to be able to search in more than one category. The customers can find supporting articles and join the community on Facebook or sign up for a monthly newsletter to be informed about the new tidings within the company. The customers can leave book reviews to express their opinion.
+## Business Goal
 
-As the site owner I want to provide a range of books for all young readers no matter what their reading skill is, so they can discover the world of books and fall in love with reading.
+Bookworm Kid provides a range of books for all young readers no matter what their reading skill is, so they can discover the world of books and fall in love with reading.
 
-Once the book offer has been amplified with consulation from experts on childrens' literature, this app could also be used as a search tool for finding the best books by librarians, teachers or other bookstores.
+Bookworm Kid strives to create a community of parents, teacher, librarians who could contribute with their tips for great books for young readers and at the same time find support on their journey of helping young readers discover the world of books. The articles, newsletter, contact form, reviews and community readings aim to attract like-minded people with similar desires and facilitate their search for the best books for their young ones.
 
-# User Experience (UX)
+Once the book offer has been amplified with consulation from experts on childrens' literature, this app could also be used as a search tool for finding the best books by teachers, librarians and others.
+
+Bookworm Kid provides a very user friendly interface for bookstore admin where they can add/edit/delete books from the store, manage articles and enquiries. The admin can access all order details in the django admin panel and also can approve customer reviews.
+# User Experience (UX/UI)
 
 ## Primary Goal
 
@@ -125,6 +145,7 @@ As a visitor I want to find a fun and enticing book for my child/grandchild/pupi
     -  receive an email with order confirmation
   - On top of that, a logged in user can:
     -  leave a review for books they had previously bought
+    -  a user can review a book only once
     -  like/unlike articles
     -  create a wishlist
     -  save their information in the Profile section under the profile icon and update it
@@ -235,6 +256,8 @@ As a visitor I want to find a fun and enticing book for my child/grandchild/pupi
   - As a **user** I can **add a review for a book I had bought previously** so that I can **express my opinion**.
 - US - Create Facebook page
   - As a **user** I can **visit the store's facebook page** so that I can **have access to the newest posts and connect with other followers of the bookstore**.
+- US - Lets the user review a book only once
+  - As a **user** I can **review a product only once** so that I can **share my opinion but not spam others**.
 
 
 [Back to top](#contents)
