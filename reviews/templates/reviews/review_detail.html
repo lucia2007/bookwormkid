@@ -28,7 +28,7 @@
                             <p class="font-weight-bold">
                                 {{ review.name }} says:
                             </p>
-                            <span class="text-muted font-weight-normal">
+                            <span class="text-black font-weight-normal">
                                 {{ review.created_on }}
                             </span>
                             {{ review.body | linebreaks }}
@@ -51,7 +51,7 @@
 {% else %}
 <!-- If user signed in, they can see the review form and leave a review if they had bought this particular item in the past -->
 {% if user.is_authenticated %}
-{% if product_bought %}
+{% if product_bought and not already_reviewed %}
 <div class="col-md-8 card mb-4 mt-3 p-2">
     <div class="card-body">
         <p>Leave a review:</p>

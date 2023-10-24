@@ -127,19 +127,33 @@ def product_bought_by_request_user(request, product_id):
     return product_bought
 
 
+def product_already_reviewed_by_user(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+
+    user_profile = get_object_or_404(UserProfile, user=request.user)
+
+    already_reviewed = Review.objects.filter(
+        reviewer=request.user,
+        product=product).first()
+
+    return already_reviewed
+
+
 def product_detail(request, product_id):
     """ A view to show product details. """
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = product.reviews.filter(approved=True).order_by('created_on')
     product_bought = product_bought_by_request_user(request, product_id)
+    already_reviewed = product_already_reviewed_by_user(request, product_id)
 
     context = {
         'product': product,
         'reviews': reviews,
         'reviewed': False,
         'review_form': ReviewForm(),
-        'product_bought': product_bought
+        'product_bought': product_bought,
+        'already_reviewed': already_reviewed
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -150,6 +164,16 @@ def add_review(request, product_id):
     """ Add a new product review """
     """ Only a signed in user can review a product """
     product = get_object_or_404(Product, pk=product_id)
+
+    already_reviewed = product_already_reviewed_by_user(request, product_id)
+
+    if already_reviewed:
+        messages.error(
+            request,
+            'You have already reviewed this book. '
+            'You can add only one review per book.')
+        return redirect(reverse('product_detail', args=[product_id]))
+
     reviews = product.reviews.filter(approved=True).order_by('-created_on')
 
     if not product_bought_by_request_user(request, product_id):
