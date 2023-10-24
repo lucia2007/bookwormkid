@@ -60,6 +60,9 @@ For access to Admin Dashboard frontend view with relevant sign-in credentials: [
     - [Frequent Visitor](#frequent-visitor)
   - [User Stories](#user-stories)
 - [Creation Process](#creation-process)
+  - [Design Inspiration](#design-inspiration)
+    - [Color Scheme](#color-scheme)
+    - [Typography and Iconography](#typography-and-iconography)
   - [Design Prototype (Wireframes)](#design-prototype-wireframes)
     - [Desktop Wireframes](#desktop-wireframes)
     - [Tablet Wireframes](#tablet-wireframes)
@@ -74,6 +77,12 @@ For access to Admin Dashboard frontend view with relevant sign-in credentials: [
     - [Sprint #7 - 16/10 - 20/10](#sprint-7---1610---2010)
     - [Sprint #8 + #9 - 23/10 - 03/11](#sprint-8--9---2310---0311)
     - [Sprint #10 - 06/11 - 07/11](#sprint-10---0611---0711)
+    - [GitHub Projects Board](#github-projects-board)
+    - [MoSCoW Prioritization](#moscow-prioritization)
+    - [Milestones](#milestones)
+    - [Epics](#epics)
+    - [User Stories](#user-stories-1)
+  - [Database Schema (ERD)](#database-schema-erd)
 - [Credits](#credits)
   - [Content](#content)
   - [Tools](#tools)
@@ -259,11 +268,25 @@ As a visitor I want to find a fun and enticing book for my child/grandchild/pupi
 - US - Lets the user review a book only once
   - As a **user** I can **review a product only once** so that I can **share my opinion but not spam others**.
 
-
-[Back to top](#contents)
 # Creation Process
 
-When I started creating the web application, I had a very clear idea of what I wanted to achieve. I wanted to create an attractive enticing eshop where the user would easily find a great book for their young reading. Firstly, I designed wireframes, then I proceeded to create the ERD schema and subsequently I focused on writing down user stories and planned my sprints.
+When I started creating the web application, I had a very clear idea of what I wanted to achieve. I wanted to create an attractive enticing eshop where the user would easily find a great book for their young reader. Firstly, I designed wireframes, then I proceeded to create the ERD schema and subsequently I focused on writing down the user stories and planned all my sprints.
+
+## Design Inspiration
+
+### Color Scheme
+
+I got the idea for the main hero image and color theme when travelling in France in the summer and having come across the happy child reading a book mural by Jef Aerosol. It took me a while to find the image online and refine it using the [AI Image Sharpener](https://vanceai.com/sharpen-ai/) to make it a bit more sharp. The image I found had orange background, so I used it as one of main background colors and found the complementary colors by using [Coloors](https://coolors.co/).
+
+<details><summary><b>Color Scheme</b></summary>
+
+![Color Scheme](/readme-images/color_scheme.png)
+</details><br>
+
+### Typography and Iconography
+
+As regards the icons, I mainly used fontawesome icons, as they are easy to use and are consistent in style. I used 'Raleway' font from Google fonts and it seemed to work well with the bookstore theme. The font is also easily legible which is a very important requirement.
+
 
 [Back to top](#contents)
 ## Design Prototype (Wireframes)
@@ -398,7 +421,25 @@ I have been using GitHub projects for organizing my project, tracking user stori
 
 At the beginning of the project, I spent a fair amount of time on project planning, on thinking it through. I created wireframes and a sketch of my models first. Having the wireframes and the ERD model to refer to when working on the project was both essential and very helpful. Any time I was getting lost or confused, I could consult them and figure out how to proceed.
 
-Reflecting back on my experience with PP4, I felt more confident about planning of the sprints and I planned them right at the beginning. I did make minor changes to the content of each milestone, but in general my sprints followed this logic: focus on essential features first (mvp), add additional features if there is enough time.
+Reflecting back on my experience with PP4, I felt more confident about planning of the sprints and I planned them right at the beginning. I did make minor changes to the content of each milestone, but in general my sprints followed this logic: focus on essential features first (mvp), add additional features if there is enough time. I also focused on issues with high priority and only when the project was taking shape, would I add a could have or lower priority features. I also improved in guessing have many story points should each user story/dev tasks take, but I had not yet planned to do a given number of points withing the sprint.
+
+When I am finished with the project, I plan to go back and analyze how many story points I was able to achieve in a sprint and will use this information for my future project planning.
+
+I used Milestones for organizing my sprints. I know it is not ideal, but the Project tool does not have a great alternative to tracking sprints. Thus, I would create my milestones, give them a description, assign Epics and User stories to them and add a finish date for each of them. My sprints were usually one week long Monday to Friday, but sometimes I had to move some issues to the next sprint due to a problem which took me longer to solve than I had expected or I managed to squeeze in some US story into the current sprint.
+
+From the beginning I tried to update my readme and testing files, especially as regards credits, sources and bug-fixes. I left the last two sprints for readme and testing file completion as it is a very time consuming task to document everything.
+
+I tried to fix bugs, small or big, as I went so that they would not be too much left at the end. Also it gave me a great relief when the app would start working again after having displayed error upon error.
+
+As you will see from my progress, I have always kept MVP in mind. At first I made sure the backend functionality was in place, then I started working on other crucial elements and when I had some extra time, I added some nice to have features, but always keeping in mind meeting the core project requirements first.
+
+This is visible especially with the product filtering, where at first I developed only a basic filtering functionality by skill level and some other model attributes. It took me a long time until I got around doing the age filtering, but I felt this was an essantial feature of the app and needed to be done. Again, I started with a simple age filter which did not take any other parameters in the account. Finally, towards the end of my development, I managed to create filters which take more than one criterion into account and I am very happy with the result. In the meantime I would add other essential features to comply with the mvp requirements, like newsletter, contact form, articles, enquiries and others.
+
+Overall, primarily, I focused on completing majority of the must-haves, in later stages of the product development I would consider some should and could-haves. At the same time, I was identifying user stories which would have to change into won't haves and be left for future development.
+
+Breaking up the project in Epics, User stories and essentially into tasks has been very helpful and enabled me to tackle the project in managable bite-size steps. Using acceptance criteria as a part of my user stories helped me define what was necessary to achieve before I could consider the user story done. Each user story also contained detailed tasks which had to be fulfilled before labeling the story as done.
+
+Each of the user stories would get labels such as: must have, should have, could have, won't have; number of story points; epic ; user story/dev task/bug; high/medium/low priority. Each user story would be assigned to its respective epic and milestone (sprint).
 
 [Back to top](#contents)
 
@@ -502,14 +543,108 @@ In this milestone I focused on finishing the last features, I started refactorin
 
 ### Sprint #8 + #9 - 23/10 - 03/11
 
-Testing/Readme
+Testing/Readme/Marketing/SEO/Missing Files
 
 The main focus of these sprints was to update the readme file and do through testing of the whole app, including python, javascript, html validation, user story testing, lighthouse testing. Towards the end of the two weeks, I will add the robots.txt, sitemap.xml, and focus on improving of the SEO score.
+
+- US - Lets the user review a book only once
 
 ### Sprint #10 - 06/11 - 07/11
 
 Project Submission
 
+[Back to top](#contents)
+
+### GitHub Projects Board
+
+I used Projects tool inbuilt in GitHub, [GitHub's Projects](https://github.com/users/lucia2007/projects/6/views/1), to help me manage the scope of the project, to track my progress and record any bugs, but also to jot down any ideas that were relevant for the application development. These ideas were either later applied in the code or dismissed if they did not seem to enhance the user's experience or improve the development process. The issues were being fluidly moved from PBIs into In Progress and then either into Done or Won't have. Anytime I came across a bug, I noted it down with as many details as possible in the bug section and continuously worked on fixing them.
+
+Whenever I had an idea related to the project, I would jot it down in the "Backlog section/Brainstorming" section. Then I would go through the issues and choose the ones suitable for the current Milestone. I would convert the simple ideas into proper User Stories with acceptance criteria and necessary tasks and move them to the To Do/In Progress section. I would label each User Story with the following labels: MoSCoW lables, number of story points, relevant Epic and Milestone, priority, user story/dev task/bug-fix. The dev tasks were usually centered around the backend part of the project, getting the frameworks set up and functional, or fixing bugs, writing documentation or testing.
+
+When my Milestone with its deadline was set up (Sprint), I would assign relevant Epics with their User Stories to it. On a day-to-day basis I would choose 2 or 3 things that were currently being worked on and I would place them in the "In Progress" section. I also took some extra time, usually on a Friday afternoon or Monday morning to do a more thorough clean up of the project board so that it would remain usable and not be too cluttered. (Sometimes I wrote the same bug/issue down more than once or I had more than 2-3 issues in my In Progress section.) If I became stuck on a task for whatever reason or depended on external input, I moved it to "Blocked". At last, when a task was completed, I would one more time check against the acceptance criteria, tick each of the finished tasks and move it to the "Done" section. As soon as an issue was identified as "won't have" for the current project version, I moved it to the won't do section on the project board.
+
+The Project tool has been very benefitial for my development process, especially because I could rely on having all the relevant information in one place. I would write down the sources to be credited, or bugs to be fixed or ideas on how to improve some part of the application, so I did not have to worry about having forgotten something essential.
+
+In the future, I should able to surmise the amount of story points for each Epic/User story more easily and thus plan my Sprints more effectively. In the past I noted down the bugs only retrospectively. This time around I tried to create an issue for each bug right away and tried to connect a commit to the issue, but I didn't do it quite consistently. I hope this process becomes a second nature to me in the future and I won't be forgetting to attach the issue number to a commit. What was definitely benefitial, was that I documented each bug and its solution in the testing file as soon as I had solved it.
+
+[Back to top](#contents)
+### MoSCoW Prioritization
+
+I had tried to apply MoSCoW principles in my development but more on a project basis than on a sprint basis. In my first sprints I solely focused on meeting must-have dev tasks and user stories and when most of my necessary features were in place, only then did I start incorporating should-haves or could-haves. As I went along, I also indentified won't-haves which were either to be fully abandoned or left for future development.
+
+- Must Have: must be delivered (max 60% of user stories)
+- Should Have: add significant value, but not crucial (20% of stories)
+- Could Have: small impact if not implemented (20% of stories)
+- Won't Have: not crucial for this iteration
+
+Unfinished user stories can be found in either PBis, to-do or the won't have section of my project board.
+
+[Back to top](#contents)
+### Milestones
+
+I split up my project development into the following milestones as mentioned above:
+
+1. Project planning, project set up, Django Allauth
+2. Product Model set up/Page skeleton/Database set up
+3. Shopping Bag/Checkout page/User Profile/STRIPE
+4. Deploy/Newsletter sign up
+5. Blog/Contact Form/Wishlist
+6. Age segmentation/Add more products to the shop/Bookstore management/Bug fixes/Confirm deletion
+7. Facebook mockup/Marketing (keywords)/Finish Age segmentation/Code refactoring/Fiinish up Footer/Navbar content/
+8. and  9. Testing/Readme/Marketing/SEO/missing files
+10. Project Submission
+
+[Back to top](#contents)
+### Epics
+
+Each milestone was split into epics. Looking back at it, I could have used fewer epics. Some milestones contain just one or two epic, others contain more. For details please look into my [Projects](https://github.com/users/lucia2007/projects/9) where you can see which epic was a part of which milestone. My Projects board is set to public.
+
+- EPIC Registration and User Account
+- EPIC Viewing and Navigation
+- EPIC Book Details
+- EPIC Books in Specials
+- EPIC Shopping Bag Functionality
+- EPIC Filtering
+- EPIC Sorting and Searching
+- EPIC Contact Form
+- EPIC Articles
+- EPIC Customer Communication and Advertisement
+- EPIC Error Pages
+- EPIC Wishlist
+- EPIC Store Management
+
+[Back to top](#contents)
+### User Stories
+
+Each epic would contain several user stories. Each user story has a description, acceptance criteria and tasks which had to be ticked before the user story could be closed and moved to done. For details as to which user story was a part of a particular epic/milestone and for the acceptance criteria/tasks, please refer to my [Projects](https://github.com/users/lucia2007/projects/9) where all the details can be found.
+
+The above listed user stories above had all been finished. There are several user stories which had not been done and are postponed for future development, others were moved into "won't do" category. For more details see Future Features section.
+
+I realize that my attempt at agile project development was not perfect and I know I will do several things differently in the future, but it has definitely been an enriching experience which helped me manage the project's scope. In the future I plan to make more detailed Epics and to plan my sprints according to user story points, as now I have a better idea how long different tasks take me and I can make better, if imperfect, estimates.
+
+[Back to top](#contents)
+## Database Schema (ERD)
+
+Before I started writing any code, I spent a lot of time on planning and thinking things through. One part on which I spent a considerable amount of time, was creating the ERD diagram and designing each model and their relationships. I used [Lucid Charts](https://lucidchart.com/) to create my ERD schema. As you can tell, not all my arrows are pointing into the right direction as I was still a bit confused about the relationships and how the models are related to each other, but I believe that if I had to create the schema now, it would be much easier and a more straightforward process.
+
+![ERD Diagram Lucid Charts](/readme-images/ERD_PP5.png)
+
+This ERD schema was instrumental for creating all the necessary models for this app. Creating this schema helped me realize the relationships between different apps and models and clarified what kind of fields each of the model components would need.
+
+Models/Apps used in this project:
+- UserProfiles - used to collect and update contact/delivery information for users
+- Checkout - For creating/updating orders
+- Bookstore Management - for managing books/enquiries/articles from a user friendly interface
+- Contact - for contacting the store via a online form
+- Newletter - for signing up for a regular newsletter
+- Products - for managing books, filtering, sorting and more
+- Article - for adding/editing/deleting articles
+- Enquiry - for adding/updating/removing FAQ and their answers
+- Wishlist - for adding/removing items from the user's wishlist
+- allauth - used for sign in/out/up functionality of the site
+- Reviews - for adding a review to a book the customer had bought and not reviewed before
+
+I had not implemented the comments model to Articles (future feature), but at my mentor's suggestion, I focused on adding the book reviews as we found this feature essential for an online store.
 
 [Back to top](#contents)
 
@@ -523,29 +658,34 @@ Project Submission
 - [Boutique Ado](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/) for general quidance and mainly for the shopping bag and checkout functionalities
 - [I think therefore I Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) for articles functionality
 - [Everneed](https://github.com/amylour/everneed/tree/main) for articles and wishlist functionalities
-- [I Think, Therefor I Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/dabfed30d1fc4d078b6de270117dbe50/?child=first)
+- [I Think, Thereforw I Blog Child first](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/dabfed30d1fc4d078b6de270117dbe50/?child=first)
 - [Contact Form](https://ordinarycoders.com/blog/article/build-a-django-contact-form-with-email-backend)
 - [Read more/Read less buttons](https://codepen.io/joserick/pen/ooVPwR)
 - [Property decorator Django - final_price functionality ](https://www.andreadiotallevi.com/blog/how-to-use-the-property-decorator-in-python-and-django)
 - [Inspiration for final_price functionality](https://github.com/Iris-Smok/JoyfulBookstore-PP5/blob/main/books/views.py)
 - [Privacy Policy and Terms of Use by Termly](https://termly.io/products/terms-and-conditions-generator/)
-
-[Back to top](#contents)
-## Media
-- [A reading girl mural by Jef Aerosol](https://toppng.com/show_download/451527/graffiti-child-reading-book-street-art/xlarge)
-- I used [AI Image Sharpener](https://vanceai.com/sharpen-ai/) to make the hero image sharper.
-- [Overlay over the Hero image](https://stackoverflow.com/questions/28121731/use-pseudo-element-to-create-background-overlay)
 - [Sticky Footer](https://mdbootstrap.com/docs/standard/navigation/footer/)
-- [Favicon](https://cz.pinterest.com/pin/462181980485395733/)
-- [Little House](https://www.google.cz/books/edition/Little_House_on_the_Prairie/m06dCwAAQBAJ?hl=en&gbpv=1)
-- [Dr. Seuss](https://www.amazon.com/Seusss-Beginner-Collection-Green-Socks/dp/0375851569)
-- Images were taken from [Unsplash](unsplash.com), [Amazon](amazon.co.uk) and [Megaknihy](megaknihy.cz)
 - [Top tips for engaging reluctant readers](https://www.explorelearning.co.uk/free-resources/tips-engaging-reluctant-readers/)
 - [7 effective ways to increase your child's reading skills](https://www.petitjourney.com.au/7-effective-ways-to-increase-your-childs-reading-skills/)
 - [Why Reading is Important](https://www.worksheetcloud.com/blog/why-is-reading-important/)
 - [safe filter](https://www.djangotemplatetagsandfilters.com/filters/safe/)
+
+## Tools
+- [Coloors](https://coolors.co/) for finding a suitable color palette.
 - [Resize images](https://www.iloveimg.com/resize-image)
 - [Convert images jpg to webp](https://convertio.co/jpg-webp/)
+- I used [AI Image Sharpener](https://vanceai.com/sharpen-ai/) to make the hero image sharper.
+- [Lucid Charts](https://lucidchart.com/)
+
+
+[Back to top](#contents)
+## Media
+- Images were taken from [Unsplash](unsplash.com), [Amazon](amazon.co.uk) and [Megaknihy](megaknihy.cz)
+- [A reading girl mural by Jef Aerosol](https://toppng.com/show_download/451527/graffiti-child-reading-book-street-art/xlarge)
+- [Overlay over the Hero image](https://stackoverflow.com/questions/28121731/use-pseudo-element-to-create-background-overlay)
+- [Favicon](https://cz.pinterest.com/pin/462181980485395733/)
+- [Little House](https://www.google.cz/books/edition/Little_House_on_the_Prairie/m06dCwAAQBAJ?hl=en&gbpv=1)
+- [Dr. Seuss](https://www.amazon.com/Seusss-Beginner-Collection-Green-Socks/dp/0375851569)
 
 [Back to top](#contents)
 ## Acknowledgements
