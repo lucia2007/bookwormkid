@@ -213,7 +213,8 @@ def add_review(request, product_id):
         'reviews': reviews,
         'on_page': True,
         'reviewed': True,
-        'product_bought': product_bought
+        'product_bought': product_bought,
+        'already_reviewed': already_reviewed
     }
 
     return render(request, template, context)
