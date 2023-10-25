@@ -257,13 +257,15 @@ As a visitor I want to find a fun and enticing book for my child/grandchild/pupi
   - As an **admin** I can **add/edit/remove products to the store offer through admin dashboard** so that I **don't have to do it through the admin panel**
 - US - Bookstore Management
   - A an **admin/superuser** I can access the Bookstore management page** so that I **can add/edit/delete Articles, Enquiries and Products without having to access the django admin**.
-- US - Add Articles to the app (add, edit, delete functionality)
-  - As a **user** I can **read several interesting articles about why reading skills are important and how to encourage children to read** so that I can **understand the issue better**.
 - US - View all articles
   - As a **user** I can **see all articles** so that I can **choose which one I am most interested in and educate myself on the top of the importance of reading**.
+- US - View Article detail
+  - As a **user** I can **click on the article card** so that I can **read the article and see extra details**.
+- US - Add Articles to the app (add, edit, delete functionality)
+  - As a **user** I can **read several interesting articles about why reading skills are important and how to encourage children to read** so that I can **understand the issue better**.
 - US - View likes
   - As a **user** I can **like/unlike an article** so that I can **express my opinion**.
-- US - View Likes/Like/Unlike articles
+- US - View Like/Unlike articles
   - As a **signed in user** I can **like/unlike articles and be visually informed about my action** so that I can **express my views**.
 - US - Add Read more/Read less functionality
   - As a **user** I can **choose if I want to read the whole book description** so that I **am not overwhelmed by too much text**.
@@ -546,9 +548,11 @@ In this sprint I added Blog, contact form and wishlist and made small improvemen
 
 - US - Admin Dashboard
 - US - Wishlist Icon Changes Colour when there is an Item in the Wishlist
-- US - Add Articles to the App (add, edit, delete functionality)
+- US - View Article detail
 - US - View All Articles
-- US - View Likes/Like/Unlike articles
+- US - Add Articles to the App (add, edit, delete functionality)
+- US - View Likes
+- US - View Like/Unlike articles
 - US - Wishlist
 - US - Contact
 - US - Shopping Bag icon/functionality availabla from all books view
@@ -643,18 +647,64 @@ I split up my project development into the following milestones as mentioned abo
 Each milestone was split into epics. Looking back at it, I could have used fewer epics. Some milestones contain just one or two epic, others contain more. For details please look into my [Projects](https://github.com/users/lucia2007/projects/9) where you can see which epic was a part of which milestone. My Projects board is set to public.
 
 - EPIC Registration and User Account
+  - DT Preparation for Project Planning
+  - US User Registration
+  - US Login/Logout Functionality
+  - US User Profile
 - EPIC Viewing and Navigation
+  - US Navigation
+  - US Visual confirmation for shopping bag/wishlist items
+  - US Home Page
+  - US View All Products
+  - US Product Detail View
+  - US Product Category/Specials Filter
+  - US Footer
+  - US Optimize footer for small devices
+  - US Add Terms and Conditions, Privacy Policy
 - EPIC Book Details
-- EPIC Books in Specials
+  - US Add Products to the Database
+  - US Add Read more/Read less functionality
 - EPIC Shopping Bag Functionality
+  - US Shopping Bag
+  - US Checkout
+  - US Add Products to Bag
+  - US Order Sorting
+  - US Shopping bag icon/functionality available from all books view
+  - US Sales Price Functionality
+  - US User Notifications (Toasts)
 - EPIC Filtering
+  - US Filtering according to skill levels, special offers features
+  - US Product Category/Specials Filter
+  - US Add age segmentation filtering
+  - US Add age segmentation for all product views and filters
+  - US Add double filtering for products according to different segments&age
+  - US Make the chosen age parameter visually clear
 - EPIC Sorting and Searching
-- EPIC Contact Form
+  - US Search Functionality
+  - US Product Sorting Functionality
+  - US Sorting according to sales price
 - EPIC Articles
+  - US View all Articles
+  - US View Article detail
+  - US Add Articles to the app (add, edit, delete functionality)
+  - US Like/Unlike Articles
+  - US View Likes
 - EPIC Customer Communication and Advertisement
+  - US Contact
+  - US Newsletter
+  - US Create Facebook Page
+  - US Frequently Asked Questions - FAQ
 - EPIC Error Pages
+  - DT Add customized 403, 404, 500 Error Pages
 - EPIC Wishlist
+  - US Wishlist
+  - US Wishlist icon changes colour when there is an item in the wishlist
+  - US Wishlist visual confirmation
 - EPIC Store Management
+  - US Bookstore Management
+  - US Toasts without Shopping Bag
+  - US Admin Dashboard
+  - US Confirm Deletion
 
 [Back to top](#contents)
 ### User Stories
