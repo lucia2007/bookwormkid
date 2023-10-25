@@ -3,7 +3,6 @@ from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 # to display messages
 from django.contrib import messages
-from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponse
 
 

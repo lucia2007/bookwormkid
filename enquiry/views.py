@@ -4,13 +4,9 @@ from django.shortcuts import (
                               get_object_or_404,
                               redirect)
 from django.urls import reverse
-from django.urls import reverse_lazy
 from .models import Enquiry
-from django.http import HttpResponseRedirect
-from django.core.exceptions import PermissionDenied
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
 from .forms import EnquiryForm
 
 
@@ -110,7 +106,7 @@ def delete_enquiry(request, enquiry_id):
     enquiry = get_object_or_404(Enquiry, pk=enquiry_id)
     enquiry.delete()
     messages.success(request,
-                     f'Enquiry was deleted successfully.')
+                     'Enquiry was deleted successfully.')
 
     context = {
         'on_page': True,
