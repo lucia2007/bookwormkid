@@ -301,12 +301,14 @@ As a visitor I want to find a fun and enticing book for my child/grandchild/pupi
   - As a **user/admin** I can **be informed about my actions without the shopping bag showing** so that I can **clearly and easily see the action confirmation and not be overwhelmed by too much unnecessary information**.
 - US - Optimize footer for small devices
   - As a **user** I can **click on Help button in footer which contains all relevant links** so that I **don't have to scroll too far**.
-- US - Product Review
-  - As a **user** I can **add a review for a book I had bought previously** so that I can **express my opinion**.
 - US - Create Facebook page
   - As a **user** I can **visit the store's facebook page** so that I can **have access to the newest posts and connect with other followers of the bookstore**.
+- US - Product Review
+  - As a **user** I can **add a review for a book I had bought previously by clicking on the item in my order history** so that I can **express my opinion**.
 - US - Lets the user review a book only once
   - As a **user** I can **review a product only once** so that I can **share my opinion but not spam others**.
+- US - Wishlist visual confirmation
+  - As a **user** I can **clearly see that I already have a book in my wishlist** so that I don't **try to add it again**.
 
 # Creation Process
 
@@ -588,6 +590,7 @@ Testing/Readme/Marketing/SEO/Missing Files
 The main focus of these sprints was to update the readme file and do through testing of the whole app, including python, javascript, html validation, user story testing, lighthouse testing. Towards the end of the two weeks, I will add the robots.txt, sitemap.xml, and focus on improving of the SEO score.
 
 - US - Lets the user review a book only once
+- US - Wishlist visual confirmation
 
 ### Sprint #10 - 06/11 - 07/11
 
@@ -684,9 +687,103 @@ Models/Apps used in this project:
 - allauth - used for sign in/out/up functionality of the site
 - Reviews - for adding a review to a book the customer had bought and not reviewed before
 
-I had not implemented the comments model to Articles (future feature), but at my mentor's suggestion, I focused on adding the book reviews as we found this feature essential for an online store.
+I had not implemented the comments model to Articles (possible future feature), but at my mentor's suggestion, I focused on adding the book reviews as we found this feature essential for an online store to increase customer's ability to interact with the application. Comments model for the Articles was not deemed necessary at this stage, as the current articles are guest articles. When we start adding our own content in the future, we will add a possibility for users to comment on the new posts.
 
 [Back to top](#contents)
+
+## Site Structure
+
+The Bookworm Kid site structure is very straightforward and easy to understand. A collapsible navbar is present at the top with a search bar, different features (sorting, filtering, articles, contact form, ... ) of the website are accesssible directly from the navbar. The main content follows with a responsive footer at the bottom of the page. A back to top bottom is present on pages, where the content is too long.
+
+The Bookworm Kid site changes depending on if the user is signed in or not. If the user is not signed in, they can see a Register/Login buttons, whereas if they are signed in, they can see a Profile Icon/Logout buttons. A signed in user can also see a Wishlist Icon in the navbar which changes color based on the fact if it's empty or if there are some items in the wishlist. If staff member is signed in, they can also see a Bookstore Management tab under their profile icon in the NavBar. Also edit/delete buttons are present on different pages if an admin user is signed in. More details can be found in the respective feature section.
+
+
+- [Python](https://www.python.org/) - Used for adding functionality to the application.
+- [HTML5](https://en.wikipedia.org/wiki/HTML) - Provides the content and structure for the website.
+- [CSS3](https://en.wikipedia.org/wiki/CSS) - Provides the styling for the website.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Provides interactive elements of the website
+
+## Frameworks and Software
+
+- [Bootstrap](https://getbootstrap.com/) - A CSS framework that helps building solid, responsive, mobile-first sites.
+- [Django](https://www.djangoproject.com/) - An MVT framework used to create the Tennis Buddies site.
+- [Figma](https://figma.com) - Used to create wireframes.
+- [Github](https://github.com/) - Used for hosting the repository.
+- [Projects in GitHub](https://github.com/lucia2007?tab=projects) - Used for project managament.
+- [Heroku](https://heroku.com/) - Used for deploying the application.
+- [Gitpod](https://www.gitpod.io/#get-started) - Used for developing the application.
+- [Markdown Table Generator](https://www.tablesgenerator.com/markdown_tables) - Used to generate tables in Markdown.
+- [Favicon Converter](https://favicon.io/favicon-converter/) - used to create a favicon in correct format.
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - Used to test performance of site.
+- [Responsive Design Checker](https://www.responsivedesignchecker.com/) - Used for responsiveness check.
+- [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Used for debugginf and responsiveness testing.
+- [HTML Validation](https://validator.w3.org/) - Used to validate HTML code
+- [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code
+- [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used for validation python code.
+- [Lucid Charts](https://lucidchart.com/) - for creating my ERD Diagram
+- [AWS]
+- [Stripe]
+
+[Back to top](#contents)
+
+# Python Packages
+
+Following packages and libraries were installed and are located in requirements.txt.
+asgiref==3.7.2
+boto3==1.28.54
+botocore==1.31.54
+dj-database-url==0.5.0
+Django==3.2.21
+django-allauth==0.41.0
+django-countries==7.2.1
+django-crispy-forms==1.14.0
+django-richtextfield==1.6.1
+django-storages==1.14
+django-stubs==4.2.4
+django-stubs-ext==4.2.2
+django-summernote==0.8.20.0
+gunicorn==21.2.0
+jmespath==1.0.1
+oauthlib==3.2.2
+Pillow==10.0.0
+psycopg2==2.9.7
+python-dateutil==2.8.2
+python-slugify==8.0.1
+python3-openid==3.2.0
+requests-oauthlib==1.3.1
+s3transfer==0.6.2
+sqlparse==0.4.4
+stripe==6.5.0
+text-unidecode==1.3
+types-dj-database-url==1.3.0.4
+types-pytz==2023.3.0.1
+types-PyYAML==6.0.12.11
+types-stripe==3.5.2.14
+urllib3==1.26.16
+
+[Back to top](#contents)
+# Testing
+
+To test the aspects of the application, I used manual testing and external validators. Both manual and external testing are a part of a separate [testing file](/TESTING.md).
+
+### Manual testing
+
+  - I used manual testing throughout the whole development phase of the project. Mainly:
+    - I deployed early to avoid any last minute issues and checked my local and life site periodically. With the live site, I could check responsivness from early on on different devices.
+    - I continuously attended to any errors which I came across during the development process.
+    - I used validators to check my HTML, CSS and backend code.
+    - For each of the user stories I wrote down clear acceptance criteria and tasks which had to be done to meet those criteria. Only after I had met all the conditions, did I move the user story to done.
+
+### External Testing
+
+  All external testing is a part of a separate [testing file](/TESTING.md).
+
+### Automated Testing
+
+I had not managed to do automated testing for this application, but I plan to make it a regular part of my development process in my future projects.
+
+[Back to top](#contents)
+
 
 # Credits
 
