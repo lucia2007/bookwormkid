@@ -127,7 +127,9 @@ def product_bought_by_request_user(request, product_id):
     return product_bought
 
 
+@login_required
 def product_already_reviewed_by_user(request, product_id):
+
     product = get_object_or_404(Product, pk=product_id)
 
     user_profile = get_object_or_404(UserProfile, user=request.user)
