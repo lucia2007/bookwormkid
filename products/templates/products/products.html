@@ -365,10 +365,19 @@
                                 <input type="hidden" name="quantity" value="1" data-item_id="{{ product.id }}">
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </form>
+                            {% if product in customer_wishlist %}
+                            <a href="{% url 'remove_from_wishlist' product.id %}"
+                                aria-label="Adds a product to wishlist - Remove From Wishlist"
+                                class="btn btn-outline-navy-reverse"><i class="fas fa-heart"></i> Remove From
+                                Wishlist
+                            </a>
+                            {% else %}
                             <a href="{% url 'add_to_wishlist' product.id %}"
                                 aria-label="Adds a product to wishlist - Add to wishlist"
-                                class="btn btn-outline-navy-reverse"><i class="fas fa-heart"> </i> Add To Wishlist
+                                class="btn btn-outline-navy-reverse"><i class="far fa-heart"></i> Add To
+                                Wishlist
                             </a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
