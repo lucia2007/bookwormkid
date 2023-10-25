@@ -225,6 +225,8 @@ As a visitor I want to find a fun and enticing book for my child/grandchild/pupi
   - As a **site user** I can **choose to register on the site and have my own account with personalized information** so that I can **easily review my past activities on the site and smoothly do another purchase**.
 - US - User Login/Logout Functionality
   - As a **site user** I can **login in and logout of my account** so that I can **access personalized data, special features and keep my online activities safe**.
+- US - Account Email Validation
+  - As a **site user** I can **register my email and receive a validation link via email** so that I **can create an account to track my spending and purchases**.
 - US - Shopping Bag
   - As a **customer** I can **choose the quantity of the product and add it to the shopping bag** so that I can **buy the product later**.
 - US - Add Products to Bag
@@ -239,6 +241,8 @@ As a visitor I want to find a fun and enticing book for my child/grandchild/pupi
   - As a **customer** I can **click on an individual product** so that I can **see the title, author, book description, price, segments by age and skill level etc**.
 - US - Checkout
   - As a **customer** I can **securely checkout the products in my shopping bag** so that I can **finish my purchase**.
+- US - Order Email Confirmation
+  - As a **customer** I can **receive an email after purchase** so that I can **confirm my purchase and keep a record of my order**.
 - US - Order sorting
   - As a **user** I can **view my past orders in descending order** so that I can **easily find my most recent orders**.
 - US - User Profile
@@ -499,6 +503,7 @@ In the first sprint I focused on project planning: I created wireframes, ERD sch
 - DT - Set Up Development Environment
 - US - User Registration
 - US - User Login/Logout Functionality
+- US - Account Email Validation
 
 ### Sprint #2 - 11/09-15/09
 
@@ -524,8 +529,9 @@ Shopping Bag/Checkout page/User Profile/STRIPE
 I created shopping bag and checkout page functionality, customized user registration/login functionality, started working on implementation of Stripe payment system.
 
 - US - Shopping Bag
-- US - CHeckout
+- US - Checkout
 - US - User Notifications (Toasts)
+- US - Order Email Confirmation
 - US - Add Products to Bag
 - DT - Add customized 403, 404 and 500 Error Pages
 - Several bug-fixes (details in testing.md)
@@ -650,6 +656,7 @@ Each milestone was split into epics. Looking back at it, I could have used fewer
   - DT Preparation for Project Planning
   - US User Registration
   - US Login/Logout Functionality
+  - US Account Email Validation
   - US User Profile
 - EPIC Viewing and Navigation
   - US Navigation
@@ -672,6 +679,7 @@ Each milestone was split into epics. Looking back at it, I could have used fewer
   - US Shopping bag icon/functionality available from all books view
   - US Sales Price Functionality
   - US User Notifications (Toasts)
+  - US Order Email Confirmation
 - EPIC Filtering
   - US Filtering according to skill levels, special offers features
   - US Product Category/Specials Filter
