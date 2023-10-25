@@ -44,10 +44,10 @@
                         {% if request.user.is_superuser %}
                         <div class="text-uppercase ml-3">
                             <a href="{% url 'edit_enquiry' enquiry.id%}"
-                                class="text-success text-decoration-none p-1 border-0"
+                                class="text-success text-decoration-none p-1 border-0 small-buttons"
                                 aria-label="Lets the user edit the chosen enquiry.">Edit</a>
-                            <button type="button" class="text-danger text-uppercase p-1 border-0" data-toggle="modal"
-                                data-target="#enquiryModal_{{ enquiry.id }}"
+                            <button type="button" class="text-danger text-uppercase p-1 border-0 small-buttons"
+                                data-toggle="modal" data-target="#enquiryModal_{{ enquiry.id }}"
                                 aria-label="Show a confirm deletion modal.">
                                 Delete
                             </button>
