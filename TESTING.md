@@ -31,9 +31,19 @@
 [Back to top](#testing)
 
 ### CSS Testing
-## Browser Compatibility
-[W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS file. External CSS for Bootstrap, provided by CDN was not tested. No errors were found.
-[Back to top](#testing)
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS files. External CSS for Bootstrap, provided by CDN was not tested. No errors were found.
+
+To avoid cluttering my testing file with multiple identical images, I have not included every screenshot of the CSS validations, as they are all the same. 
+
+![css validation](/testing_images/css_no_errors.png)
+
+| CSS File | Errors | Warnings |
+| ---- | ------ | -------- |
+| Base CSS | 0 | 0 |
+| Article | 0 | 0 |
+| Checkout | 0 | 0 |
+| Profiles | 0 | 0 |
+
 
 ## Browser Compatibility
 [Back to top](#testing)
