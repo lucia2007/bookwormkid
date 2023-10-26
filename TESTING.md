@@ -19,7 +19,61 @@
 
 [Back to top](#testing)
 ### HTML Testing
-[Back to top](#testing)
+
+I used [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
+
+I followed a different approach for validating my HTML for this project as all of my pages contain Jinja syntax such as '{% extends "base.html" %}' and '{{ form|crispy }}' and most require user authentication to avoid html validation errors. I followed the steps below:
+
+- I gradually opened each html page on my heroku deployed app.
+- I right clicked on the screen and chode 'View page source' towards the bottom of the menu.
+- I copied the source code.
+- I pasted the copied code into the [validate by input](https://validator.w3.org/#validate_by_input) option.
+- I checked for errors and warnings, fixed any issues, revalidated by following the above steps and recorded the results.
+
+I would do html validation at different stages of the development to avoid being overwhelmed by multiple errors at the end of the project development.
+
+All HTML pages were validated and received a 'No errors or warning to show' for code that I had written. The image was identical for all pages, so I'm including if here for illustration.
+
+![html validation](./testing-images/html_no_errors.png)
+
+| HTML Source Code/Page | Errors | Warnings |
+| ---- | ------ | -------- |
+| Home | 0 | 0 |
+| All Books (including filtering and sorting) | 0 | 0 |
+| Book Detail | 0 | 0 |
+| Register | 0 | 0 |
+| Log In | 0 | 0 |
+| Logout| 0 | 0 |
+| Profile | 0 | 0 |
+| Admin Dashboard | 0 | 0 |
+| Admin Add Product | [duplicate id error (id_image)](./testing-images/duplicate_error_id_image.png) | 0 |
+| Admin Edit Product | [duplicate id error (id_image)](./testing-images/duplicate_error_id_image.png) | 0 |
+| Admin Delete Product | n/a due to deletion modal | 0 |
+| Admin Add Article | [duplicate id error (id_image)](./testing-images/duplicate_error_id_image.png) | 0 |
+| Admin Edit Article | [duplicate id error (id_image)](./testing-images/duplicate_error_id_image.png) | 0 |
+| Admin Delete Article | n/a due to deletion modal | 0 |
+| Admin Add Enquiry | 0 | 0 |
+| Admin Edit Enquiry | 0 | 0 |
+| Admin Delete Enquiry | n/a due to deletion modal | 0 |
+| Order History | 0 | 0 |
+| Wishlist | 0 | 0 |
+| Bag - Empty | 0 | 0 |
+| Bag - Products | 0 | 0 |
+| Checkout | 0 | 0 |
+| All Articles | 0 | 0 |
+| Article Detail | 0 | 0 |
+| Contact Us | 0 | 0 |
+| Enquiries | 0 | 0 |
+| Newsletter | 0 | 0 |
+| Error 403 | 0 | 0 |
+| Error 404 | 0 | 0 |
+| Error 500 | 0  | 0 |
+| Footer | Privacy Policy | [multiple errors](./testing-images/html_privacy_policy_error.png) | x |
+| Footer | Terms and Conditions | [multiple errors](./testing-images/html_terms_and_conditions_errors.png) | x |
+
+There is a duplicate error id on my add/edit article and product forms. This is due to using crispy forms. I know I could fix this error by using form helper, but I was not sure if the id was not being used internally, so I did not want to change its name to avoid breaking some functionality.
+
+There were multiple errors in both the Privacy Policy and the Terms and Conditions. Both of these html files were downloaded from termly.io. I didn't attempt to correct the errors as I feared that I would break the document and it would not render correctly. This is perhaps because the service was provided for free. For my future projects, I would look for a better source of these documents.
 
 ### Python Testing
 [CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files which were created or edited by me. I regularly checked my code in my environment and corrected mistakes as I went. I shortened the lines where possible, but in a few places I felt splitting the code would make it illegible. In such cases I used `# noqa` to ignore the length of the line.
