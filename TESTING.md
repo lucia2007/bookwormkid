@@ -46,15 +46,15 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 | Logout| 0 | 0 |
 | Profile | 0 | 0 |
 | Admin Dashboard | 0 | 0 |
-| Admin Add Product | [duplicate id error (id_image)](./testing-images/duplicate_error_id_image.png) | 0 |
-| Admin Edit Product | [duplicate id error (id_image)](./testing-images/duplicate_error_id_image.png) | 0 |
-| Admin Delete Product | n/a due to deletion modal | 0 |
-| Admin Add Article | [duplicate id error (id_image)](./testing-images/duplicate_error_id_image.png) | 0 |
-| Admin Edit Article | [duplicate id error (id_image)](./testing-images/duplicate_error_id_image.png) | 0 |
-| Admin Delete Article | n/a due to deletion modal | 0 |
+| Admin Add Product | 0 | 0 |
+| Admin Edit Product | 0 | 0 |
+| Admin Delete Product | n/a due to deletion modal | n/a |
+| Admin Add Article | 0 | 0 |
+| Admin Edit Article | 0 | 0 |
+| Admin Delete Article | n/a due to deletion modal | n/a |
 | Admin Add Enquiry | 0 | 0 |
 | Admin Edit Enquiry | 0 | 0 |
-| Admin Delete Enquiry | n/a due to deletion modal | 0 |
+| Admin Delete Enquiry | n/a due to deletion modal | n/a |
 | Order History | 0 | 0 |
 | Wishlist | 0 | 0 |
 | Bag - Empty | 0 | 0 |
@@ -71,7 +71,6 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 | Footer | Privacy Policy | [multiple errors](./testing-images/html_privacy_policy_error.png) | x |
 | Footer | Terms and Conditions | [multiple errors](./testing-images/html_terms_and_conditions_errors.png) | x |
 
-There is a duplicate error id on my add/edit article and product forms. This is due to using crispy forms. I know I could fix this error by using form helper, but I was not sure if the id was not being used internally, so I did not want to change its name to avoid breaking some functionality.
 
 There were multiple errors in both the Privacy Policy and the Terms and Conditions. Both of these html files were downloaded from termly.io. I didn't attempt to correct the errors as I feared that I would break the document and it would not render correctly. This is perhaps because the service was provided for free. For my future projects, I would look for a better source of these documents.
 
@@ -147,8 +146,8 @@ To avoid cluttering my testing file with multiple identical images, I have not i
 | Class "{%" duplicated| products.html  | products.html| I had change the place where I added the condition for filters** | [dccafb7](https://github.com/lucia2007/bookwormkid/commit/dccafb7b55aec72f89a381019eabd77c4caec305)
 | Avoid anonymous user error for reviews  | product_detail.html, products/views.py| I had to switch the order of the conditions | [e9e9b23](https://github.com/lucia2007/bookwormkid/commit/e9e9b23a5b90202e3bc693b736833941e565847a)
 | 'AnonymousUser' object is not iterable (max 1 review) and wrong rendering  | products.html, product_detail.html, products/views.py| I had to switch the order of the if conditions and add a @login_required decorator to my view| [59fc46d](https://github.com/lucia2007/bookwormkid/commit/59fc46daea23bf228de2c7288e244c4100fb96c6)
-
-
+| Div not persmissible under small + extra space in tab= -1  | articles.html, article_detail.html, article_deletion.html | I had to change small to div and add classes, and delete an extra space in tabindex=" -1"| [2754559](https://github.com/lucia2007/bookwormkid/commit/2754559bd3b5a4a9f711a69e0f4a4f13d1dd2d61)
+| Fix duplicate id="id_image" (I wasn't able to add an image to an article) | articles.html, add/edit_article.html, products.html, add/edit_product.html, custom_clearable_file_input.html | I had to get rid on id="new-image", as it was creating a duplicate id, and had to add/change js which worked with "new-image"| [6f0cf78](https://github.com/lucia2007/bookwormkid/commit/6f0cf78c2697b1de4f6a7c592ea235dc924ee49b)
 
 * My registration and email confirmation for orders stopped working for all users but admin. This was partly due to the fact, that I attempted to use aws ses functionality for sending emails for my contact form. I later found out that aws ses in the basic version would allow sending emails only to verified email addresses, which couldn't be done when a new user was being created, as his email address was new and not verified. I found out that if I used a "helping email address" success@simulator.amazonses.com, everything worked fine. If I wanted aws ses to send emails to nonverified email address, I would have to ask for a personal approval from Amazon. As it was proving quite complicated, I opted to revert back to the previous smtp functionality. Neverthless, the problem persisted even after that. With tutor support we were able to discover that my "app password" in my gmail account got deleted (without any action on my side) and thus the email functionality stopped working. When I created a new app and reset the password in Heroku, everything started working again. I hope this problem doesn't happen again, as it's completely out of my control if Google decided to delete my "app password" for some reason.
 [Error due to deleted app password](/testing_images/smtp_error.png)
