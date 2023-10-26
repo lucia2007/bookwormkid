@@ -3,17 +3,15 @@
   - [Code Validation](#code-validation)
     - [HTML Testing](#html-testing)
     - [Python Testing](#python-testing)
-    - [JavaScript Testing](#javascript-testing)
+    - [JavaScript Validation](#javascript-validation)
     - [CSS Testing](#css-testing)
   - [Browser Compatibility](#browser-compatibility)
-  - [Browser Compatibility](#browser-compatibility-1)
   - [Responsiveness Test](#responsiveness-test)
   - [Fixed Bugs](#fixed-bugs)
   - [Unfixed Bugs](#unfixed-bugs)
   - [Additional Testing](#additional-testing)
     - [Lighthouse](#lighthouse)
     - [Results from Lighthouse](#results-from-lighthouse)
-    - [Results from Lighthouse](#results-from-lighthouse-1)
     - [User Stories Testing](#user-stories-testing)
     - [Manual Testing](#manual-testing)
 
@@ -43,9 +41,19 @@
 
 [Back to top](#testing)
 
-### JavaScript Testing
-[Back to top](#testing)
+### JavaScript Validation
 
+[JSHint](https://jshint.com/) was used to validate the JavaScript code added to the project. External JS, for Bootstrap, jQuery and Fontawesome purposes were not validated through JSHint.
+
+| Page | Screenshot | Errors | Warnings |
+|---------|----------|----------|-----------|
+| Bag - Quantity Update/Remove Script | ![Bag update/remove js](./testing-images/bag_update_remove_js.png) | none | none |
+| Checkout - Stripe Script | ![Stripe elements](./testing-images/stripe_element_js.png) | none | none |
+| Products - Quantity Input Script | ![Product quantity script](./testing-images/product_quantity_input_script_js.png) | none  | none |
+| Products - Sorting Script | ![Product sorting script](./testing-images/product_sorting_js.png) | none | none |
+| Edit Product Image Script | ![Edit product image script](./testing-images/edit_product_image_js.png) | none | none |
+| Profile - Country Field Script | ![Profile country field script](./testing-images/profile_country_field_js.png) | none | none |
+| Back to Top Button | ![Back to top button script](./testing-images/back_to_top_js.png) | none | none |
 ### CSS Testing
 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS files. External CSS for Bootstrap, provided by CDN was not tested. No errors were found.
 
