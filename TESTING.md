@@ -13,6 +13,7 @@
   - [Additional Testing](#additional-testing)
     - [Lighthouse](#lighthouse)
     - [Results from Lighthouse](#results-from-lighthouse)
+    - [Results from Lighthouse](#results-from-lighthouse-1)
     - [User Stories Testing](#user-stories-testing)
     - [Manual Testing](#manual-testing)
 
@@ -69,6 +70,37 @@
 
 ## Additional Testing
 ### Lighthouse
+
+The application was also tested using [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome Developer Tools. The following aspects were tested:
+
+- Performance - reveals how the site performs during loading
+- Accessibility - shows if the site if accessible for all users and suggests ways to improve it
+- Best Practices - indicates if the site conforms to industry best practices
+- SEO - Search Engine Optimisation - shows if the site is optimised for search engine result rankings
+
+### Results from Lighthouse
+| Page | Validation Results |
+| ---- | ---------- |
+| Home | [Home Page Score](./testing-images/lighthouse_homepage.png) |
+| Contact Us | [Contact Us Score](./testing-images/lighthouse_contactus.png) |
+| Products | [Products Score](./testing-images/lighthouse_products.png) |
+| Product Details | [Product Details](./testing-images/lighthouse_product_detail.png) |
+| Admin Dashboard | [Admin Dashboard](./testing-images/lighthouse_admin_dashboard.png) |
+| Shopping Bag | [Shopping Bag Score](./testing-images/lighthouse_shopping_bag.png) |
+| Checkout | [Checkout Score](./testing-images/lighthouse_checkout.png) |
+| Articles | [Articles Score](./testing-images/lighthouse_articles.png) |
+| Article Details | [Article Details](./testing-images/lighthouse_article_detail.png) |
+| Wishlist | [Wishlist Score](./testing-images/lighthouse_wishlist.png) |
+| Profile | [Profile Score](./testing-images/lighthouse_profile.png) |
+| Enquiries | [Enquiries Score](./testing-images/lighthouse_enquiries.png) |
+| Sign In | [Sign In Score](./testing-images/lighthouse_login.png) |
+| Sign Up | [Sign Up Score](./testing-images/lighthouse_signup.png) |
+| Sign Out | [Sign Out Score](./testing-images/lighthouse_logout.png) |
+
+I continuously worked on improving the individual scores and tried to reflect on the warnings in the Lighthouse which lead to the score increase. For increasing accessibility I had to change many button names as I was not using their explicit description and for performance I used [tiny png](tinypng.com) and [convertio](convertio.co) and [i love img](https://www.iloveimg.com/) to decrease their size and change them to webp where possible. However, I couldn't do this for all of my images, espcially for the book covers, as sometimes I was not able to find a large enough image of a book I needed.
+
+All of my scores for all of the pages were above 90, often close to 100. On a couple of pages the "SEO" score is slightly lower. This is due to the presence of a "back to top" button which has no href value and thus is not crawlable. I also got a lower score on Best Practices, due to [issues](./testing-images/stripe_cookies.png) which were logged into the console and have to do with using stripe cookies. Sometimes my scores for performance differed, probably due to current connection speed.
+
 
 ### Results from Lighthouse
 | Page | Validation Results |
