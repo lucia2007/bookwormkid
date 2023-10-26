@@ -34,14 +34,17 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if article.image %}
-                                <img src=" {{ article.image.url }}" alt=" {{article.image_description }}"
-                                    class=" card-img-top">
-                                {% else %}
-                                <img src="{{ MEDIA_URL }}noimage.png" alt="No image provided" class="card-img-top">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class=" fs-sm">Author: {{ article.author }}</p>
-                                </div>
+                                <a href="{% url 'article_detail' article.slug %}"
+                                    aria-label="Takes the user to article {{article.title}}">
+                                    <img src=" {{ article.image.url }}" alt=" {{article.image_description }}"
+                                        class=" card-img-top">
+                                    {% else %}
+                                    <img src="{{ MEDIA_URL }}noimage.png" alt="No image provided" class="card-img-top">
+                                    {% endif %}
+                                    <div class="image-flash">
+                                        <p class=" fs-sm">Author: {{ article.author }}</p>
+                                    </div>
+                                </a>
                             </div>
                             <a href="{% url 'article_detail' article.slug %}"
                                 aria-label="Takes the user to the article detail page." class="article-link">
