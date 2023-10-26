@@ -46,4 +46,5 @@ def contact(request):
         'form': form,
         'on_page': True,
     }
+
     return render(request, "contact/contact.html", context)
