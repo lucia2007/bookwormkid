@@ -37,9 +37,10 @@
                                 <a href="{% url 'article_detail' article.slug %}"
                                     aria-label="Takes the user to article {{article.title}}">
                                     <img src=" {{ article.image.url }}" alt=" {{article.image_description }}"
-                                        class=" card-img-top">
+                                        class=" card-img-top article-image">
                                     {% else %}
-                                    <img src="{{ MEDIA_URL }}noimage.png" alt="No image provided" class="card-img-top">
+                                    <img src="{{ MEDIA_URL }}noimage.png" alt="No image provided"
+                                        class="card-img-top article-image noimage">
                                     {% endif %}
                                     <div class="image-flash">
                                         <p class=" fs-sm">Author: {{ article.author }}</p>

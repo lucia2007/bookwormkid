@@ -355,6 +355,19 @@ input[name='q']::placeholder {
     background: #EDFFD9;
 }
 
+.article-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.noimage {
+    width: 100%;
+    height: auto;
+    max-height: 171px;
+    object-fit: contain;
+}
+
 /* Admin Product Form */
 .btn-file {
     position: relative;
