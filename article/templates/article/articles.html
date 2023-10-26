@@ -31,7 +31,7 @@
                 {% for article in articles %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card mb-4 h-100">
-                        <div class="card-body">
+                        <div class="card-body shadow">
                             <div class="image-container">
                                 {% if article.image %}
                                 <a href="{% url 'article_detail' article.slug %}"
@@ -57,17 +57,20 @@
                             <p class="card-text text-muted h6"><i class="far fa-heart"></i>
                                 {{ article.number_of_likes }}</p>
                             {% if request.user.is_superuser %}
-                            <small>
+                            <div class="text-uppercase">
                                 <a href="{% url 'edit_article' article.slug %}"
-                                    aria-label="Takes the user to edit the article" class="edit-button">Edit</a> |
+                                    class="edit-button font-weight-bold small-buttons" aria-label="Edit Article">Edit
+                                    |</a>
                                 <!-- Button trigger modal -->
-                                <button type="button" class="text-danger border-0 bg-white" data-toggle="modal"
-                                    data-target="#articleModal_{{ article.slug }}">
+                                <button type="button"
+                                    class="text-danger text-uppercase bg-white font-weight-bold border-0 small-buttons"
+                                    data-toggle="modal" data-target="#articleModal_{{ article.slug }}"
+                                    aria-label="Delete Article">
                                     Delete
                                 </button>
                                 <!-- End of button trigger modal -->
                                 {% include 'article/includes/article_deletion.html' %}
-                            </small>
+                            </div>
                             {% endif %}
                         </div>
                     </div>

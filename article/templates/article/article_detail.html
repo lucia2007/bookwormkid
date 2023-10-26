@@ -46,17 +46,20 @@
                         {{ article.title }}</h1>
                     <p class="mb-0"><i class="fa-solid fa-at"></i> {{ article.author }}</p>
                     {% if request.user.is_superuser %}
-                    <small>
-                        <a href="{% url 'edit_article' article.slug %}" aria-label="Takes the user to edit the article"
-                            class="edit-button">Edit</a> |
+                    <div class="text-uppercase">
+                        <a href="{% url 'edit_article' article.slug %}"
+                            class="edit-button font-weight-bold small-buttons" aria-label="Edit Article">Edit
+                            |</a>
                         <!-- Button trigger modal -->
-                        <button type="button" class="text-danger border-0 delete_article" data-toggle="modal"
-                            data-target="#articleModal_{{ article.slug }}">
+                        <button type="button"
+                            class="text-danger text-uppercase delete_article font-weight-bold border-0 small-buttons"
+                            data-toggle="modal" data-target="#articleModal_{{ article.slug }}"
+                            aria-label="Delete Article">
                             Delete
                         </button>
-                        <!-- End of trigger modal button -->
+                        <!-- End of button trigger modal -->
                         {% include 'article/includes/article_deletion.html' %}
-                    </small>
+                    </div>
                     {% endif %}
                     <!-- The safe filter indicates that the value is known to be safe and therefore does not need to be escaped. -->
                     <!-- https://www.djangotemplatetagsandfilters.com/filters/safe/ -->
@@ -72,12 +75,10 @@
                             {% csrf_token %}
                             {% if liked %}
                             <button class="btn-like" type="submit" name="article_id" value="{{ article.slug }}"
-                                aria-label="solid heart icon if liked by the current user"><i
-                                    class="fas fa-heart"></i></button>
+                                aria-label="Solid Heart if liked"><i class="fas fa-heart"></i></button>
                             {% else %}
-                            <button class="btn-like" type="submit" name="article_id" value="{{ article.slug }}"><i
-                                    class="far fa-heart"
-                                    arial-label="empty heart if not liked by the current user. Empty heart icon."></i></button>
+                            <button class="btn-like" aria-label="Empty Heart" type="submit" name="article_id"
+                                value="{{ article.slug }}"><i class="far fa-heart"></i></button>
                             {% endif %}
                         </form>
                         <!-- End of form -->
