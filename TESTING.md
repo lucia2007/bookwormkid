@@ -24,7 +24,23 @@
 [Back to top](#testing)
 
 ### Python Testing
-[CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files which were created or edited by me.
+[CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files which were created or edited by me. I regularly checked my code in my environment and corrected mistakes as I went. I shortened the lines where possible, but in a few places I felt splitting the code would make it illegible. In such cases I used `# noqa` to ignore the length of the line.
+
+| Feature | admin | forms | models | urls | views | extra |
+|---------|----------|----------|-----------|---------|----------|-------|
+| Article | none ![python validation](./testing-images/article_admin_py.png) | none ![python validation](./testing-images/article_forms_py.png) | none ![python validation](./testing-images/article_models_py.png) | none ![python validation](./testing-images/article_urls_py.png) | none ![python validation](./testing-images/article_views_py.png) | none ![python validation](./testing-images/article_widgets_py.png)  |
+| Bag | n/a |n/a | n/a | none ![python validation](./testing-images/bag_urls_py.png) | none ![python validation](./testing-images/bag_views_py.png) | n/a  |
+| Bookstore Managegement | n/a |n/a | n/a | none ![python validation](./testing-images/bs_urls_py.png) | none ![python validation](./testing-images/bs_views_py.png) | n/a  |
+| Checkout | none ![python validation](./testing-images/checkout_admin_py.png) | none ![python validation](./testing-images/checkout_forms_py.png) | none ![python validation](./testing-images/checkout_models_py.png) | none ![python validation](./testing-images/checkout_urls_py.png) | none ![python validation](./testing-images/checkout_views_py.png) | none ![python validation](./testing-images/checkout_signals_py.png), none ![python validation](./testing-images/checkout_wh_py.png), none ![python validation](./testing-images/checkout_webhooks_py.png)  |
+| Contact | n/a | none ![python validation](./testing-images/contact_forms_py.png) | n/a | none ![python validation](./testing-images/contact_urls_py.png) | none ![python validation](./testing-images/contact_views_py.png) | n/a  |
+| Enquiry |  none ![python validation](./testing-images/enquiry_admin_py.png) | none ![python validation](./testing-images/enquiry_forms_py.png) | none ![python validation](./testing-images/enquiry_models_py.png) | none ![python validation](./testing-images/enquiry_urls_py.png) | none ![python validation](./testing-images/enquiry_views_py.png) | n/a |
+| Home | n/a |n/a | n/a | none ![python validation](./testing-images/home_urls_py.png) | none ![python validation](./testing-images/home_views_py.png) | n/a  |
+| Newsletter | n/a |n/a | n/a | none ![python validation](./testing-images/newsletter_urls_py.png) | none ![python validation](./testing-images/newsletter_views_py.png) | n/a  |
+| Products | none ![python validation](./testing-images/product_admin_py.png) | none ![python validation](./testing-images/product_forms_py.png) | none ![python validation](./testing-images/product_models_py.png) | none ![python validation](./testing-images/product_urls_py.png) | none ![python validation](./testing-images/product_views_py.png) | none ![python validation](./testing-images/product_widgets_py.png)  |
+| Profile |  n/a | none ![python validation](./testing-images/profile_forms_py.png) | none ![python validation](./testing-images/profile_models_py.png) | none ![python validation](./testing-images/profile_urls_py.png) | none ![python validation](./testing-images/profile_views_py.png) | n/a |
+| Review |  none ![python validation](./testing-images/review_admin_py.png) | none ![python validation](./testing-images/review_forms_py.png) | none ![python validation](./testing-images/review_models_py.png) | none ![python validation](./testing-images/review_urls_py.png) | none ![python validation](./testing-images/review_views_py.png) | n/a |
+| Wishlist | none ![python validation](./testing-images/wishlist_admin_py.png) | none ![python validation](wishlist./testing-images/wishlist_forms_py.png) | none ![python validation](./testing-images/wishlist_models_py.png) | none ![python validation](./testing-images/wishlist_urls_py.png) | none ![python validation](./testing-images/wishlist_views_py.png) | none ![python validation](./testing-images/wishlist_contexts_py.png)  |
+
 [Back to top](#testing)
 
 ### JavaScript Testing
@@ -33,14 +49,14 @@
 ### CSS Testing
 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS files. External CSS for Bootstrap, provided by CDN was not tested. No errors were found.
 
-To avoid cluttering my testing file with multiple identical images, I have not included every screenshot of the CSS validations, as they are all the same. 
+To avoid cluttering my testing file with multiple identical images, I have not included every screenshot of the CSS validations, as they were all the same. 
 
-![css validation](/testing_images/css_no_errors.png)
+![css validation](./testing-images/css_no_errors.png)
 
 | CSS File | Errors | Warnings |
 | ---- | ------ | -------- |
 | Base CSS | 0 | 0 |
-| Article | 0 | 0 |
+| bag | 0 | 0 |
 | Checkout | 0 | 0 |
 | Profiles | 0 | 0 |
 
@@ -113,10 +129,6 @@ I continuously worked on improving the individual scores and tried to reflect on
 
 All of my scores for all of the pages were above 90, often close to 100. On a couple of pages the "SEO" score is slightly lower. This is due to the presence of a "back to top" button which has no href value and thus is not crawlable. I also got a lower score on Best Practices, due to [issues](./testing-images/stripe_cookies.png) which were logged into the console and have to do with using stripe cookies. Sometimes my scores for performance differed, probably due to current connection speed.
 
-
-### Results from Lighthouse
-| Page | Validation Results |
-[Back to top](#testing)
 
 ### User Stories Testing
 [Back to top](#testing)
