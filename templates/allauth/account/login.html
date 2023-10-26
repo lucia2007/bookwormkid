@@ -30,8 +30,9 @@
 {% include "socialaccount/snippets/login_extra.html" %}
 
 {% else %}
-<p>{% blocktrans %}If you have not created an account yet, then please
-  <a href="{{ signup_url }}" aria-label="Takes the user to the registration page.">sign up</a> first.{% endblocktrans %}
+<p class="text-black">{% blocktrans %}If you have not created an account yet, then please
+  <a href="{{ signup_url }}" aria-label="Takes the user to the registration page. Sign up.">sign up</a>
+  first.{% endblocktrans %}
 </p>
 {% endif %}
 
@@ -41,11 +42,12 @@
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <a class="btn btn-outline-navy rounded-0" href="{% url 'home' %}"
-    aria-label="Takes the user to the home page.">Home</a>
+  <a class="btn btn-outline-navy rounded-0 text-white" href="{% url 'home' %}"
+    aria-label="Takes the user to the home page.Home.">Home</a>
   <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
   <p class="mt-2">
-    <a class="button secondaryAction" aria-label="Takes the user to the password reset page."
+    <a class="button secondaryAction text-black?"
+      aria-label="Takes the user to the password reset page. Forgot Password?"
       href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
   </p>
 </form>
