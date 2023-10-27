@@ -759,6 +759,18 @@ If a user navigates to a page and there is a server related issue/error, they wi
 
 ![500 Error Page Image](readme-images/500_error_page.png)
 
+
+## Future Features
+
+I did not manage to develop all of the features which I wished to use in this project, but in case of some of them, I knew from the beginning they would have to be left for future development.
+
+Here are some of the features I wish to implement in the future:
+- Social Account Sign up
+- Exchange an old book for store credit - this would be a very cool feature to implement, to help with sustainability and to protect the environment, aleternatively send a discout code for returned used books
+- This store could offer stationary and related back-to-school products
+- Montesorri toys and materials to help children improve their reading skills through play could complement the offer
+- Books should have more attributes - hardcover/paperback, publisher, genre
+
 # Technologies Used
 ## Languages
 
