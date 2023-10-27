@@ -217,106 +217,60 @@ As a visitor I want to find a fun and enticing book for my child/grandchild/pupi
 
 [Back to top](#contents)
 ## User Stories
-- US - Navigation
-  - As a **user** I can **locate the navigation area** so that I can **easily access different parts of the website**.
-- US - Footer
-  - As a **user**, I can **access relevant information about the business, contact information and social media links without having to scroll back to the top of the page** so that I can **learn about terms and conditions, contact the eshop and follow the eshop online**.
-- US - User Registration
-  - As a **site user** I can **choose to register on the site and have my own account with personalized information** so that I can **easily review my past activities on the site and smoothly do another purchase**.
-- US - User Login/Logout Functionality
-  - As a **site user** I can **login in and logout of my account** so that I can **access personalized data, special features and keep my online activities safe**.
-- US - Account Email Validation
-  - As a **site user** I can **register my email and receive a validation link via email** so that I **can create an account to track my spending and purchases**.
-- US - Shopping Bag
-  - As a **customer** I can **choose the quantity of the product and add it to the shopping bag** so that I can **buy the product later**.
-- US - Add Products to Bag
-  - As a **customer** I can **click on Add to Bag button on product detail page** so that I can **add the product and its chosen quantity to the shopping bag**,
-- US - Shopping bag icon/functionality avaiable from all books view
-  - As a **user** I can **buy a chosen book directly from the all product view** so that I don't **have to go to product detail page**.
-- US - Search Functionality
-  - As a **site user**, I can **enter keywords into the search** bar so that I can **search for a specific item**.
-- US - View All Products
-  - As a **customer**, I can **easily scroll through all products** so that I can **see all the products the eshop offers".
-- US - Product Detail View
-  - As a **customer** I can **click on an individual product** so that I can **see the title, author, book description, price, segments by age and skill level etc**.
-- US - Checkout
-  - As a **customer** I can **securely checkout the products in my shopping bag** so that I can **finish my purchase**.
-- US - Order Email Confirmation
-  - As a **customer** I can **receive an email after purchase** so that I can **confirm my purchase and keep a record of my order**.
-- US - Order sorting
-  - As a **user** I can **view my past orders in descending order** so that I can **easily find my most recent orders**.
-- US - User Profile
-  - As a **site user** I can **register and create an account** so that I can **save my personal details, see order history and checkout quickly**.
-- US - User Notifications (Toasts)
-  - As a **customer** I can **view messages/toasts which inform me about my actions** so that I can **be sure that a certain action/choice took place**.
-- US - Filtering according to skill levels, special offers features
-  - As a **customer** I can **sort the products according to reading skill level, according to different special features** so that I can **quickly find the products I'm interested in**
-- US - Product Sorting Functionality
-  - As a **customer** I can **sort the products according to the price, category name and rating** so that I can **see the products sorting according to the chosen criterion**.
-- US - Product Category/Specials Filter
-  - As a **site user** I can **click on the options in the navbar** so that I can **see the chosen categories/subsegments to make my search quicker.**
-- US - Specials (on sale/featured/new arrival) Visual Confirmation
-  - As a **customer** I can **easily see which products are in the specials category** so that I can **avail of specials deals**.
-- US - Admin Dashboard
-  - As an **admin** I can **add/edit/remove products to the store offer through admin dashboard** so that I **don't have to do it through the admin panel**
-- US - Bookstore Management
-  - A an **admin/superuser** I can access the Bookstore management page** so that I **can add/edit/delete Articles, Enquiries and Products without having to access the django admin**.
-- US - View all articles
-  - As a **user** I can **see all articles** so that I can **choose which one I am most interested in and educate myself on the top of the importance of reading**.
-- US - View Article detail
-  - As a **user** I can **click on the article card** so that I can **read the article and see extra details**.
-- US - Add Articles to the app (add, edit, delete functionality)
-  - As a **user** I can **read several interesting articles about why reading skills are important and how to encourage children to read** so that I can **understand the issue better**.
-- US - View likes
-  - As a **user** I can **like/unlike an article** so that I can **express my opinion**.
-- US - View Like/Unlike articles
-  - As a **signed in user** I can **like/unlike articles and be visually informed about my action** so that I can **express my views**.
-- US - Add Read more/Read less functionality
-  - As a **user** I can **choose if I want to read the whole book description** so that I **am not overwhelmed by too much text**.
-- US - Wishlist
-  - As a **customer** I can **add desired products into my wishlist** so that I can **be reminded later which products were interesting for me**
-- US - Wishlist icon changes colour when there is an item in the wishlist
-  - As a **customer** I can **distinguish if there is something in my wishlist** so that I can **be informed about my actions**.
-- US - Contact
-  - As a **user** I can **contact the store by filling in a form directly on the webpage** so that I **don't have to send an email through a different app**.
-- US - Frequently asked questions - FAQ
-  - As a **user** I can **easily find answers to frequently asked questions** so that I **don't have to call or write to the store owners to find out the information**.
-- US - Add age segmentation filtering
-  - As a **customer** I can **easily find books in a chosen age category** so that I **don't have to search all the products**.
-- US - Add age segmentation for all product views and filters
-  - As a **user** I can **use age segmentation in combination with category or specials filters** so that I can **easily find an age appropriate book in the chosen subsegment**.
-- US - Add double filtering for products according to different segments&age
-  - As a **user** I can **sort the products by age within any chosen subsegment** so that I can **quickly find an age appropriate book**.
-- US - Make the chosen age parameter visually clear
-  - As a **user** I can **easily say if an age filter has been applied to the current template** so that I **don't have to study the product list for confirmation**.
-- US - Sales price functionality
-  - As a **user** I can **buy products on sale** so that I can **save money and enjoy my shopping more**.
-- US Sorting according to sales price
-  - As a **user** I can **see the products correctly ordered by their effective price** so that I **can easily identify the cheapest/most expensive products**.
-- US - Add Terms and Conditions, Privacy Policy
-  - As a **user** I can **learn what the company's Terms and Conditions and Privacy Policy are** so that I can **understand my rights and obligations in connection to the store**.
-- US - Newsletter
-  - As a **user** I can **subscribe for a newsletter service** so that I can **be informed about any news, new development on the bookwormkid app**.
-- US - Visual confirmation for shopping bag/wishlist items
-  - As a **customer** I can **easily see if there is something in my wishlist or shopping bag** so that I can **be informed about my current and previous actions**.
-- DT - Add customized 403, 404, 500 Error pages
-  - As a **developer** I can **display customized error pages** so that they **correspond to the overall site design**.
-- US - Confirm Deletion
-  - As an **superuser/admin** I can **confirm deletion of products or articles** so that I don't **accidently delete a product or article**.
-- US - Toasts without shopping bag
-  - As a **user/admin** I can **be informed about my actions without the shopping bag showing** so that I can **clearly and easily see the action confirmation and not be overwhelmed by too much unnecessary information**.
-- US - Optimize footer for small devices
-  - As a **user** I can **click on Help button in footer which contains all relevant links** so that I **don't have to scroll too far**.
-- US - Create Facebook page
-  - As a **user** I can **visit the store's facebook page** so that I can **have access to the newest posts and connect with other followers of the bookstore**.
-- US - Product Review
-  - As a **user** I can **add a review for a book I had bought previously by clicking on the item in my order history** so that I can **express my opinion**.
-- US - Lets the user review a book only once
-  - As a **user** I can **review a product only once** so that I can **share my opinion but not spam others**.
-- US - Wishlist visual confirmation
-  - As a **user** I can **clearly see that I already have a book in my wishlist** so that I don't **try to add it again**.
+| **User Stories** | **Description** | **Status** |
+| --- | --- | --- |
+| US - Navigation | As a **user** I can **locate the navigation area** so that I can **easily access different parts of the website**. | &#9745; |
+| US - Footer | As a **user**, I can **access relevant information about the business, contact information and social media links without having to scroll back to the top of the page** so that I can **learn about terms and conditions, contact the eshop and follow the eshop online**. | &#9745; |
+| US - User Registration | As a **site user** I can **choose to register on the site and have my own account with personalized information** so that I can **easily review my past activities on the site and smoothly do another purchase**. | &#9745; |
+| US - User Login/Logout Functionality | As a **site user** I can **login in and logout of my account** so that I can **access personalized data, special features and keep my online activities safe**. | &#9745; |
+| US - Account Email Validation | As a **site user** I can **register my email and receive a validation link via email** so that I **can create an account to track my spending and purchases**. | &#9745; |
+| US - Shopping Bag | As a **customer** I can **choose the quantity of the product and add it to the shopping bag** so that I can **buy the product later**. | &#9745; |
+| US - Add Products to Bag | As a **customer** I can **click on Add to Bag button on product detail page** so that I can **add the product and its chosen quantity to the shopping bag**, | &#9745; |
+| US - Shopping bag icon/functionality avaiable from all books view | As a **user** I can **buy a chosen book directly from the all product view** so that I don't **have to go to product detail page**. | &#9745; |
+| US - Search Functionality | As a **site user**, I can **enter keywords into the search** bar so that I can **search for a specific item**. | &#9745; |
+| US - View All Products | As a **customer**, I can **easily scroll through all products** so that I can **see all the products the eshop offers". | &#9745; |
+| US - Product Detail View | As a **customer** I can **click on an individual product** so that I can **see the title, author, book description, price, segments by age and skill level etc**. | &#9745; |
+| US - Checkout | As a **customer** I can **securely checkout the products in my shopping bag** so that I can **finish my purchase**. | &#9745; |
+| US - Order Email Confirmation | As a **customer** I can **receive an email after purchase** so that I can **confirm my purchase and keep a record of my order**. | &#9745; |
+| US - Order sorting | As a **user** I can **view my past orders in descending order** so that I can **easily find my most recent orders**. | &#9745; |
+| US - User Profile | As a **site user** I can **register and create an account** so that I can **save my personal details, see order history and checkout quickly**. | &#9745; |
+| US - User Notifications (Toasts) | As a **customer** I can **view messages/toasts which inform me about my actions** so that I can **be sure that a certain action/choice took place**. | &#9745; |
+| US - Filtering according to skill levels, special offers features | As a **customer** I can **sort the products according to reading skill level, according to different special features** so that I can **quickly find the products I'm interested in** | &#9745; |
+| US - Product Sorting Functionality | As a **customer** I can **sort the products according to the price, category name and rating** so that I can **see the products sorting according to the chosen criterion**. | &#9745; |
+| US - Product Category/Specials Filter | As a **site user** I can **click on the options in the navbar** so that I can **see the chosen categories/subsegments to make my search quicker.** | &#9745; |
+| US - Specials (on sale/featured/new arrival) Visual Confirmation | As a **customer** I can **easily see which products are in the specials category** so that I can **avail of specials deals**. | &#9745; |
+| US - Admin Dashboard | As an **admin** I can **add/edit/remove products to the store offer through admin dashboard** so that I **don't have to do it through the admin panel** | &#9745; |
+| US - Bookstore Management | A an **admin/superuser** I can access the Bookstore management page** so that I **can add/edit/delete Articles, Enquiries and Products without having to access the django admin**. | &#9745; |
+| US - View all articles | As a **user** I can **see all articles** so that I can **choose which one I am most interested in and educate myself on the top of the importance of reading**. | &#9745; |
+| US - View Article detail | As a **user** I can **click on the article card** so that I can **read the article and see extra details**. | &#9745; |
+| US - Add Articles to the app (add, edit, delete functionality) | As a **user** I can **read several interesting articles about why reading skills are important and how to encourage children to read** so that I can **understand the issue better**. | &#9745; |
+| US - View likes | As a **user** I can **like/unlike an article** so that I can **express my opinion**. | &#9745; |
+| US - View Like/Unlike articles | As a **signed in user** I can **like/unlike articles and be visually informed about my action** so that I can **express my views**. | &#9745; |
+| US - Add Read more/Read less functionality | As a **user** I can **choose if I want to read the whole book description** so that I **am not overwhelmed by too much text**. | &#9745; |
+| US - Wishlist | As a **customer** I can **add desired products into my wishlist** so that I can **be reminded later which products were interesting for me** | &#9745; |
+| US - Wishlist icon changes colour when there is an item in the wishlist | As a **customer** I can **distinguish if there is something in my wishlist** so that I can **be informed about my actions**. | &#9745; |
+| US - Contact | As a **user** I can **contact the store by filling in a form directly on the webpage** so that I **don't have to send an email through a different app**. | &#9745; |
+| US - Frequently asked questions - FAQ | As a **user** I can **easily find answers to frequently asked questions** so that I **don't have to call or write to the store owners to find out the information**. | &#9745; |
+| US - Add age segmentation filtering | As a **customer** I can **easily find books in a chosen age category** so that I **don't have to search all the products**. | &#9745; |
+| US - Add age segmentation for all product views and filters | As a **user** I can **use age segmentation in combination with category or specials filters** so that I can **easily find an age appropriate book in the chosen subsegment**. | &#9745; |
+| US - Add double filtering for products according to different segments&age | As a **user** I can **sort the products by age within any chosen subsegment** so that I can **quickly find an age appropriate book**. | &#9745; |
+| US - Make the chosen age parameter visually clear | As a **user** I can **easily say if an age filter has been applied to the current template** so that I **don't have to study the product list for confirmation**. | &#9745; |
+| US - Sales price functionality | As a **user** I can **buy products on sale** so that I can **save money and enjoy my shopping more**. | &#9745; |
+| US Sorting according to sales price | As a **user** I can **see the products correctly ordered by their effective price** so that I **can easily identify the cheapest/most expensive products**. | &#9745; |
+| US - Add Terms and Conditions, Privacy Policy | As a **user** I can **learn what the company's Terms and Conditions and Privacy Policy are** so that I can **understand my rights and obligations in connection to the store**. | &#9745; |
+| US - Newsletter | As a **user** I can **subscribe for a newsletter service** so that I can **be informed about any news, new development on the bookwormkid app**. | &#9745; |
+| US - Visual confirmation for shopping bag/wishlist items | As a **customer** I can **easily see if there is something in my wishlist or shopping bag** so that I can **be informed about my current and previous actions**. | &#9745; |
+| DT - Add customized 403, 404, 500 Error pages | As a **developer** I can **display customized error pages** so that they **correspond to the overall site design**. | &#9745; |
+| US - Confirm Deletion | As an **superuser/admin** I can **confirm deletion of products or articles** so that I don't **accidently delete a product or article**. | &#9745; |
+| US - Toasts without shopping bag | As a **user/admin** I can **be informed about my actions without the shopping bag showing** so that I can **clearly and easily see the action confirmation and not be overwhelmed by too much unnecessary information**. | &#9745; |
+| US - Optimize footer for small devices | As a **user** I can **click on Help button in footer which contains all relevant links** so that I **don't have to scroll too far**. | &#9745; |
+| US - Create Facebook page | As a **user** I can **visit the store's facebook page** so that I can **have access to the newest posts and connect with other followers of the bookstore**. | &#9745; |
+| US - Product Review | As a **user** I can **add a review for a book I had bought previously by clicking on the item in my order history** so that I can **express my opinion**. | &#9745; |
+| US - Lets the user review a book only once | As a **user** I can **review a product only once** so that I can **share my opinion but not spam others**. | &#9745; |
+| US - Wishlist visual confirmation | As a **user** I can **clearly see that I already have a book in my wishlist** so that I don't **try to add it again**. | &#9745; |
+| US - There are no past orders/no books found | As a **user** I can **be informed that I entered a wrong key word or that there are no orders in my history** so that I **don't have to guess what went wrong**. | &#9745; |
 
-# Creation Process
+## Design Choices
 
 When I started creating the web application, I had a very clear idea of what I wanted to achieve. I wanted to create an attractive enticing eshop where the user would easily find a great book for their young reader. Firstly, I designed wireframes, then I proceeded to create the ERD schema and subsequently I focused on writing down the user stories and planned all my sprints.
 
