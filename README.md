@@ -748,235 +748,102 @@ If a user navigates to a page that does not exist, a customized 404 error page w
 If a user attempts to do something they are not authorized to do, they will get a 403 Error page.
 
 If a user navigates to a page and there is a server related issue/error, they will be shown a customized 500 error page.
-    
-![404 Error Page Image](readme-images/404_error_page.png) 
 
-![403 Error Page Image](readme-images/403_error_page.png) 
+![404 Error Page Image](readme-images/404_error_page.png)
 
-![500 Error Page Image](readme-images/500_error_page.png) 
+![403 Error Page Image](readme-images/403_error_page.png)
 
-My sprints were planned out as follows:
+![500 Error Page Image](readme-images/500_error_page.png)
 
-### Sprint #1 - 04/09 - 08/09
+# Technologies Used
+## Languages
 
-Project planning, project set up, Django Allauth
+- [Python](https://www.python.org/) - Used for adding functionality to the application.
+- [HTML5](https://en.wikipedia.org/wiki/HTML) - Provides the content and structure for the website.
+- [CSS3](https://en.wikipedia.org/wiki/CSS) - Provides the styling for the website.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Provides interactive elements of the website
 
-In the first sprint I focused on project planning: I created wireframes, ERD schema, wrote down user stories, planned sprints and set up the project including the Django allauth. Most of this sprint was about setting up the backend and the tasks were labeled as Dev Task (DT). The following tasks where a part of this sprint:
+## Frameworks and Software
 
-- DT - Preparation for Project Planning
-- DT - Set Up Development Environment
-- US - User Registration
-- US - User Login/Logout Functionality
-- US - Account Email Validation
-
-### Sprint #2 - 11/09-15/09
-
-Product Model set up/Page skeleton/Database set up
-
-In this sprint, I focused on creating the backend functionality for displaying products on offer, enable filtering and sorting and search functionality.
-
-- US - Home Page
-- US - Navigation
-- US - Footer
-- US - View All Products
-- US - Product Detail View
-- US - Product Sorting Functionality
-- US - Search Functionality
-- US - Filtering according to Skill Level, Special Offers, Featured
-- US - Product Category/Specials Filter
-- DT - Add Products to the database
-
-### Sprint #3 - 18/09-22/09
-
-Shopping Bag/Checkout page/User Profile/STRIPE
-
-I created shopping bag and checkout page functionality, customized user registration/login functionality, started working on implementation of Stripe payment system.
-
-- US - Shopping Bag
-- US - Checkout
-- US - User Notifications (Toasts)
-- US - Order Email Confirmation
-- US - Add Products to Bag
-- DT - Add customized 403, 404 and 500 Error Pages
-- Several bug-fixes (details in testing.md)
-
-### Sprint #4 - 25/09-29/09
-
-Deploy/Newsletter sign up/CSS style improvements/Basic Admin Dashboard
-
-In this sprint I focused on early deploymentmadding newletter sign up functionality, improving app styling and added basic admin dashboard for adding products.
-
-- US - Newsletter
-- US - Visual Confirmation for shopping bag/wishlist items
-- Several bug fixes (details in testing.md)
-
-### Sprint #5 - 02/10 - 06/10
-
-Blog/Contact Form/Wishlist
-
-In this sprint I added Blog, contact form and wishlist and made small improvements to admin dashboard.
-
-- US - Admin Dashboard
-- US - Wishlist Icon Changes Colour when there is an Item in the Wishlist
-- US - View Article detail
-- US - View All Articles
-- US - Add Articles to the App (add, edit, delete functionality)
-- US - View Likes
-- US - View Like/Unlike articles
-- US - Wishlist
-- US - Contact
-- US - Shopping Bag icon/functionality availabla from all books view
-
-### Sprint #6 - 09/10 - 13/10
-
-Age segmentation/Add more products to the shop/Bookstore management/Bug fixes/Confirm deletion
-
-In this sprint I managed to basic filtering by age, I added more products to the shop, significantly improved Bookstore Management, fixed bugs and added confirm deletion messages to relevant places.
-
-- US - Order Sorting
-- US - Confirm Deletion
-- US - Toasts without Shopping Bag
-- US - Add Age segmentation Filtering
-- US - Add Read more/read less Functionality
-- US - FAQs
-- US - Bookstore Management
-
-### Sprint #7 - 16/10 - 20/10
-
-Facebook mockup/Marketing (keywords)/Finish Age segmentation/Code refactoring/HTML Error Fixes/Finish up Footer/Navbar content
-
-In this milestone I focused on finishing the last features, I started refactoring the code and fixing HTML errors (duplicate ID's). I also finished up the Footer and Navbar Content. At my mentor's suggestion, I added a product review functionality.
-
-- US - Add Age Segmentation for all Product Views and Filters
-- US - Add Terms and Conditions
-- US _ Sales Price Functionality
-- US - Optimize Footer for Small Devices
-- US - Create Facebook Page
-- US - Sorting according to Sales Price
-- US - Add Dobule Filtering for Products according to Different Segments & Age
-- US - Make the Chosen Age Parameter Visually Clear
-- US - Product Review
-
-### Sprint #8 + #9 - 23/10 - 03/11
-
-Testing/Readme/Marketing/SEO/Missing Files
-
-The main focus of these sprints was to update the readme file and do through testing of the whole app, including python, javascript, html validation, user story testing, lighthouse testing. Towards the end of the two weeks, I will add the robots.txt, sitemap.xml, and focus on improving of the SEO score.
-
-- US - Lets the user review a book only once
-- US - Wishlist visual confirmation
-
-### Sprint #10 - 06/11 - 07/11
-
-Project Submission
+- [Bootstrap](https://getbootstrap.com/) - A CSS framework that helps building solid, responsive, mobile-first sites.
+- [Django](https://www.djangoproject.com/) - An MVT framework used to create the Tennis Buddies site.
+- [Figma](https://figma.com) - Used to create wireframes.
+- [Github](https://github.com/) - Used for hosting the repository.
+- [Projects in GitHub](https://github.com/lucia2007?tab=projects) - Used for project managament.
+- [Heroku](https://heroku.com/) - Used for deploying the application.
+- [Gitpod](https://www.gitpod.io/#get-started) - Used for developing the application.
+- [Markdown Table Generator](https://www.tablesgenerator.com/markdown_tables) - Used to generate tables in Markdown.
+- [Favicon Converter](https://favicon.io/favicon-converter/) - used to create a favicon in correct format.
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - Used to test performance of site.
+- [Responsive Design Checker](https://www.responsivedesignchecker.com/) - Used for responsiveness check.
+- [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Used for debugginf and responsiveness testing.
+- [HTML Validation](https://validator.w3.org/) - Used to validate HTML code
+- [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code
+- [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used for validation python code.
+- [Lucid Charts](https://lucidchart.com/) - for creating my ERD Diagram
+- [AWS]
+- [Stripe]
 
 [Back to top](#contents)
 
-### GitHub Projects Board
+# Python Packages
 
-I used Projects tool inbuilt in GitHub, [GitHub's Projects](https://github.com/users/lucia2007/projects/6/views/1), to help me manage the scope of the project, to track my progress and record any bugs, but also to jot down any ideas that were relevant for the application development. These ideas were either later applied in the code or dismissed if they did not seem to enhance the user's experience or improve the development process. The issues were being fluidly moved from PBIs into In Progress and then either into Done or Won't have. Anytime I came across a bug, I noted it down with as many details as possible in the bug section and continuously worked on fixing them.
-
-Whenever I had an idea related to the project, I would jot it down in the "Backlog section/Brainstorming" section. Then I would go through the issues and choose the ones suitable for the current Milestone. I would convert the simple ideas into proper User Stories with acceptance criteria and necessary tasks and move them to the To Do/In Progress section. I would label each User Story with the following labels: MoSCoW lables, number of story points, relevant Epic and Milestone, priority, user story/dev task/bug-fix. The dev tasks were usually centered around the backend part of the project, getting the frameworks set up and functional, or fixing bugs, writing documentation or testing.
-
-When my Milestone with its deadline was set up (Sprint), I would assign relevant Epics with their User Stories to it. On a day-to-day basis I would choose 2 or 3 things that were currently being worked on and I would place them in the "In Progress" section. I also took some extra time, usually on a Friday afternoon or Monday morning to do a more thorough clean up of the project board so that it would remain usable and not be too cluttered. (Sometimes I wrote the same bug/issue down more than once or I had more than 2-3 issues in my In Progress section.) If I became stuck on a task for whatever reason or depended on external input, I moved it to "Blocked". At last, when a task was completed, I would one more time check against the acceptance criteria, tick each of the finished tasks and move it to the "Done" section. As soon as an issue was identified as "won't have" for the current project version, I moved it to the won't do section on the project board.
-
-The Project tool has been very benefitial for my development process, especially because I could rely on having all the relevant information in one place. I would write down the sources to be credited, or bugs to be fixed or ideas on how to improve some part of the application, so I did not have to worry about having forgotten something essential.
-
-In the future, I should able to surmise the amount of story points for each Epic/User story more easily and thus plan my Sprints more effectively. In the past I noted down the bugs only retrospectively. This time around I tried to create an issue for each bug right away and tried to connect a commit to the issue, but I didn't do it quite consistently. I hope this process becomes a second nature to me in the future and I won't be forgetting to attach the issue number to a commit. What was definitely benefitial, was that I documented each bug and its solution in the testing file as soon as I had solved it.
-
-[Back to top](#contents)
-### MoSCoW Prioritization
-
-I had tried to apply MoSCoW principles in my development but more on a project basis than on a sprint basis. In my first sprints I solely focused on meeting must-have dev tasks and user stories and when most of my necessary features were in place, only then did I start incorporating should-haves or could-haves. As I went along, I also indentified won't-haves which were either to be fully abandoned or left for future development.
-
-- Must Have: must be delivered (max 60% of user stories)
-- Should Have: add significant value, but not crucial (20% of stories)
-- Could Have: small impact if not implemented (20% of stories)
-- Won't Have: not crucial for this iteration
-
-Unfinished user stories can be found in either PBis, to-do or the won't have section of my project board.
-
-[Back to top](#contents)
-### Milestones
-
-I split up my project development into the following milestones as mentioned above:
-
-1. Project planning, project set up, Django Allauth
-2. Product Model set up/Page skeleton/Database set up
-3. Shopping Bag/Checkout page/User Profile/STRIPE
-4. Deploy/Newsletter sign up
-5. Blog/Contact Form/Wishlist
-6. Age segmentation/Add more products to the shop/Bookstore management/Bug fixes/Confirm deletion
-7. Facebook mockup/Marketing (keywords)/Finish Age segmentation/Code refactoring/Fiinish up Footer/Navbar content/
-8. and  9. Testing/Readme/Marketing/SEO/missing files
-10. Project Submission
+Following packages and libraries were installed and are located in requirements.txt.
+- asgiref==3.7.2
+- boto3==1.28.54
+- botocore==1.31.54
+- dj-database-url==0.5.0
+- Django==3.2.21
+- django-allauth==0.41.0
+- django-countries==7.2.1
+- django-crispy-forms==1.14.0
+- django-richtextfield==1.6.1
+- django-storages==1.14
+- django-stubs==4.2.4
+- django-stubs-ext==4.2.2
+- django-summernote==0.8.20.0
+- gunicorn==21.2.0
+- jmespath==1.0.1
+- oauthlib==3.2.2
+- Pillow==10.0.0
+- psycopg2==2.9.7
+- python-dateutil==2.8.2
+- python-slugify==8.0.1
+- python3-openid==3.2.0
+- requests-oauthlib==1.3.1
+- s3transfer==0.6.2
+- sqlparse==0.4.4
+- stripe==6.5.0
+- text-unidecode==1.3
+- types-dj-database-url==1.3.0.4
+- types-pytz==2023.3.0.1
+- types-PyYAML==6.0.12.11
+- types-stripe==3.5.2.14
+- urllib3==1.26.16
 
 [Back to top](#contents)
-### Epics
+# Testing
 
-Each milestone was split into epics. Looking back at it, I could have used fewer epics. Some milestones contain just one or two epic, others contain more. For details please look into my [Projects](https://github.com/users/lucia2007/projects/9) where you can see which epic was a part of which milestone. My Projects board is set to public.
+To test the aspects of the application, I used manual testing and external validators. Both manual and external testing are a part of a separate [testing file](/TESTING.md).
 
-- EPIC Registration and User Account
-  - DT Preparation for Project Planning
-  - US User Registration
-  - US Login/Logout Functionality
-  - US Account Email Validation
-  - US User Profile
-- EPIC Viewing and Navigation
-  - US Navigation
-  - US Visual confirmation for shopping bag/wishlist items
-  - US Home Page
-  - US View All Products
-  - US Product Detail View
-  - US Product Category/Specials Filter
-  - US Footer
-  - US Optimize footer for small devices
-  - US Add Terms and Conditions, Privacy Policy
-- EPIC Book Details
-  - US Add Products to the Database
-  - US Add Read more/Read less functionality
-- EPIC Shopping Bag Functionality
-  - US Shopping Bag
-  - US Checkout
-  - US Add Products to Bag
-  - US Order Sorting
-  - US Shopping bag icon/functionality available from all books view
-  - US Sales Price Functionality
-  - US User Notifications (Toasts)
-  - US Order Email Confirmation
-- EPIC Filtering
-  - US Filtering according to skill levels, special offers features
-  - US Product Category/Specials Filter
-  - US Add age segmentation filtering
-  - US Add age segmentation for all product views and filters
-  - US Add double filtering for products according to different segments&age
-  - US Make the chosen age parameter visually clear
-- EPIC Sorting and Searching
-  - US Search Functionality
-  - US Product Sorting Functionality
-  - US Sorting according to sales price
-- EPIC Articles
-  - US View all Articles
-  - US View Article detail
-  - US Add Articles to the app (add, edit, delete functionality)
-  - US Like/Unlike Articles
-  - US View Likes
-- EPIC Customer Communication and Advertisement
-  - US Contact
-  - US Newsletter
-  - US Create Facebook Page
-  - US Frequently Asked Questions - FAQ
-- EPIC Error Pages
-  - DT Add customized 403, 404, 500 Error Pages
-- EPIC Wishlist
-  - US Wishlist
-  - US Wishlist icon changes colour when there is an item in the wishlist
-  - US Wishlist visual confirmation
-- EPIC Store Management
-  - US Bookstore Management
-  - US Toasts without Shopping Bag
-  - US Admin Dashboard
-  - US Confirm Deletion
+### Manual testing
+
+  - I used manual testing throughout the whole development phase of the project. Mainly:
+    - I deployed early to avoid any last minute issues and checked my local and life site periodically. With the live site, I could check responsivness from early on on different devices.
+    - I continuously attended to any errors which I came across during the development process.
+    - I used validators to check my HTML, CSS and backend code.
+    - For each of the user stories I wrote down clear acceptance criteria and tasks which had to be done to meet those criteria. Only after I had met all the conditions, did I move the user story to done.
+
+### External Testing
+
+  All external testing is a part of a separate [testing file](/TESTING.md).
+
+### Automated Testing
+
+I had not managed to do automated testing for this application, but I plan to make it a regular part of my development process in my future projects.
+
+[Back to top](#contents)
+
 
 [Back to top](#contents)
 ### User Stories
