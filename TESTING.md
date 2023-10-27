@@ -177,6 +177,8 @@ Testing of responsive design was carried out manually by utilizing [Google Chrom
 ** There are quite a few commits around my product filters and highlighting of the chosen age segment, as I was trying to figure out ways how to do it more efficiently and more simply. There was a lot of back and forth, and some unnecessary or duplicated commits, and even though I know the code could still be refactored, I feel that at the moment it is finally easily legible and understandable.
 ## Unfixed Bugs
 
+There are no known unfixed bugs in the project.
+
 [Back to top](#testing)
 
 ## Additional Testing

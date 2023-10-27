@@ -589,6 +589,7 @@ The wireframes include a view for desktop, tablet and mobile to take responsives
 I used [Figma](https://www.figma.com) which is an excellent tool for making wireframes.
 
 [Back to top](#contents)
+
 **Desktop Wireframes**
 
 <details><summary><b>Home Page</b></summary>
