@@ -121,11 +121,33 @@ To avoid cluttering my testing file with multiple identical images, I have not i
 | Checkout | 0 | 0 |
 | Profiles | 0 | 0 |
 
-
 ## Browser Compatibility
+
+The website was tested on the following browsers: Google Chrome, Safari, Microsoft Edge and Mozilla Firefox. There were no errors discovered in the functionality of the site or the individual features.
+
+| App | Browser Compatibility |
+| ---- | ---------- |
+| Google Chrome | &check; |
+| Safari | &check; |
+| Microsoft Edge| &check; |
+| Mozilla Firefox| &check; |
+
 [Back to top](#testing)
 
 ## Responsiveness Test
+
+Achieving responsiveness on this project was much easier and faster than before mainly due to the application of Bootstrap. I always strived to put mobile devices first and then I used medie queries for larger devices, as it is proven that majority of internet users are accessing web apps through their mobile phones.
+
+Testing of responsive design was carried out manually by utilizing [Google Chrome DevTools](https://developer.chrome.com/docs/devtools) and [Responsive Design Checker](https://www.responsivedesignchecker.com/).
+
+|        | S Galaxy 5 | iPhone 6/6S/7 | iPad Mini | iPad Pro | Display <1200px | Display >1200px |
+| ------ | ---------- | ------------- | --------- | -------- | --------------- | --------------- |
+| Render | pass       | pass          | pass      | pass     | pass            | pass            |
+| Images | pass       | pass          | pass      | pass     | pass            | pass            |
+
+[Responsiveness test video](./readme-images/responsivness_test.webm)
+
+
 [Back to top](#testing)
 
 ## Fixed Bugs
