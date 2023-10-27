@@ -401,6 +401,10 @@
                     <hr>
                 </div>
                 {% endif %}
+                {% empty %}
+                <div class="col mt-5 empty-result">
+                    <p class="text-center text-black">Sorry, no books match your search.</p>
+                </div>
                 {% endfor %}
             </div>
         </div>
