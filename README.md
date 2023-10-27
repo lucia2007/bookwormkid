@@ -70,7 +70,6 @@ For access to Admin Dashboard frontend view with relevant sign-in credentials: [
   - [Sign Up Page](#sign-up-page)
   - [Sign In Page](#sign-in-page)
   - [Logout Page](#logout-page)
-    - [Future Features Sign in functionality](#future-features-sign-in-functionality)
   - [403, 404 and 500 Error Pages](#403-404-and-500-error-pages)
 - [Technologies Used](#technologies-used)
   - [Languages](#languages)
@@ -80,6 +79,18 @@ For access to Admin Dashboard frontend view with relevant sign-in credentials: [
     - [Manual testing](#manual-testing)
     - [External Testing](#external-testing)
     - [Automated Testing](#automated-testing)
+- [Project Deployment](#project-deployment)
+  - [Create a new GitHub Repository from CI template](#create-a-new-github-repository-from-ci-template)
+  - [Install Django and the supporting libraries](#install-django-and-the-supporting-libraries)
+  - [ElephantSQL Database](#elephantsql-database)
+  - [Heroku Deployment](#heroku-deployment)
+  - [Google Mail Setup](#google-mail-setup)
+  - [AWS Config](#aws-config)
+    - [Media Folder Setup](#media-folder-setup)
+    - [Django AWS Connect](#django-aws-connect)
+  - [Stripe Config](#stripe-config)
+  - [To fork the repository on GitHub](#to-fork-the-repository-on-github)
+  - [To create a local clone of a project](#to-create-a-local-clone-of-a-project)
 - [Credits](#credits)
   - [Content](#content)
   - [Tools](#tools)
@@ -733,14 +744,6 @@ All sign in functionalities are a result of using django-allauth. Using this pac
 
 [Back to top](#contents)
 
-### Future Features Sign in functionality
-
-In the next version I would like to enable registration with social account sign in as this functionality makes the registration process much quicker and easier. Users are often dissuaded from signing up to new apps and this could facilitate the process.
-
-At the moment, the email is not being verified and user can use a made up email. In the future I definitely want to add email verification as this is important for other features in the app, like contacting a buddy to organize a game or for contacting users in case of need by staff.
-
-[Back to top](#contents)
-
 ## 403, 404 and 500 Error Pages
 
 If a user navigates to a page that does not exist, a customized 404 error page will appear.
@@ -844,132 +847,479 @@ I had not managed to do automated testing for this application, but I plan to ma
 
 [Back to top](#contents)
 
+# Project Deployment
+
+It is advisable to do an early deployment of the application to be able to regularly check both the local and the deployed versions of the project. Testing of responsivness on different devices is easy with the deployed version. (I could share the link for the deployed app with my friends and receive early feedback.) I found that sometimes it took up to several hours for changes to show in the deployed version, so an early deployment is definitely advantageous to avoid last minute scares.
+
+Follow the steps below to deploy your project:
+## Create a new GitHub Repository from CI template
+
+- Navigate to [GitHub](https://github.com) and create a GitHub repository from the [Code Institute template](https://github.com/Code-Institute-Org/gitpod-full-template) by following the link and then click 'Use this template'.
+
+<details><summary><b>Create GitHub Repository</b></summary>
+
+![Create GitHub Repository](./readme-images/heroku_step_1.png)
+</details><br>
+
+- Fill in the needed details as stated in the screenshot below and then click 'Create Repository From Template'. The name you choose must be unique.
+
+<details><summary><b>Choose Repository Name</b></summary>
+
+![Repository Name](./readme-images/heroku_step_2.png)
+</details><br>
+
+- When the repository is created, click the green 'Gitpod' button as stated in the screenshot below.
+
+<details><summary><b>Click Green GitPod Button</b></summary>
+
+![Click Green GitPod Button](./readme-images/heroku_step_3.png)
+</details><br>
 
 [Back to top](#contents)
-### User Stories
+## Install Django and the supporting libraries
 
-Each epic would contain several user stories. Each user story has a description, acceptance criteria and tasks which had to be ticked before the user story could be closed and moved to done. For details as to which user story was a part of a particular epic/milestone and for the acceptance criteria/tasks, please refer to my [Projects](https://github.com/users/lucia2007/projects/9) where all the details can be found.
+- To install Django and the supporting libraries, type the commands below.
 
-The above listed user stories above had all been finished. There are several user stories which had not been done and are postponed for future development, others were moved into "won't do" category. For more details see Future Features section.
+* ```pip3 install 'django<4' gunicorn```
+* ```pip3 install dj_database_url psycopg2```
 
-I realize that my attempt at agile project development was not perfect and I know I will do several things differently in the future, but it has definitely been an enriching experience which helped me manage the project's scope. In the future I plan to make more detailed Epics and to plan my sprints according to user story points, as now I have a better idea how long different tasks take me and I can make better, if imperfect, estimates.
+<details><summary><b>Install Supporting Libraries</b></summary>
+
+![Install Supporting Libraries](./readme-images/heroku_step_4.png)
+</details><br>
+
+- When Django and the libraries are installed we need to create a requirements file.
+
+* ```pip3 freeze --local > requirements.txt``` - This will create and add required libraries to requirements.txt
+
+<details><summary><b>Create Requirements File</b></summary>
+
+![Step 5](./readme-images/heroku_step_5.png)
+</details><br>
+
+- Create the project.
+
+* ```django-admin startproject YOUR_PROJECT_NAME .``` - This will create your project
+
+<details><summary><b>Create Project</b></summary>
+
+![Create Project](./readme-images/heroku_step_6.png)
+</details><br>
+
+- When the project is created, we can now create the application.
+
+* ```django-admin startapp APP_NAME``` - This will create your application
+
+<details><summary><b>Create Application</b></summary>
+
+![Create Application](./readme-images/heroku_step_7.png)
+</details><br>
+
+- To create a superuser type in the following code:
+`python3 manage.py createsuperuser`
+
+You will be asked to enter credentials after which the superuser is created.  
+
+- We now need to add the application to settings.py
+
+<details><summary><b>Add Application to settings.py</b></summary>
+
+![Add Application to settings.py](./readme-images/heroku_step_8.png)
+</details><br>
+
+- Now do your first migration and run the server to test that everything works as expected. This is done by writing the commands below.
+
+* ```python3 manage.py migrate``` - This will migrate the changes.
+* ```python3 manage.py runserver``` - This runs the server. To test it, click the 'open browser' button that will be visible after the command is run.
+
+- Create `env.py` file at the root level and include the following environment variables. Don't forget to add the `env.py` file in the `.gitignore` in order to keep your secret information from becoming unsafe:
+
+`import os`
+
+`os.environ["DATABASE_URL"] = "insert your own ElephantSQL database URL here"`
+
+`os.environ["SECRET_KEY"] = "this can be any random secret key"`
+
+
+- In the `settings.py` add the following code under `from pathlib import Path`:
+
+`import os`
+
+`import dj_database_url`
+
+`if os.path.isfile("env.py"):`
+
+`import env`
+
+* Replace the original unsafe SECRET_KEY with the following code:
+
+`SECRET_KEY = os.environ.get('SECRET_KEY')`
+
+* Set `DEBUG = "DEVELOPMENT" in os.environ`. This allows us to have DEBUG set to True when developing locally, but set to False when deployed to Heroku.
+
+* Replace the original `DATABASES` code with the following lines (this allows us to use the postgress database instead of the sqlite3 databases):
+
+`
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+  }
+`
+
+* Link the file to the Heroku templates directory:
+- Under ``BASE_DIR`` enter ``TEMPLATES_DIR = os.path.join(BASE_DIR, ‘templates’)``
+- Update ``TEMPLATES = 'DIRS': [TEMPLATES_DIR]`` with:
+
+```
+os.path.join(BASE_DIR, 'templates'),
+os.path.join(BASE_DIR, 'templates', 'allauth')
+```
+
+* Create the following folders at the top level directory:
+  * media
+  * static
+  * templates
+  
+* Create a file called **Procfile** and add the following line in it:
+`web: gunicorn PROJ_NAME.wsgi`
+
+* Make necessary migrations.
+
+* Save all the files and do the first commit and push to GitHub:
+  * `git add .`
+  * `git commit -m "Deployment Commit"`
+  * `git push`
 
 [Back to top](#contents)
-## Database Schema (ERD)
+## ElephantSQL Database
 
-Before I started writing any code, I spent a lot of time on planning and thinking things through. One part on which I spent a considerable amount of time, was creating the ERD diagram and designing each model and their relationships. I used [Lucid Charts](https://lucidchart.com/) to create my ERD schema. As you can tell, not all my arrows are pointing into the right direction as I was still a bit confused about the relationships and how the models are related to each other, but I believe that if I had to create the schema now, it would be much easier and a more straightforward process.
+[ElephantSQL](https://www.elephantsql.com/) is used for the PostgreSQL database in this project.
 
-![ERD Diagram Lucid Charts](/readme-images/ERD_PP5.png)
+To create your own PostgreSQL database, sign-up with your GitHub account and follow these steps:
+- Click **Create New Instance** to initiate a new database.
+- Choose a name, usually the name of the project.
+- Select **Tiny Turtle(Free)** plan.
+- Leave the **Tags** blank.
+- Select **Region** and **Data Center** closest to you.
+- Afterwards, click on the new database name, where you can view the db URL and Password. Copy the URL and enter the address into your **config vars in Heroku** and into your `env.py` file.
 
-This ERD schema was instrumental for creating all the necessary models for this app. Creating this schema helped me realize the relationships between different apps and models and clarified what kind of fields each of the model components would need.
+[Back to top](#contents)
+## Heroku Deployment
 
-Models/Apps used in this project:
-- UserProfiles - used to collect and update contact/delivery information for users
-- Checkout - For creating/updating orders
-- Bookstore Management - for managing books/enquiries/articles from a user friendly interface
-- Contact - for contacting the store via a online form
-- Newletter - for signing up for a regular newsletter
-- Products - for managing books, filtering, sorting and more
-- Article - for adding/editing/deleting articles
-- Enquiry - for adding/updating/removing FAQ and their answers
-- Wishlist - for adding/removing items from the user's wishlist
-- allauth - used for sign in/out/up functionality of the site
-- Reviews - for adding a review to a book the customer had bought and not reviewed before
+The project was deployed to [Heroku](https://www.heroku.com). To deploy, please follow the process below:
 
-I had not implemented the comments model to Articles (possible future feature), but at my mentor's suggestion, I focused on adding the book reviews as we found this feature essential for an online store to increase customer's ability to interact with the application. Comments model for the Articles was not deemed necessary at this stage, as the current articles are guest articles. When we start adding our own content in the future, we will add a possibility for users to comment on the new posts.
+Create the application on Heroku, attach a database, prepare the `env.py` and `settings.py` file and setup the **AWS storage** for static and media files. 
+
+* Go to [Heroku](https://www.heroku.com/) and sign in (or create an account if needed).
+
+* Once signed in, click the button "New" in the top right corner, below the header and choose "Create new app". The name you choose must be unique. Choose a region which is closest to you.
+
+<details><summary><b>Create New App</b></summary>
+
+![Create New App](./readme-images/heroku_step_9.png)
+</details><br>
+
+<details><summary><b>Choose Name and Region</b></summary>
+
+![Choose Name and Region](./readme-images/heroku_step_10.png)
+</details><br>
+
+- This brings you to the "Deploy" tab. From here, click the "Settings" tab and scroll down to the "Config Vars" section and click on "Reveal Config Vars". Click the "Add" button on the right and add the following key/value pairs:
+
+   - **DATABASE_URL**:**postgres://...**
+   - **DISABLE_COLLECTSTATIC** of value '1'
+   - **SECRET_KEY** and value  
+   - **AWS_ACCESS_KEY** and value
+   - **AWS_SECRET_ACCESS_KEY** and value
+   - **EMAIL_HOST_PASS** and value
+   - **EMAIL_HOST_USER** and value
+   - **STRIPE_PUBLIC_KEY** and value
+   - **STRIPE_SECRET_KEY** and value
+   - **STRIPE_WH_SECRET** and value
+   - **USE_AWS** and value
+
+- `DISABLE_COLLECTSTATIC` variable is needed only for the initial deployment, later this variable must be removed.
+
+Heroku needs two additional files in order to deploy properly (see above):
+- `requirements.txt`
+- `Procfile` 
+
+- Scroll back to the top of the page and choose the "Deploy" tab. Then choose "GitHub" as Deployment method.
+   
+<details><summary><b>Deployment method</b></summary>
+
+![Deployment method](./readme-images/deploy.png)
+</details><br>
+
+Go to "Connect to GiHub" section, search for the repository name and then click "Connect".
+   
+<details><summary><b>Connect to GitHub</b></summary>
+
+![Connect to GitHub](./readme-images/connect_repository.png)
+</details><br>
+
+- In the "Automatic Deploys" section, choose your preferred method for deployment. At first, I used the manual deployment option, and later I changed it to automatic deploys. Afterwards, click "Deploy Branch".
+   
+<details><summary><b>Automatic Deploys</b></summary>
+
+![Automatic Deploys](./readme-images/automatic_deploys.png)
+</details><br>
+
+Alternatively, you can follow these steps:
+- In the Terminal/CLI connect to Heroku by typing in: `heroku login -i`
+- Set the remote for Heroku: `heroku git: remote -a app_name` (replace app_name with your app name)
+- After doing Git `add`, `commit`, `push` to GitHub, you can type in: `git push heroku main`
+
+The project should now be deployed to Heroku.
+
+The link to the the live site can be found here - https://bookwormkid-c20568b2004e.herokuapp.com/.
+The link to the GitHub repository can be found here - https://github.com/lucia2007/bookwormkid.
+
+Add the Heroku host name into **ALLOWED_HOSTS** in your projects **settings.py file** -> ```['herokuappname', ‘localhost’, ‘8000 port url’].```
+
+**DISABLE_COLLECTSTATIC**  may be removed from the Config Vars once you have saved and pushed an image within your project.
+
+## Google Mail Setup
+
+To be able to receive emails upon registration, checkout and from the contact form, you need to set up app password in your Gmail.
+
+- Setup a Gmail account that will be used to hold and store the emails for your project.
+- Log in, navigate to **Settings** -> **Other Google Account Settings** -> **Accounts** -> **Import** -> **Other Account Settings**
+- Activate 2-Step Verification
+- Once verified access **App Passwords** -> **Other** -> enter a name for the password, eg Bookworm Kid.
+- Click **Create** -> copy the 16 digit password that is generated.
+- In your `settings.py` add the following Email Settings:
+   [Django email settings](./readme_images/../readme-images/email_settings.png)  
+- Add EMAIL_HOST_PASS, EMAIL_HOST_USER variable, password and email address to your Heroku Config Vars
+
+## AWS Config
+
+[AWS](https://aws.amazon.com) is used to store the media and static files online for Bookworm Kid. To set it up for your project, please follow the steps below:
+
+- Setup AWS Account and Login
+- Create a new S3 Bucket -> name it to match your Heroku App name -> Choose the region closest to you.
+- Allow **Click All Public Access**, tick 'Bucket will be public' in order for the bucket to connect to Heroku. 
+- In **Object Ownership** -> **ACLS Enabled** -> **Bucket Owner Preferred**.
+- **Properties** tab -> turn on static web hosting and add 'index.html' and 'error.html' into the correct fields -> click **Save**
+- In the **Permissions** tab, paste in the following CORS config:
+
+   ```
+	[
+		{
+			"AllowedHeaders": [
+				"Authorization"
+			],
+			"AllowedMethods": [
+				"GET"
+			],
+			"AllowedOrigins": [
+				"*"
+			],
+			"ExposeHeaders": []
+		}
+	]
+	```
+- Copy your **ARN** string.
+- From the **Bucket Policy** tab, select the **Policy Generator** link, and use the following steps:
+	- Policy Type: **S3 Bucket Policy**
+	- Effect: **Allow**
+	- Principal: `*`
+	- Actions: **GetObject**
+	- Amazon Resource Name (ARN): **paste-your-ARN-here**
+	- Click **Add Statement**
+	- Click **Generate Policy**
+	- Copy the entire Policy, and paste it into the **Bucket Policy Editor**
+
+		```shell
+		{
+			"Id": "Policy1234567890",
+			"Version": "2012-10-17",
+			"Statement": [
+				{
+					"Sid": "Stmt1234567890",
+					"Action": [
+						"s3:GetObject"
+					],
+					"Effect": "Allow",
+					"Resource": "arn:aws:s3:::bucket-name/*"
+					"Principal": "*",
+				}
+			]
+		}
+		```
+    - Before you click "Save", add `/*` to the end of the Resource key in the Bucket Policy Editor (like above).
+	- Click **Save**.
+- In the **ACL - Access Control List** -> **Edit** -> enable **List** for **Everyone(Public Access)** -> Accept the warning.
+
+### AWS - IAM setup
+
+- In AWS Services Menu click **Create New Group**, add name eg. 'group-project-name'.
+- Navigate to **Review Policy** page -> **User Groups** -> Select newly named group.
+- Navigate to **Permissions** tab -> **Add Permissions** -> Click **Attach Policies**
+- Select policy -> **Add Permissions** at the bottom, click when finished.
+- From **JSON** tab -> select **Import Managed Policy** link -> search for **S3** -> select **Amazon3FullAccess** policy -> **Import**.
+- Copy **ARN** from S3 Bucket again ->
+
+   ```
+		{
+			"Version": "2012-10-17",
+			"Statement": [
+				{
+					"Effect": "Allow",
+					"Action": "s3:*",
+					"Resource": [
+						"arn:aws:s3:::bucket-name",
+						"arn:aws:s3:::bucket-name/*"
+					]
+				}
+			]
+		}
+	```
+- Click **Review Policy** -> name eg. 'Bookworm Kid Policy' -> enter a description -> **Create Policy**
+- Search for your new policy and click on it to **Attach Policy**
+- **User Groups** -> **Add User** -> name eg. 'Bookworm Kid user'
+- For **Select AWS Access Type** -> select **Programmatic Access** -> Add group to 'Bookworm Kid user' -> **Review User** -> **Create User**.
+- Find **Download.csv** button to download crendetials and save a copy. The file can be downloaded only once, so make sure to save it securely.
+  - This file contains the user's **Access key ID** and **Secret access key**.
+	- `AWS_ACCESS_KEY_ID` = **Access key ID**
+	- `AWS_SECRET_ACCESS_KEY` = **Secret access key** 
+- Add these variables into your env.py and Heroku config vars.
+### Media Folder Setup
+1. In Heroku Config Vars, remove `DISABLE_COLLECTSTATIC` (after at least one image has been added).
+2. In AWS S3 create a new folder -> **media** -> Add project images -> **Manage Public Permissions** -> **Grant public read access to the objects** -> **Upload**
+
+### Django AWS Connect
+
+- Install following packages to use AWS S3 Buckets in Django:
+   - `pip3 install boto3`
+   - `pip3 install django-storages`
+- 
+- Add the following code in settings.py:
+   ```
+   INSTALLED_APPS = [
+       'storages',
+   ]
+
+- Check if AWS variables are present in env.py and if environment variable paths are set in settings.py:
+   ```
+   import os
+   from pathlib import Path
+   import dj_database_url
+
+   if os.path.isfile('env.py'):
+   import env
+   ```
+
+- Check if DATABASES are set up to connect with Heroku Postgres server in production vs SQLite3 when in local development.
+   ```
+   if "DATABASE_URL" in os.environ:
+	DATABASES = {
+		"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+	}
+    else:
+	DATABASES = {
+		"default": {
+			"ENGINE": "django.db.backends.sqlite3",
+			"NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+		}
+	}
+    ```
+
+- Set up media and static file storage in settings.py:
+   ```
+   STATIC_URL = "/static/"
+   STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+
+   MEDIA_URL = "/media/"
+   MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+   ```
+
+- Set up S3 Bucket config in settings.py:
+   ```
+   if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'Bookworm Kid-096aafe5d13c'
+    AWS_S3_REGION_NAME = 'eu-west-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+    ```
+
+- Create a 'custom_storages.py' file in the root directory and add the following:
+   ```
+  from django.conf import settings
+  from storages.backends.s3boto3 import S3Boto3Storage
+
+  class StaticStorage(S3Boto3Storage):
+  	location = settings.STATICFILES_LOCATION
+ 
+  class MediaStorage(S3Boto3Storage):
+	  location = settings.MEDIAFILES_LOCATION
+    ```
+
+- AWS S3 Bucket is now connected.
+
+## Stripe Config
+
+Stripe's API is used to handle Bookworm Kid's payment system. To setup follow the below steps:
+
+- Create a Stripe account and log in.
+- In the Stripe Dashboard -> **Get your test API keys.**
+- Add your `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY` to your env.py, connect to your settings.py using your environment variables and then enter them into your project's Heroku Config Vars.
+- Include Stripe's Webhooks to create an intennt if a customer exits the page during payment authorisation. In Stripe's Dashboard -> **Developers** -> **Webhooks** -> **Add Endpoint**: 'herokuapp url/checkout/wh'
+- Choose **Retrieve all events** -> **Add Endpoint**.
+- Add new key **STRIPE_WH_SECRET** to env.py, settings.py and Heroku Config Vars as before.
+
+[Back to top](#contents)
+## To fork the repository on GitHub
+
+A copy of the GitHub Repository can be made by forking the GitHub account. This copy can be viewed and changed without affecting the original repository. Take the following steps to fork the repository:
+
+1. Log in to **GitHub** and locate the [repository](hhttps://github.com/lucia2007/bookwormkid).
+2. On the top right hand side of the page is a button called **'Fork'**. Click on the button to create a copy of the original repository in your GitHub Account.
+
+![GitHub forking process image](./readme-images/forking_process.png)
 
 [Back to top](#contents)
 
-## Site Structure
+## To create a local clone of a project
 
-The Bookworm Kid site structure is very straightforward and easy to understand. A collapsible navbar is present at the top with a search bar, different features (sorting, filtering, articles, contact form, ... ) of the website are accesssible directly from the navbar. The main content follows with a responsive footer at the bottom of the page. A back to top bottom is present on pages, where the content is too long.
+Take the following steps to create a clone of a project:
 
-The Bookworm Kid site changes depending on if the user is signed in or not. If the user is not signed in, they can see a Register/Login buttons, whereas if they are signed in, they can see a Profile Icon/Logout buttons. A signed in user can also see a Wishlist Icon in the navbar which changes color based on the fact if it's empty or if there are some items in the wishlist. If staff member is signed in, they can also see a Bookstore Management tab under their profile icon in the NavBar. Also edit/delete buttons are present on different pages if an admin user is signed in. More details can be found in the respective feature section.
+1. Click on the **Code** button in the left top corner.
+2. Next to the green **GitPod** button, click on **Code** drop-down menu.
+3. In the **HTTPS** section, click on the clipboard icon to copy the displayed URL.
+4. In your IDE of choice, open **Git Bash**.
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone``, and then paste the URL copied from GitHub.
+7. Press **enter** and the local clone will be created.
+8. Install requirements to get the project to work by typing in this command:
+   `pip3 install -r requirements.txt`
+   This command downloads and installs all the required dependencies as found in `requirements.txt file`.
+9. Set up environment file (`env.py`) so that the project knows what variables are needed to make it work. For retrieving the AWS/Stripe API key and the ElepahtnSQL url, please follow the steps in the relevant sections. 
+10. These variables are hidden due to sensitivity of the information. You must not push the `env.py` file to GitHub. You will achieve this by adding the `env.py` to the `.gitignore-file`. The variables that are declared in the `env.py` also need to be added to the **Heroku config vars** apart from the ["DEVELOPMENT"] variable, for detailes see above. (For setting up your AWS and ElephantSQL please follow the steps detailed in the deployment section.)
 
+11.  Make all the relevant migrations before running the server by:
+    - `python3 manage.py migrate` - this makes the necessary migrations
+    - `python3 manage.py runserver` - enables the project to live locally 
+    - `python3 manage.py createsuperuser` - this creates a superuser after you provide credentials
 
-- [Python](https://www.python.org/) - Used for adding functionality to the application.
-- [HTML5](https://en.wikipedia.org/wiki/HTML) - Provides the content and structure for the website.
-- [CSS3](https://en.wikipedia.org/wiki/CSS) - Provides the styling for the website.
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Provides interactive elements of the website
-
-## Frameworks and Software
-
-- [Bootstrap](https://getbootstrap.com/) - A CSS framework that helps building solid, responsive, mobile-first sites.
-- [Django](https://www.djangoproject.com/) - An MVT framework used to create the Tennis Buddies site.
-- [Figma](https://figma.com) - Used to create wireframes.
-- [Github](https://github.com/) - Used for hosting the repository.
-- [Projects in GitHub](https://github.com/lucia2007?tab=projects) - Used for project managament.
-- [Heroku](https://heroku.com/) - Used for deploying the application.
-- [Gitpod](https://www.gitpod.io/#get-started) - Used for developing the application.
-- [Markdown Table Generator](https://www.tablesgenerator.com/markdown_tables) - Used to generate tables in Markdown.
-- [Favicon Converter](https://favicon.io/favicon-converter/) - used to create a favicon in correct format.
-- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - Used to test performance of site.
-- [Responsive Design Checker](https://www.responsivedesignchecker.com/) - Used for responsiveness check.
-- [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Used for debugginf and responsiveness testing.
-- [HTML Validation](https://validator.w3.org/) - Used to validate HTML code
-- [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code
-- [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used for validation python code.
-- [Lucid Charts](https://lucidchart.com/) - for creating my ERD Diagram
-- [AWS]
-- [Stripe]
-
-[Back to top](#contents)
-
-# Python Packages
-
-Following packages and libraries were installed and are located in requirements.txt.
-asgiref==3.7.2
-boto3==1.28.54
-botocore==1.31.54
-dj-database-url==0.5.0
-Django==3.2.21
-django-allauth==0.41.0
-django-countries==7.2.1
-django-crispy-forms==1.14.0
-django-richtextfield==1.6.1
-django-storages==1.14
-django-stubs==4.2.4
-django-stubs-ext==4.2.2
-django-summernote==0.8.20.0
-gunicorn==21.2.0
-jmespath==1.0.1
-oauthlib==3.2.2
-Pillow==10.0.0
-psycopg2==2.9.7
-python-dateutil==2.8.2
-python-slugify==8.0.1
-python3-openid==3.2.0
-requests-oauthlib==1.3.1
-s3transfer==0.6.2
-sqlparse==0.4.4
-stripe==6.5.0
-text-unidecode==1.3
-types-dj-database-url==1.3.0.4
-types-pytz==2023.3.0.1
-types-PyYAML==6.0.12.11
-types-stripe==3.5.2.14
-urllib3==1.26.16
-
-[Back to top](#contents)
-# Testing
-
-To test the aspects of the application, I used manual testing and external validators. Both manual and external testing are a part of a separate [testing file](/TESTING.md).
-
-### Manual testing
-
-  - I used manual testing throughout the whole development phase of the project. Mainly:
-    - I deployed early to avoid any last minute issues and checked my local and life site periodically. With the live site, I could check responsivness from early on on different devices.
-    - I continuously attended to any errors which I came across during the development process.
-    - I used validators to check my HTML, CSS and backend code.
-    - For each of the user stories I wrote down clear acceptance criteria and tasks which had to be done to meet those criteria. Only after I had met all the conditions, did I move the user story to done.
-
-### External Testing
-
-  All external testing is a part of a separate [testing file](/TESTING.md).
-
-### Automated Testing
-
-I had not managed to do automated testing for this application, but I plan to make it a regular part of my development process in my future projects.
+![Github cloning process image](./readme-images/cloning_process.png)
 
 [Back to top](#contents)
 
@@ -983,7 +1333,7 @@ I had not managed to do automated testing for this application, but I plan to ma
 - [RichTextField settings - Daisy's Recipe Tutorial](https://www.youtube.com/watch?v=_GNvmwvvS70)
 - [Boutique Ado](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/) for general quidance and mainly for the shopping bag and checkout functionalities
 - [I think therefore I Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) for articles functionality
-- [Everneed](https://github.com/amylour/everneed/tree/main) for articles and wishlist functionalities
+- [Bookworm Kid](https://github.com/amylour/Bookworm Kid/tree/main) for articles and wishlist functionalities
 - [I Think, Thereforw I Blog Child first](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/dabfed30d1fc4d078b6de270117dbe50/?child=first)
 - [Contact Form](https://ordinarycoders.com/blog/article/build-a-django-contact-form-with-email-backend)
 - [Read more/Read less buttons](https://codepen.io/joserick/pen/ooVPwR)
