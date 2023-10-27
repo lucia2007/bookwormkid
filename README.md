@@ -52,43 +52,34 @@ For access to Admin Dashboard frontend view with relevant sign-in credentials: [
   - [Objective](#objective)
   - [Cutomer Goals](#cutomer-goals)
   - [Business Goal](#business-goal)
-- [Business Model](#business-model)
+  - [Business Model](#business-model)
   - [Marketing Techniques](#marketing-techniques)
-    - [Facebook Page](#facebook-page)
-    - [Content marketing](#content-marketing)
-    - [E-mail Marketing](#e-mail-marketing)
-    - [Search Engine Optimization (SEO)](#search-engine-optimization-seo)
-- [User Experience (UX/UI)](#user-experience-uxui)
-  - [Primary Goal](#primary-goal)
-  - [Visitor Goals](#visitor-goals)
-    - [First Time Visitor](#first-time-visitor)
-    - [Returning Visitor](#returning-visitor)
-    - [Frequent Visitor](#frequent-visitor)
-  - [User Stories](#user-stories)
-- [Creation Process](#creation-process)
-  - [Design Inspiration](#design-inspiration)
-    - [Color Scheme](#color-scheme)
-    - [Typography and Iconography](#typography-and-iconography)
-  - [Design Prototype (Wireframes)](#design-prototype-wireframes)
-    - [Desktop Wireframes](#desktop-wireframes)
-    - [Tablet Wireframes](#tablet-wireframes)
-    - [Mobile Wireframes](#mobile-wireframes)
   - [Project Management](#project-management)
-    - [Sprint #1 - 04/09 - 08/09](#sprint-1---0409---0809)
-    - [Sprint #2 - 11/09-15/09](#sprint-2---1109-1509)
-    - [Sprint #3 - 18/09-22/09](#sprint-3---1809-2209)
-    - [Sprint #4 - 25/09-29/09](#sprint-4---2509-2909)
-    - [Sprint #5 - 02/10 - 06/10](#sprint-5---0210---0610)
-    - [Sprint #6 - 09/10 - 13/10](#sprint-6---0910---1310)
-    - [Sprint #7 - 16/10 - 20/10](#sprint-7---1610---2010)
-    - [Sprint #8 + #9 - 23/10 - 03/11](#sprint-8--9---2310---0311)
-    - [Sprint #10 - 06/11 - 07/11](#sprint-10---0611---0711)
     - [GitHub Projects Board](#github-projects-board)
     - [MoSCoW Prioritization](#moscow-prioritization)
     - [Milestones](#milestones)
     - [Epics](#epics)
-    - [User Stories](#user-stories-1)
+    - [Sprints (Milestones)](#sprints-milestones)
   - [Database Schema (ERD)](#database-schema-erd)
+- [User Experience (UX/UI)](#user-experience-uxui)
+  - [User Stories](#user-stories)
+  - [Design Choices](#design-choices)
+  - [Design Prototype (Wireframes)](#design-prototype-wireframes)
+  - [Site Structure](#site-structure)
+- [Features](#features)
+  - [Sign Up Page](#sign-up-page)
+  - [Sign In Page](#sign-in-page)
+  - [Logout Page](#logout-page)
+    - [Future Features Sign in functionality](#future-features-sign-in-functionality)
+  - [403, 404 and 500 Error Pages](#403-404-and-500-error-pages)
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages)
+  - [Frameworks and Software](#frameworks-and-software)
+- [Python Packages](#python-packages)
+- [Testing](#testing)
+    - [Manual testing](#manual-testing)
+    - [External Testing](#external-testing)
+    - [Automated Testing](#automated-testing)
 - [Credits](#credits)
   - [Content](#content)
   - [Tools](#tools)
@@ -122,13 +113,13 @@ Once the book offer has been amplified with consulation from experts on children
 
 Bookworm Kid provides a very user friendly interface for bookstore admin where they can add/edit/delete books from the store, manage articles and enquiries. The admin can access all order details in the django admin panel and also can approve customer reviews.
 
-# Business Model
+## Business Model
 Bookworm Kid was designed as a B2C - Business to Customer model - where the customer buys directly from the business. There are no intermediaries. This model enables direct communication with the customer and provides space for flexibility and quick reactions and adaptability to the customer's needs.
 
 ## Marketing Techniques
 It is absolutely necessary to have online presence and recognition to be able to attract new customers and build a strong customer base. One of the ways to achieve this is through social platforms, e.g. the Facebook platform. Social media can be a great tool for attracting new customers and communicating with the current ones, if done correctly.
 
-### Facebook Page
+* Facebook Page
  A commercial Facebook page was created to make the potential customers aware of the business, its goals and to create a community around book lovers. We hope that through regular engagement with potential customers through posts, and other activities, we will be able to attract new customers. Facebook page will help us keep in touch with the current customers and provide a way for communication with new ones. We will be announcing new arrivals, featured products or special sales on this platform. Also when a new article is released/published, the users will be informed. When a new live reading session for children (which are very popular and will contribute to the organic growth of the store) takes place, the users will be informed about this upcoming event on our Facebook page. In the future we are considering using targeted ads, once our platform is robust enough.
 
 <details><summary><b>Facebook Page</b></summary>
@@ -137,14 +128,14 @@ It is absolutely necessary to have online presence and recognition to be able to
 
 </details><br>
 
-### Content marketing
+* Content marketing
 
 There are several articles present on the Bookworm Kid website with the purpose of attracting potential customers to read up on the topic of the importance of reading and ways to improve children's reading skills. At the moment, all of the articles are guest articles, but in the future we plan to add our own content and engage more deeply with the users.
 
-### E-mail Marketing
+* E-mail Marketing
 Another form of online marketing is through email. Bookworm Kid users can opt to subscribe to the company's newsletter. The content of the newsletter is kept short and fresh with the purpose to attract the customers to the store. New arrivals, featured products, sales will be announced through this platform. Also if there is a new interesting article or a new reading session, we will be letting the customers know. Lastly, the users will receive discount codes for their next purchase (future feature). [Mailchimp](https://mailchimp.com/) was used to set up the newsletter subscription functionality.
 
-### Search Engine Optimization (SEO)
+* Search Engine Optimization (SEO)
 If a website does not come up in the google search on one of the top positions, it is very unlikely the users will ever visit is. Having sufficient traffic is a prerequite for customer conversion. One of the ways how to come up higher in searches is through Search Engine Optimization. If the ranking is good/high, there is a higher return on investment.
 
 Therefore it is Bookworm Kid's goal to include content which is reliable, profesional and relevant. Descriptive Meta Tags have been implemented on the site in hope of increasing the SEO. Most of them are a result of several brainstorming sessions, but I also used [Wordtracker](https://www.wordtracker.com/) to add more content specific keywords. I made sure to use not only short, but also long-tail words. The Meta Tags used:
@@ -155,17 +146,306 @@ Therefore it is Bookworm Kid's goal to include content which is reliable, profes
 
 The site also includes a sitemap.xml and robots.txt to make sure that the search engines can find and crawl the pages on the site. These files are essential for SEO optimization. The sitemap.xml was generated using [XML Sitemap Generator](https://www.xml-sitemaps.com/) and included in the root folder of the project. A robots.txt file was created in the root folder to instruct search engine crawlers on how to access and crawl the site's pages.
 
+## Project Management
+
+I have been using GitHub projects for organizing my project, tracking user stories and epics. It is a very helpful tool which enabled me to keep all my PBIs in one place and to tackle them gradually.
+
+At the beginning of the project, I spent a fair amount of time on project planning, on thinking it through. I created wireframes and a sketch of my models first. Having the wireframes and the ERD model to refer to when working on the project was both essential and very helpful. Any time I was getting lost or confused, I could consult them and figure out how to proceed.
+
+Reflecting back on my experience with PP4, I felt more confident about planning of the sprints and I planned them right at the beginning. I did make minor changes to the content of each milestone, but in general my sprints followed this logic: focus on essential features first (mvp), add additional features if there is enough time. I also focused on issues with high priority and only when the project was taking shape, would I add a could have or lower priority features. I also improved in guessing have many story points should each user story/dev tasks take, but I had not yet planned to do a given number of points withing the sprint.
+
+When I am finished with the project, I plan to go back and analyze how many story points I was able to achieve in a sprint and will use this information for my future project planning.
+
+I used Milestones for organizing my sprints. I know it is not ideal, but the Project tool does not have a great alternative to tracking sprints. Thus, I would create my milestones, give them a description, assign Epics and User stories to them and add a finish date for each of them. My sprints were usually one week long Monday to Friday, but sometimes I had to move some issues to the next sprint due to a problem which took me longer to solve than I had expected or I managed to squeeze in some US story into the current sprint.
+
+From the beginning I tried to update my readme and testing files, especially as regards credits, sources and bug-fixes. I left the last two sprints for readme and testing file completion as it is a very time consuming task to document everything.
+
+I tried to fix bugs, small or big, as I went so that they would not be too much left at the end. Also it gave me a great relief when the app would start working again after having displayed error upon error.
+
+As you will see from my progress, I have always kept MVP in mind. At first I made sure the backend functionality was in place, then I started working on other crucial elements and when I had some extra time, I added some nice to have features, but always keeping in mind meeting the core project requirements first.
+
+This is visible especially with the product filtering, where at first I developed only a basic filtering functionality by skill level and some other model attributes. It took me a long time until I got around doing the age filtering, but I felt this was an essantial feature of the app and needed to be done. Again, I started with a simple age filter which did not take any other parameters in the account. Finally, towards the end of my development, I managed to create filters which take more than one criterion into account and I am very happy with the result. In the meantime I would add other essential features to comply with the mvp requirements, like newsletter, contact form, articles, enquiries and others.
+
+Overall, primarily, I focused on completing majority of the must-haves, in later stages of the product development I would consider some should and could-haves. At the same time, I was identifying user stories which would have to change into won't haves and be left for future development.
+
+Breaking up the project in Epics, User stories and essentially into tasks has been very helpful and enabled me to tackle the project in managable bite-size steps. Using acceptance criteria as a part of my user stories helped me define what was necessary to achieve before I could consider the user story done. Each user story also contained detailed tasks which had to be fulfilled before labeling the story as done.
+
+Each of the user stories would get labels such as: must have, should have, could have, won't have; number of story points; epic ; user story/dev task/bug; high/medium/low priority. Each user story would be assigned to its respective epic and milestone (sprint).
+
+[Back to top](#contents)
+
+### GitHub Projects Board
+
+I used Projects tool inbuilt in GitHub, [GitHub's Projects](https://github.com/users/lucia2007/projects/9), to help me manage the scope of the project, to track my progress and record any bugs, but also to jot down any ideas that were relevant for the application development. These ideas were either later applied in the code or dismissed if they did not seem to enhance the user's experience or improve the development process. The issues were being fluidly moved from PBIs into In Progress and then either into Done or Won't have. Anytime I came across a bug, I noted it down with as many details as possible in the bug section and continuously worked on fixing them.
+
+Whenever I had an idea related to the project, I would jot it down in the "Backlog section/Brainstorming" section. Then I would go through the issues and choose the ones suitable for the current Milestone. I would convert the simple ideas into proper User Stories with acceptance criteria and necessary tasks and move them to the To Do/In Progress section. I would label each User Story with the following labels: MoSCoW lables, number of story points, relevant Epic and Milestone, priority, user story/dev task/bug-fix. The dev tasks were usually centered around the backend part of the project, getting the frameworks set up and functional, or fixing bugs, writing documentation or testing.
+
+When my Milestone with its deadline was set up (Sprint), I would assign relevant Epics with their User Stories to it. On a day-to-day basis I would choose 2 or 3 things that were currently being worked on and I would place them in the "In Progress" section. I also took some extra time, usually on a Friday afternoon or Monday morning to do a more thorough clean up of the project board so that it would remain usable and not be too cluttered. (Sometimes I wrote the same bug/issue down more than once or I had more than 2-3 issues in my In Progress section.) If I became stuck on a task for whatever reason or depended on external input, I moved it to "Blocked". At last, when a task was completed, I would one more time check against the acceptance criteria, tick each of the finished tasks and move it to the "Done" section. As soon as an issue was identified as "won't have" for the current project version, I moved it to the won't do section on the project board.
+
+The Project tool has been very benefitial for my development process, especially because I could rely on having all the relevant information in one place. I would write down the sources to be credited, or bugs to be fixed or ideas on how to improve some part of the application, so I did not have to worry about having forgotten something essential.
+
+In the future, I should able to surmise the amount of story points for each Epic/User story more easily and thus plan my Sprints more effectively. In the past I noted down the bugs only retrospectively. This time around I tried to create an issue for each bug right away and tried to connect a commit to the issue, but I didn't do it quite consistently. I hope this process becomes a second nature to me in the future and I won't be forgetting to attach the issue number to a commit. What was definitely benefitial, was that I documented each bug and its solution in the testing file as soon as I had solved it.
+
+[Back to top](#contents)
+### MoSCoW Prioritization
+
+I had tried to apply MoSCoW principles in my development but more on a project basis than on a sprint basis. In my first sprints I solely focused on meeting must-have dev tasks and user stories and when most of my necessary features were in place, only then did I start incorporating should-haves or could-haves. As I went along, I also indentified won't-haves which were either to be fully abandoned or left for future development.
+
+- Must Have: must be delivered (max 60% of user stories)
+- Should Have: add significant value, but not crucial (20% of stories)
+- Could Have: small impact if not implemented (20% of stories)
+- Won't Have: not crucial for this iteration
+
+Unfinished user stories can be found in either PBis, to-do or the won't have section of my project board.
+
+[Back to top](#contents)
+### Milestones
+
+I split up my project development into the following milestones:
+
+1. Project planning, project set up, Django Allauth
+2. Product Model set up/Page skeleton/Database set up
+3. Shopping Bag/Checkout page/User Profile/STRIPE
+4. Deploy/Newsletter sign up
+5. Blog/Contact Form/Wishlist
+6. Age segmentation/Add more products to the shop/Bookstore management/Bug fixes/Confirm deletion
+7. Facebook mockup/Marketing (keywords)/Finish Age segmentation/Code refactoring/Fiinish up Footer/Navbar content/
+8. and  9. Testing/Readme/Marketing/SEO/missing files
+10. Project Submission
+
+For more details please see the sprints (milestones) below.
+
+[Back to top](#contents)
+### Epics
+
+Each milestone was split into epics. Some milestones contain just one or two epic, others contain more.
+
+Each epic would contain several user stories. Each user story has a description, acceptance criteria and tasks which had to be ticked before the user story could be closed and moved to done. For details please refer to my [Projects](https://github.com/users/lucia2007/projects/9).
+
+- EPIC Registration and User Account
+  - DT Preparation for Project Planning
+  - US User Registration
+  - US Login/Logout Functionality
+  - US Account Email Validation
+  - US User Profile
+- EPIC Viewing and Navigation
+  - US Navigation
+  - US Visual confirmation for shopping bag/wishlist items
+  - US Home Page
+  - US View All Products
+  - US Product Detail View
+  - US Product Category/Specials Filter
+  - US Footer
+  - US Optimize footer for small devices
+  - US Add Terms and Conditions, Privacy Policy
+- EPIC Book Details
+  - US Add Products to the Database
+  - US Add Read more/Read less functionality
+- EPIC Shopping Bag Functionality
+  - US Shopping Bag
+  - US Checkout
+  - US Add Products to Bag
+  - US Order Sorting
+  - US Shopping bag icon/functionality available from all books view
+  - US Sales Price Functionality
+  - US User Notifications (Toasts)
+  - US Order Email Confirmation
+- EPIC Filtering
+  - US Filtering according to skill levels, special offers features
+  - US Product Category/Specials Filter
+  - US Add age segmentation filtering
+  - US Add age segmentation for all product views and filters
+  - US Add double filtering for products according to different segments&age
+  - US Make the chosen age parameter visually clear
+- EPIC Sorting and Searching
+  - US Search Functionality
+  - US Product Sorting Functionality
+  - US Sorting according to sales price
+- EPIC Articles
+  - US View all Articles
+  - US View Article detail
+  - US Add Articles to the app (add, edit, delete functionality)
+  - US Like/Unlike Articles
+  - US View Likes
+- EPIC Customer Communication and Advertisement
+  - US Contact
+  - US Newsletter
+  - US Create Facebook Page
+  - US Frequently Asked Questions - FAQ
+- EPIC Error Pages
+  - DT Add customized 403, 404, 500 Error Pages
+- EPIC Wishlist
+  - US Wishlist
+  - US Wishlist icon changes colour when there is an item in the wishlist
+  - US Wishlist visual confirmation
+- EPIC Store Management
+  - US Bookstore Management
+  - US Toasts without Shopping Bag
+  - US Admin Dashboard
+  - US Confirm Deletion
+
+[Back to top](#contents)
+
+### Sprints (Milestones)
+
+My sprints were planned out as follows:
+
+**Sprint #1 - 04/09 - 08/09**
+
+Project planning, project set up, Django Allauth
+
+In the first sprint I focused on project planning: I created wireframes, ERD schema, wrote down user stories, planned sprints and set up the project including the Django allauth. Most of this sprint was about setting up the backend and the tasks were labeled as Dev Task (DT). The following tasks where a part of this sprint:
+
+- DT - Preparation for Project Planning
+- DT - Set Up Development Environment
+- US - User Registration
+- US - User Login/Logout Functionality
+- US - Account Email Validation
+
+**Sprint #2 - 11/09-15/09**
+
+Product Model set up/Page skeleton/Database set up
+
+In this sprint, I focused on creating the backend functionality for displaying products on offer, enable filtering and sorting and search functionality.
+
+- US - Home Page
+- US - Navigation
+- US - Footer
+- US - View All Products
+- US - Product Detail View
+- US - Product Sorting Functionality
+- US - Search Functionality
+- US - Filtering according to Skill Level, Special Offers, Featured
+- US - Product Category/Specials Filter
+- DT - Add Products to the database
+
+**Sprint #3 - 18/09-22/09**
+
+Shopping Bag/Checkout page/User Profile/STRIPE
+
+I created shopping bag and checkout page functionality, customized user registration/login functionality, started working on implementation of Stripe payment system.
+
+- US - Shopping Bag
+- US - Checkout
+- US - User Notifications (Toasts)
+- US - Order Email Confirmation
+- US - Add Products to Bag
+- DT - Add customized 403, 404 and 500 Error Pages
+- Several bug-fixes (details in testing.md)
+
+**Sprint #4 - 25/09-29/09**
+
+Deploy/Newsletter sign up/CSS style improvements/Basic Admin Dashboard
+
+In this sprint I focused on early deploymentmadding newletter sign up functionality, improving app styling and added basic admin dashboard for adding products.
+
+- US - Newsletter
+- US - Visual Confirmation for shopping bag/wishlist items
+- Several bug fixes (details in testing.md)
+
+**Sprint #5 - 02/10 - 06/10**
+
+Blog/Contact Form/Wishlist
+
+In this sprint I added Blog, contact form and wishlist and made small improvements to admin dashboard.
+
+- US - Admin Dashboard
+- US - Wishlist Icon Changes Colour when there is an Item in the Wishlist
+- US - View Article detail
+- US - View All Articles
+- US - Add Articles to the App (add, edit, delete functionality)
+- US - View Likes
+- US - View Like/Unlike articles
+- US - Wishlist
+- US - Contact
+- US - Shopping Bag icon/functionality availabla from all books view
+
+**Sprint #6 - 09/10 - 13/10**
+
+Age segmentation/Add more products to the shop/Bookstore management/Bug fixes/Confirm deletion
+
+In this sprint I managed to basic filtering by age, I added more products to the shop, significantly improved Bookstore Management, fixed bugs and added confirm deletion messages to relevant places.
+
+- US - Order Sorting
+- US - Confirm Deletion
+- US - Toasts without Shopping Bag
+- US - Add Age segmentation Filtering
+- US - Add Read more/read less Functionality
+- US - FAQs
+- US - Bookstore Management
+
+**Sprint #7 - 16/10 - 20/10**
+
+Facebook mockup/Marketing (keywords)/Finish Age segmentation/Code refactoring/HTML Error Fixes/Finish up Footer/Navbar content
+
+In this milestone I focused on finishing the last features, I started refactoring the code and fixing HTML errors (duplicate ID's). I also finished up the Footer and Navbar Content. At my mentor's suggestion, I added a product review functionality.
+
+- US - Add Age Segmentation for all Product Views and Filters
+- US - Add Terms and Conditions
+- US _ Sales Price Functionality
+- US - Optimize Footer for Small Devices
+- US - Create Facebook Page
+- US - Sorting according to Sales Price
+- US - Add Dobule Filtering for Products according to Different Segments & Age
+- US - Make the Chosen Age Parameter Visually Clear
+- US - Product Review
+
+**Sprint #8 + #9 - 23/10 - 03/11**
+
+Testing/Readme/Marketing/SEO/Missing Files
+
+The main focus of these sprints was to update the readme file and do through testing of the whole app, including python, javascript, html validation, user story testing, lighthouse testing. Towards the end of the two weeks, I will add the robots.txt, sitemap.xml, and focus on improving of the SEO score.
+
+- US - Lets the user review a book only once
+- US - Wishlist visual confirmation
+- US - There are no past orders/no books found
+
+**Sprint #10 - 06/11 - 07/11**
+
+Project Submission
+
+The above listed user stories above had all been finished. There are several user stories which had not been done and are postponed for future development, others were moved into "won't do" category. For more details see Future Features section.
+
+I realize that my attempt at agile project development was not perfect and I know I will do several things differently in the future, but it has definitely been an enriching experience which helped me manage the project's scope. In the future I plan to make more detailed Epics and to plan my sprints according to user story points, as now I have a better idea how long different tasks take me and I can make better, if imperfect, estimates.
+
+
+[Back to top](#contents)
+## Database Schema (ERD)
+
+Before I started writing any code, I spent a lot of time on planning and thinking things through. One part on which I spent a considerable amount of time, was creating the ERD diagram and designing each model and their relationships. I used [Lucid Charts](https://lucidchart.com/) to create my ERD schema. As you can tell, not all my arrows are pointing into the right direction as I was still a bit confused about the relationships and how the models were related to each other, but I believe that if I had to create the schema now, it would be much easier and a more straightforward process.
+
+![ERD Diagram Lucid Charts](/readme-images/ERD_PP5.png)
+
+This ERD schema was instrumental for creating all the necessary models for this app. Creating this schema helped me realize the relationships between different apps and models and clarified what kind of fields each of the model components would need.
+
+Models/Apps used in this project:
+- UserProfiles - used to collect and update contact/delivery information for users
+- Checkout - For creating/updating orders
+- Bookstore Management - for managing books/enquiries/articles from a user friendly interface
+- Contact - for contacting the store via a online form
+- Newletter - for signing up for a regular newsletter
+- Products - for managing books, filtering, sorting and more
+- Article - for adding/editing/deleting articles
+- Enquiry - for adding/updating/removing FAQ and their answers
+- Wishlist - for adding/removing items from the user's wishlist
+- allauth - used for sign in/out/up functionality of the site
+- Reviews - for adding a review to a book the customer had bought and not reviewed before
+
+I had not implemented the comments model to Articles (possible future feature), but at my mentor's suggestion, I focused on adding the book reviews as we found this feature essential for an online store to increase customer's ability to interact with the application. Comments model for the Articles was not deemed necessary at this stage, as the current articles are guest articles. When we start adding our own content in the future, we will add a possibility for users to comment on the new posts.
+
+[Back to top](#contents)
+
 # User Experience (UX/UI)
 
-## Primary Goal
+**Primary Goal**
 
 The primary goal of this application is to enable a purchase of age appropriate literature which takes a child's skill level and maturity into account. The shopping experience needs to be seemless and smooth.
 
-## Visitor Goals
+**Visitor Goals**
 
 As a visitor I want to find a fun and enticing book for my child/grandchild/pupil which will encourage them to make reading a regular and important part of their lives.
 
-### First Time Visitor
+**First Time Visitor**
 
   - A user sees the main features of the app on the welcome page: find a book by different search criteria, read an article or contact us.
   - A user can register, log in and logout.
@@ -206,12 +486,13 @@ As a visitor I want to find a fun and enticing book for my child/grandchild/pupi
     - can approve a review
     - admin user can see unpublished articles and save them as drafts
 
-### Returning Visitor
+**Returning Visitor**
+
   - A user can easily sign in and access majority of the features of the website (like articles, leave a review, create a wishlist)
   - A user with filled in profile details can make a fast purchase.
   - A user can easily find books on sale/new arrivals or featured products
 
-### Frequent Visitor
+**Frequent Visitor**
 
   - A user can easily find a suitable book and make a quick purchase thanks to the saved personal and billing information and make use of any user features.
 
@@ -274,9 +555,7 @@ As a visitor I want to find a fun and enticing book for my child/grandchild/pupi
 
 When I started creating the web application, I had a very clear idea of what I wanted to achieve. I wanted to create an attractive enticing eshop where the user would easily find a great book for their young reader. Firstly, I designed wireframes, then I proceeded to create the ERD schema and subsequently I focused on writing down the user stories and planned all my sprints.
 
-## Design Inspiration
-
-### Color Scheme
+**Color Scheme**
 
 I got the idea for the main hero image and color theme when travelling in France in the summer and having come across the happy child reading a book mural by Jef Aerosol. It took me a while to find the image online and refine it using the [AI Image Sharpener](https://vanceai.com/sharpen-ai/) to make it a bit more sharp. The image I found had orange background, so I used it as one of main background colors and found the complementary colors by using [Coloors](https://coolors.co/).
 
@@ -285,10 +564,9 @@ I got the idea for the main hero image and color theme when travelling in France
 ![Color Scheme](/readme-images/color_scheme.png)
 </details><br>
 
-### Typography and Iconography
+**Typography and Icons**
 
 As regards the icons, I mainly used fontawesome icons, as they are easy to use and are consistent in style. I used 'Raleway' font from Google fonts and it seemed to work well with the bookstore theme. The font is also easily legible which is a very important requirement.
-
 
 [Back to top](#contents)
 ## Design Prototype (Wireframes)
@@ -300,7 +578,7 @@ The wireframes include a view for desktop, tablet and mobile to take responsives
 I used [Figma](https://www.figma.com) which is an excellent tool for making wireframes.
 
 [Back to top](#contents)
-### Desktop Wireframes
+**Desktop Wireframes**
 
 <details><summary><b>Home Page</b></summary>
 
@@ -352,7 +630,7 @@ I used [Figma](https://www.figma.com) which is an excellent tool for making wire
 ![Blog Detail](/readme-images/blog_detail_desktop.png)
 </details><br>
 
-### Tablet Wireframes
+**Tablet Wireframes**
 
 <details><summary><b>Home Page</b></summary>
 
@@ -409,7 +687,7 @@ I used [Figma](https://www.figma.com) which is an excellent tool for making wire
 ![Login](/readme-images/login_tablet.png)
 </details><br>
 
-### Mobile Wireframes
+**Mobile Wireframes**
 
 <details><summary><b>Mobile Wireframes</b></summary>
 
@@ -417,33 +695,65 @@ I used [Figma](https://www.figma.com) which is an excellent tool for making wire
 </details><br>
 
 [Back to top](#contents)
-## Project Management
 
-I have been using GitHub projects for organizing my project, tracking user stories and epics. It is a very helpful tool which enabled me to keep all my PBIs in one place and to tackle them gradually.
+## Site Structure
 
-At the beginning of the project, I spent a fair amount of time on project planning, on thinking it through. I created wireframes and a sketch of my models first. Having the wireframes and the ERD model to refer to when working on the project was both essential and very helpful. Any time I was getting lost or confused, I could consult them and figure out how to proceed.
+The Bookworm Kid site structure is very straightforward and easy to understand. A collapsible navbar is present at the top with a search bar, different features (sorting, filtering, articles, contact form, ... ) of the website are accesssible directly from the navbar. The main content follows with a responsive footer at the bottom of the page. A back to top bottom is present on pages, where the content is too long.
 
-Reflecting back on my experience with PP4, I felt more confident about planning of the sprints and I planned them right at the beginning. I did make minor changes to the content of each milestone, but in general my sprints followed this logic: focus on essential features first (mvp), add additional features if there is enough time. I also focused on issues with high priority and only when the project was taking shape, would I add a could have or lower priority features. I also improved in guessing have many story points should each user story/dev tasks take, but I had not yet planned to do a given number of points withing the sprint.
+The Bookworm Kid site changes depending on if the user is signed in or not. If the user is not signed in, they can see a Register/Login buttons, whereas if they are signed in, they can see a Profile Icon/Logout buttons. A signed in user can also see a Wishlist Icon in the navbar which changes color based on the fact if it's empty or if there are some items in the wishlist. If staff member is signed in, they can also see a Bookstore Management tab under their profile icon in the NavBar. Also edit/delete buttons are present on different pages if an admin user is signed in. More details can be found in the respective feature section.
 
-When I am finished with the project, I plan to go back and analyze how many story points I was able to achieve in a sprint and will use this information for my future project planning.
+Also here are different features which become available only for a signed in user (like/unlike articles, add a book review, access order history).
 
-I used Milestones for organizing my sprints. I know it is not ideal, but the Project tool does not have a great alternative to tracking sprints. Thus, I would create my milestones, give them a description, assign Epics and User stories to them and add a finish date for each of them. My sprints were usually one week long Monday to Friday, but sometimes I had to move some issues to the next sprint due to a problem which took me longer to solve than I had expected or I managed to squeeze in some US story into the current sprint.
+# Features
+## Sign Up Page
 
-From the beginning I tried to update my readme and testing files, especially as regards credits, sources and bug-fixes. I left the last two sprints for readme and testing file completion as it is a very time consuming task to document everything.
+Sign up Page has a simple design. The user has to enter their email and the password twice. This is due to defensive programming principle where we try to avoid unnecessary errors caused by small typos.
 
-I tried to fix bugs, small or big, as I went so that they would not be too much left at the end. Also it gave me a great relief when the app would start working again after having displayed error upon error.
-
-As you will see from my progress, I have always kept MVP in mind. At first I made sure the backend functionality was in place, then I started working on other crucial elements and when I had some extra time, I added some nice to have features, but always keeping in mind meeting the core project requirements first.
-
-This is visible especially with the product filtering, where at first I developed only a basic filtering functionality by skill level and some other model attributes. It took me a long time until I got around doing the age filtering, but I felt this was an essantial feature of the app and needed to be done. Again, I started with a simple age filter which did not take any other parameters in the account. Finally, towards the end of my development, I managed to create filters which take more than one criterion into account and I am very happy with the result. In the meantime I would add other essential features to comply with the mvp requirements, like newsletter, contact form, articles, enquiries and others.
-
-Overall, primarily, I focused on completing majority of the must-haves, in later stages of the product development I would consider some should and could-haves. At the same time, I was identifying user stories which would have to change into won't haves and be left for future development.
-
-Breaking up the project in Epics, User stories and essentially into tasks has been very helpful and enabled me to tackle the project in managable bite-size steps. Using acceptance criteria as a part of my user stories helped me define what was necessary to achieve before I could consider the user story done. Each user story also contained detailed tasks which had to be fulfilled before labeling the story as done.
-
-Each of the user stories would get labels such as: must have, should have, could have, won't have; number of story points; epic ; user story/dev task/bug; high/medium/low priority. Each user story would be assigned to its respective epic and milestone (sprint).
+All sign in functionalities are a result of using django-allauth. Using this package has enabled me to set this functionality up quickly and easily.
 
 [Back to top](#contents)
+
+![Sign Up Page](./readme-images/sign_up_page.png)
+
+![Sign Up Success](./readme-images/sign_up_success_message.png)
+
+[Back to top](#contents)
+
+## Sign In Page
+![Sign In Page](./readme-images/sign_in_page.png)
+
+![Sign In Success](./readme-images/sign_in_success_message.png)
+
+[Back to top](#contents)
+## Logout Page
+
+![Sign Out Page](./readme-images/sign_out_page.png)
+
+![Sign Out Success](./readme-images/sign_out_success_message.png)
+
+[Back to top](#contents)
+
+### Future Features Sign in functionality
+
+In the next version I would like to enable registration with social account sign in as this functionality makes the registration process much quicker and easier. Users are often dissuaded from signing up to new apps and this could facilitate the process.
+
+At the moment, the email is not being verified and user can use a made up email. In the future I definitely want to add email verification as this is important for other features in the app, like contacting a buddy to organize a game or for contacting users in case of need by staff.
+
+[Back to top](#contents)
+
+## 403, 404 and 500 Error Pages
+
+If a user navigates to a page that does not exist, a customized 404 error page will appear.
+
+If a user attempts to do something they are not authorized to do, they will get a 403 Error page.
+
+If a user navigates to a page and there is a server related issue/error, they will be shown a customized 500 error page.
+    
+![404 Error Page Image](readme-images/404_error_page.png) 
+
+![403 Error Page Image](readme-images/403_error_page.png) 
+
+![500 Error Page Image](readme-images/500_error_page.png) 
 
 My sprints were planned out as follows:
 
@@ -823,6 +1133,7 @@ I had not managed to do automated testing for this application, but I plan to ma
 - [Coloors](https://coolors.co/) for finding a suitable color palette.
 - [Resize images](https://www.iloveimg.com/resize-image)
 - [Convert images jpg to webp](https://convertio.co/jpg-webp/)
+- [tinypng](https://tinypng.com/) and [i love img](https://www.iloveimg.com/) for reducing image size
 - I used [AI Image Sharpener](https://vanceai.com/sharpen-ai/) to make the hero image sharper.
 - [Lucid Charts](https://lucidchart.com/)
 
