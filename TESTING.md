@@ -238,6 +238,8 @@ achieved e.g. by pasting in an edit product or edit article url when signed in a
 
 
 | Status | **Main Website - User Logged Out - Main Navigation**
+|:-------:|:--------|
+| &check; | The main navigation collapses into a hamburger on small screens. All links work properly.
 | &check; | Clicking the nav logo loads the home page.
 | &check; | Clicking the Home button on the nav bar loads the home page.
 | &check; | Clicking the By Price link in the Products menu lists all products and sorts them by price taking the sales price into consideration if a product is on sale.
@@ -274,7 +276,7 @@ page.
 | &check; | Back to top button is present in the right hand corner and takes the user to the top of the page.
 
 | Status | **Main Website - User Logged Out - Books Details**
-
+|:-------:|:--------|
 | &check; | Clicking the book image on the product card, loads the product detail page.
 | &check; | Clicking the book image on the product detail page displays a new page with the book image.
 | &check; | Book details (title, author, category, age group, price, rating, description, quantity selection, keep shopping/add to bag buttons and a clickable number of reviews if present are displayed. If book is in specials category, a correct icon is present and all add to wishlist button.)
@@ -290,6 +292,7 @@ page.
 | &check; | If reviews are present, the reviews icon and their number is displayed. The user can click on the reviews button and see all the current reviews.
 
 | Status | **Main Website - User Logged Out - Articles**
+|:-------:|:--------|
 | &check; | Clicking the article link, takes the user to all articles.
 | &check; | The correct image and information for each article post is displayed.
 | &check; | Currently 4 articles are present.
@@ -300,7 +303,7 @@ page.
 | &check; | Back to top button is present in the right hand corner and takes the user to the top of the page.
 
 | Status | **Main Website - User Logged Out - Article Details**
-
+|:-------:|:--------|
 | &check; | Clicking the article image/text on the card, takes the user to the article detail page.
 | &check; | The correct image and information for each article post is displayed.
 | &check; | The article image, author, heading and text are present.
@@ -364,5 +367,36 @@ page.
 | &check; | Registering an already used valid e-mail address in the newsletter signup in the footer triggers a message about being registered already.
 | &check; | Contact information is displayed in footer. Clicking on the envelope opens up an email draft.
 | &check; | On small devices the footer is collapsed and some information is hidden under the HELP button. The links work correctly.
+
+| Status | **Main Website - User Logged In - Navigation** (Extra features)
+|:-------:|:--------|
+| &check; | Clicking the My Profile icon the main navigatin menu, loads My profile page.
+| &check; | Under My profile, user can see their delivery information if previously saved and their order history ordered from the newest to the oldest. Order history is clickable to display order details.
+| &check; | Update button lets the user update their default delivery information.
+| &check; | A heart icon is present in the main navbar. It is blue, if wishlist is empty and yellow, if there is at least one item in the wishlist. Clicking the heart, takes the user to My Wishlist page.
+
+| Status | **Main Website - User Logged In - Article Detail**
+|:-------:|:--------|
+| &check; | Clicking the heart icon at the bottom of the article detail page, lets the user like/unlike the article. The change in the number of likes is reflected both on the detail and all article pages.
+
+
+| Status | **Main Website - User Logged In - Products**
+|:-------:|:--------|
+| &check; | User can click on a link in their order history and a review window is present on the respective product's detail page if they had bought the product and had not previously reviewed it.
+| &check; | User can add a review and wait for the admin's approval. After approval, the review is added and the number of reviews is updated.
+| &check; | The review form is also available for the user who had bought the product previously and had not availed of the review opportunity yet. They can see the form to add review under the books they had bought and not reviewed yet without having to click on the link in their order confirmation.
+
+
+| Status | **Main Website - User Logged In - Checkout**
+|:-------:|:--------|
+| &check; | It the user has updated the profile information previously, the information is prefilled in the form.
+| &check; | In the bottom of the form an option to save the delivery information to their profile is visible.
+
+| Status | **Main Website - User Logged In - Order Confirmation Page**
+|:-------:|:--------|
+| &check; | Clickable past orders are displayed under My Profile for each user.
+| &check; | Orders contain a link to the bought products to leave a review. The review form is available only if the product had not been reviewed previously.
+
+
 
 [Back to top](#testing)
