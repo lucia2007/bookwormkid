@@ -33,7 +33,7 @@ def contact(request):
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             messages.success(request, 'Your inquiry was sent successfully.')
-            return redirect('home')
+            return redirect('thanks')
         else:
             messages.warning(
                 request,
@@ -48,3 +48,9 @@ def contact(request):
     }
 
     return render(request, "contact/contact.html", context)
+
+
+def thanks(request):
+    """ A view to return the thank you page """
+
+    return render(request, 'contact/thankyou.html')
