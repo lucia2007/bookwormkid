@@ -219,5 +219,122 @@ All of my scores for all of the pages were above 90, often close to 100. On a co
 [Back to top](#testing)
 
 ### Manual Testing
+**User Input/Form Validation**
+
+I tested all Bookworm Kid features repeatedly throughout the development process and again at the end in the testing sprints. I final testing was carried out on the deployed version on Chrome on desktop.
+
+| Status | **Main Website - User Logged Out - Top Navigation**
+|:-------:|:--------|
+| &check; | The free shipping treshold corresponds to the value set in the settings.py file.
+| &check; | Typing in a incorrect URL on the page loads the 404 error page.
+| &check; | Pasting page that needs authentication opens the login page (e.g. clicking on a "add to wishlist" button if not signed in).
+| &check; | Pasting page that is restricted to a logged in admin user, displays the login page first and either a forbidden 403 page for articles or a warning message for products. (This can be
+achieved e.g. by pasting in an edit product or edit article url when signed in as a regular user.)
+| &check; | Inputting an invalid query in the search box displays "Sorry, no books match your search" message.
+| &check; | Clicking the Register link in the My Account menu loads the sign up page.
+| &check; | Clicking the Login link in the My Account menu loads the login page.
+| &check; | Clicking on the shopping bag link in the menu bar loads the shopping bag page.
+| &check; | Inputting an empty query in the search box triggers an error messages and lists all products.
+
+
+| Status | **Main Website - User Logged Out - Main Navigation**
+| &check; | Clicking the nav logo loads the home page.
+| &check; | Clicking the Home button on the nav bar loads the home page.
+| &check; | Clicking the By Price link in the Products menu lists all products and sorts them by price taking the sales price into consideration if a product is on sale.
+| &check; | Clicking the By Rating link in the Products menu lists all products and sorts them by rating.
+| &check; | Clicking the By Name link in the Products menu lists all products and sorts them by name.
+| &check; | Clicking the By Category link in the Products menu lists all products and sorts them by Category name.
+| &check; | Clicking the All Products link in the Products menu lists all products.
+| &check; | Clicking the Reluctant Reader link in the Categories menu lists all products within the Reluctant Reader category are displayed.
+| &check; | Clicking the Keen Reader link in the Categories menu lists all products within the Keen Reader category are displayed.
+| &check; | Clicking the Avid Reader link in the Categories menu lists all products within the Avid Reader category are displayed.
+| &check; | Clicking the All Products link in the Skill Level menu lists all products.
+| &check; | Clicking the New Arrivals link in the Special Offers menu lists all products with the tag new arrivals and displayes the correct icon.
+| &check; | Clicking the Featured Books link in the Special Offers menu lists all products with the tag Featured Books and displayes the correct icon.
+| &check; | Clicking the On Sale link in the Special Offers menu lists all products with the tag On Sale and displayes the correct icon.
+| &check; | Clicking the Specialls link in the Special Offers menu lists all products with the tag New Arrival/Featured or On Sale and displayes the correct icons.
+| &check; | Clicking the Articles link takes the user to all articles page, 4 articles are displayed.
+| &check; | Clicking the Contact US link takes the user to a contact form which the user can fill in.
+
+
+| Status | **Main Website - User Logged Out - Books**
+|:-------:|:--------|
+| &check; | Clicking the filtering links in the by skill or special offers, renders the correct subcategory name at the top of the page.
+| &check; | Age segmentation buttons + all are present on all product pages.
+| &check; | Clicking the chosen age link (6-8, 9-10, 11-12, all) displays products within that age group in the chosen subcategory (e.g. skill level or specials) and the correct age button choice is highlighted in dard blue.
+| &check; | Sorting function below the product page headline sorts the products accordingly within the chosen subsegments.
+| &check; | The correct image and information for each book is displayed.
+| &check; | One piece of the chosen book is added to the shopping bag when "add to bag" button is clicked from the main products page.
+page.
+| &check; | If product is added to bag successfully, a toast with bag and delivery cost information is displayed in the top right corner, if total price is below €30 or without it delivery fee, if the total price is higher. The toast includes a link to the shopping bag.
+| &check; | When the first products is added to the bag, the bag changes color to yellow.
+| &check; | Clicking the "add to wishlist" button takes the user to the login page.
+| &check; | Sales price is displayed in red if present.
+| &check; | Products have correct specials icons if in new arrivals/featured or on sale.
+| &check; | Back to top button is present in the right hand corner and takes the user to the top of the page.
+
+| Status | **Main Website - User Logged Out - Books Details**
+
+| &check; | Clicking the book image on the product card, loads the product detail page.
+| &check; | Clicking the book image on the product detail page displays a new page with the book image.
+| &check; | Book details (title, author, category, age group, price, rating, description, quantity selection, keep shopping/add to bag buttons and a clickable number of reviews if present are displayed. If book is in specials category, a correct icon is present and all add to wishlist button.)
+| &check; | Sales price is displayed in red if present.
+| &check; | Clicking the read more button opens up the whole book description.
+| &check; | Clicking the read less button closes the whole book description.
+| &check; | Setting the quantity in the quantity selector and clicking "add to bag" button, adds the correct quantity in the bag (works for both mobile and larger screens).
+| &check; | Trying a add a decimal number in the quantity selector renders a warning message about using whole numbers.
+| &check; | If product is added to bag successfully, a toast with bag and delivery cost information is displayed in the top right corner, if total price is below €30 or without it delivery fee, if the total price is higher. The toast includes a link to the shopping bag.
+| &check; | When the first products is added to the bag, the bag changes color to yellow.
+| &check; | Keep shopping button takes the user back to all books.
+| &check; | Clicking the "add to wishlist" button takes the user to the login page.
+| &check; | If reviews are present, the reviews icon and their number is displayed. The user can click on the reviews button and see all the current reviews.
+
+| Status | **Main Website - User Logged Out - Articles**
+| &check; | Clicking the article link, takes the user to all articles.
+| &check; | The correct image and information for each article post is displayed.
+| &check; | Currently 4 articles are present.
+| &check; | A short excerpt of the article is shown.
+| &check; | Newest articles are shown first.
+| &check; | The number next to the heart, which is not clickable in this view, shows the number of likes.
+| &check; | Clicking the article image or the article text takes the user to the article detail page.
+| &check; | Back to top button is present in the right hand corner and takes the user to the top of the page.
+
+| Status | **Main Website - User Logged Out - Article Details**
+
+| &check; | Clicking the article image/text on the card, takes the user to the article detail page.
+| &check; | The correct image and information for each article post is displayed.
+| &check; | The article image, author, heading and text are present.
+| &check; | At the bottom of the article, the source is present, which when clicked, opens a new tab with the original article.
+| &check; | The number next to the heart, which is not clickable when not signed in, shows the number of likes.
+| &check; | Clicking the article image takes the user to the detail or the article image.
+| &check; | Back to top button is present in the right hand corner and takes the user to the top of the page.
+| &check; | "Back to articles" button takes the user back to all articles.
+
+
+| Status | **Main Website - User Logged Out - Shopping Bag**
+|:-------:|:--------|
+| &check; | The correct products, their titles, images, quantity, price and subtotal are displayed in the shopping bag.
+| &check; | When changing the quantity and clicking update the quantity updates and the toast confirms this action. The quantity must be a whole number, otherwise a warning message is displayed and the form is not processed.
+| &check; | When clicking the remove link, the product is removed from the shopping bag. If the bag remains empty after the removal, the user is informed about this.
+| &check; | Clicking the Keep Shopping button on the shopping bag page, takes the user to all products.
+| &check; | Clicking the Secure Checkout button on the shopping bag page, loads the secure checkout page.
+| &check; | The shopping bag is yellow, if there are items present in it.
+
+| Status | **Main Website - User Logged Out - Secure Checkout**
+|:-------:|:--------|
+| &check; | The correct products with images, quantity, subtotal and delivery amount (if below €30) are showing in the order summary.
+| &check; | In the bottom of the form an option log in or sign up is visible.
+| &check; | Clicking the "Adjust Bag" button loads the shopping bag page.
+| &check; | Clicking the "Complete order" buttons lead to the order processing.
+| &check; | The payment with card number is working correctly (tested with Stripe test numbers).
+| &check; | The payment with card number that needs to be authenticated is working correctly (tested with Stripe test numbers). The authentication window is visible.
+| &#10008; | The form validation works except that the Full Name field (which is empty) can include numbers and the phone number field can include text.
+| &check; | The Success toast is displayed in the right hand corner with order number and information about confirmation email.
+
+| Status | **Main Website - User Logged Out - Order Confirmation Page**
+|:-------:|:--------|
+| &check; | The correct products, information and delivery amount are showing in the order confirmation and an e-mail has been sent to the user e-mail used in the checkout form.
+| &check; | Webhooks are working and are confirmed in Stripe developer dashboard.
+| &check; | Clicking "Now Check out our special offers" button, the user is taken to all specials page.
 
 [Back to top](#testing)
