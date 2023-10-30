@@ -219,9 +219,10 @@ All of my scores for all of the pages were above 90, often close to 100. On a co
 [Back to top](#testing)
 
 ### Manual Testing
+
 **User Input/Form Validation**
 
-I tested all Bookworm Kid features repeatedly throughout the development process and again at the end in the testing sprints. I final testing was carried out on the deployed version on Chrome on desktop.
+I tested all Bookworm Kid features repeatedly throughout the development process and again at the end in the testing sprints. The final testing was carried out on the deployed version on Chrome on desktop. All features were tested for both guest and logged in user, but to avoid redundancy, I added only the extra features available to the logged in users in the respective section. Again, for the admin section, only new features were mentioned to avoid redundancy.
 
 | Status | **Main Website - User Logged Out - Top Navigation**
 |:-------:|:--------|
@@ -301,6 +302,7 @@ page.
 | &check; | The number next to the heart, which is not clickable in this view, shows the number of likes.
 | &check; | Clicking the article image or the article text takes the user to the article detail page.
 | &check; | Back to top button is present in the right hand corner and takes the user to the top of the page.
+| &check; | The search functionality is restricted to products only.
 
 | Status | **Main Website - User Logged Out - Article Details**
 |:-------:|:--------|
@@ -312,7 +314,6 @@ page.
 | &check; | Clicking the article image takes the user to the detail or the article image.
 | &check; | Back to top button is present in the right hand corner and takes the user to the top of the page.
 | &check; | "Back to articles" button takes the user back to all articles.
-
 
 | Status | **Main Website - User Logged Out - Shopping Bag**
 |:-------:|:--------|
@@ -357,6 +358,7 @@ page.
 | &check; | Clicking the Pinterest link in the footer area opens Pinterest in a new window.
 | &check; | Clicking the Twitter link in the footer area opens Twitter in a new window.
 | &check; | Clicking the FAQ link in the footer area takes the user to freaquently asked questions.
+| &check; | The search functionality is restricted to products only and does not comprise enquiries.
 | &check; | Clicking the Privacy Policy link in the footer area takes the user to the Privacy Policy.
 | &check; | Clicking the Terms of Use in the footer area takes the user to the Terms of Use.
 | &check; | Clicking the Shipping Info in the footer area takes the user to the FAQ where they can find more information.
@@ -367,6 +369,8 @@ page.
 | &check; | Registering an already used valid e-mail address in the newsletter signup in the footer triggers a message about being registered already.
 | &check; | Contact information is displayed in footer. Clicking on the envelope opens up an email draft.
 | &check; | On small devices the footer is collapsed and some information is hidden under the HELP button. The links work correctly.
+
+[Back to top](#testing)
 
 | Status | **Main Website - User Logged In - Navigation** (Extra features)
 |:-------:|:--------|
@@ -386,7 +390,6 @@ page.
 | &check; | User can add a review and wait for the admin's approval. After approval, the review is added and the number of reviews is updated.
 | &check; | The review form is also available for the user who had bought the product previously and had not availed of the review opportunity yet. They can see the form to add review under the books they had bought and not reviewed yet without having to click on the link in their order confirmation.
 
-
 | Status | **Main Website - User Logged In - Checkout**
 |:-------:|:--------|
 | &check; | It the user has updated the profile information previously, the information is prefilled in the form.
@@ -397,6 +400,83 @@ page.
 | &check; | Clickable past orders are displayed under My Profile for each user.
 | &check; | Orders contain a link to the bought products to leave a review. The review form is available only if the product had not been reviewed previously.
 
+| Status | **Main Website - User Logged In - Wishlist**
+|:-------:|:--------|
+| &check; | When a user adds a product to their wishlist, they are taken to their wishlist page. The "add to wishlist" button changes to "remove from wishlist" button and the heart is full.
+| &check; | Also on all products page, if the signed in user already has a book in their wishlist, they see a "remove from wishlist" button instead of "add to wishlist button" with an empty heart.
+| &check; | If the user tries to add a product to the wishlist and is not signed in, they are taken to the sign in page first. If they are accidently trying to add a product to their wishlist which they had added previously, they are warned about the product being present in their wishlist already.
+| &check; | "Add to bag" button is present on the wishlist page and addes one piece of the chosen product to the shopping bag.
 
+[Back to top](#testing)
+
+| Status | **Main Website - Admin Logged In - Navigation**
+|:-------:|:--------|
+| &check; | Under the Profile Icon, the Bookstore Management link is present. When clicked, it takes the admin to a bookstore management page, where they can add/edit/delete products, articles and enquiries.
+
+
+| Status | **Main Website - Admin Logged In - Products/Product Detail Page**
+|:-------:|:--------|
+| &check; | When an admin is logged in, they can see an edit/delete button on each product card both on all products and product details pages.
+| &check; | The edit button takes them to the product's edit page, where they can update the product details.
+| &check; | The update button leads to saving the updated information and takes the user to the product detail page.
+| &check; | The admin can add a product with no image. In this case a placeholder images is displayed.
+| &check; | Before the admin can delete a chosen product from the store, they have to confirm their deletion choice.
+
+| Status | **Main Website - Admin Logged In - Book Management - Add Book**
+|:-------:|:--------|
+| &check; | The form validation is working and does not accept negative numbers on the price, sales price, number of pages and rating fields.
+| &check; | When no image is provided, a placeholder image is used.
+| &check; | When clicking the Add Product button, the user is taken to product detail page.
+| &check; | When clicking the Cancel button, the user is taken to All products page.
+
+| Status | **Main Website - Admin Logged In - Book Management - Edit/Delete Book**
+|:-------:|:--------|
+| &check; | When clicking the Edit button the form is prefilled with the product information and the action is changed to 'You are editing this product'.
+| &check; | When clicking the Delete Product button a warning modal is loaded for deletion confirmation. After deletion, the user is taken to all products page.
+| &check; | Clicking on Cancel button, the user is taken back to all products view.
+| &check; | When clicking the Update button, the user is taken back to the product detail page with the updated information.
+
+| Status | **Main Website - Admin Logged In - Articles/Article Detail Page**
+|:-------:|:--------|
+| &check; | When an admin is logged in, they can see an edit/delete button on each article card both on all articles and article details pages.
+| &check; | The edit button takes them to the article's edit page, where they can update the article's details.
+| &check; | The update button leads to saving the updated information and takes the user to the article detail page.
+| &check; | The admin can add an article with no image. In this case a placeholder images is displayed.
+| &check; | The admin can save an article as a draft. In this case only admin can see this article in all articles.
+| &check; | Before the admin can delete a chosen article, they have to confirm their deletion choice.
+
+| Status | **Main Website - Admin Logged In - Article Management - Add Article**
+|:-------:|:--------|
+| &check; | The form validation is working and article has to have a unique name.
+| &check; | When no image is provided, a placeholder image is used.
+| &check; | When clicking the Add Article button, the user is taken to article detail page.
+| &check; | When clicking the Cancel button, the user is taken to all articles page.
+
+| Status | **Main Website - Admin Logged In - Article Management - Edit/Delete Article**
+|:-------:|:--------|
+| &check; | When clicking the Edit button the form is prefilled with the article information.
+| &check; | When clicking the Delete article button a warning modal is loaded for deletion confirmation. After deletion, the user is taken to all articles page.
+| &check; | Clicking on Cancel button, the user is taken back to all articles view.
+| &check; | When clicking the Update button, the user is taken back to the article detail page with the updated information.
+
+| Status | **Main Website - Admin Logged In - Enquiries Page**
+|:-------:|:--------|
+| &check; | When an admin is logged in, they can see an edit/delete button on each enquiry card both on all enquiries page.
+| &check; | The edit button takes them to the enquiry edit page, where they can update the enquiry's details.
+| &check; | The update button leads to saving the updated information and takes the user to all enquiries.
+| &check; | The admin can save an enquiry as a draft. In this case only admin can see this enquiry in all enquiries.
+| &check; | Before the admin can delete a chosen enquiry, they have to confirm their deletion choice.
+
+| Status | **Main Website - Admin Logged In - FAQ Management - Add FAQ**
+|:-------:|:--------|
+| &check; | When clicking the Add Enquiry button, the user is taken to all FAQ page.
+| &check; | When clicking the Cancel button, the user is taken to all articlesFAQ page.
+
+| Status | **Main Website - Admin Logged In - FAQ Management - Edit/Delete FAQ**
+|:-------:|:--------|
+| &check; | When clicking the Edit button the form is prefilled with the FAQ information.
+| &check; | When clicking the Delete article button a warning modal is loaded for deletion confirmation. After deletion, the user is taken to all FAQs page.
+| &check; | Clicking on Cancel button, the user is taken back to all FAQs view.
+| &check; | When clicking the Update button, the user is taken back to all FAQs.
 
 [Back to top](#testing)
