@@ -26,13 +26,12 @@
                 <!-- Display article picture, author, content and so on -->
                 <div class="image-container my-5">
                     {% if article.image %}
-                    <a href="{% url 'article_detail' article.slug %}"
-                        aria-label="Takes the user to the detail page of the chosen article. A picture of the article is displayed.">
+                    <a href="{{ article.image.url }}" aria-label="A picture of the article is displayed in a new tab.">
                         <img class="card-img-top img-fluid card-image" src="{{ article.image.url }}"
                             alt="{{ article.title }}">
                     </a>
                     {% else %}
-                    <a href="{% url 'article_detail' article.slug %}"
+                    <a href="{{ MEDIA_URL }}noimage.png"
                         aria-label="Takes the user to the detail page of the chosen article. Noimage substitute picture is displayed.">
                         <img class="card-img-top img-fluid card-image" src="{{ MEDIA_URL }}noimage.png"
                             alt="{{ article.title }}">
