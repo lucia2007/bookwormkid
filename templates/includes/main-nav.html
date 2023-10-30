@@ -19,6 +19,9 @@
                 <a href="{% url 'products' %}?sort=rating&direction=desc"
                     aria-label="Takes the user to the products sorted by rating in descending order."
                     class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=title&direction=asc"
+                    aria-label="Takes the user to the products sorted by name in ascending order."
+                    class="dropdown-item ">By Name</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc"
                     aria-label="Takes the user to the products sorted by category in ascending order."
                     class="dropdown-item ">By Category</a>
