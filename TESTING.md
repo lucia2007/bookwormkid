@@ -74,6 +74,8 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 
 There were multiple errors in both the Privacy Policy and the Terms and Conditions. Both of these html files were downloaded from termly.io. I didn't attempt to correct the errors as I feared that I would break the document and it would not render correctly. This is perhaps because the service was provided for free. For my future projects, I would look for a better source of these documents.
 
+[Back to top](#testing)
+
 ### Python Testing
 [CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files which were created or edited by me. I regularly checked my code in my environment and corrected mistakes as I went. I shortened the lines where possible, but in a few places I felt splitting the code would make it illegible. In such cases I used `# noqa` to ignore the length of the line.
 
@@ -107,10 +109,12 @@ There were multiple errors in both the Privacy Policy and the Terms and Conditio
 | Edit Product Image Script | ![Edit product image script](./testing-images/edit_product_image_js.png) | none | none |
 | Profile - Country Field Script | ![Profile country field script](./testing-images/profile_country_field_js.png) | none | none |
 | Back to Top Button | ![Back to top button script](./testing-images/back_to_top_js.png) | none | none |
+
+[Back to top](#testing)
 ### CSS Testing
 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS files. External CSS for Bootstrap, provided by CDN was not tested. No errors were found.
 
-To avoid cluttering my testing file with multiple identical images, I have not included every screenshot of the CSS validations, as they were all the same. 
+To avoid cluttering my testing file with multiple identical images, I have not included every screenshot of the CSS validations, as they were all the same.
 
 ![css validation](./testing-images/css_no_errors.png)
 
@@ -121,6 +125,7 @@ To avoid cluttering my testing file with multiple identical images, I have not i
 | Checkout | 0 | 0 |
 | Profiles | 0 | 0 |
 
+[Back to top](#testing)
 ## Browser Compatibility
 
 The website was tested on the following browsers: Google Chrome, Safari, Microsoft Edge and Mozilla Firefox. There were no errors discovered in the functionality of the site or the individual features.
@@ -175,6 +180,8 @@ Testing of responsive design was carried out manually by utilizing [Google Chrom
 [Error due to deleted app password](/testing_images/smtp_error.png)
 
 ** There are quite a few commits around my product filters and highlighting of the chosen age segment, as I was trying to figure out ways how to do it more efficiently and more simply. There was a lot of back and forth, and some unnecessary or duplicated commits, and even though I know the code could still be refactored, I feel that at the moment it is finally easily legible and understandable.
+
+[Back to top](#testing)
 ## Unfixed Bugs
 
 There are no known unfixed bugs in the project.
@@ -214,8 +221,64 @@ I continuously worked on improving the individual scores and tried to reflect on
 
 All of my scores for all of the pages were above 90, often close to 100. On a couple of pages the "SEO" score is slightly lower. This is due to the presence of a "back to top" button which has no href value and thus is not crawlable. I also got a lower score on Best Practices, due to [issues](./testing-images/stripe_cookies.png) which were logged into the console and have to do with using stripe cookies. Sometimes my scores for performance differed, probably due to current connection speed.
 
-
+[Back to top](#testing)
 ### User Stories Testing
+
+Before any of the user stories were moved into the done column, I checked against all the acceptance criteria and all the tasks to make sure I had not forgotten anything vital. User stories were checked on a regular basis and extensively towards the end of the project.
+
+| User Story                 | Outcome | Pass/Fail |
+|----------------------------|---------|-----------|
+| US - Navigation | As a **user** I can **locate the navigation area** so that I can **easily access different parts of the website**. | The navigation bar is present at the top of the page. |&#9745; |
+| US - Footer | As a **user**, I can **access relevant information about the business, contact information and social media links without having to scroll back to the top of the page** so that I can **learn about terms and conditions, contact the eshop and follow the eshop online**. | Footer is present at the bottom of the page and contains all relevant information. | &#9745; |
+| US - User Registration | As a **site user** I can **choose to register on the site and have my own account with personalized information** so that I can **easily review my past activities on the site and smoothly do another purchase**. | It is possible register as a new user, including email confirmation. | &#9745; |
+| US - User Login/Logout Functionality | As a **site user** I can **login in and logout of my account** so that I can **access personalized data, special features and keep my online activities safe**. | As a logged in user, I can access My profile info, my wishlist and leave reviews. |&#9745; |
+| US - Account Email Validation | As a **site user** I can **register my email and receive a validation link via email** so that I **can create an account to track my spending and purchases**. | User has to confirm their email address by clicking on a link received in their inbox. |&#9745; |
+| US - Shopping Bag | As a **customer** I can **choose the quantity of the product and add it to the shopping bag** so that I can **buy the product later**. | The quantity buttons work on shopping bag on both mobile and desktop and do not accept decimal numbers. |&#9745; |
+| US - Add Products to Bag | As a **customer** I can **click on Add to Bag button on product detail page** so that I can **add the product and its chosen quantity to the shopping bag**. | Clicking on the "add to bag" button leads to the chosen product being added to the bag. | &#9745; |
+| US - Shopping bag icon/functionality avaiable from all books view | As a **user** I can **buy a chosen book directly from the all product view** so that I don't **have to go to product detail page**. | User can click on "add to bag" button on all page view and 1 piece of the chosen book is added to the shopping bag. |&#9745; |
+| US - Search Functionality | As a **site user**, I can **enter keywords into the search** bar so that I can **search for a specific item**. | Search functionality works for products, not articles or reviews (future feature). The customer is informed if no items match their query. |&#9745; |
+| US - View All Products | As a **customer**, I can **easily scroll through all products** so that I can **see all the products the eshop offers". | Cards with all books and their details are visible on the all books pages. | &#9745; |
+| US - Product Detail View | As a **customer** I can **click on an individual product** so that I can **see the title, author, book description, price, segments by age and skill level etc**. | Click on the chosen book card, takes us to the book detail page where all the details are present. | &#9745; |
+| US - Checkout | As a **customer** I can **securely checkout the products in my shopping bag** so that I can **finish my purchase**. | Checkout functionality works and results in: order added to the database, order visible in order history, confirmation email is received and webhook success message is present. | &#9745; |
+| US - Order Email Confirmation | As a **customer** I can **receive an email after purchase** so that I can **confirm my purchase and keep a record of my order**. | A user receives an email upon order confirmation whether signed in or not. | &#9745; |
+| US - Order sorting | As a **user** I can **view my past orders in descending order** so that I can **easily find my most recent orders**. |  Orders from the newest to the oldest are visible in My Profile.| &#9745; |
+| US - User Profile | As a **site user** I can **register and create an account** so that I can **save my personal details, see order history and checkout quickly**. | User default delivery information and past orders are available under My profile. | &#9745; |
+| US - User Notifications (Toasts) | As a **customer** I can **view messages/toasts which inform me about my actions** so that I can **be sure that a certain action/choice took place**. | Toasts are continuously being displayed upon user actions. | &#9745; |
+| US - Filtering according to skill levels, special offers features | As a **customer** I can **sort the products according to reading skill level, according to different special features** so that I can **quickly find the products I'm interested in** | Filtering by skill or specials attributes renders the correct products. | &#9745; |
+| US - Product Sorting Functionality | As a **customer** I can **sort the products according to the price, category name and rating** so that I can **see the products sorting according to the chosen criterion**. | Products are sorting according the chosen criterion. Sorting by name was added to the navbar during testing, as it was missing. | &#9745; |
+| US - Product Category/Specials Filter | As a **site user** I can **click on the options in the navbar** so that I can **see the chosen categories/subsegments to make my search quicker.** | The links takes the user to the correct subsegments. | &#9745; |
+| US - Specials (on sale/featured/new arrival) Visual Confirmation | As a **customer** I can **easily see which products are in the specials category** so that I can **avail of specials deals**.| User can see special icons related to each category on the products cards on both the all products and product detail pages. | &#9745; |
+| US - Admin Dashboard | As an **admin** I can **add/edit/remove products to the store offer through admin dashboard** so that I **don't have to do it through the admin panel** | It is possible to add products through the admin dashboard when an admin user is signed in. | &#9745; |
+| US - Bookstore Management | A an **admin/superuser** I can access the Bookstore management page** so that I **can add/edit/delete Articles, Enquiries and Products without having to access the django admin**. | A link to the Bookstore Management page is available from the Profile Icon if an admin user is signed in. | &#9745; |
+| US - View all articles | As a **user** I can **see all articles** so that I can **choose which one I am most interested in and educate myself on the top of the importance of reading**. | Articles link takes the user to view all articles. | &#9745; |
+| US - View Article detail | As a **user** I can **click on the article card** so that I can **read the article and see extra details**. | Clicking on the chosen article card, takes the user to the article detail page. | &#9745; |
+| US - Add Articles to the app (add, edit, delete functionality) | As a **user** I can **read several interesting articles about why reading skills are important and how to encourage children to read** so that I can **understand the issue better**. | Articles with meaningful and relenant content are present on the article page.  | &#9745; |
+| US - View likes | As a **user** I can **like/unlike an article** so that I can **express my opinion**. | A heart with the number of likes is present both on all articles page and the article details pages. | &#9745; |
+| US - View Like/Unlike articles | As a **signed in user** I can **like/unlike articles and be visually informed about my action** so that I can **express my views**. | A signed in user can click on the heart at the bottom of the article detail page and like it or unlike it. The number of likes is subsequently updated. | &#9745; |
+| US - Add Read more/Read less functionality | As a **user** I can **choose if I want to read the whole book description** so that I **am not overwhelmed by too much text**. | Read more/read less buttons are present on product detail pages and work correctly. | &#9745; |
+| US - Wishlist | As a **customer** I can **add desired products into my wishlist** so that I can **be reminded later which products were interesting for me** | When the user is signed in, they can add products to their wishlist and they are informed if the product had already been added. | &#9745; |
+| US - Wishlist icon changes colour when there is an item in the wishlist | As a **customer** I can **distinguish if there is something in my wishlist** so that I can **be informed about my actions**. | The wishlist icon is yellow/orange when at least one book is added, or blue when wishlist is empty. | &#9745; |
+| US - Contact | As a **user** I can **contact the store by filling in a form directly on the webpage** so that I **don't have to send an email through a different app**. | A user can fill in a form and gets a toast about successful submission. The store gets an email with the enquiry. During the last week of development, I added a thank you page which displays when the user send the enquiry. | &#9745; |
+| US - Frequently asked questions - FAQ | As a **user** I can **easily find answers to frequently asked questions** so that I **don't have to call or write to the store owners to find out the information**. | FAQs are available in the footer in collapsible form and provide answers to FAQs. | &#9745; |
+| US - Add age segmentation filtering | As a **customer** I can **easily find books in a chosen age category** so that I **don't have to search all the products**. | Age segmentation works for the chosen age groups. |&#9745; |
+| US - Add age segmentation for all product views and filters | As a **user** I can **use age segmentation in combination with category or specials filters** so that I can **easily find an age appropriate book in the chosen subsegment**. | Age segmentation works within the prechosen segments. | &#9745; |
+| US - Add double filtering for products according to different segments & age | As a **user** I can **sort the products by age within any chosen subsegment** so that I can **quickly find an age appropriate book**. | Age segmentation is present for all segements, including the specials category. | &#9745; |
+| US - Make the chosen age parameter visually clear | As a **user** I can **easily say if an age filter has been applied to the current template** so that I **don't have to study the product list for confirmation**. | When a certain age category is chosen, the user can clearly see which one it is, as the button is changed to dark blue. | &#9745; |
+| US - Sales price functionality | As a **user** I can **buy products on sale** so that I can **save money and enjoy my shopping more**. | A customer can clearly see if a product is on sale by seeing the sale icon and the sale price in red. The original price is crossed out. | &#9745; |
+| US Sorting according to sales price | As a **user** I can **see the products correctly ordered by their effective price** so that I **can easily identify the cheapest/most expensive products**. | The products sorting works correctly both in descending and ascending directions. | &#9745; |
+| US - Add Terms and Conditions, Privacy Policy | As a **user** I can **learn what the company's Terms and Conditions and Privacy Policy are** so that I can **understand my rights and obligations in connection to the store**. | Terms of Use and Privacy Policy are present in the future and can be reviewed by users. | &#9745; |
+| US - Newsletter | As a **user** I can **subscribe for a newsletter service** so that I can **be informed about any news, new development on the bookwormkid app**. | A user can enter a valid email address to subscribe for the newsletter. They are informed if they had already signed up. | &#9745; |
+| US - Visual confirmation for shopping bag/wishlist items | As a **customer** I can **easily see if there is something in my wishlist or shopping bag** so that I can **be informed about my current and previous actions**. | Wishlist and shopping bag icons change color to orange/yellow when there is at least one product present. | &#9745; |
+| DT - Add customized 403, 404, 500 Error pages | As a **developer** I can **display customized error pages** so that they **correspond to the overall site design**. | All error pages work and are displayed on the base template to be consistent with the store design. | &#9745; |
+| US - Confirm Deletion | As an **superuser/admin** I can **confirm deletion of products or articles** so that I don't **accidently delete a product or article**. | A deletion modal is displayed whenever an admin user wants to delete a book/article or enquiry. | &#9745; |
+| US - Toasts without shopping bag | As a **user/admin** I can **be informed about my actions without the shopping bag showing** so that I can **clearly and easily see the action confirmation and not be overwhelmed by too much unnecessary information**. | Shoppping bag doesn't show when articles and enquiries are handled. | &#9745; |
+| US - Optimize footer for small devices | As a **user** I can **click on Help button in footer which contains all relevant links** so that I **don't have to scroll too far**. | Several links are moved under the HELP button for small devices to avoid taking too much space. | &#9745; |
+| US - Create Facebook page | As a **user** I can **visit the store's facebook page** so that I can **have access to the newest posts and connect with other followers of the bookstore**. | Facebook page is created and available for the user to see. They are taken there by clicking on the facebook icon in the footer. |&#9745; |
+| US - Product Review | As a **user** I can **add a review for a book I had bought previously by clicking on the item in my order history** so that I can **express my opinion**. | A user can add a review for a book they bought, if they had not reviewed the products already. A form to submit the review is present on the book details page for the items the user had bought. This feature is accessible by clicking on a link in the order confirmation or by visiting the product detail page of the product previously bought by the user. | &#9745; |
+| US - Lets the user review a book only once | As a **user** I can **review a product only once** so that I can **share my opinion but not spam others**. | The form for book review is unavailable for the signed in user, if they had reviewed the book before. | &#9745; |
+| US - Wishlist visual confirmation | As a **user** I can **clearly see that I already have a book in my wishlist** so that I don't **try to add it again**. | When a user adds a book to the wishlist, the "add to wishlist" button changes to "remove from wishlist" button and the heart changes its color to solid. | &#9745; |
+| US - There are no past orders/no books found | As a **user** I can **be informed that I entered a wrong key word or that there are no orders in my history** so that I **don't have to guess what went wrong**. | These messages are correctly displayed in situations when no orders or wrong key words were entered. | &#9745; |
+
 [Back to top](#testing)
 
 ### Manual Testing
