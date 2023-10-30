@@ -337,4 +337,32 @@ page.
 | &check; | Webhooks are working and are confirmed in Stripe developer dashboard.
 | &check; | Clicking "Now Check out our special offers" button, the user is taken to all specials page.
 
+
+| Status | **Main Website - User Logged Out - Contact Us Page**
+|:-------:|:--------|
+| &check; | The correct form is rendered when Contact Us link is clicked.
+| &check; | Email has to be in a correct format. User is informed if they didn't use the correct form.
+| &check; | An email with the enquiry is sent to the bookstore's email address.
+| &check; | The user sees a success toast.
+| &check; | The user is taken to the Thank you page and HOME button.
+
+
+| Status | **Main Website - User Logged Out - Footer**
+|:-------:|:--------|
+| &check; | Clicking the Facebook link in the footer area opens store's Facebook page in a new window.
+| &check; | Clicking the Instagram link in the footer area opens Instagram in a new window.
+| &check; | Clicking the Pinterest link in the footer area opens Pinterest in a new window.
+| &check; | Clicking the Twitter link in the footer area opens Twitter in a new window.
+| &check; | Clicking the FAQ link in the footer area takes the user to freaquently asked questions.
+| &check; | Clicking the Privacy Policy link in the footer area takes the user to the Privacy Policy.
+| &check; | Clicking the Terms of Use in the footer area takes the user to the Terms of Use.
+| &check; | Clicking the Shipping Info in the footer area takes the user to the FAQ where they can find more information.
+| &check; | Clicking the Home, Books, Articles and Contact us button in the footer area takes the user to the corresponding pages.
+| &check; | Clicking the Home, Books, Articles and Contact us button in the footer area takes the user to the corresponding pages.
+| &check; | Registering an invalid e-mail address in the newsletter signup in the footer triggers an error message.
+| &check; | Registering a valid e-mail address in the newsletter signup in the footer triggers a confirmation message.
+| &check; | Registering an already used valid e-mail address in the newsletter signup in the footer triggers a message about being registered already.
+| &check; | Contact information is displayed in footer. Clicking on the envelope opens up an email draft.
+| &check; | On small devices the footer is collapsed and some information is hidden under the HELP button. The links work correctly.
+
 [Back to top](#testing)
