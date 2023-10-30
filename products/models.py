@@ -1,4 +1,6 @@
 from django.db import models
+# https://github.com/worldofmarcus/project-portfolio-5/blob/main/products/models.py
+from django.core.validators import MinValueValidator
 
 
 class Category(models.Model):
@@ -38,10 +40,11 @@ class Product(models.Model):
     size = models.CharField(max_length=254)
     number_of_pages = models.IntegerField()
     description = models.TextField(max_length=1024, default='')
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=6, decimal_places=2, validators=[
+            MinValueValidator(0.1, message=None)])
     rating = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=True
-        )
+        max_digits=6, decimal_places=2, null=True, blank=True, validators=[
+            MinValueValidator(0.1, message=None)])
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     new_arrival = models.BooleanField(blank=True)
@@ -51,8 +54,8 @@ class Product(models.Model):
         )
     is_sale = models.BooleanField()
     sale_price = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=True
-        )
+        max_digits=6, decimal_places=2, null=True, blank=True, validators=[
+            MinValueValidator(0.1, message=None)])
     ISBN = models.CharField(max_length=13, unique=True)
     by_age = models.CharField(max_length=6, choices=[
         ("6-8", "6-8"), ("9-10", "9-10"), ("11-12", "11-12")])

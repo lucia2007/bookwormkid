@@ -1358,6 +1358,8 @@ Take the following steps to create a clone of a project:
 - [7 effective ways to increase your child's reading skills](https://www.petitjourney.com.au/7-effective-ways-to-increase-your-childs-reading-skills/)
 - [Why Reading is Important](https://www.worksheetcloud.com/blog/why-is-reading-important/)
 - [safe filter](https://www.djangotemplatetagsandfilters.com/filters/safe/)
+- Book descriptions and book details were taken from [Amazon](https://amazon.co.uk)
+- When testing my forms, I was made aware of the possibility of using negative numbers in my add product forms, so I added a minvaluevalidator (inspiration came from here)(https://github.com/worldofmarcus/project-portfolio-5/blob/main/products/models.py).
 
 ## Tools
 - [Coloors](https://coolors.co/) for finding a suitable color palette.
