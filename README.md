@@ -1088,6 +1088,31 @@ As a developer I can confirm in Stripe webhooks that the orders has been success
 ![Webhook Success](/readme-images/webhook_success.png)
 </details><br>
 
+**Review Books**
+
+When a user receives their order confirmation, there is a list of products with details present. The individual books can be clicked on and the user is taken to the detail page of the particular book. If the user is signed in and they had not reviewed this particular book previously, there is a review form present where the user can express their opinion. These review links are available in the order history under My Profile as well.
+
+<details><summary><b>Book Review Form</b></summary>
+
+![Book Review Form](/readme-images/review_form.png)
+</details><br>
+
+Upon submission, the user is informed that the admin has to approve the review first.
+
+<details><summary><b>Book Review Waiting for Approval</b></summary>
+
+![Book Review Waiting for Approval](/readme-images/waiting_for_approval.png)
+</details><br>
+
+As soon as the review is approved, the number of reviews on the detail page of the chosen book is automatically updated and the user can click on the reviews button and the review is visible.
+
+<details><summary><b>Book Review Added</b></summary>
+
+![Book Review Added](/readme-images/review_added.png)
+</details><br>
+
+Each user can review a particular book only once. So in case the customer had bought the same book before and had already reviewed it, the review form will not be visible.
+
 
 **Wishlist**
 
