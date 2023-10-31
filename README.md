@@ -861,6 +861,71 @@ The user has to confirm their email address to finish up the registration proces
 
 The user can choose to remember their profile and they can avail of the inbuilt forgot password functionality as well.
 
+**Home Page**
+
+The design of the home page is very simple. A hero image of a girl happily reading a book is visible (the story of this image can be found earlier in the document) and there is a call to Action present. The Shop Now button takes the users to the all books page.
+
+<details><summary><b>Home Page</b></summary>
+
+![Home Page](/readme-images/home_page.png)
+</details><br>
+
+[Back to top](#contents)
+
+**Books**
+
+<details><summary><b>All Books</b></summary>
+
+![All Books](/readme-images/all_books_page.png)
+</details><br>
+
+The user can get to all books page by different routes, e.g. by clicking Shop Now button on the main page. On this page all books are displayed on product cards which contain the book's image, title, price, category, age range, rating, Add to Bag and Add to Wishlist/Remove from Wishlist buttons. The latter is available only for a signed in user if the item is already in the wishlist.
+
+The books are displayed in rows of 4, 3, 2 or one depending on the screen size. As there are only 24 books in the store's offer at the moment, I did not include pagination functionality also because I assume the user will be filtering the store's offer by different criteria and thus the list of displayed products will be significantly shorter. Paganation will be included as soon as the number of products is above 40 to prevent the user from having to scroll for too long.
+
+The user can directly add one piece of the chosen product to the shopping bag.
+
+The user can add a product to the wishlist if they are signed in.
+
+The heading always reflects what segment of books is being displayed (e.g. All Books, Reluctant Reader, New Arrivals,...).
+
+Sorting products by price, rating, name and category is available from the navbar. The books can be ordered in descending or ascedning order. The sorting choice is reflected in the sorting window, which is available in the right top corner.
+
+Sorting by sales price works correctly (sales price is taken into account if a product is on sale).
+
+If a product is in one or more of the specials categories, the correct icons are displayed in the top right corner of the product card. If a product is on sale, the sale price is on the right in red and the original price is crossed out.
+
+Age filtering is available under the main heading on all products page. The age filtering takes into account a previous segment selection. E.g. if reluctant reader category is displayed and the user chooses 6-8 age group, only books for this age category from among reluctant readers are shown.
+
+All of the above mentioned features are recorder on this [video](/readme-images/books_sorting_filtering.webm).
+
+In the video, sorting by name is not reflected in the sort window if the user chooses this option directly from the search box. This has been fixed since the video was taken.
+
+If an admin is signed in, the edit/delete buttons are visible on the individual product cards as well. For details see the admin section.
+
+**Book Detail View**
+
+Each book detail page contains an image of the book, the title, the author, category, age range, price, rating and book description. The description is collapsed and can be unpacked by clicking read more button or collapsed by clicking read less button.
+
+The quantity of the product can be adjusted before add the product to the shopping bag. Only whole numbers can be accepted and the user is informed if they try to add a floating number.
+
+Keep shopping button takes the user back to all books view. A correct specials icon is included under the book picture. Also a Add to wishlist button is present and it changes to Remove from wishlist button if the user had previously added this product to their wishlist.
+
+<details><summary><b>Book Detail</b></summary>
+
+![Book Detail](/readme-images/book_detail.png)
+</details><br>
+
+<details><summary><b>Book Detail Read less/Remove from Wishlist</b></summary>
+
+![Book Detail Read less/Remove from Wishlist](/readme-images/book_read_less_wishlist.png)
+</details><br>
+
+If an admin is signed in, the edit/delete buttons are visible as well. For details see the admin section.
+
+If a book has been reviewed before, there is also an expandable button with a review icon and number of reviews present. For more details please see the Reviews section.
+
+
 If a user navigates to a page that does not exist, a customized 404 error page will appear.
 
 If a user attempts to do something they are not authorized to do, they will get a 403 Error page.
