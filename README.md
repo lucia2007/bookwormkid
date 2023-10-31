@@ -1047,14 +1047,47 @@ As soon as there is at least one item in shopping bag, the icon changes color to
 ![Shopping Bag Quantity Update Mobile](/readme-images/mobile_quantity_updated.png)
 </details><br>
 
-
 **Secure Checkout**
 
-**Order Processing**
+The checkout process for Bookworm Kid is done through the [Stripe](https://stripe.com/docs) API.
 
-**Order Email Confirmation**
+Both a guest and signed in user can go to checkout by clicking Go to Checkout button. If the user has an account and are signed in, their information is prefilled, if previously saved. They have to enter their Full Name and add credit card details. For testing purchases this card number was used: 4242 4242 4242 4242. The user must enter a future expiry date, the secure number and a 5 digit postcode.
 
-**Order History**
+The user can choose to adjust bag their bag which takes them back to their shopping bag, or to click Complete Order button.
+
+The Stripe Payment form accepts the user's information and informs them if they try to use an invalid card number. Form validation is also present and the user is informed if they have not entered all of the details.
+
+<details><summary><b>Checkout</b></summary>
+
+![Checkout](/readme-images/checkout.png)
+</details><br>
+
+A loading spinner is visible until the order has been processed.
+
+<details><summary><b>Order Processing</b></summary>
+
+![Order Processing](/readme-images/order_processing.png)
+</details><br>
+
+As soon as the order is processed, the customer gets an email confirmation and is shown the order success message with order details.
+
+<details><summary><b>Order Success</b></summary>
+
+![Order Success](/readme-images/order_success.png)
+</details><br>
+
+<details><summary><b>Order Email Confirmation</b></summary>
+
+![Order Email Confirmation](/readme-images/order_email_confirmation.png)
+</details><br>
+
+As a developer I can confirm in Stripe webhooks that the orders has been successfully processed.
+
+<details><summary><b>Webhook Success</b></summary>
+
+![Webhook Success](/readme-images/webhook_success.png)
+</details><br>
+
 
 **Wishlist**
 
