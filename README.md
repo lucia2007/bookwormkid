@@ -745,9 +745,9 @@ At the top of the page there is a navbar. At the top there is a **delivery banne
 
 Second row contains the company's Logo, which is clickable and takes the user to the Home page.
 
-In the middle of the second row, there is a search bar which allows for searching books. This is not available for articles or enquiries (future feature). 
+In the middle of the second row, there is a search bar which allows for searching books. This is not available for articles or enquiries (future feature).
 
-When the user is not signed in, only Profile (Register/Login options only) and Shopping bag icons are available. 
+When the user is not signed in, only Profile (Register/Login options only) and Shopping bag icons are available.
 
 **Guest User**
 
@@ -765,7 +765,7 @@ A wishlist icon becomes available for the signed in user.
 ![Wishlist Icon](/readme-images/wishlist_icon.png)
 </details><br>
 
-If the user signs in, they can access My Profile, where default information is saved and they can access their past orders. 
+If the user signs in, they can access My Profile, where default information is saved and they can access their past orders.
 
 <details><summary><b>My Profile</b></summary>
 
@@ -779,7 +779,7 @@ Wishlist and Shopping bag icons change color if there is at least one product pr
 ![Wishlist/Bag Icons orange](/readme-images/icons_orange.png)
 </details><br>
 
-**Collapsible footer**
+**Collapsible Navbar**
 
 <details><summary><b>Collapsed Navbar</b></summary>
 
@@ -796,7 +796,7 @@ In the last row of the navbar the user can click the following links:
 - Home - takes the user to the home page
 - Books - product sorting by price, category, name and rating is available.
 - Skill level - category filtering available (reluctant, keen and avid reader)
-- Special offers - new arrivals, featured products, on sale 
+- Special offers - new arrivals, featured products, on sale
 - Articles - takes the user to view all articles
 - Contact us - takes the user to the contact form
 
@@ -819,7 +819,6 @@ In the last row of the navbar the user can click the following links:
 
 ![Navbar Specials](/readme-images/navbar_special_offers.png)
 </details><br>
-
 
 **Account registration/login/logout**
 
@@ -946,7 +945,6 @@ All articles view currently contains four article cards with an image, author, e
 ![All Articles](/readme-images/all_articles.png)
 </details><br>
 
-
 **Article Detail View**
 
 On the article detail page, there is the article image which is clickable and opens in a new tab. The article title follows with the author's name.
@@ -989,7 +987,6 @@ An email is received by admin which they can reply to.
 ![Enquiry Email Received](/readme-images/enquiry_email.png)
 </details><br>
 
-
 **My Profile**
 
 If a user has created an account with Bookworm Kid, they can save and update their default delivery information under their "My Profile" link under the Profile icon. Also the order history is accessible there and the orders are ordered from the newest to the oldest.
@@ -1008,7 +1005,6 @@ The order history number is clickable and opens up a past order confirmation (th
 
 Back to Profile button takes the user back to their My Profile page.
 
-
 **Shopping Bag**
 
 As this is an ecommerce project, one of the crucial features is the possibility to add products to the shopping bag and subsequently make a purchase.
@@ -1025,7 +1021,6 @@ As soon as there is at least one item in shopping bag, the icon changes color to
 
 ![Add to Bag Success Toast](/readme-images/add_to_bag.png)
 </details><br>
-
 
 <details><summary><b>Add to Bag Success No Delivery Cost</b></summary>
 
@@ -1113,7 +1108,6 @@ As soon as the review is approved, the number of reviews on the detail page of t
 
 Each user can review a particular book only once. So in case the customer had bought the same book before and had already reviewed it, the review form will not be visible.
 
-
 **Wishlist**
 
 As mentioned before, a wishlist functionality is available for registered users only.
@@ -1141,10 +1135,79 @@ On the Wishlist page the user can choose to add the book to their shopping bag.
 ![Wishlist Page](/readme-images/wishlist_page.png)
 </details><br>
 
+**Bookstore management/Admin (CRUD functionality)**
 
-**Review articles**
+When an admin user is logged in, the Bookstore Management link is available under their Profile. This feature was added so that the store admin user can perform all necessary tasks around store management without having to access the Django admin panel.
 
-Admin (CRUD functionality)/Bookstore management
+<details><summary><b>Bookstore Management Link</b></summary>
+
+![Bookstore Management Link](/readme-images/bookstore_management_link.png)
+</details><br>
+
+<details><summary><b>Bookstore Management Page</b></summary>
+
+![Bookstore Management Page](/readme-images/bookstore_management_page.png)
+</details><br>
+
+An admin can add/edit/remove books from the store, add/edit/remove articles, add/edit/remove enquiries.
+
+When an admin user is signed in, edit/delete buttons are present on the book, article and enquiry cards.
+
+Admin can also see drafts of articles and enquiries in their view.
+
+<details><summary><b>Edit/Remove Buttons Books</b></summary>
+
+![Edit/Remove Buttons Books](/readme-images/edit_delete_books.png)
+</details><br>
+
+<details><summary><b>Edit/Remove Button Articles</b></summary>
+
+![Edit/Remove Buttons Articles](/readme-images/edit_delete_articles.png)
+</details><br>
+
+<details><summary><b>Edit/Remove Buttons FAQs</b></summary>
+
+![Edit/Remove Buttons FAQs](/readme-images/edit_delete_enquiries.png)
+</details><br>
+
+**Book Management**
+
+**Add Book**
+
+When the admin clicks an Add Book button, they are taken to an add a book form. Input is validated (e.g. all numbers must be positive integers, more details in the testing file).
+
+<details><summary><b>Add Book Form</b></summary>
+
+![Add Book Form](/readme-images/add_book.png)
+</details><br>
+
+If a book without an image is added, a placeholder image is used in its place.
+
+<details><summary><b>Placeholder Book Image</b></summary>
+
+![Placeholder Book Image](/readme-images/placeholder_book_image.png)
+</details><br>
+
+When the user clicks on the edit button, they are taken to all books view, where the edit buttons are visible and clickable.
+
+On the edit book form, the book details are already prefilled and can be amended.
+
+<details><summary><b>Edit Book Form</b></summary>
+
+![Edit Book Form](/readme-images/edit_book.png)
+</details><br>
+
+When the admin wants to delete a book, they are shown a deletion modal to provide a chance to cancel the deletion. If they are sure and confirm deletion, the product is deleted.
+
+<details><summary><b>Confirm Book Deletion</b></summary>
+
+![Confirm Book Deletion](/readme-images/confirm_book_deletion.png)
+</details><br>
+
+<details><summary><b>Book Deleted</b></summary>
+
+![Book Deleted](/readme-images/book_deleted.png)
+</details><br>
 
 **Books**
 **Articles**
