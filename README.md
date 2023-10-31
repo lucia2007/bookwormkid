@@ -990,9 +990,63 @@ An email is received by admin which they can reply to.
 </details><br>
 
 
-**Profile** - order history and delivery details
+**My Profile**
+
+If a user has created an account with Bookworm Kid, they can save and update their default delivery information under their "My Profile" link under the Profile icon. Also the order history is accessible there and the orders are ordered from the newest to the oldest.
+
+<details><summary><b>My Profile</b></summary>
+
+![My Profile](/readme-images/my_profile.png)
+</details><br>
+
+The order history number is clickable and opens up a past order confirmation (the user is informed about this being a past confirnation).
+
+<details><summary><b>Order Past Confirmation</b></summary>
+
+![Order Past Confirmation](/readme-images/past_order_confirmation.png)
+</details><br>
+
+Back to Profile button takes the user back to their My Profile page.
+
 
 **Shopping Bag**
+
+As this is an ecommerce project, one of the crucial features is the possibility to add products to the shopping bag and subsequently make a purchase.
+
+Both a guest and a registered user can make a purchase. If the user has an account, they can access their order history under My Profile. Both guest and registered users will receive an email upon purchase.
+
+A user can add one book directly from the all books view by clicking on Add to Bag button, or they can adjust the quantity in the book detail view and add a product from there. The entered quantity must be a whole number and must not exceed 10 pieces due to the restricted capacity of the book store.
+
+When a user adds a product to their bag, they see a success toast with the bag information and are informed about the delivery cost if the total amount is below €30. They can choose to click on Go to Your Bag and go to the shopping bag page where they can adjust the amount/remove the book entirely or click Keep Shopping button to continue shopping. User is informed about all of their actions and the updated quantities are reflected in the success toast.
+
+As soon as there is at least one item in shopping bag, the icon changes color to orange.
+
+<details><summary><b>Add to Bag Success Toast</b></summary>
+
+![Add to Bag Success Toast](/readme-images/add_to_bag.png)
+</details><br>
+
+
+<details><summary><b>Add to Bag Success No Delivery Cost</b></summary>
+
+![Add to Bag Success No Delivery Cost](/readme-images/no_delivery_cost.png)
+</details><br>
+
+<details><summary><b>Shopping Bag</b></summary>
+
+![Shopping Bag](/readme-images/shopping_bag.png)
+</details><br>
+
+<details><summary><b>Remove from Shopping Bag</b></summary>
+
+![Remove from Shopping Bag](/readme-images/remove_from_bag.png)
+</details><br>
+
+<details><summary><b>Shopping Bag Quantity Update Mobile</b></summary>
+
+![Shopping Bag Quantity Update Mobile](/readme-images/mobile_quantity_updated.png)
+</details><br>
+
 
 **Secure Checkout**
 
