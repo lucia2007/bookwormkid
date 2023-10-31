@@ -67,10 +67,10 @@ For access to Admin Dashboard frontend view with relevant sign-in credentials: [
   - [Design Prototype (Wireframes)](#design-prototype-wireframes)
   - [Site Structure](#site-structure)
 - [Features](#features)
-  - [Sign Up Page](#sign-up-page)
-  - [Sign In Page](#sign-in-page)
-  - [Logout Page](#logout-page)
-  - [403, 404 and 500 Error Pages](#403-404-and-500-error-pages)
+  - [User View - Guests/Account Holders](#user-view---guestsaccount-holders)
+  - [CRUD Functionality](#crud-functionality)
+  - [Features Details](#features-details)
+  - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
   - [Languages](#languages)
   - [Frameworks and Software](#frameworks-and-software)
@@ -716,8 +716,110 @@ The Bookworm Kid site changes depending on if the user is signed in or not. If t
 
 Also here are different features which become available only for a signed in user (like/unlike articles, add a book review, access order history).
 
+[Back to top](#contents)
 # Features
-## Sign Up Page
+
+## User View - Guests/Account Holders
+
+| Feature   | Guest | Registered, Account Holder |
+|-----------|-------------------|-----------------|
+| Home Page | Visible           | Visible         |
+| Account  | n/a | 'My Profile' option including order history and delivery information |
+| All Products  | Items can be viewed and added to Bag, Wishlist not available, Reviews visible | Wishlist available, possible to review products |
+| Categories/Filtering/Sorting   | Visible | Visible|
+| Articles   | Visible, like/unlike not available | Visible, like/unlike available |
+| Search  | Visible | Visible |
+| Contact Us/Newsletter | Visible | Visible |
+| Enquiries | Visible | Visible |
+| Admin Dashboard | Not Visible | Only available to Admin |
+
+## CRUD Functionality
+
+Customers have full CRUD functionality for the shopping bag (viewing/adding/updating the amount/removing products from bag). They may also edit their delivery details if they are registered, logged-in users. Logged in customers may also view/add and remove products from their Wishlist and add reviews to books they had previously bought. Logged in users can like/unlike articles. Bookworm Kid Admin has access to the Admin Dashboard which allows them full CRUD for Books/Articles/Enquiries Management.
+
+## Features Details
+
+**Navbar**
+
+At the top of the page there is a navbar. At the top there is a **delivery banner** with information about the threshhold price which qualifies the customers for free delivery. Currently the threshhold price is set to €30.
+
+Second row contains the company's Logo, which is clickable and takes the user to the Home page.
+
+In the middle of the second row, there is a search bar which allows for searching books. This is not available for articles or enquiries (future feature). 
+
+When the user is not signed in, only Profile (Register/Login options only) and Shopping bag icons are available. 
+
+**Guest User**
+
+<details><summary><b>Top Navbar Guest</b></summary>
+
+![Top Navbar Guest](/readme-images/top_navbar_guest.png)
+</details><br>
+
+**Logged in User**
+
+A wishlist icon becomes available for the signed in user.
+
+<details><summary><b>Wishlist Icon</b></summary>
+
+![Wishlist Icon](/readme-images/wishlist_icon.png)
+</details><br>
+
+If the user signs in, they can access My Profile, where default information is saved and they can access their past orders. 
+
+<details><summary><b>My Profile</b></summary>
+
+![Wishlist Icon](/readme-images/my_profile.png)
+</details><br>
+
+Wishlist and Shopping bag icons change color if there is at least one product present.
+
+<details><summary><b>Wishlist/Bag Icons orange</b></summary>
+
+![Wishlist/Bag Icons orange](/readme-images/icons_orange.png)
+</details><br>
+
+**Collapsible footer**
+
+<details><summary><b>Collapsed Navbar</b></summary>
+
+![Collapsed Navbar](/readme-images/collapsed_navbar.png)
+</details><br>
+
+<details><summary><b>Hamburger Open</b></summary>
+
+![Hamburger Open](/readme-images/hamburger_open.png)
+</details><br>
+
+**Navbar Bottom Row**
+In the last row of the navbar the user can click the following links:
+- Home - takes the user to the home page
+- Books - product sorting by price, category, name and rating is available.
+- Skill level - category filtering available (reluctant, keen and avid reader)
+- Special offers - new arrivals, featured products, on sale 
+- Articles - takes the user to view all articles
+- Contact us - takes the user to the contact form
+
+<details><summary><b>Navbar Bottom Row</b></summary>
+
+![Navbar Bottom Row](/readme-images/navbar_last_row.png)
+</details><br>
+
+<details><summary><b>Navbar Sorting</b></summary>
+
+![Navbar Sorting](/readme-images/navbar_sorting.png)
+</details><br>
+
+<details><summary><b>Navbar Skill Level</b></summary>
+
+![Navbar Skill Level](/readme-images/navbar_skill_level.png)
+</details><br>
+
+<details><summary><b>Navbar Specials</b></summary>
+
+![Navbar Specials](/readme-images/navbar_special_offers.png)
+</details><br>
+
 
 Sign up Page has a simple design. The user has to enter their email and the password twice. This is due to defensive programming principle where we try to avoid unnecessary errors caused by small typos.
 
