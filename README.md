@@ -821,33 +821,45 @@ In the last row of the navbar the user can click the following links:
 </details><br>
 
 
-Sign up Page has a simple design. The user has to enter their email and the password twice. This is due to defensive programming principle where we try to avoid unnecessary errors caused by small typos.
+**Account registration/login/logout**
 
-All sign in functionalities are a result of using django-allauth. Using this package has enabled me to set this functionality up quickly and easily.
+All user functionalities are a result of using django-allauth. Using this package has enabled me to set this functionality up quickly and easily. The user is informed if their password is too common or if it is too similar to their user name or email address.
 
-[Back to top](#contents)
+**Sign Up Page**
 
-![Sign Up Page](./readme-images/sign_up_page.png)
+Sign up Page has a simple design. The user has to enter their email address and password twice. This is due to defensive programming principle where we try to avoid unnecessary errors caused by small typos.
 
-![Sign Up Success](./readme-images/sign_up_success_message.png)
+The user has to confirm their email address to finish up the registration process.
 
-[Back to top](#contents)
+[Sign Up Page](./readme-images/signup_page.png)
 
-## Sign In Page
-![Sign In Page](./readme-images/sign_in_page.png)
+[Verification Email received](./readme-images/confirm_email_address.png)
 
-![Sign In Success](./readme-images/sign_in_success_message.png)
+[Confirm Email page](./readme-images/confirm_email_address_page.png)
 
-[Back to top](#contents)
-## Logout Page
+[Email confirmed](./readme-images/email_address_confirmed.png)
 
-![Sign Out Page](./readme-images/sign_out_page.png)
-
-![Sign Out Success](./readme-images/sign_out_success_message.png)
+[Sign Up Success](./readme-images/successful_login.png)
 
 [Back to top](#contents)
 
-## 403, 404 and 500 Error Pages
+**Sign In Page**
+
+[Sign In Page](./readme-images/signin_page.png)
+
+[Sign In Success](./readme-images/successful_login.png)
+
+[Back to top](#contents)
+
+**Logout Page**
+
+[Sign Out Page](./readme-images/signout_page.png)
+
+[Sign Out Success](./readme-images/signout_success.png)
+
+[Back to top](#contents)
+
+The user can choose to remember their profile and they can avail of the inbuilt forgot password functionality as well.
 
 If a user navigates to a page that does not exist, a customized 404 error page will appear.
 
