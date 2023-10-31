@@ -1250,15 +1250,65 @@ When the admin wants to delete an article, they are shown a deletion modal to pr
 ![Article Deleted](/readme-images/article_deleted.png)
 </details><br>
 
-**Enquiries**
 
-**Enquiries**
+**Enquiries/Enquiries Management**
+
+There is a link to enquiries/FAQs in the footer to provide quick answers to common questions of the store's customers. The questions are clickable and answers are displayed.
+
+<details><summary><b>All Enquiries Collapsed</b></summary>
+
+![All Enquiries Collapsed](/readme-images/enquiries.png)
+</details><br>
+
+<details><summary><b>All Enquiries Unpacked</b></summary>
+
+![All Enquiries Unpacked](/readme-images/enquiries_unpacked.png)
+</details><br>
+
+**Add Enquiry**
+
+When the admin clicks an Add Enquiry button, they are taken to an add an enquiry form. Input is validated (more details in the testing file).
+
+<details><summary><b>Add Enquiry Form</b></summary>
+
+![Add Enquiry Form](/readme-images/add_enquiry.png)
+</details><br>
+
+The admin can choose to save the enquiry as a draft in which case only admin can see it in the all enquiries view.
+
+<details><summary><b>Draft Enquiry</b></summary>
+
+![Draft Enquiry](/readme-images/draft_enquiry.png)
+</details><br>
+
+When the user clicks on the edit button, they are taken to all enquiries view, where the edit buttons are visible and clickable.
+
+On the edit enquiry form, the enquiry details are already prefilled and can be amended.
+
+<details><summary><b>Edit Enquiry Form</b></summary>
+
+![Edit Enquiry Form](/readme-images/edit_enquiry.png)
+</details><br>
+
+When the admin wants to delete an enquiry, they are shown a deletion modal to provide a chance to cancel the deletion. If they are sure and confirm deletion, the enquiry is deleted.
+
+<details><summary><b>Confirm Enquiry Deletion</b></summary>
+
+![Confirm Enquiry Deletion](/readme-images/confirm_enquiry_deletion.png)
+</details><br>
+
+<details><summary><b>Enquiry Deleted</b></summary>
+
+![Enquiry Deleted](/readme-images/enquiry_deleted.png)
+</details><br>
+
+**Footer**
 
 **Newsletter**
 
 **Deletion Modals**
 
-For deleting products, articles and enquiries, the user is always asked to confirm their choice to delete the chosen item to avoid accidental deletion. This is an example of the application of defensive programming.
+For deleting products, articles and enquiries, the user is always asked to confirm their choice to delete the chosen item to avoid accidental deletion. This is an example of the application of defensive programming. Images of deletion modals are included under Bookstore Management section.
 
 **403, 404 and 500 Error Pages**
 
