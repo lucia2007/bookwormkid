@@ -1091,6 +1091,32 @@ As a developer I can confirm in Stripe webhooks that the orders has been success
 
 **Wishlist**
 
+As mentioned before, a wishlist functionality is available for registered users only.
+
+If a guest user attempts to add an item to their wishlist, they are asked to login (register) and then they can avail of this functionality.
+
+If a user attempts to add a book which is already in their wishlist, they are see a warning message.
+
+<details><summary><b>Already In Wishlist</b></summary>
+
+![Already In Wishlist](/readme-images/already_in_wishlist.png)
+</details><br>
+
+If a particular book was added to the wishlist and the user is signed in, the Add to Wishlist button changes to Remove from Wishlist button.
+
+<details><summary><b>Remove From Wishlist Button</b></summary>
+
+![Remove From Wishlist Button](/readme-images/remove_from_wishlist.png)
+</details><br>
+
+On the Wishlist page the user can choose to add the book to their shopping bag.
+
+<details><summary><b>Wishlist Page</b></summary>
+
+![Wishlist Page](/readme-images/wishlist_page.png)
+</details><br>
+
+
 **Review articles**
 
 Admin (CRUD functionality)/Bookstore management
