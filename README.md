@@ -925,6 +925,45 @@ If an admin is signed in, the edit/delete buttons are visible as well. For detai
 
 If a book has been reviewed before, there is also an expandable button with a review icon and number of reviews present. For more details please see the Reviews section.
 
+If a book image is clicked, the image opens in a new tab for a more detailed view.
+
+**Articles**
+
+Originally I had thought I would include a blog like functionality where users would be able to add articles and comments. Later, I realized that at this stage I wanted only admin to add content so that the quality and content of articles would be aligned with the website's purpose.
+
+In the future I might implement an option for users to add articles as well. In this case, each article would have to be approved by the admin before publishing. At this point I would also add the possibility to add comments to the articles.
+
+At the moment, a signed in user can like/unlike articles. The number of likes is automatically adjusted.
+
+**All articles**
+
+All articles view currently contains four article cards with an image, author, excerpt, time of publication and number of likes. Cards are clickable and take the user to the article detail view.
+
+<details><summary><b>All Articles</b></summary>
+
+![All Articles](/readme-images/all_articles.png)
+</details><br>
+
+
+**Article Detail View**
+
+On the article detail page, there is the article image which is clickable and opens in a new tab. The article title follows with the author's name.
+
+At the end of the article a clickable source link is present which opens the original article in a new tab.
+
+Number of likes are visible at the bottom of the page and if the current user had liked the article before, the heart is solid. Only a signed in user can like/unlike the article and the number of likes updates automatically.
+
+Back to articles button takes the user to all articles page.
+
+If an admin is signed in edit/delete buttons are present on both all article cards and the article detail view. More details follow in the admin section.
+
+As some of the articles are quite long, there is a back to top button present in the right bottom corner.
+
+<details><summary><b>Article Detail</b></summary>
+
+![Article Detail](/readme-images/article_detail.png)
+</details><br>
+
 
 If a user navigates to a page that does not exist, a customized 404 error page will appear.
 
