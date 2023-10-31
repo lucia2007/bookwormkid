@@ -903,6 +903,8 @@ In the video, sorting by name is not reflected in the sort window if the user ch
 
 If an admin is signed in, the edit/delete buttons are visible on the individual product cards as well. For details see the admin section.
 
+Back to top button is present in the right bottom corner of the page.
+
 **Book Detail View**
 
 Each book detail page contains an image of the book, the title, the author, category, age range, price, rating and book description. The description is collapsed and can be unpacked by clicking read more button or collapsed by clicking read less button.
@@ -964,19 +966,73 @@ As some of the articles are quite long, there is a back to top button present in
 ![Article Detail](/readme-images/article_detail.png)
 </details><br>
 
+**Contact Form**
+
+A user can send an enquiry to the store admin.
+
+<details><summary><b>Contact Us</b></summary>
+
+![Contact Us](/readme-images/contactus_form.png)
+</details><br>
+
+They see a thank you page when the enquiry is submitted and also a success toast.
+
+<details><summary><b>Thank you/Success Toast</b></summary>
+
+![Thank you/Success Toast](/readme-images/enquiry_sent_thankyou.png)
+</details><br>
+
+An email is received by admin which they can reply to.
+
+<details><summary><b>Enquiry Email Received</b></summary>
+
+![Enquiry Email Received](/readme-images/enquiry_email.png)
+</details><br>
+
+
+**Profile** - order history and delivery details
+
+**Shopping Bag**
+
+**Secure Checkout**
+
+**Order Processing**
+
+**Order Email Confirmation**
+
+**Order History**
+
+**Wishlist**
+
+**Review articles**
+
+Admin (CRUD functionality)/Bookstore management
+
+**Books**
+**Articles**
+**Enquiries**
+
+**Enquiries**
+
+**Newsletter**
+
+**Deletion Modals**
+
+For deleting products, articles and enquiries, the user is always asked to confirm their choice to delete the chosen item to avoid accidental deletion. This is an example of the application of defensive programming.
+
+**403, 404 and 500 Error Pages**
 
 If a user navigates to a page that does not exist, a customized 404 error page will appear.
 
+[404 Error Page Image](readme-images/404_error_page.png)
+
 If a user attempts to do something they are not authorized to do, they will get a 403 Error page.
+
+[403 Error Page Image](readme-images/403_error_page.png)
 
 If a user navigates to a page and there is a server related issue/error, they will be shown a customized 500 error page.
 
-![404 Error Page Image](readme-images/404_error_page.png)
-
-![403 Error Page Image](readme-images/403_error_page.png)
-
-![500 Error Page Image](readme-images/500_error_page.png)
-
+[500 Error Page Image](readme-images/500_error_page.png)
 
 ## Future Features
 
@@ -988,6 +1044,8 @@ Here are some of the features I wish to implement in the future:
 - This store could offer stationary and related back-to-school products
 - Montesorri toys and materials to help children improve their reading skills through play could complement the offer
 - Books should have more attributes - hardcover/paperback, publisher, genre
+- Customer rating - in the future I hope to include an interactive customer rating system. At the moment the rating value was taken from Amazon.
+- Blog functionality including commenting
 
 # Technologies Used
 ## Languages
