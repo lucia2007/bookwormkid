@@ -1209,8 +1209,47 @@ When the admin wants to delete a book, they are shown a deletion modal to provid
 ![Book Deleted](/readme-images/book_deleted.png)
 </details><br>
 
-**Books**
-**Articles**
+**Article Management**
+
+**Add Article**
+
+When the admin clicks an Add Article button, they are taken to an add an article form. Input is validated (more details in the testing file).
+
+<details><summary><b>Add Article Form</b></summary>
+
+![Add Article Form](/readme-images/add_article.png)
+</details><br>
+
+The admin can choose to save the article as a draft in which case only admin can see it in the all articles view.
+
+If an article without an image is added, a placeholder image is used in its place.
+
+<details><summary><b>Placeholder Article Image</b></summary>
+
+![Placeholder Article Image](/readme-images/draft_article.png)
+</details><br>
+
+When the user clicks on the edit button, they are taken to all articles view, where the edit buttons are visible and clickable.
+
+On the edit article form, the article details are already prefilled and can be amended.
+
+<details><summary><b>Edit Article Form</b></summary>
+
+![Edit Article Form](/readme-images/edit_article.png)
+</details><br>
+
+When the admin wants to delete an article, they are shown a deletion modal to provide a chance to cancel the deletion. If they are sure and confirm deletion, the article is deleted.
+
+<details><summary><b>Confirm Article Deletion</b></summary>
+
+![Confirm Article Deletion](/readme-images/confirm_article_deletion.png)
+</details><br>
+
+<details><summary><b>Article Deleted</b></summary>
+
+![Article Deleted](/readme-images/article_deleted.png)
+</details><br>
+
 **Enquiries**
 
 **Enquiries**
