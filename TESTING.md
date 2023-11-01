@@ -219,7 +219,19 @@ The application was also tested using [Google Lighthouse](https://developers.goo
 
 I continuously worked on improving the individual scores and tried to reflect on the warnings in the Lighthouse which lead to the score increase. For increasing accessibility I had to change many button names as I was not using their explicit description and for performance I used [tinypng.com](https://tinypng.com/) and [convertio](https://convertio.co/) and [i love img](https://www.iloveimg.com/resize-image) to decrease their size and change them to webp where possible. However, I couldn't do this for all of my images, espcially for the book covers, as sometimes I was not able to find a large enough image of a book I needed.
 
-All of my scores for all of the pages were above 90, often close to 100. On a couple of pages the "SEO" score is slightly lower. This is due to the presence of a "back to top" button which has no href value and thus is not crawlable. I also got a lower score on Best Practices, due to [issues](./testing-images/stripe_cookies.png) which were logged into the console and have to do with using stripe cookies. Sometimes my scores for performance differed, probably due to current connection speed.
+All of my scores for all of the pages were above 90, often close to 100. On a couple of pages the "SEO" score is slightly lower. This is due to the presence of a "back to top" button which has no href value and thus is not crawlable. When I tried to change the anchor element into a button with this code:
+
+```
+<div class="btt-button d-flex justify-content-around text-decoration-none">
+    <button type="submit" class="btn-link bg-navy w-100 h-100 rounded-circle">
+        <i class="fas fa-arrow-up bg-navy text-white mx-auto my-auto"></i>
+    </button>
+</div>
+```
+
+my SEO was raised to a 100, but my accessibility went down because the button couldn't have an accessible name, so I decided to leave it as is.
+
+I also got a lower score on Best Practices, due to [issues](./testing-images/stripe_cookies.png) which were logged into the console and have to do with using stripe cookies. Sometimes my scores for performance differed, probably due to current connection speed.
 
 [Back to top](#testing)
 ### User Stories Testing
