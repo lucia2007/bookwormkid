@@ -231,7 +231,7 @@ For more details please see the sprints (milestones) below.
 
 Each milestone was split into epics. Some milestones contain just one or two epic, others contain more.
 
-Each epic would contain several user stories. Each user story has a description, acceptance criteria and tasks which had to be ticked before the user story could be closed and moved to done. For details please refer to my [Projects](https://github.com/users/lucia2007/projects/9).
+Each epic would contain several user stories. Each user story has a description, acceptance criteria and tasks which had to be ticked before the user story could be closed and moved to done. For details please refer to my [Projects](https://github.com/users/lucia2007/projects/9). DT - developer task, US - User Story
 
 - EPIC Registration and User Account
   - DT Preparation for Project Planning
@@ -1137,7 +1137,7 @@ On the Wishlist page the user can choose to add the book to their shopping bag.
 
 **Bookstore management/Admin (CRUD functionality)**
 
-When an admin user is logged in, the Bookstore Management link is available under their Profile. This feature was added so that the store admin user can perform all necessary tasks around store management without having to access the Django admin panel.
+When an admin user is logged in, the Bookstore Management link is available under their Profile. This feature was added so that the store admin user can perform all necessary tasks around store management without having to access the Django admin panel. Only a signed in admin user can access the bookstore management link.
 
 <details><summary><b>Bookstore Management Link</b></summary>
 
@@ -1436,8 +1436,8 @@ Here are some of the features I wish to implement in the future:
 - [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code
 - [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used for validation python code.
 - [Lucid Charts](https://lucidchart.com/) - for creating my ERD Diagram
-- [AWS](https://aws.amazon.com/)
-- [Stripe](https://stripe.com/en-cz)
+- [AWS](https://aws.amazon.com/) - used for holding images and email sending sfunctionality
+- [Stripe](https://stripe.com/en-cz) - used for providing a payment method to the store
 
 [Back to top](#contents)
 
