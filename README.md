@@ -1250,7 +1250,6 @@ When the admin wants to delete an article, they are shown a deletion modal to pr
 ![Article Deleted](/readme-images/article_deleted.png)
 </details><br>
 
-
 **Enquiries/Enquiries Management**
 
 There is a link to enquiries/FAQs in the footer to provide quick answers to common questions of the store's customers. The questions are clickable and answers are displayed.
@@ -1404,6 +1403,7 @@ Here are some of the features I wish to implement in the future:
 - Books should have more attributes - hardcover/paperback, publisher, genre
 - Customer rating - in the future I hope to include an interactive customer rating system. At the moment the rating value was taken from Amazon.
 - Blog functionality including commenting
+- Unsubscribe from newsletter
 
 # Technologies Used
 ## Languages
@@ -1969,10 +1969,7 @@ Take the following steps to create a clone of a project:
 ![Github cloning process image](./readme-images/cloning_process.png)
 
 [Back to top](#contents)
-
-
 # Credits
-
 ## Content
 - [Triangle snippets from CSS-tricks.com](https://css-tricks.com/snippets/css/css-triangle/)
 - [Scott's commit for avoiding decrement disable bug](https://github.com/Code-Institute-Solutions/boutique_ado_v1/commit/de7ad2067ac1b5de37a4cd8b9f4ddf572a4bf6c7)
@@ -1981,7 +1978,7 @@ Take the following steps to create a clone of a project:
 - [Boutique Ado](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/) for general quidance and mainly for the shopping bag and checkout functionalities
 - [I think therefore I Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) for articles functionality
 - [Bookworm Kid](https://github.com/amylour/Bookworm Kid/tree/main) for articles and wishlist functionalities
-- [I Think, Thereforw I Blog Child first](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/dabfed30d1fc4d078b6de270117dbe50/?child=first)
+- [I Think, Therefore I Blog Child first](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/dabfed30d1fc4d078b6de270117dbe50/?child=first)
 - [Contact Form](https://ordinarycoders.com/blog/article/build-a-django-contact-form-with-email-backend)
 - [Read more/Read less buttons](https://codepen.io/joserick/pen/ooVPwR)
 - [Property decorator Django - final_price functionality ](https://www.andreadiotallevi.com/blog/how-to-use-the-property-decorator-in-python-and-django)
@@ -1994,7 +1991,7 @@ Take the following steps to create a clone of a project:
 - [safe filter](https://www.djangotemplatetagsandfilters.com/filters/safe/)
 - Book descriptions and book details were taken from [Amazon](https://amazon.co.uk)
 - When testing my forms, I was made aware of the possibility of using negative numbers in my add product forms, so I added a minvaluevalidator (inspiration came from here)(https://github.com/worldofmarcus/project-portfolio-5/blob/main/products/models.py).
-
+- Readmes to follow: [Kollektiv Fem](https://github.com/worldofmarcus/project-portfolio-5/blob/main/README.md), [Joyful Bookstoe](https://github.com/Iris-Smok/JoyfulBookstore-PP5/blob/f37dc7a338dd26c35ffb5efd183138235836a983/README.md), [everneed](https://github.com/amylour/everneed/blob/main/README.md)
 ## Tools
 - [Coloors](https://coolors.co/) for finding a suitable color palette.
 - [Resize images](https://www.iloveimg.com/resize-image)
