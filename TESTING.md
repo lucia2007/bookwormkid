@@ -184,7 +184,7 @@ Testing of responsive design was carried out manually by utilizing [Google Chrom
 [Back to top](#testing)
 ## Unfixed Bugs
 
-There are no known unfixed bugs in the project.
+I noticed the phone number validation was not present on the profile form and the checkout form, so I wanted to add it. It was easy enough to do for the profile form, but I had a hard time making it work for the checkout form. It was easy enough to add the validation itself, but as soon as I used this code and entered an invalid phone number, I would get this [error]. I tried to fix it, I tried different ways of validations, asked for tutor help (two of them got together to help figure it out), but the issue was not in the validation itself but in the way invalid form is handled in Boutique Ado, which was the source for the payment functionality for this project. We concluded that I would have to rewrite quite a bit of code to fix this and I did not feel confident enough to do it at this stage. For now, phone number validation is not present either for profile form or the checkout form. I hope to do this later, when not under a tight deadline.
 
 [Back to top](#testing)
 
