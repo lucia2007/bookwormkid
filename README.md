@@ -13,7 +13,7 @@ As a mother of four young children I have always strived for them to acquire and
 
 In the English speaking countries, the reading system is much better developped, well throught-through and adjusted to different ages and reading skills/levels. Children can pick a book which is the right level for them and take it from there.
 
-However, even in the English speaking environment, it is not easy to find books which would not be only age or skill appropriate, but both at the same time. Even a great [online resource](oxfordowl.com) which provides great age segmentation for young readers, doesn't provide interesting content for struggling readers of a higher age or profilic young readers. (I'm sure no struggling 8 year old would want to read "A very hungry caterpillar" or "Biff, Chip and Kipper" series which might correspond to their reading level if they are reluctant readers, but wouldn't correspond to their age or maturity level.)
+However, even in the English speaking environment, it is not easy to find books which would not be only age or skill appropriate, but both at the same time. Even a great [online resource](https://www.oxfordowl.co.uk/) which provides great age segmentation for young readers, doesn't provide interesting content for struggling readers of a higher age or profilic young readers. (I'm sure no struggling 8 year old would want to read "A very hungry caterpillar" or "Biff, Chip and Kipper" series which might correspond to their reading level if they are reluctant readers, but wouldn't correspond to their age or maturity level.)
 
 I have heard of software available to schools which can diagnose a child's reading level and suggest books which would be age appropriate at the same time. However, this software is not available to broad public and it is very hard to find fun books for reluctant and struggling readers who need to be pulled into an age appropriate story.
 
@@ -425,7 +425,7 @@ I realize that my attempt at agile project development was not perfect and I kno
 
 Before I started writing any code, I spent a lot of time on planning and thinking things through. One part on which I spent a considerable amount of time, was creating the ERD diagram and designing each model and their relationships. I used [Lucid Charts](https://lucidchart.com/) to create my ERD schema. As you can tell, not all my arrows are pointing into the right direction as I was still a bit confused about the relationships and how the models were related to each other, but I believe that if I had to create the schema now, it would be much easier and a more straightforward process.
 
-![ERD Diagram Lucid Charts](/readme-images/ERD_PP5.png)
+[ERD Diagram Lucid Charts](/readme-images/ERD_PP5.png)
 
 This ERD schema was instrumental for creating all the necessary models for this app. Creating this schema helped me realize the relationships between different apps and models and clarified what kind of fields each of the model components would need.
 
@@ -993,7 +993,7 @@ If a user has created an account with Bookworm Kid, they can save and update the
 
 <details><summary><b>My Profile</b></summary>
 
-![My Profile](/readme-images/my_profile.png)
+![My Profile](/readme-images/my_profile_details.png)
 </details><br>
 
 The order history number is clickable and opens up a past order confirmation (the user is informed about this being a past confirnation).
@@ -1371,6 +1371,11 @@ The user is informed if they had signed up previously or if they enter an invali
 ![Already Subscribed](/readme-images/already_subscribed.png)
 </details><br>
 
+<details><summary><b>Invalid Email</b></summary>
+
+![Invalid Email](/readme-images/newsletter_invalid_email.png)
+</details><br>
+
 The unsubscribe functionality is not currently available, but it is on the list of future features.
 
 **Deletion Modals**
@@ -1431,8 +1436,8 @@ Here are some of the features I wish to implement in the future:
 - [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code
 - [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used for validation python code.
 - [Lucid Charts](https://lucidchart.com/) - for creating my ERD Diagram
-- [AWS]
-- [Stripe]
+- [AWS](https://aws.amazon.com/)
+- [Stripe](https://stripe.com/en-cz)
 
 [Back to top](#contents)
 
@@ -1940,7 +1945,7 @@ A copy of the GitHub Repository can be made by forking the GitHub account. This 
 1. Log in to **GitHub** and locate the [repository](hhttps://github.com/lucia2007/bookwormkid).
 2. On the top right hand side of the page is a button called **'Fork'**. Click on the button to create a copy of the original repository in your GitHub Account.
 
-![GitHub forking process image](./readme-images/forking_process.png)
+[GitHub forking process image](./readme-images/forking_process.png)
 
 [Back to top](#contents)
 
@@ -1966,7 +1971,7 @@ Take the following steps to create a clone of a project:
     - `python3 manage.py runserver` - enables the project to live locally 
     - `python3 manage.py createsuperuser` - this creates a superuser after you provide credentials
 
-![Github cloning process image](./readme-images/cloning_process.png)
+[Github cloning process image](./readme-images/cloning_process.png)
 
 [Back to top](#contents)
 # Credits
@@ -1977,9 +1982,9 @@ Take the following steps to create a clone of a project:
 - [RichTextField settings - Daisy's Recipe Tutorial](https://www.youtube.com/watch?v=_GNvmwvvS70)
 - [Boutique Ado](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/) for general quidance and mainly for the shopping bag and checkout functionalities
 - [I think therefore I Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) for articles functionality
-- [Bookworm Kid](https://github.com/amylour/Bookworm Kid/tree/main) for articles and wishlist functionalities
+- [FreeFido](https://github.com/amylour/FreeFido_v2) for articles and wishlist functionalities
 - [I Think, Therefore I Blog Child first](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/dabfed30d1fc4d078b6de270117dbe50/?child=first)
-- [Contact Form](https://ordinarycoders.com/blog/article/build-a-django-contact-form-with-email-backend)
+- [Contact Form](https://ordinarycoders.com/blog/article/build-a-django-contact-form-with-email-backend) - this link seems to not work anymore
 - [Read more/Read less buttons](https://codepen.io/joserick/pen/ooVPwR)
 - [Property decorator Django - final_price functionality ](https://www.andreadiotallevi.com/blog/how-to-use-the-property-decorator-in-python-and-django)
 - [Inspiration for final_price functionality](https://github.com/Iris-Smok/JoyfulBookstore-PP5/blob/main/books/views.py)
@@ -1988,10 +1993,11 @@ Take the following steps to create a clone of a project:
 - [Top tips for engaging reluctant readers](https://www.explorelearning.co.uk/free-resources/tips-engaging-reluctant-readers/)
 - [7 effective ways to increase your child's reading skills](https://www.petitjourney.com.au/7-effective-ways-to-increase-your-childs-reading-skills/)
 - [Why Reading is Important](https://www.worksheetcloud.com/blog/why-is-reading-important/)
+- [Overlay over the Hero image](https://stackoverflow.com/questions/28121731/use-pseudo-element-to-create-background-overlay)
 - [safe filter](https://www.djangotemplatetagsandfilters.com/filters/safe/)
 - Book descriptions and book details were taken from [Amazon](https://amazon.co.uk)
-- When testing my forms, I was made aware of the possibility of using negative numbers in my add product forms, so I added a minvaluevalidator (inspiration came from here)(https://github.com/worldofmarcus/project-portfolio-5/blob/main/products/models.py).
-- Readmes to follow: [Kollektiv Fem](https://github.com/worldofmarcus/project-portfolio-5/blob/main/README.md), [Joyful Bookstoe](https://github.com/Iris-Smok/JoyfulBookstore-PP5/blob/f37dc7a338dd26c35ffb5efd183138235836a983/README.md), [everneed](https://github.com/amylour/everneed/blob/main/README.md)
+- When testing my forms, I was made aware of the possibility of using negative numbers in my add product forms, so I added a minvaluevalidator [inspiration came from here](https://github.com/worldofmarcus/project-portfolio-5/blob/main/products/models.py).
+- Readmes to follow: [Kollektiv Fem](https://github.com/worldofmarcus/project-portfolio-5/blob/main/README.md), [Joyful Bookstore](https://github.com/Iris-Smok/JoyfulBookstore-PP5/blob/f37dc7a338dd26c35ffb5efd183138235836a983/README.md), [everneed](https://github.com/amylour/everneed/blob/main/README.md)
 ## Tools
 - [Coloors](https://coolors.co/) for finding a suitable color palette.
 - [Resize images](https://www.iloveimg.com/resize-image)
@@ -2000,12 +2006,11 @@ Take the following steps to create a clone of a project:
 - I used [AI Image Sharpener](https://vanceai.com/sharpen-ai/) to make the hero image sharper.
 - [Lucid Charts](https://lucidchart.com/)
 
-
 [Back to top](#contents)
+
 ## Media
-- Images were taken from [Unsplash](unsplash.com), [Amazon](amazon.co.uk) and [Megaknihy](megaknihy.cz)
+- Images were taken from [Unsplash](https://unsplash.com/), [Amazon](https://www.amazon.co.uk/) and [Megaknihy](https://www.megaknihy.cz/)
 - [A reading girl mural by Jef Aerosol](https://toppng.com/show_download/451527/graffiti-child-reading-book-street-art/xlarge)
-- [Overlay over the Hero image](https://stackoverflow.com/questions/28121731/use-pseudo-element-to-create-background-overlay)
 - [Favicon](https://cz.pinterest.com/pin/462181980485395733/)
 - [Little House](https://www.google.cz/books/edition/Little_House_on_the_Prairie/m06dCwAAQBAJ?hl=en&gbpv=1)
 - [Dr. Seuss](https://www.amazon.com/Seusss-Beginner-Collection-Green-Socks/dp/0375851569)
