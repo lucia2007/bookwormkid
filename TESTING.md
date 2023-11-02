@@ -150,8 +150,9 @@ Testing of responsive design was carried out manually by utilizing [Google Chrom
 | Render | pass       | pass          | pass      | pass     | pass            | pass            |
 | Images | pass       | pass          | pass      | pass     | pass            | pass            |
 
-[Responsiveness test video](./testing-images/responsivness_test.mp4)
+This video captures the site's responsiveness. 
 
+https://github.com/lucia2007/bookwormkid/assets/51453242/f2371d2b-3679-444c-b3bd-1536ed1f6897
 
 [Back to top](#testing)
 
