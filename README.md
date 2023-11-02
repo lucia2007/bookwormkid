@@ -1409,6 +1409,7 @@ Here are some of the features I wish to implement in the future:
 - Customer rating - in the future I hope to include an interactive customer rating system. At the moment the rating value was taken from Amazon.
 - Blog functionality including commenting
 - Unsubscribe from newsletter
+- One more thing that needs to be done is allowing the admin to approve reviews from the admin panel, as at the moment they can do it only throught the django admin panel
 
 # Technologies Used
 ## Languages

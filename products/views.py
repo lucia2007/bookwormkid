@@ -32,7 +32,7 @@ def all_products(request):
                 products = products.annotate(lower_name=Lower('title'))
             if sortkey == "category":
                 sortkey = 'category__name'
-            # my husbang helped me with the sorting price functionality
+            # my husband helped me with the sorting price functionality
             # https://docs.djangoproject.com/en/1.8/ref/models/conditional-expressions/#conditional-aggregation
             if sortkey == "price":
                 sortkey = 'sort_price'
