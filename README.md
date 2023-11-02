@@ -896,7 +896,7 @@ If a product is in one or more of the specials categories, the correct icons are
 
 Age filtering is available under the main heading on all products page. The age filtering takes into account a previous segment selection. E.g. if reluctant reader category is displayed and the user chooses 6-8 age group, only books for this age category from among reluctant readers are shown.
 
-All of the above mentioned features are recorder on this [video](/readme-images/books_sorting_filtering.mp4).
+All of the above mentioned features are recorded on this [video](/readme-images/books_filtering_sorting.mp4).
 
 In the video, sorting by name is not reflected in the sort window if the user chooses this option directly from the search box. This has been fixed since the video was taken.
 
@@ -2006,6 +2006,7 @@ Take the following steps to create a clone of a project:
 - [tinypng](https://tinypng.com/) and [i love img](https://www.iloveimg.com/) for reducing image size
 - I used [AI Image Sharpener](https://vanceai.com/sharpen-ai/) to make the hero image sharper.
 - [Lucid Charts](https://lucidchart.com/)
+- [Veed.io](https://www.veed.io) for reducing video size
 
 [Back to top](#contents)
 

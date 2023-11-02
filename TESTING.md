@@ -150,7 +150,7 @@ Testing of responsive design was carried out manually by utilizing [Google Chrom
 | Render | pass       | pass          | pass      | pass     | pass            | pass            |
 | Images | pass       | pass          | pass      | pass     | pass            | pass            |
 
-[Responsiveness test video](./readme-images/responsivness_test.webm)
+[Responsiveness test video](./testing-images/responsivness_test.mp4)
 
 
 [Back to top](#testing)
