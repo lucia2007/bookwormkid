@@ -896,7 +896,9 @@ If a product is in one or more of the specials categories, the correct icons are
 
 Age filtering is available under the main heading on all products page. The age filtering takes into account a previous segment selection. E.g. if reluctant reader category is displayed and the user chooses 6-8 age group, only books for this age category from among reluctant readers are shown.
 
-All of the above mentioned features are recorded on this [video](/readme-images/books_filtering_sorting.mp4).
+All of the above mentioned features are recorded on this video:
+
+https://github.com/lucia2007/bookwormkid/assets/51453242/b929d1b6-1c48-4501-9d87-49d8269242e9
 
 In the video, sorting by name is not reflected in the sort window if the user chooses this option directly from the search box. This has been fixed since the video was taken.
 
