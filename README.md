@@ -900,8 +900,6 @@ All of the above mentioned features are recorded on this video:
 
 https://github.com/lucia2007/bookwormkid/assets/51453242/b929d1b6-1c48-4501-9d87-49d8269242e9
 
-In the video, sorting by name is not reflected in the sort window if the user chooses this option directly from the search box. This has been fixed since the video was taken.
-
 If an admin is signed in, the edit/delete buttons are visible on the individual product cards as well. For details see the admin section.
 
 Back to top button is present in the right bottom corner of the page.
@@ -2001,6 +1999,7 @@ Take the following steps to create a clone of a project:
 - Book descriptions and book details were taken from [Amazon](https://amazon.co.uk)
 - When testing my forms, I was made aware of the possibility of using negative numbers in my add product forms, so I added a minvaluevalidator [inspiration came from here](https://github.com/worldofmarcus/project-portfolio-5/blob/main/products/models.py).
 - Readmes to follow: [Kollektiv Fem](https://github.com/worldofmarcus/project-portfolio-5/blob/main/README.md), [Joyful Bookstore](https://github.com/Iris-Smok/JoyfulBookstore-PP5/blob/f37dc7a338dd26c35ffb5efd183138235836a983/README.md), [everneed](https://github.com/amylour/everneed/blob/main/README.md)
+- 
 ## Tools
 - [Coloors](https://coolors.co/) for finding a suitable color palette.
 - [Resize images](https://www.iloveimg.com/resize-image)
@@ -2008,7 +2007,7 @@ Take the following steps to create a clone of a project:
 - [tinypng](https://tinypng.com/) and [i love img](https://www.iloveimg.com/) for reducing image size
 - I used [AI Image Sharpener](https://vanceai.com/sharpen-ai/) to make the hero image sharper.
 - [Lucid Charts](https://lucidchart.com/)
-- [Veed.io](https://www.veed.io) for reducing video size
+- [Veed.io](https://www.veed.io) and [VLC medica player](https://www.videolan.org/vlc/) for reducing video size. I commited the files directly from github through the edit functionality as I was having trouble attaching the videos the usual way, despite the fact that the videos met the maximum size limit.
 
 [Back to top](#contents)
 
